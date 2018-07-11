@@ -1,13 +1,38 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import GatsbyImg from 'gatsby-image';
+import styled from 'styled-components';
+import Link from 'gatsby-link';
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-)
+const Img = styled(GatsbyImg)`
+  width: 100%;
+`;
 
-export default IndexPage
+const IndexPage = ({ data }) => {
+  return (
+    <div>
+      <Img sizes={data.background.sizes} />
+    </div>
+  );
+};
+
+export const query = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    background: imageSharp(id: { regex: "/shared/background.png/" }) {
+      sizes(maxWidth: 5464) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+  }
+`;
+
+export default IndexPage;
