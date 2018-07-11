@@ -9,11 +9,16 @@ const HeaderWrapper = styled.div`
     rgba(0, 72, 153, 1) 15.05%,
     rgba(0, 127, 200, 1) 100%
   );
-  opacity: 0.7;
-
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   max-width: 960;
+`;
+
+const LogoWrapper = styled.h1`
+  padding-left: 1.5em;
+  margin: 0;
 `;
 
 const LogoImg = styled(GatsbyImage)`
@@ -23,7 +28,7 @@ const LogoImg = styled(GatsbyImage)`
 const List = styled.ul`
   display: flex;
   list-style: none;
-  margin-left: none;
+  margin: 0;
 `;
 
 const ListItem = styled.li`
@@ -43,24 +48,32 @@ const Link = styled(GatsbyLink)`
 const Header = ({ logoSizes }) => (
   <div>
     <HeaderWrapper>
-      <h1>
+      <LogoWrapper>
         <Link to="/">
-          <LogoImg sizes={logoSizes} />
+          <LogoImg alt="logo" sizes={logoSizes} />
         </Link>
-      </h1>
+      </LogoWrapper>
       <nav>
         <List>
           <ListItem>
-            <Link activeStyle={{ color: '#F2B006' }} exact to="/">Home</Link>
+            <Link activeStyle={{ color: '#F2B006' }} exact to="/">
+              Home
+            </Link>
           </ListItem>
           <ListItem>
-            <Link activeStyle={{ color: '#F2B006' }} to="/overview">Overview</Link>
+            <Link activeStyle={{ color: '#F2B006' }} to="/overview">
+              Overview
+            </Link>
           </ListItem>
           <ListItem>
-            <Link activeStyle={{ color: '#F2B006' }} to="/instructions">Instructions For Use</Link>
+            <Link activeStyle={{ color: '#F2B006' }} to="/instructions">
+              Instructions For Use
+            </Link>
           </ListItem>
           <ListItem>
-            <Link activeStyle={{ color: '#F2B006' }} to="/contact">Contact</Link>
+            <Link activeStyle={{ color: '#F2B006' }} to="/contact">
+              Contact
+            </Link>
           </ListItem>
         </List>
       </nav>

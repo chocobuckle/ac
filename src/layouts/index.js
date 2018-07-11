@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import './index.css';
 
 const Wrapper = styled.div`
@@ -28,6 +29,7 @@ const Layout = ({ children, data }) => (
       }}>
       <Header logoSizes={data.logo.sizes} />
       {children()}
+      <Footer footerSizes={data.footer.sizes} />
     </Wrapper>
   </div>
 );
@@ -47,6 +49,16 @@ export const query = graphql`
     }
     logo: imageSharp(id: { regex: "/shared/logo.png/" }) {
       sizes(maxWidth: 211) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    footer: imageSharp(id: { regex: "/shared/footer.png/" }) {
+      sizes(maxWidth: 960) {
         src
         srcSet
         srcWebp
