@@ -3,65 +3,79 @@ import GatsbyImage from 'gatsby-image';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const ImgAndContactTeam = styled.div`
   position: relative;
+  width: 100%;
 `;
 
-const Img = styled(GatsbyImage)`
-`;
+const Img = styled(GatsbyImage)``;
 
-const TextWrapper = styled.div`
-  margin-left: 2em;
-`;
-
-const ContactTeam = styled.p`
-  color: #ffffff;
+const Text = styled.p`
+  color: #fff;
   color: rgb(255, 255, 255);
   font-family: Myriad Pro;
-  font-size: 0.8rem;
-  font-weight: bold;
   position: absolute;
-  margin-bottom: 5em;
-  bottom: 3.4em;
+  width: 80%;
 `;
 
-const SmallPrint = styled.div`
-  position: absolute;
-  bottom: 1.5em;
+const ContactTeam = Text.extend`
+  bottom: 2.1vw;
+  font-size: 3.5vw;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+`;
+
+const SmallPrintWrapper = styled.div`
+  background: #010915;
   display: flex;
-  justify-content: space-between;
-  width: 60%;
-  div p {
-    margin-bottom: 0;
-    color: #ffffff;
-    color: rgb(255, 255, 255);
-    font-family: Myriad Pro;
-    font-size: 0.6rem;
-  }
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 0.6em;
+`;
+
+const SmallPrint = Text.extend`
+  color: #fff;
+  font-size: 2.7vw;
+  line-height: 2em;
+  margin-bottom: 0;
+  position: relative;
+  text-align: center;
 `;
 
 function Footer({ footerSizes }) {
   return (
     <Wrapper>
-      <Img alt="footer" sizes={footerSizes} />
-      <TextWrapper>
+      <ImgAndContactTeam>
+        <Img alt="footer" imgStyle={{ marginBottom: 0 }} sizes={footerSizes} />
         <ContactTeam>
           Contact the Teva team for more information on the full respiratory
           portfolio
         </ContactTeam>
+      </ImgAndContactTeam>
+      <SmallPrintWrapper>
         <SmallPrint>
-          <div>
-            <p>Teva Pharmaceuticals, Floor 1, Wing A, Building 1</p>
-            <p>
-              Finnabair Business & Technology Park, Dundalk, Co. Louth, Ireland
-            </p>
-          </div>
-          <div>
-            <p>privacy policy | legal</p>
-            <p>Date of preparation: July 2018</p>
-            <p>Job Code: IE/AEC/18/0001e</p>
-          </div>
+          Teva Pharmaceuticals, Floor 1, Wing A, Building 1
         </SmallPrint>
-      </TextWrapper>
+        <SmallPrint>
+          Finnabair Business & Technology Park, Dundalk, Co. Louth, Ireland
+        </SmallPrint>
+        <SmallPrint>
+          Freephone:&nbsp;&nbsp;&nbsp;1800&nbsp;-&nbsp;201&nbsp;700&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Email:
+          info@teva.ie&nbsp;&nbsp;&nbsp;
+        </SmallPrint>
+        <SmallPrint>Web: www.teva.ie</SmallPrint>
+        <SmallPrint>privacy policy | legal</SmallPrint>
+        <SmallPrint>Date of preparation: July 2018</SmallPrint>
+        <SmallPrint>Job Code: IE/AEC/18/0001e</SmallPrint>
+      </SmallPrintWrapper>
     </Wrapper>
   );
 }

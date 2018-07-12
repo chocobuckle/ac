@@ -10,32 +10,37 @@ const HeaderWrapper = styled.div`
     rgba(0, 127, 200, 1) 100%
   );
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 960;
+  flex-direction: column;
 `;
 
 const LogoWrapper = styled.h1`
-  padding-left: 1.5em;
-  margin: 0;
+  margin: 0 auto;
+  padding: 2vw 0 3vw;
 `;
 
 const LogoImg = styled(GatsbyImage)`
-  width: 200px;
+  width: 65vw;
+  max-width: 300px;
 `;
 
+const logoImgStyle = {
+  marginBottom: 0
+};
+
 const List = styled.ul`
-  display: flex;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 1vw;
 `;
 
 const ListItem = styled.li`
   font-family: Myriad Pro;
   text-decoration: none;
-  color: black;
-  margin-right: 1em;
+  font-size: 6vw;
+  margin-bottom: 2vw;
 `;
 
 const Link = styled(GatsbyLink)`
@@ -50,7 +55,7 @@ const Header = ({ logoSizes }) => (
     <HeaderWrapper>
       <LogoWrapper>
         <Link to="/">
-          <LogoImg alt="logo" sizes={logoSizes} />
+          <LogoImg alt="logo" imgStyle={logoImgStyle} sizes={logoSizes} />
         </Link>
       </LogoWrapper>
       <nav>
