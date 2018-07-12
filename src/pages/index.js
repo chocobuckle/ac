@@ -72,6 +72,16 @@ const WhiteBannerInnerImgWrapper = styled.div`
   margin: 0 auto;
 `;
 
+const InhalerTipsWrapper = styled.div`
+  width: 100%;
+`;
+
+const InhalingRed = styled(Img)``;
+const InhalingWithLogo = styled(Img)``;
+const HomeInstructions1 = styled(Img)``;
+const HomeInstructions2 = styled(Img)``;
+const HomeInstructions3 = styled(Img)``;
+
 const BubblesInnerImg = styled(Img)`
   width: 50px;
 `;
@@ -91,6 +101,13 @@ const IndexPage = ({ data }) => {
           <VideoButton>VIDEO 3</VideoButton>
         </VideoButtonWrapper>
       </MacbookWrapper>
+      <InhalerTipsWrapper>
+        <InhalingRed sizes={data.inhalingRed.sizes} />
+        <InhalingWithLogo sizes={data.inhalingWithLogo.sizes} />
+        <HomeInstructions1 sizes={data.homeInstructions1.sizes} />
+        <HomeInstructions2 sizes={data.homeInstructions2.sizes} />
+        <HomeInstructions3 sizes={data.homeInstructions3.sizes} />
+      </InhalerTipsWrapper>
       <BubblesAndBannerWrapper>
         <Bubbles
           imgStyle={{ ...BubblesImgStyle }}
@@ -110,6 +127,56 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query IndexQuery {
+    inhalingRed: imageSharp(id: { regex: "/home/inhaling_red.png/" }) {
+      sizes(maxWidth: 350) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    inhalingWithLogo: imageSharp(id: { regex: "/home/inhaling_with_logo.png/" }) {
+      sizes(maxWidth: 350) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    homeInstructions1: imageSharp(id: { regex: "/home/home_instructions_1.png/" }) {
+      sizes(maxWidth: 117) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    homeInstructions2: imageSharp(id: { regex: "/home/home_instructions_2.png/" }) {
+      sizes(maxWidth: 178) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    homeInstructions3: imageSharp(id: { regex: "/home/home_instructions_3.png/" }) {
+      sizes(maxWidth: 206) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
     macbook: imageSharp(id: { regex: "/shared/macbook_large.png/" }) {
       sizes(maxWidth: 960) {
         src
