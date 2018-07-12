@@ -7,6 +7,14 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Droid Sans', 'Droid Serif']
+        }
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'img',
@@ -16,4 +24,4 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp'
   ]
-}
+};

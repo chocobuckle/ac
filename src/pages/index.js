@@ -1,13 +1,12 @@
 import React from 'react';
-import GatsbyImg from 'gatsby-image';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
-import Link from 'gatsby-link';
 
 const ImgAndTextWrapper = styled.div`
   position: relative;
 `;
 
-const BackgroundImg = styled(GatsbyImg)`
+const BackgroundImg = styled(Img)`
   width: 100%;
 `;
 
@@ -31,6 +30,14 @@ const HeroText = styled.p`
   margin-bottom: 6vw;
 `;
 
+const FlowVuImg = styled(Img)`
+  position: absolute;
+  width: 20vw;
+  max-width: 263px;
+  bottom: 54vw;
+  left: 72vw;
+`;
+
 const MacbookWrapper = styled.div`
   background: linear-gradient(
     180deg,
@@ -44,7 +51,7 @@ const MacbookWrapper = styled.div`
   width: 100%;
 `;
 
-const MacbookImg = styled(GatsbyImg)`
+const MacbookImg = styled(Img)`
   max-width: 80.813em;
 `;
 
@@ -70,6 +77,45 @@ const VideoButton = styled.button`
   );
 `;
 
+const BubblesAndBannerWrapper = styled.div`
+  width: 100%;
+`;
+
+const Bubbles = styled(Img)`
+  width: 100%;
+  margin: 1.5em auto;
+`;
+
+const BubblesImgStyle = {
+  marginBottom: 0
+};
+
+const WhiteBanner = styled.div`
+  background: #fff;
+  background: rgba(255, 255, 255, 1);
+  opacity: 0.5;
+  width: 100%;
+  position: relative;
+  bottom: 29vw;
+  padding: 0.25em;
+`;
+
+const WhiteBannerInnerImgWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+`;
+
+const BubblesInnerImg = styled(Img)`
+  width: 50px;
+`;
+
+const DishWasherSafeImg = BubblesInnerImg.extend``;
+const Replace12MonthsImg = BubblesInnerImg.extend``;
+const BPAFreeImg = BubblesInnerImg.extend``;
+
 const IndexPage = ({ data }) => {
   return (
     <div>
@@ -80,6 +126,7 @@ const IndexPage = ({ data }) => {
           <HeroText>Metered Dose Inhaler (MDI’s)</HeroText>
           <HeroText>Medications Correctly1</HeroText>
         </HeroTextWrapper>
+        <FlowVuImg sizes={data.flowVu.sizes} />
       </ImgAndTextWrapper>
       <MacbookWrapper>
         <MacbookImg sizes={data.macbook.sizes} />
@@ -89,6 +136,19 @@ const IndexPage = ({ data }) => {
           <VideoButton>VIDEO 3</VideoButton>
         </VideoButtonWrapper>
       </MacbookWrapper>
+      <BubblesAndBannerWrapper>
+        <Bubbles
+          imgStyle={{ ...BubblesImgStyle }}
+          sizes={data.bubblesBG.sizes}
+        />
+        <WhiteBanner>
+          <WhiteBannerInnerImgWrapper>
+            <DishWasherSafeImg sizes={data.dishwasherSafe.sizes} />
+            <Replace12MonthsImg sizes={data.replace12Months.sizes} />
+            <BPAFreeImg sizes={data.bpaFree.sizes} />
+          </WhiteBannerInnerImgWrapper>
+        </WhiteBanner>
+      </BubblesAndBannerWrapper>
     </div>
   );
 };
@@ -101,7 +161,7 @@ export const query = graphql`
       }
     }
     background: imageSharp(id: { regex: "/shared/background.png/" }) {
-      sizes(maxWidth: 5464) {
+      sizes(maxWidth: 960) {
         src
         srcSet
         srcWebp
@@ -111,7 +171,57 @@ export const query = graphql`
       }
     }
     macbook: imageSharp(id: { regex: "/shared/macbook_large.png/" }) {
-      sizes(maxWidth: 1293) {
+      sizes(maxWidth: 960) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    flowVu: imageSharp(id: { regex: "/home/flow_vu_large.png/" }) {
+      sizes(maxWidth: 263) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    bubblesBG: imageSharp(id: { regex: "/home/bubbles_crop_bg.png/" }) {
+      sizes(maxWidth: 960) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    dishwasherSafe: imageSharp(id: { regex: "/home/dishwasher_safe.png/" }) {
+      sizes(maxWidth: 135) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    replace12Months: imageSharp(id: { regex: "/home/replace_12_months.png/" }) {
+      sizes(maxWidth: 135) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    bpaFree: imageSharp(id: { regex: "/home/bpa_free.png/" }) {
+      sizes(maxWidth: 135) {
         src
         srcSet
         srcWebp
