@@ -2,42 +2,6 @@ import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 
-const ImgAndTextWrapper = styled.div`
-  position: relative;
-`;
-
-const BackgroundImg = styled(Img)`
-  width: 100%;
-`;
-
-const HeroTextWrapper = styled.div`
-  position: absolute;
-  top: 22vw;
-  left: 5vw;
-  line-height: 0;
-  font-weight: 100;
-  p:nth-child(2) {
-    font-style: italic;
-    font-weight: bolder;
-  }
-`;
-
-const HeroText = styled.p`
-  color: #fff;
-  font-family: Myriad Pro;
-  font-size: 4.5vw;
-  font-weight: 100;
-  margin-bottom: 6vw;
-`;
-
-const FlowVuImg = styled(Img)`
-  position: absolute;
-  width: 20vw;
-  max-width: 263px;
-  bottom: 54vw;
-  left: 72vw;
-`;
-
 const MacbookWrapper = styled.div`
   background: linear-gradient(
     180deg,
@@ -119,15 +83,6 @@ const BPAFreeImg = BubblesInnerImg.extend``;
 const IndexPage = ({ data }) => {
   return (
     <div>
-      <ImgAndTextWrapper>
-        <BackgroundImg sizes={data.background.sizes} />
-        <HeroTextWrapper>
-          <HeroText>Helps Patients Inhale</HeroText>
-          <HeroText>Metered Dose Inhaler (MDI’s)</HeroText>
-          <HeroText>Medications Correctly1</HeroText>
-        </HeroTextWrapper>
-        <FlowVuImg sizes={data.flowVu.sizes} />
-      </ImgAndTextWrapper>
       <MacbookWrapper>
         <MacbookImg sizes={data.macbook.sizes} />
         <VideoButtonWrapper>
@@ -155,33 +110,8 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    background: imageSharp(id: { regex: "/shared/background.png/" }) {
-      sizes(maxWidth: 960) {
-        src
-        srcSet
-        srcWebp
-        srcSetWebp
-        sizes
-        aspectRatio
-      }
-    }
     macbook: imageSharp(id: { regex: "/shared/macbook_large.png/" }) {
       sizes(maxWidth: 960) {
-        src
-        srcSet
-        srcWebp
-        srcSetWebp
-        sizes
-        aspectRatio
-      }
-    }
-    flowVu: imageSharp(id: { regex: "/home/flow_vu_large.png/" }) {
-      sizes(maxWidth: 263) {
         src
         srcSet
         srcWebp
