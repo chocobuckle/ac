@@ -45,7 +45,7 @@ function HeroImg({ backgroundImgSizes, flowVuSizes }) {
       <HeroTextWrapper>
         <HeroText>Helps Patients Inhale</HeroText>
         <HeroText>Metered Dose Inhaler (MDI’s)</HeroText>
-        <HeroText>Medications Correctly1</HeroText>
+        <HeroText>Medications Correctly<sup>1</sup></HeroText>
       </HeroTextWrapper>
       <FlowVuImg sizes={flowVuSizes} />
     </HeroImgAndTextWrapper>

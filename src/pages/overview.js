@@ -7,6 +7,10 @@ const OverviewWrapper = styled.div`
 
   p,
   span,
+  ul,
+  li,
+  b,
+  sup,
   h1,
   h2 {
     font-family: Myriad Pro;
@@ -19,7 +23,7 @@ const OverviewWrapper = styled.div`
 
   p,
   span {
-    font-size: 3vw;
+    font-size: 3.9vw;
     margin-bottom: 2.25vw;
   }
 
@@ -34,15 +38,15 @@ const H1Wrapper = styled.div`
 `;
 
 const H1 = styled.h1`
-  font-size: 5vw;
+  font-size: 6vw;
   margin-bottom: 1vw;
 `;
 
 const H2 = styled.h2`
-  font-size: 3.8vw;
-  margin-bottom: 3vw;
+  font-size: 5.3vw;
+  margin-bottom: 2vw;
   span {
-    font-size: 3.8vw;
+    font-size: 5.3vw;
   }
 `;
 
@@ -73,10 +77,6 @@ const MacbookImg = styled(Img)`
   width: 60vw;
 `;
 
-const AdditionalFeaturesText = styled.p``;
-const DownloadInstructionsText = styled.p``;
-const IndicationsForUseText = styled.p``;
-
 const BearAndMaskImgWrapper = styled.div``;
 
 const BearOrMaskImg = styled(Img)`
@@ -90,7 +90,6 @@ const LargeMaskImg = BearOrMaskImg.extend``;
 const CautionsList = styled.ul`
   margin-left: none;
 `;
-const CautionsListItem = styled.li``;
 
 function Overview({ data }) {
   return (
@@ -122,35 +121,37 @@ function Overview({ data }) {
           <H2>
             Additional features of <span>AeroChamber Plus® Flow-Vu®</span> VHC
           </H2>
-          <AdditionalFeaturesText>
-            <span>
-              "EZ Flow" Exhalation Valve
-            </span>{' '}
-            - Directs exhaled medication away from the patient's face and eyes.5
-          </AdditionalFeaturesText>
-          <AdditionalFeaturesText>
-            <span>Inhalation Valve</span> -
-            Built-in, low-resistance, 1-way valve opens easily and prevents
-            exhalation back into the chamber.5
-          </AdditionalFeaturesText>
-          <AdditionalFeaturesText>
-            <span>Anti-static Chamber</span>{' '}
-            - Improves the delivery of MDIs used with AeroChamber® due to
-            medication not adhering to chamber walls.6
-          </AdditionalFeaturesText>
+          <p>
+            <span>"EZ Flow" Exhalation Valve</span> - Directs exhaled medication
+            away from the patient's face and eyes.<sup>5</sup>
+          </p>
+          <p>
+            <span>Inhalation Valve</span> - Built-in, low-resistance, 1-way
+            valve opens easily and prevents exhalation back into the chamber.<sup>
+              5
+            </sup>
+          </p>
+          <p>
+            <span>Anti-static Chamber</span> - Improves the delivery of MDIs
+            used with AeroChamber® due to medication not adhering to chamber
+            walls.<sup>6</sup>
+          </p>
           <span>
             Not made (or manufactured) with BPA (bisphenol A), phthalates,
-            latex, lead, or PVC1,7
+            latex, lead, or PVC<sup>1,7</sup>
           </span>
         </ContentWrapper>
       </AdditionalFeatures>
       <DownloadInstructions>
         <ContentWrapper style={{ borderBottom: '1px solid #000' }}>
           <H2>Download Instructions for Use</H2>
-          <DownloadInstructionsText>
+          <p>
             Printed in English and Spanish and featuring the child-friendly
-            AeroBear®1
-          </DownloadInstructionsText>
+            <span>
+              {' '}
+              AeroBear®<sup>1</sup>
+            </span>
+          </p>
           <BearAndMaskImgWrapper>
             <BearImg sizes={data.bear.sizes} />
             <SmallMaskImg sizes={data.smallMask.sizes} />
@@ -161,23 +162,23 @@ function Overview({ data }) {
       <IndicationsForUse>
         <ContentWrapper>
           <H2>Indications For Use</H2>
-          <IndicationsForUseText>
+          <p>
             This product is intended to be used by patients who are under the
             care or treatment of a physician or licensed healthcare
             professional. The device is intended to be used by these patients to
             administer aerosolized medication from most pressurized Metered Dose
             Inhalers. The intended environments for use include the home,
             hospitals and clinics.
-          </IndicationsForUseText>
+          </p>
           <H2>Cautions:</H2>
           <CautionsList>
-            <CautionsListItem>
+            <li>
               PRODUCT MAY BE PERMANENTLY DAMAGED IF BOILED, STERILIZED, OR
               CLEANED IN A DISHWASHER AT TEMPERATURES ABOVE 158°F (70°C).
-            </CautionsListItem>
-            <CautionsListItem>
+            </li>
+            <li>
               Do not leave the chamber unattended with children.
-            </CautionsListItem>
+            </li>
           </CautionsList>
           <b>Please see Instructions for Use</b>
         </ContentWrapper>
