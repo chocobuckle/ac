@@ -3,169 +3,149 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 const OverviewWrapper = styled.div`
-  width: 100%;
-`;
-
-const H1Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 3vw;
-  margin: 2vw auto 0;
-`;
-
-const H1 = styled.h1`
-  font-family: Myriad Pro;
-  font-size: 5vw;
-  color: #004899;
-  color: rgb(0, 72, 153);
-  margin-bottom: 1vw;
-`;
-
-const AdditionalFeatures = styled.div`
-  background: #f5f5f5;
-  background: rgba(245, 245, 245, 1);
-  width: 100%;
   line-height: 4.5vw;
-`;
 
-const TextWrapper = styled.div`
-  width: 90%;
-  margin: 0 auto;
-  padding: 3vw;
-  font-family: Myriad Pro;
+  p,
+  span,
+  h1,
+  h2 {
+    font-family: Myriad Pro;
+  }
+
+  h1,
+  h2 {
+    color: #004899;
+  }
+
   p,
   span {
     font-size: 3vw;
     margin-bottom: 2.25vw;
   }
+
+  span {
+    color: #007fc8;
+  }
+`;
+
+const H1Wrapper = styled.div`
+  margin: 2vw auto;
+  text-align: center;
+`;
+
+const H1 = styled.h1`
+  font-size: 5vw;
+  margin-bottom: 1vw;
 `;
 
 const H2 = styled.h2`
   font-size: 3.8vw;
   margin-bottom: 3vw;
-  color: #004899;
-  color: rgb(0, 72, 153);
   span {
-    font-size: 3.5vw;
-    color: #007fc8;
-    color: rgb(0, 127, 200);
+    font-size: 3.8vw;
   }
 `;
 
-const DishWasherSafeAndMacbookWrapper = styled.div`
-  width: 90%;
-  margin: 0 auto;
+const SeeingIsBelieving = styled.section`
+  text-align: center;
 `;
+const AdditionalFeatures = styled.section`
+  background: #f5f5f5;
+`;
+const DownloadInstructions = styled.section``;
+const IndicationsForUse = styled.section``;
+
+const ContentWrapper = styled.div`
+  margin: 0 auto;
+  padding: 3vw 0;
+  width: 91%;
+`;
+
 const BPAAndDishwasherSafeImg = styled(Img)`
   max-width: 187px;
   width: 20vw;
 `;
+
 const MacbookImg = styled(Img)`
-  margin: 0 auto;
-  width: 60vw;
-  position: absolute;
   bottom: 21vw;
+  margin: 0 auto;
+  position: absolute;
+  width: 60vw;
 `;
 
 const AdditionalFeaturesText = styled.p``;
 const DownloadInstructionsText = styled.p``;
 const IndicationsForUseText = styled.p``;
-const SubHeaderText = styled.p`
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-  span {
-    color: #007fc8;
-    color: rgb(0, 127, 200);
-  }
-`;
 
-const AdditionalFeaturesSpan = styled.span`
-  color: #007fc8;
-  color: rgb(0, 127, 200);
-`;
-
-const DownloadInstructions = styled.div`
-  width: 100%;
-  line-height: 4.5vw;
-`;
-
-const BearAndMaskImgWrapper = styled.div`
-  width: 100%;
-`;
+const BearAndMaskImgWrapper = styled.div``;
 
 const BearOrMaskImg = styled(Img)`
   width: 30%;
 `;
+
 const BearImg = BearOrMaskImg.extend``;
 const SmallMaskImg = BearOrMaskImg.extend``;
 const LargeMaskImg = BearOrMaskImg.extend``;
 
-const IndicationsForUse = styled.div`
-  width: 100%;
-  line-height: 4.5vw;
-`;
-
 const CautionsList = styled.ul`
   margin-left: none;
 `;
-
 const CautionsListItem = styled.li``;
 
 function Overview({ data }) {
   return (
     <OverviewWrapper>
-      <H1Wrapper>
-        <H1>AeroChamber Plus® Flow-Vu®:</H1>
-        <H1>Seeing Is The Difference</H1>
-      </H1Wrapper>
-      <TextWrapper>
-        <SubHeaderText>
-          <span>AeroChamber Plus® Flow-Vu®</span> is an anti-static valved
-          holding chamber designed with patients in mind. Patients can use an{' '}
-          <span>AeroChamber Plus® Flow-Vu®</span> to help improve medication
-          delivery from a metered dose inhaler (MDI).
-        </SubHeaderText>
-        <SubHeaderText>
-          Watch <b>Seeing Is the Difference</b> for a behind-the-scenes look at how
-          <span> AeroChamber Plus®</span> is designed, manufactured, and tested:
-        </SubHeaderText>
-      </TextWrapper>
-      <DishWasherSafeAndMacbookWrapper>
-        <BPAAndDishwasherSafeImg sizes={data.bpaAndDishwasherSafe.sizes} />
-        <MacbookImg sizes={data.macbook.sizes} />
-      </DishWasherSafeAndMacbookWrapper>
+      <SeeingIsBelieving>
+        <ContentWrapper>
+          <H1Wrapper>
+            <H1>AeroChamber Plus® Flow-Vu®:</H1>
+            <H1>Seeing Is The Difference</H1>
+          </H1Wrapper>
+          <p>
+            <span>AeroChamber Plus® Flow-Vu®</span> is an anti-static valved
+            holding chamber designed with patients in mind. Patients can use an{' '}
+            <span>AeroChamber Plus® Flow-Vu®</span> to help improve medication
+            delivery from a metered dose inhaler (MDI).
+          </p>
+          <p>
+            Watch <b>Seeing Is the Difference</b> for a behind-the-scenes look
+            at how
+            <span> AeroChamber Plus®</span> is designed, manufactured, and
+            tested:
+          </p>
+          <BPAAndDishwasherSafeImg sizes={data.bpaAndDishwasherSafe.sizes} />
+          <MacbookImg sizes={data.macbook.sizes} />
+        </ContentWrapper>
+      </SeeingIsBelieving>
       <AdditionalFeatures>
-        <TextWrapper>
+        <ContentWrapper>
           <H2>
             Additional features of <span>AeroChamber Plus® Flow-Vu®</span> VHC
           </H2>
           <AdditionalFeaturesText>
-            <AdditionalFeaturesSpan>
+            <span>
               "EZ Flow" Exhalation Valve
-            </AdditionalFeaturesSpan>{' '}
+            </span>{' '}
             - Directs exhaled medication away from the patient's face and eyes.5
           </AdditionalFeaturesText>
           <AdditionalFeaturesText>
-            <AdditionalFeaturesSpan>Inhalation Valve</AdditionalFeaturesSpan> -
+            <span>Inhalation Valve</span> -
             Built-in, low-resistance, 1-way valve opens easily and prevents
             exhalation back into the chamber.5
           </AdditionalFeaturesText>
           <AdditionalFeaturesText>
-            <AdditionalFeaturesSpan>Anti-static Chamber</AdditionalFeaturesSpan>{' '}
+            <span>Anti-static Chamber</span>{' '}
             - Improves the delivery of MDIs used with AeroChamber® due to
             medication not adhering to chamber walls.6
           </AdditionalFeaturesText>
-          <AdditionalFeaturesSpan>
+          <span>
             Not made (or manufactured) with BPA (bisphenol A), phthalates,
             latex, lead, or PVC1,7
-          </AdditionalFeaturesSpan>
-        </TextWrapper>
+          </span>
+        </ContentWrapper>
       </AdditionalFeatures>
       <DownloadInstructions>
-        <TextWrapper>
+        <ContentWrapper style={{ borderBottom: '1px solid #000' }}>
           <H2>Download Instructions for Use</H2>
           <DownloadInstructionsText>
             Printed in English and Spanish and featuring the child-friendly
@@ -176,10 +156,10 @@ function Overview({ data }) {
             <SmallMaskImg sizes={data.smallMask.sizes} />
             <LargeMaskImg sizes={data.largeMask.sizes} />
           </BearAndMaskImgWrapper>
-        </TextWrapper>
+        </ContentWrapper>
       </DownloadInstructions>
       <IndicationsForUse>
-        <TextWrapper>
+        <ContentWrapper>
           <H2>Indications For Use</H2>
           <IndicationsForUseText>
             This product is intended to be used by patients who are under the
@@ -200,7 +180,7 @@ function Overview({ data }) {
             </CautionsListItem>
           </CautionsList>
           <b>Please see Instructions for Use</b>
-        </TextWrapper>
+        </ContentWrapper>
       </IndicationsForUse>
     </OverviewWrapper>
   );

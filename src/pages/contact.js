@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import MapImg from 'gatsby-image';
 
 const Wrapper = styled.div`
-  width: 90%;
+  width: 91%;
   margin: 0 auto;
 `;
 
@@ -31,7 +31,10 @@ const TextWrapper = styled.div`
   h2:nth-child(2) {
     margin-top: 0;
   }
-  div:last-child {
+  span + p {
+    margin-bottom: 1vw;
+  }
+  span + p:last-child {
     margin-bottom: 0;
   }
 `;
@@ -43,12 +46,6 @@ const Text = styled.p`
 const Address = styled.div`
   margin-bottom: 2vw;
 `;
-
-const ContactDetails = styled.div`
-  margin-bottom: 1vw;
-`;
-
-const MapImg = styled(Img)``;
 
 function Contact({ data }) {
   return (
@@ -82,30 +79,18 @@ function Contact({ data }) {
 
           <H2>Retails Representatives</H2>
 
-          <ContactDetails>
-            <LightBlueSpan>Phil Osborn (Group accounts)</LightBlueSpan>
-            <Text>087 050 8779 - phil.osborn@teva.ie</Text>
-          </ContactDetails>
-          <ContactDetails>
-            <LightBlueSpan>Avril Ryan (South East)</LightBlueSpan>
-            <Text>087 223 4895 - avril.ryan@teva.ie</Text>
-          </ContactDetails>
-          <ContactDetails>
-            <LightBlueSpan>Jane Clements (West)</LightBlueSpan>
-            <Text>087 120 9148 - jane.clements@teva.ie</Text>
-          </ContactDetails>
-          <ContactDetails>
-            <LightBlueSpan>Paul Moran (Midlands)</LightBlueSpan>
-            <Text>087 799 2896 - paul.moran@teva.ie</Text>
-          </ContactDetails>
-          <ContactDetails>
-            <LightBlueSpan>Sinead Finucane (South West)</LightBlueSpan>
-            <Text>087 799 2858 - sinead.finucane@teva.ie</Text>
-          </ContactDetails>
-          <ContactDetails>
-            <LightBlueSpan>Collin Botha (North East)</LightBlueSpan>
-            <Text>087 668 5876 - collin.botha@teva.ie</Text>
-          </ContactDetails>
+          <LightBlueSpan>Phil Osborn (Group accounts)</LightBlueSpan>
+          <Text>087 050 8779 - phil.osborn@teva.ie</Text>
+          <LightBlueSpan>Avril Ryan (South East)</LightBlueSpan>
+          <Text>087 223 4895 - avril.ryan@teva.ie</Text>
+          <LightBlueSpan>Jane Clements (West)</LightBlueSpan>
+          <Text>087 120 9148 - jane.clements@teva.ie</Text>
+          <LightBlueSpan>Paul Moran (Midlands)</LightBlueSpan>
+          <Text>087 799 2896 - paul.moran@teva.ie</Text>
+          <LightBlueSpan>Sinead Finucane (South West)</LightBlueSpan>
+          <Text>087 799 2858 - sinead.finucane@teva.ie</Text>
+          <LightBlueSpan>Collin Botha (North East)</LightBlueSpan>
+          <Text>087 668 5876 - collin.botha@teva.ie</Text>
         </TextWrapper>
         <MapImg sizes={data.map.sizes} />
       </TextAndMapWrapper>
