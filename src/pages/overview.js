@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import { ContentWrapper } from '../helpers/sharedStyles';
 
 const OverviewWrapper = styled.div`
   line-height: 4.5vw;
@@ -59,12 +60,6 @@ const AdditionalFeatures = styled.section`
 const DownloadInstructions = styled.section``;
 const IndicationsForUse = styled.section``;
 
-const ContentWrapper = styled.div`
-  margin: 0 auto;
-  padding: 3vw 0;
-  width: 91%;
-`;
-
 const BPAAndDishwasherSafeImg = styled(Img)`
   max-width: 187px;
   width: 20vw;
@@ -77,15 +72,25 @@ const MacbookImg = styled(Img)`
   width: 60vw;
 `;
 
-const BearAndMaskImgWrapper = styled.div``;
-
-const BearOrMaskImg = styled(Img)`
-  width: 30%;
+const BearAndMaskImgWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
 `;
 
-const BearImg = BearOrMaskImg.extend``;
-const SmallMaskImg = BearOrMaskImg.extend``;
-const LargeMaskImg = BearOrMaskImg.extend``;
+const BearOrMaskImg = styled(Img)``;
+
+const BearImg = BearOrMaskImg.extend`
+  width: 40vw;
+`;
+const SmallMaskImg = BearOrMaskImg.extend`
+  width: 20vw;
+`;
+const LargeMaskImg = BearOrMaskImg.extend`
+  width: 20vw;
+`;
 
 const CautionsList = styled.ul`
   margin-left: none;
@@ -127,7 +132,8 @@ function Overview({ data }) {
           </p>
           <p>
             <span>Inhalation Valve</span> - Built-in, low-resistance, 1-way
-            valve opens easily and prevents exhalation back into the chamber.<sup>
+            valve opens easily and prevents exhalation back into the chamber.
+            <sup>
               5
             </sup>
           </p>
@@ -176,9 +182,7 @@ function Overview({ data }) {
               PRODUCT MAY BE PERMANENTLY DAMAGED IF BOILED, STERILIZED, OR
               CLEANED IN A DISHWASHER AT TEMPERATURES ABOVE 158°F (70°C).
             </li>
-            <li>
-              Do not leave the chamber unattended with children.
-            </li>
+            <li>Do not leave the chamber unattended with children.</li>
           </CautionsList>
           <b>Please see Instructions for Use</b>
         </ContentWrapper>
