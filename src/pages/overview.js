@@ -72,6 +72,18 @@ const MacbookImg = styled(Img)`
   width: 60vw;
 `;
 
+const H2AndDownloadWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 2vw;
+`;
+
+const DownloadImg = styled(Img)`
+  margin-left: 2.75vw;
+  width: 7vw;
+`;
+
 const BearAndMaskImgWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -134,9 +146,7 @@ function Overview({ data }) {
           <p>
             <span>Inhalation Valve</span> - Built-in, low-resistance, 1-way
             valve opens easily and prevents exhalation back into the chamber.
-            <sup>
-              5
-            </sup>
+            <sup>5</sup>
           </p>
           <p>
             <span>Anti-static Chamber</span> - Improves the delivery of MDIs
@@ -151,7 +161,10 @@ function Overview({ data }) {
       </AdditionalFeatures>
       <DownloadInstructions>
         <ContentWrapper style={{ borderBottom: '1px solid #000' }}>
-          <H2>Download Instructions for Use</H2>
+          <H2AndDownloadWrapper>
+            <H2 style={{ marginBottom: 0 }}>Download Instructions for Use</H2>
+            <DownloadImg sizes={data.download.sizes} />
+          </H2AndDownloadWrapper>
           <p>
             Printed in English and Spanish and featuring the child-friendly
             <span>
@@ -242,6 +255,16 @@ export const query = graphql`
       id: { regex: "/overview/large_mask_mouthpiece.png/" }
     ) {
       sizes(maxWidth: 851) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    download: imageSharp(id: { regex: "/overview/download.png/" }) {
+      sizes(maxWidth: 238) {
         src
         srcSet
         srcWebp
