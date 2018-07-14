@@ -60,16 +60,25 @@ const AdditionalFeatures = styled.section`
 const DownloadInstructions = styled.section``;
 const IndicationsForUse = styled.section``;
 
-const BPAAndDishwasherSafeImg = styled(Img)`
-  max-width: 187px;
-  width: 20vw;
+const BPAImgAndTextWrapper = styled.div`
+  width: 42vw;
+`;
+
+const BPAImgAndTextAndMacbookImgWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const BPAImg = styled(Img)`
+  max-width: 749px;
+  margin-bottom: 2vw;
 `;
 
 const MacbookImg = styled(Img)`
-  bottom: 21vw;
-  margin: 0 auto;
-  position: absolute;
-  width: 60vw;
+  max-width: 886px;
+  margin-bottom: 2vw;
+  width: 70vw;
 `;
 
 const H2AndDownloadWrapper = styled.div`
@@ -96,13 +105,13 @@ const BearOrMaskImg = styled(Img)`
 `;
 
 const BearImg = BearOrMaskImg.extend`
-  width: 36vw;
+  width: 37.5vw;
 `;
 const SmallMaskImg = BearOrMaskImg.extend`
-  width: 19.5vw;
+  width: 21vw;
 `;
 const LargeMaskImg = BearOrMaskImg.extend`
-  width: 19.5vw;
+  width: 21vw;
 `;
 
 const CautionsList = styled.ul`
@@ -130,8 +139,22 @@ function Overview({ data }) {
             <span> AeroChamber Plus®</span> is designed, manufactured, and
             tested:
           </p>
-          <BPAAndDishwasherSafeImg sizes={data.bpaAndDishwasherSafe.sizes} />
-          <MacbookImg sizes={data.macbook.sizes} />
+          <BPAImgAndTextAndMacbookImgWrapper>
+            <MacbookImg sizes={data.macbook.sizes} />
+            <BPAImgAndTextWrapper>
+              <BPAImg sizes={data.bpaAndDishwasherSafe.sizes} />
+              <p
+                style={{
+                  color: '#007fc8',
+                  fontSize: '3vw',
+                  lineHeight: '1.5em',
+                  marginBottom: 0
+                }}>
+                AeroChamber Plus® Flow-Vu® is dishwasher safe on the top rack at
+                temperatures up to 158°F (70°C).
+              </p>
+            </BPAImgAndTextWrapper>
+          </BPAImgAndTextAndMacbookImgWrapper>
         </ContentWrapper>
       </SeeingIsBelieving>
       <AdditionalFeatures>
@@ -210,7 +233,7 @@ export const query = graphql`
     bpaAndDishwasherSafe: imageSharp(
       id: { regex: "/overview/bpa_and_dishwasher_safe.png/" }
     ) {
-      sizes(maxWidth: 187) {
+      sizes(maxWidth: 749) {
         src
         srcSet
         srcWebp
