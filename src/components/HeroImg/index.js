@@ -27,18 +27,10 @@ const HeroText = styled.p`
   font-family: Myriad Pro;
   font-size: 4.5vw;
   font-weight: 100;
-  margin-bottom: 6vw;
+  line-height: 0.75vw;
 `;
 
-const FlowVuImg = styled(Img)`
-  position: absolute;
-  width: 20vw;
-  max-width: 263px;
-  bottom: 54vw;
-  left: 72vw;
-`;
-
-function HeroImg({ backgroundImgSizes, flowVuSizes }) {
+function HeroImg({ backgroundImgSizes }) {
   return (
     <HeroImgAndTextWrapper>
       <BackgroundImg sizes={backgroundImgSizes} />
@@ -47,7 +39,6 @@ function HeroImg({ backgroundImgSizes, flowVuSizes }) {
         <HeroText>Metered Dose Inhaler (MDI’s)</HeroText>
         <HeroText>Medications Correctly<sup>1</sup></HeroText>
       </HeroTextWrapper>
-      <FlowVuImg sizes={flowVuSizes} />
     </HeroImgAndTextWrapper>
   );
 }
