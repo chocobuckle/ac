@@ -76,20 +76,21 @@ const BearAndMaskImgWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
-  width: 100%;
+  align-items: center;
 `;
 
-const BearOrMaskImg = styled(Img)``;
+const BearOrMaskImg = styled(Img)`
+  margin: 0 2vw;
+`;
 
 const BearImg = BearOrMaskImg.extend`
-  width: 40vw;
+  width: 36vw;
 `;
 const SmallMaskImg = BearOrMaskImg.extend`
-  width: 20vw;
+  width: 19.5vw;
 `;
 const LargeMaskImg = BearOrMaskImg.extend`
-  width: 20vw;
+  width: 19.5vw;
 `;
 
 const CautionsList = styled.ul`
@@ -216,7 +217,7 @@ export const query = graphql`
       }
     }
     bear: imageSharp(id: { regex: "/overview/bear.png/" }) {
-      sizes(maxWidth: 412) {
+      sizes(maxWidth: 1636) {
         src
         srcSet
         srcWebp
@@ -226,9 +227,9 @@ export const query = graphql`
       }
     }
     smallMask: imageSharp(
-      id: { regex: "/overview/small_mask_and_medium_mask.png/" }
+      id: { regex: "/overview/small_mask_medium_mask.png/" }
     ) {
-      sizes(maxWidth: 412) {
+      sizes(maxWidth: 851) {
         src
         srcSet
         srcWebp
@@ -240,7 +241,7 @@ export const query = graphql`
     largeMask: imageSharp(
       id: { regex: "/overview/large_mask_mouthpiece.png/" }
     ) {
-      sizes(maxWidth: 412) {
+      sizes(maxWidth: 851) {
         src
         srcSet
         srcWebp
