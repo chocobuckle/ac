@@ -51,7 +51,13 @@ const H2 = styled.h2`
   }
 `;
 
-const SeeingIsBelieving = styled.section`
+const SeeingIsTheDifference = styled.section`
+  ${'' /* background: linear-gradient(
+    180deg,
+    rgba(20, 255, 255, 0) 2.12%,
+    rgba(20, 255, 255, 0.04) 3.83%,
+    rgba(20, 255, 255, 1) 49.44%
+  ); */}
   text-align: center;
 `;
 const AdditionalFeatures = styled.section`
@@ -121,7 +127,7 @@ const CautionsList = styled.ul`
 function Overview({ data }) {
   return (
     <OverviewWrapper>
-      <SeeingIsBelieving>
+      <SeeingIsTheDifference>
         <ContentWrapper>
           <H1Wrapper>
             <H1>AeroChamber Plus® Flow-Vu®:</H1>
@@ -156,7 +162,7 @@ function Overview({ data }) {
             </BPAImgAndTextWrapper>
           </BPAImgAndTextAndMacbookImgWrapper>
         </ContentWrapper>
-      </SeeingIsBelieving>
+      </SeeingIsTheDifference>
       <AdditionalFeatures>
         <ContentWrapper>
           <H2>
