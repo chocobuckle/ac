@@ -48,7 +48,7 @@ const mapImgStyle = {};
 
 function Contact({ data }) {
   return (
-    <ContentWrapper>
+    <ContentWrapper style={{ paddingBottom: 0 }}>
       <H1>Contact Us</H1>
       <TextAndMapWrapper>
         <TextWrapper>

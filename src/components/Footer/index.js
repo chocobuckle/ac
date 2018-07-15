@@ -1,60 +1,46 @@
 import React from 'react';
-import GatsbyImage from 'gatsby-image';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const FooterWrapper = styled.div`
+  p {
+    color: #fff;
+    font-family: Myriad Pro;
+    margin-bottom: 0;
+    text-align: center;
+  }
 `;
 
 const ImgAndContactTeam = styled.div`
   position: relative;
-  width: 100%;
 `;
 
-const Img = styled(GatsbyImage)``;
-
-const Text = styled.p`
-  color: #fff;
-  color: rgb(255, 255, 255);
-  font-family: Myriad Pro;
-  position: absolute;
-  width: 80%;
-`;
-
-const ContactTeam = Text.extend`
-  bottom: 2.1vw;
-  font-size: 3.5vw;
+const ContactTeam = styled.p`
+  bottom: 2.6vw;
+  font-size: 3.6vw;
   font-weight: bold;
-  text-align: center;
-  margin: 0 auto;
-  width: 100%;
+  line-height: 1.5em;
+  position: absolute;
 `;
 
 const SmallPrintWrapper = styled.div`
+  align-items: center;
   background: #010915;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 0.6em;
+  padding-bottom: 0.55em;
 `;
 
-const SmallPrint = Text.extend`
-  color: #fff;
-  font-size: 2.7vw;
-  line-height: 2em;
-  margin-bottom: 0;
-  position: relative;
-  text-align: center;
+const SmallPrint = styled.p`
+  font-size: 3.1vw;
+  line-height: 1.8em;
 `;
 
 function Footer({ footerSizes }) {
   return (
-    <Wrapper>
+    <FooterWrapper>
       <ImgAndContactTeam>
-        <Img alt="footer" imgStyle={{ marginBottom: 0 }} sizes={footerSizes} />
+        <Img sizes={footerSizes} alt="footer" />
         <ContactTeam>
           Contact the Teva team for more information on the full respiratory
           portfolio
@@ -76,7 +62,7 @@ function Footer({ footerSizes }) {
         <SmallPrint>Date of preparation: July 2018</SmallPrint>
         <SmallPrint>Job Code: IE/AEC/18/0001e</SmallPrint>
       </SmallPrintWrapper>
-    </Wrapper>
+    </FooterWrapper>
   );
 }
 
