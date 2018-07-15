@@ -9,12 +9,10 @@ const HeroImgAndTextWrapper = styled.div`
 const HeroTextWrapper = styled.div`
   font-weight: 100;
   left: 5vw;
-  line-height: 0;
   position: absolute;
   top: 22vw;
   p:nth-child(2) {
     font-style: italic;
-    font-weight: bolder;
   }
 `;
 
@@ -23,7 +21,8 @@ const HeroText = styled.p`
   font-family: Myriad Pro, sans-serif;
   font-weight: 100;
   font-size: 4.5vw;
-  line-height: 0.75vw;
+  line-height: 1.5em;
+  margin-bottom: 0;
 `;
 
 const flowVuImgStyle = {
