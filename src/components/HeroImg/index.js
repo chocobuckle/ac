@@ -27,11 +27,11 @@ const HeroText = styled.p`
 `;
 
 const flowVuImgStyle = {
-  bottom: '31.9vw',
+  bottom: '34.5vw',
   left: '72.25vw',
   maxWidth: '263px',
   position: 'absolute',
-  width: '20vw'
+  width: '17.5vw'
 };
 
 function HeroImg({ backgroundImgSizes, flowVuSizes }) {
