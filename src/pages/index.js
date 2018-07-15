@@ -15,7 +15,7 @@ const IndexWrapper = styled.div`
   sup,
   h1,
   h2 {
-    font-family: Myriad Pro;
+    font-family: Myriad Pro, sans-serif;
   }
 
   h1,
@@ -111,7 +111,7 @@ const IndexPage = ({ data }) => {
           </VideoButtonWrapper>
         </ContentWrapper>
       </Macbook>
-      <InhalerTipsWrapper>
+      {/* <InhalerTipsWrapper>
         <Img
           sizes={data.inhalingRed.sizes}
           style={{ ...inhalingRedImgStyle }}
@@ -132,7 +132,7 @@ const IndexPage = ({ data }) => {
           sizes={data.homeInstructions3.sizes}
           style={{ ...homeInstructions3ImgStyle }}
         />
-      </InhalerTipsWrapper>
+      </InhalerTipsWrapper> */}
       <BubblesAndBanner>
         <Img
           sizes={data.bubblesBG.sizes}

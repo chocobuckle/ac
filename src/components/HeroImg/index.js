@@ -20,7 +20,7 @@ const HeroTextWrapper = styled.div`
 
 const HeroText = styled.p`
   color: #fff;
-  font-family: Myriad Pro;
+  font-family: Myriad Pro, sans-serif;
   font-weight: 100;
   font-size: 4.5vw;
   line-height: 0.75vw;

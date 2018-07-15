@@ -14,7 +14,7 @@ const OverviewWrapper = styled.div`
   sup,
   h1,
   h2 {
-    font-family: Myriad Pro;
+    font-family: Myriad Pro, sans-serif;
   }
 
   h1,

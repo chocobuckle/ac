@@ -33,7 +33,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  font-family: Myriad Pro;
+  font-family: Myriad Pro, sans-serif;
   font-size: 6vw;
   margin-bottom: 2vw;
   text-decoration: none;

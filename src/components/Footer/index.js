@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const FooterWrapper = styled.div`
   p {
     color: #fff;
-    font-family: Myriad Pro;
+    font-family: Myriad Pro, sans-serif;
     margin-bottom: 0;
     text-align: center;
   }
