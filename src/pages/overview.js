@@ -51,7 +51,7 @@ const H2 = styled.h2`
   }
 `;
 
-const SeeingIsTheDifference = styled.section`
+const SeeingIsTheDifference = ContentWrapper.extend`
   ${'' /* background: linear-gradient(
     180deg,
     rgba(20, 255, 255, 0) 2.12%,
@@ -63,8 +63,8 @@ const SeeingIsTheDifference = styled.section`
 const AdditionalFeatures = styled.section`
   background: #f5f5f5;
 `;
-const DownloadInstructions = styled.section``;
-const IndicationsForUse = styled.section``;
+const DownloadInstructions = ContentWrapper.extend``;
+const IndicationsForUse = ContentWrapper.extend``;
 
 const BPAImgAndTextWrapper = styled.div`
   width: 42vw;
@@ -124,43 +124,40 @@ function Overview({ data }) {
   return (
     <OverviewWrapper>
       <SeeingIsTheDifference>
-        <ContentWrapper>
-          <H1Wrapper>
-            <H1>AeroChamber Plus® Flow-Vu®:</H1>
-            <H1>Seeing Is The Difference</H1>
-          </H1Wrapper>
-          <p>
-            <span>AeroChamber Plus® Flow-Vu®</span> is an anti-static valved
-            holding chamber designed with patients in mind. Patients can use an{' '}
-            <span>AeroChamber Plus® Flow-Vu®</span> to help improve medication
-            delivery from a metered dose inhaler (MDI).
-          </p>
-          <p>
-            Watch <b>Seeing Is the Difference</b> for a behind-the-scenes look
-            at how
-            <span> AeroChamber Plus®</span> is designed, manufactured, and
-            tested:
-          </p>
-          <BPAImgAndTextAndMacbookImgWrapper>
-            <Img sizes={data.macbook.sizes} style={{ ...macbookImgStyle }} />
-            <BPAImgAndTextWrapper>
-              <Img
-                sizes={data.bpaAndDishwasherSafe.sizes}
-                style={{ ...BPAImgStyle }}
-              />
-              <p
-                style={{
-                  color: '#007fc8',
-                  fontSize: '3vw',
-                  lineHeight: '1.5em',
-                  marginBottom: 0
-                }}>
-                AeroChamber Plus® Flow-Vu® is dishwasher safe on the top rack at
-                temperatures up to 158°F (70°C).
-              </p>
-            </BPAImgAndTextWrapper>
-          </BPAImgAndTextAndMacbookImgWrapper>
-        </ContentWrapper>
+        <H1Wrapper>
+          <H1>AeroChamber Plus® Flow-Vu®:</H1>
+          <H1>Seeing Is The Difference</H1>
+        </H1Wrapper>
+        <p>
+          <span>AeroChamber Plus® Flow-Vu®</span> is an anti-static valved
+          holding chamber designed with patients in mind. Patients can use an{' '}
+          <span>AeroChamber Plus® Flow-Vu®</span> to help improve medication
+          delivery from a metered dose inhaler (MDI).
+        </p>
+        <p>
+          Watch <b>Seeing Is the Difference</b> for a behind-the-scenes look at
+          how
+          <span> AeroChamber Plus®</span> is designed, manufactured, and tested:
+        </p>
+        <BPAImgAndTextAndMacbookImgWrapper>
+          <Img sizes={data.macbook.sizes} style={{ ...macbookImgStyle }} />
+          <BPAImgAndTextWrapper>
+            <Img
+              sizes={data.bpaAndDishwasherSafe.sizes}
+              style={{ ...BPAImgStyle }}
+            />
+            <p
+              style={{
+                color: '#007fc8',
+                fontSize: '3vw',
+                lineHeight: '1.5em',
+                marginBottom: 0
+              }}>
+              AeroChamber Plus® Flow-Vu® is dishwasher safe on the top rack at
+              temperatures up to 158°F (70°C).
+            </p>
+          </BPAImgAndTextWrapper>
+        </BPAImgAndTextAndMacbookImgWrapper>
       </SeeingIsTheDifference>
       <AdditionalFeatures>
         <ContentWrapper>
@@ -187,47 +184,43 @@ function Overview({ data }) {
           </span>
         </ContentWrapper>
       </AdditionalFeatures>
-      <DownloadInstructions>
-        <ContentWrapper style={{ borderBottom: '1px solid #000' }}>
-          <H2AndDownloadWrapper>
-            <H2 style={{ marginBottom: 0 }}>Download Instructions for Use</H2>
-            <Img sizes={data.download.sizes} style={{ ...downloadImgStyle }} />
-          </H2AndDownloadWrapper>
-          <p>
-            Printed in English and Spanish and featuring the child-friendly
-            <span>
-              {' '}
-              AeroBear®<sup>1</sup>
-            </span>
-          </p>
-          <BearAndMaskImgWrapper>
-            <Img sizes={data.bear.sizes} style={{ ...bearImgStyle }} />
-            <Img sizes={data.smallMask.sizes} style={{ ...maskImgStyle }} />
-            <Img sizes={data.largeMask.sizes} style={{ ...maskImgStyle }} />
-          </BearAndMaskImgWrapper>
-        </ContentWrapper>
+      <DownloadInstructions style={{ borderBottom: '1px solid #000' }}>
+        <H2AndDownloadWrapper>
+          <H2 style={{ marginBottom: 0 }}>Download Instructions for Use</H2>
+          <Img sizes={data.download.sizes} style={{ ...downloadImgStyle }} />
+        </H2AndDownloadWrapper>
+        <p>
+          Printed in English and Spanish and featuring the child-friendly
+          <span>
+            {' '}
+            AeroBear®<sup>1</sup>
+          </span>
+        </p>
+        <BearAndMaskImgWrapper>
+          <Img sizes={data.bear.sizes} style={{ ...bearImgStyle }} />
+          <Img sizes={data.smallMask.sizes} style={{ ...maskImgStyle }} />
+          <Img sizes={data.largeMask.sizes} style={{ ...maskImgStyle }} />
+        </BearAndMaskImgWrapper>
       </DownloadInstructions>
       <IndicationsForUse>
-        <ContentWrapper>
-          <H2>Indications For Use</H2>
-          <p>
-            This product is intended to be used by patients who are under the
-            care or treatment of a physician or licensed healthcare
-            professional. The device is intended to be used by these patients to
-            administer aerosolized medication from most pressurized Metered Dose
-            Inhalers. The intended environments for use include the home,
-            hospitals and clinics.
-          </p>
-          <H2>Cautions:</H2>
-          <CautionsList>
-            <li>
-              PRODUCT MAY BE PERMANENTLY DAMAGED IF BOILED, STERILIZED, OR
-              CLEANED IN A DISHWASHER AT TEMPERATURES ABOVE 158°F (70°C).
-            </li>
-            <li>Do not leave the chamber unattended with children.</li>
-          </CautionsList>
-          <b>Please see Instructions for Use</b>
-        </ContentWrapper>
+        <H2>Indications For Use</H2>
+        <p>
+          This product is intended to be used by patients who are under the care
+          or treatment of a physician or licensed healthcare professional. The
+          device is intended to be used by these patients to administer
+          aerosolized medication from most pressurized Metered Dose Inhalers.
+          The intended environments for use include the home, hospitals and
+          clinics.
+        </p>
+        <H2>Cautions:</H2>
+        <CautionsList>
+          <li>
+            PRODUCT MAY BE PERMANENTLY DAMAGED IF BOILED, STERILIZED, OR CLEANED
+            IN A DISHWASHER AT TEMPERATURES ABOVE 158°F (70°C).
+          </li>
+          <li>Do not leave the chamber unattended with children.</li>
+        </CautionsList>
+        <b>Please see Instructions for Use</b>
       </IndicationsForUse>
     </OverviewWrapper>
   );

@@ -34,7 +34,15 @@ const IndexWrapper = styled.div`
   }
 `;
 
-const Macbook = styled.div`
+const H2 = styled.h2`
+  font-size: 5.3vw;
+  margin-bottom: 2vw;
+  span {
+    font-size: 5.3vw;
+  }
+`;
+
+const Macbook = ContentWrapper.extend`
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 2.12%,
@@ -61,6 +69,8 @@ const VideoButton = styled.button`
   padding: 2vw 1.75vw;
 `;
 
+const TorsoImgsWrapper = styled.div``;
+
 const BubblesAndBanner = styled.div`
   position: relative;
   display: flex;
@@ -84,7 +94,7 @@ const WhiteBannerChildImgFlexWrapper = styled.div`
   width: 60vw;
 `;
 
-const InhalerTipsWrapper = styled.div``;
+const InhalerTipsWrapper = ContentWrapper.extend``;
 
 const bubblesImgStyle = {};
 const macbookImgStyle = {};
@@ -99,57 +109,67 @@ const homeInstructions2ImgStyle = {};
 const homeInstructions3ImgStyle = {};
 
 const IndexPage = ({ data }) => {
+  const {
+    macbook,
+    inhalingRed,
+    inhalingWithLogo,
+    homeInstructions1,
+    homeInstructions2,
+    homeInstructions3,
+    bubblesBG,
+    dishwasherSafe,
+    bpaFree,
+    replace12Months
+  } = data;
   return (
     <IndexWrapper>
       <Macbook>
-        <ContentWrapper>
-          <Img sizes={data.macbook.sizes} style={{ ...macbookImgStyle }} />
-          <VideoButtonWrapper>
-            <VideoButton>VIDEO 1</VideoButton>
-            <VideoButton>VIDEO 2</VideoButton>
-            <VideoButton>VIDEO 3</VideoButton>
-          </VideoButtonWrapper>
-        </ContentWrapper>
+        <Img sizes={macbook.sizes} style={{ ...macbookImgStyle }} />
+        <VideoButtonWrapper>
+          <VideoButton>VIDEO 1</VideoButton>
+          <VideoButton>VIDEO 2</VideoButton>
+          <VideoButton>VIDEO 3</VideoButton>
+        </VideoButtonWrapper>
       </Macbook>
-      {/* <InhalerTipsWrapper>
-        <Img
-          sizes={data.inhalingRed.sizes}
-          style={{ ...inhalingRedImgStyle }}
-        />
-        <Img
-          sizes={data.inhalingWithLogo.sizes}
-          style={{ ...inhalingWithLogoImgStyle }}
-        />
-        <Img
-          sizes={data.homeInstructions1.sizes}
+      <InhalerTipsWrapper>
+        <H2>
+          People who use a valved holding chamber with their inhaler have better
+          control.<sup>1</sup>
+        </H2>
+        <TorsoImgsWrapper>
+          <Img sizes={inhalingRed.sizes} style={{ ...inhalingRedImgStyle }} />
+          <Img
+            sizes={inhalingWithLogo.sizes}
+            style={{ ...inhalingWithLogoImgStyle }}
+          />
+        </TorsoImgsWrapper>
+        {/* <Img
+          sizes={homeInstructions1.sizes}
           style={{ ...homeInstructions1ImgStyle }}
         />
         <Img
-          sizes={data.homeInstructions2.sizes}
+          sizes={homeInstructions2.sizes}
           style={{ ...homeInstructions2ImgStyle }}
         />
         <Img
-          sizes={data.homeInstructions3.sizes}
+          sizes={homeInstructions3.sizes}
           style={{ ...homeInstructions3ImgStyle }}
-        />
-      </InhalerTipsWrapper> */}
+        /> */}
+      </InhalerTipsWrapper>
       <BubblesAndBanner>
-        <Img
-          sizes={data.bubblesBG.sizes}
-          style={{ ...bubblesImgStyle }}
-        />
+        <Img sizes={bubblesBG.sizes} style={{ ...bubblesImgStyle }} />
         <WhiteBanner>
           <WhiteBannerChildImgFlexWrapper>
             <Img
-              sizes={data.dishwasherSafe.sizes}
+              sizes={dishwasherSafe.sizes}
               style={{ ...whiteBannerChildImgStyle }}
             />
             <Img
-              sizes={data.replace12Months.sizes}
+              sizes={replace12Months.sizes}
               style={{ ...whiteBannerChildImgStyle }}
             />
             <Img
-              sizes={data.bpaFree.sizes}
+              sizes={bpaFree.sizes}
               style={{ ...whiteBannerChildImgStyle }}
             />
           </WhiteBannerChildImgFlexWrapper>

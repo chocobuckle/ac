@@ -21,7 +21,7 @@ const HeroText = styled.p`
   font-family: Myriad Pro, sans-serif;
   font-weight: 100;
   font-size: 4.5vw;
-  line-height: 1.5em;
+  line-height: 1.4em;
   margin-bottom: 0;
 `;
 
