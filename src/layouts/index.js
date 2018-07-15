@@ -30,6 +30,7 @@ const Layout = ({ children, data }) => {
         <Header logoSizes={logo.sizes} />
         <HeroImg
           backgroundImgSizes={background.sizes}
+          flowVuSizes={flowVu.sizes}
         />
         {children()}
         <Footer footerSizes={footer.sizes} />
@@ -59,6 +60,16 @@ export const query = graphql`
     }
     background: imageSharp(id: { regex: "/shared/background.png/" }) {
       sizes(maxWidth: 960) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    flowVu: imageSharp(id: { regex: "/home/flow_vu_large.png/" }) {
+      sizes(maxWidth: 263) {
         src
         srcSet
         srcWebp

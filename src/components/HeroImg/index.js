@@ -6,9 +6,7 @@ const HeroImgAndTextWrapper = styled.div`
   position: relative;
 `;
 
-const BackgroundImg = styled(Img)`
-  width: 100%;
-`;
+const BackgroundImg = styled(Img)``;
 
 const HeroTextWrapper = styled.div`
   position: absolute;
@@ -30,15 +28,28 @@ const HeroText = styled.p`
   line-height: 0.75vw;
 `;
 
-function HeroImg({ backgroundImgSizes }) {
+const FlowVuImg = styled(Img)``;
+
+const flowVuImgStyle = {
+  position: 'absolute',
+  width: '20vw',
+  maxWidth: '263px',
+  bottom: '31.9vw',
+  left: '72.25vw'
+};
+
+function HeroImg({ backgroundImgSizes, flowVuSizes }) {
   return (
     <HeroImgAndTextWrapper>
       <BackgroundImg sizes={backgroundImgSizes} />
       <HeroTextWrapper>
         <HeroText>Helps Patients Inhale</HeroText>
         <HeroText>Metered Dose Inhaler (MDI’s)</HeroText>
-        <HeroText>Medications Correctly<sup>1</sup></HeroText>
+        <HeroText>
+          Medications Correctly<sup>1</sup>
+        </HeroText>
       </HeroTextWrapper>
+      <FlowVuImg style={{ ...flowVuImgStyle }} sizes={flowVuSizes} />
     </HeroImgAndTextWrapper>
   );
 }
