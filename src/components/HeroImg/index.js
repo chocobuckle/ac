@@ -6,14 +6,12 @@ const HeroImgAndTextWrapper = styled.div`
   position: relative;
 `;
 
-const BackgroundImg = styled(Img)``;
-
 const HeroTextWrapper = styled.div`
-  position: absolute;
-  top: 22vw;
+  font-weight: 100;
   left: 5vw;
   line-height: 0;
-  font-weight: 100;
+  position: absolute;
+  top: 22vw;
   p:nth-child(2) {
     font-style: italic;
     font-weight: bolder;
@@ -23,25 +21,23 @@ const HeroTextWrapper = styled.div`
 const HeroText = styled.p`
   color: #fff;
   font-family: Myriad Pro;
-  font-size: 4.5vw;
   font-weight: 100;
+  font-size: 4.5vw;
   line-height: 0.75vw;
 `;
 
-const FlowVuImg = styled(Img)``;
-
 const flowVuImgStyle = {
-  position: 'absolute',
-  width: '20vw',
-  maxWidth: '263px',
   bottom: '31.9vw',
-  left: '72.25vw'
+  left: '72.25vw',
+  maxWidth: '263px',
+  position: 'absolute',
+  width: '20vw'
 };
 
 function HeroImg({ backgroundImgSizes, flowVuSizes }) {
   return (
     <HeroImgAndTextWrapper>
-      <BackgroundImg sizes={backgroundImgSizes} />
+      <Img sizes={backgroundImgSizes} />
       <HeroTextWrapper>
         <HeroText>Helps Patients Inhale</HeroText>
         <HeroText>Metered Dose Inhaler (MDI’s)</HeroText>
@@ -49,7 +45,7 @@ function HeroImg({ backgroundImgSizes, flowVuSizes }) {
           Medications Correctly<sup>1</sup>
         </HeroText>
       </HeroTextWrapper>
-      <FlowVuImg style={{ ...flowVuImgStyle }} sizes={flowVuSizes} />
+      <Img sizes={flowVuSizes} style={{ ...flowVuImgStyle }} />
     </HeroImgAndTextWrapper>
   );
 }

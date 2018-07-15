@@ -57,9 +57,9 @@ const SeeingIsTheDifference = styled.section`
     rgba(20, 255, 255, 0) 2.12%,
     rgba(20, 255, 255, 0.04) 3.83%,
     rgba(20, 255, 255, 1) 49.44%
-  ); */}
-  text-align: center;
+  ); */} text-align: center;
 `;
+
 const AdditionalFeatures = styled.section`
   background: #f5f5f5;
 `;
@@ -76,17 +76,6 @@ const BPAImgAndTextAndMacbookImgWrapper = styled.div`
   align-items: center;
 `;
 
-const BPAImg = styled(Img)`
-  max-width: 749px;
-  margin-bottom: 2vw;
-`;
-
-const MacbookImg = styled(Img)`
-  max-width: 886px;
-  margin-bottom: 2vw;
-  width: 70vw;
-`;
-
 const H2AndDownloadWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -94,35 +83,42 @@ const H2AndDownloadWrapper = styled.div`
   margin-bottom: 2vw;
 `;
 
-const DownloadImg = styled(Img)`
-  margin-left: 2.75vw;
-  width: 7vw;
-`;
-
 const BearAndMaskImgWrapper = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-`;
-
-const BearOrMaskImg = styled(Img)`
-  margin: 0 2vw;
-`;
-
-const BearImg = BearOrMaskImg.extend`
-  width: 37.5vw;
-`;
-const SmallMaskImg = BearOrMaskImg.extend`
-  width: 21vw;
-`;
-const LargeMaskImg = BearOrMaskImg.extend`
-  width: 21vw;
 `;
 
 const CautionsList = styled.ul`
   margin-left: none;
 `;
+
+const bearImgStyle = {
+  margin: '0 2vw',
+  width: '37.5vw'
+};
+
+const BPAImgStyle = {
+  maxWidth: '749px',
+  marginBottom: '2vw'
+};
+
+const downloadImgStyle = {
+  marginLeft: '2.75vw',
+  width: '7vw'
+};
+
+const macbookImgStyle = {
+  maxWidth: '886px',
+  marginBottom: '2vw',
+  width: '70vw'
+};
+
+const maskImgStyle = {
+  margin: '0 2vw',
+  width: '21vw'
+};
 
 function Overview({ data }) {
   return (
@@ -146,9 +142,12 @@ function Overview({ data }) {
             tested:
           </p>
           <BPAImgAndTextAndMacbookImgWrapper>
-            <MacbookImg sizes={data.macbook.sizes} />
+            <Img sizes={data.macbook.sizes} style={{ ...macbookImgStyle }} />
             <BPAImgAndTextWrapper>
-              <BPAImg sizes={data.bpaAndDishwasherSafe.sizes} />
+              <Img
+                sizes={data.bpaAndDishwasherSafe.sizes}
+                style={{ ...BPAImgStyle }}
+              />
               <p
                 style={{
                   color: '#007fc8',
@@ -192,7 +191,7 @@ function Overview({ data }) {
         <ContentWrapper style={{ borderBottom: '1px solid #000' }}>
           <H2AndDownloadWrapper>
             <H2 style={{ marginBottom: 0 }}>Download Instructions for Use</H2>
-            <DownloadImg sizes={data.download.sizes} />
+            <Img sizes={data.download.sizes} style={{ ...downloadImgStyle }} />
           </H2AndDownloadWrapper>
           <p>
             Printed in English and Spanish and featuring the child-friendly
@@ -202,9 +201,9 @@ function Overview({ data }) {
             </span>
           </p>
           <BearAndMaskImgWrapper>
-            <BearImg sizes={data.bear.sizes} />
-            <SmallMaskImg sizes={data.smallMask.sizes} />
-            <LargeMaskImg sizes={data.largeMask.sizes} />
+            <Img sizes={data.bear.sizes} style={{ ...bearImgStyle }} />
+            <Img sizes={data.smallMask.sizes} style={{ ...maskImgStyle }} />
+            <Img sizes={data.largeMask.sizes} style={{ ...maskImgStyle }} />
           </BearAndMaskImgWrapper>
         </ContentWrapper>
       </DownloadInstructions>

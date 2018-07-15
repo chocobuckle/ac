@@ -1,6 +1,6 @@
 import React from 'react';
-import GatsbyLink from 'gatsby-link';
-import GatsbyImage from 'gatsby-image';
+import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 const HeaderWrapper = styled.div`
@@ -18,67 +18,73 @@ const LogoWrapper = styled.h1`
   padding: 2vw 0 3vw;
 `;
 
-const LogoImg = styled(GatsbyImage)`
-  width: 65vw;
-  max-width: 300px;
-`;
-
 const logoImgStyle = {
-  marginBottom: 0
+  maxWidth: '300px',
+  width: '65vw'
 };
 
 const List = styled.ul`
-  list-style: none;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  list-style: none;
+  margin: 0 auto;
   margin-bottom: 1vw;
+  text-align: center;
 `;
 
 const ListItem = styled.li`
   font-family: Myriad Pro;
-  text-decoration: none;
   font-size: 6vw;
   margin-bottom: 2vw;
-`;
-
-const Link = styled(GatsbyLink)`
-  color: #fff;
-  font-weight: bold;
-  font-style: italic;
   text-decoration: none;
 `;
+
+const HeaderLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
+`;
+
+const headerLinkActiveStyle = {
+  color: '#f2b006'
+};
 
 const Header = ({ logoSizes }) => (
   <div>
     <HeaderWrapper>
       <LogoWrapper>
         <Link to="/">
-          <LogoImg alt="logo" imgStyle={logoImgStyle} sizes={logoSizes} />
+          <Img alt="logo" sizes={logoSizes} style={{ ...logoImgStyle }} />
         </Link>
       </LogoWrapper>
       <nav>
         <List>
           <ListItem>
-            <Link activeStyle={{ color: '#F2B006' }} exact to="/">
+            <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} exact to="/">
               Home
-            </Link>
+            </HeaderLink>
           </ListItem>
           <ListItem>
-            <Link activeStyle={{ color: '#F2B006' }} to="/overview">
+            <HeaderLink
+              activeStyle={{ ...headerLinkActiveStyle }}
+              to="/overview">
               Overview
-            </Link>
+            </HeaderLink>
           </ListItem>
           <ListItem>
-            <Link activeStyle={{ color: '#F2B006' }} to="/instructions">
+            <HeaderLink
+              activeStyle={{ ...headerLinkActiveStyle }}
+              to="/instructions">
               Instructions For Use
-            </Link>
+            </HeaderLink>
           </ListItem>
           <ListItem>
-            <Link activeStyle={{ color: '#F2B006' }} to="/contact">
+            <HeaderLink
+              activeStyle={{ ...headerLinkActiveStyle }}
+              to="/contact">
               Contact
-            </Link>
+            </HeaderLink>
           </ListItem>
         </List>
       </nav>

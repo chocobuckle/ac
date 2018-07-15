@@ -1,16 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import MapImg from 'gatsby-image';
-
-const Wrapper = styled.div`
-  width: 91%;
-  margin: 0 auto;
-`;
+import Img from 'gatsby-image';
+import { ContentWrapper } from '../helpers/sharedStyles';
 
 const H1 = styled.h1`
   color: #004899;
   margin-bottom: 0;
 `;
+
 const H2 = H1.withComponent('h2').extend`
   margin: 4vw auto;
 `;
@@ -47,9 +44,11 @@ const Address = styled.div`
   margin-bottom: 2vw;
 `;
 
+const mapImgStyle = {};
+
 function Contact({ data }) {
   return (
-    <Wrapper>
+    <ContentWrapper>
       <H1>Contact Us</H1>
       <TextAndMapWrapper>
         <TextWrapper>
@@ -92,9 +91,9 @@ function Contact({ data }) {
           <LightBlueSpan>Collin Botha (North East)</LightBlueSpan>
           <Text>087 668 5876 - collin.botha@teva.ie</Text>
         </TextWrapper>
-        <MapImg sizes={data.map.sizes} />
+        <Img style={{ ...mapImgStyle }} sizes={data.map.sizes} />
       </TextAndMapWrapper>
-    </Wrapper>
+    </ContentWrapper>
   );
 }
 
