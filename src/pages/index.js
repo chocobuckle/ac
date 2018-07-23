@@ -38,8 +38,6 @@ const IndexWrapper = styled.div`
   figcaption {
     text-align: center;
     font-weight: 200;
-    margin-top: 0.5em;
-    position: relative;
     font-size: 4vw;
   }
 `;
@@ -198,8 +196,7 @@ const SixInhalerImgsWrapper = styled.div`
 `;
 const InhalerAndBucketBorderWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  margin-bottom: 5vw;
+  flex-direction: column;;
   width: 100%;
 `;
 const ThreeInhalers = styled.div`
@@ -208,41 +205,29 @@ const ThreeInhalers = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   width: 90%;
+  figcaption {
+    margin-top: 1.75vw;
+  }
 `;
 
-const inhaler1ImgStyle = { width: '20vw', maxWidth: '138px' };
-const inhaler2ImgStyle = { width: '24.5vw', maxWidth: '173px' };
-const inhaler3ImgStyle = { width: '16.5vw', maxWidth: '117px' };
-const inhaler4ImgStyle = {
-  width: '16.5vw',
-  maxWidth: '120px',
-  position: 'relative',
-  left: '1.5vw'
-};
-const inhaler5ImgStyle = {
-  width: '23vw',
-  maxWidth: '178px',
-  position: 'relative',
-  left: '8vw'
-};
-const inhaler6ImgStyle = {
-  width: '28.5vw',
-  maxWidth: '222px',
-  position: 'relative',
-  left: '5.5vw'
-};
+const inhaler1ImgStyle = { maxWidth: '138px', width: '20vw' };
+const inhaler2ImgStyle = { maxWidth: '173px', width: '24.5vw' };
+const inhaler3ImgStyle = { maxWidth: '117px', width: '16.5vw' };
+const inhaler4ImgStyle = { maxWidth: '120px', width: '16.5vw' };
+const inhaler5ImgStyle = { maxWidth: '178px', width: '23vw' };
+const inhaler6ImgStyle = { maxWidth: '222px', width: '28.5vw' };
+
 const BucketBorder = styled.div`
   border: 0.5vw solid #007fc8;
-  width: 100%;
-  height: 7vw;
   border-top: none;
-  margin-top: -2.5em;
+  height: 7vw;
+  margin-top: -11vw;
 `;
 const AdultOrChild = H3.extend`
   font-size: 4.4vw;
   font-weight: 600;
   text-align: center;
-  margin-top: 0.5em;
+  margin-top: 2.15vw;
 `;
 const Footnotes = styled.div`
   margin-top: 2vw;
@@ -440,23 +425,23 @@ const IndexPage = ({ data }) => {
           Anti Static Valved Holding Chamber (VHC)
         </H2>
         <SixInhalerImgsWrapper>
-          <InhalerAndBucketBorderWrapper>
-            <ThreeInhalers>
+          <InhalerAndBucketBorderWrapper style={{ marginBottom: '5vw' }}>
+            <ThreeInhalers style={{ position: 'relative', left: '2vw'}}>
               <figure>
                 <Img sizes={inhaler1.sizes} style={{ ...inhaler1ImgStyle }} />
-                <figcaption style={{ right: '2.5vw' }}>
+                <figcaption style={{ position: 'relative', right: '15.5%' }}>
                   Small<br />Mask
                 </figcaption>
               </figure>
               <figure>
                 <Img sizes={inhaler2.sizes} style={{ ...inhaler2ImgStyle }} />
-                <figcaption style={{ right: '1vw' }}>
+                <figcaption style={{ position: 'relative', right: '7.5%' }}>
                   Medium<br />Mask
                 </figcaption>
               </figure>
               <figure>
                 <Img sizes={inhaler3.sizes} style={{ ...inhaler3ImgStyle }} />
-                <figcaption style={{ right: '2.2vw' }}>
+                <figcaption style={{ position: 'relative', right: '17%' }}>
                   Youth<br />Mouthpiece
                 </figcaption>
               </figure>
@@ -465,27 +450,31 @@ const IndexPage = ({ data }) => {
             <AdultOrChild>CHILD</AdultOrChild>
           </InhalerAndBucketBorderWrapper>
           <InhalerAndBucketBorderWrapper>
-            <ThreeInhalers>
+            <ThreeInhalers style={{ position: 'relative', left: '3.25vw'}}>
               <figure>
                 <Img sizes={inhaler4.sizes} style={{ ...inhaler4ImgStyle }} />
-                <figcaption>Mouthpiece</figcaption>
+                <figcaption style={{ position: 'relative', right: '16.75%' }}>
+                  Mouthpiece
+                  <br />
+                  <br />
+                </figcaption>
               </figure>
               <figure>
                 <Img sizes={inhaler5.sizes} style={{ ...inhaler5ImgStyle }} />
-                <figcaption style={{ left: '5.7vw' }}>
+                <figcaption style={{ position: 'relative', right: '11.75%' }}>
                   Small<br />Mask
                 </figcaption>
               </figure>
               <figure>
                 <Img sizes={inhaler6.sizes} style={{ ...inhaler6ImgStyle }} />
-                <figcaption style={{ left: '3.2vw' }}>
+                <figcaption style={{ position: 'relative', right: '9.5%' }}>
                   Large<br />Mask
                 </figcaption>
               </figure>
             </ThreeInhalers>
             <BucketBorder />
             <AdultOrChild>ADULT</AdultOrChild>
-            <Footnotes>
+            {/* <Footnotes>
               <Footnote>
                 Children should transition to a mouthpiece around the age of 5
               </Footnote>
@@ -503,7 +492,7 @@ const IndexPage = ({ data }) => {
               <Footnote>
                 <span>4.</span>
               </Footnote>
-            </Footnotes>
+            </Footnotes> */}
           </InhalerAndBucketBorderWrapper>
         </SixInhalerImgsWrapper>
       </SixInhalers>
