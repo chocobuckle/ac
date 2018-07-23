@@ -150,10 +150,10 @@ const whiteBannerChildImgStyle = {
   width: '10vw'
 };
 const BubblesAndBanner = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 `;
 const WhiteBanner = styled.div`
   background: rgb(255, 255, 255, 0.5);
@@ -175,9 +175,27 @@ const SixInhalerImgsWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
 `;
-const InhalerAndBucketBorderWrapper = styled.div``;
-const ThreeInhalers = styled.div``;
-const inhalerImgStyle = {};
+const InhalerAndBucketBorderWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5vw;
+  width: 100%;
+`;
+const ThreeInhalers = styled.div`
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 90%;
+`;
+const inhaler1ImgStyle = { width: '20vw', maxWidth: '138px' };
+const inhaler2ImgStyle = { width: '24.5vw', maxWidth: '173px'};
+const inhaler3ImgStyle = { width: '16.5vw', maxWidth: '117px' };
+const inhaler4ImgStyle = { width: '16.5vw', maxWidth: '120px', position: 'relative', left: '1.5vw' };
+const inhaler5ImgStyle = { width: '23vw', maxWidth: '178px', position: 'relative', left: '8vw'};
+const inhaler6ImgStyle = { width: '28.5vw', maxWidth: '222px', position: 'relative', left: '5.5vw' };
+
+
 const BucketBorder = styled.div``;
 
 const IndexPage = ({ data }) => {
@@ -352,15 +370,15 @@ const IndexPage = ({ data }) => {
             <ThreeInhalers>
               <Img
                 sizes={inhaler1.sizes}
-                style={{ ...inhalerImgStyle }}
+                style={{ ...inhaler1ImgStyle }}
               />
               <Img
                 sizes={inhaler2.sizes}
-                style={{ ...inhalerImgStyle }}
+                style={{ ...inhaler2ImgStyle }}
               />
               <Img
                 sizes={inhaler3.sizes}
-                style={{ ...inhalerImgStyle }}
+                style={{ ...inhaler3ImgStyle }}
               />
             </ThreeInhalers>
             <BucketBorder />
@@ -369,15 +387,15 @@ const IndexPage = ({ data }) => {
             <ThreeInhalers>
               <Img
                 sizes={inhaler4.sizes}
-                style={{ ...inhalerImgStyle }}
+                style={{ ...inhaler4ImgStyle }}
               />
               <Img
                 sizes={inhaler5.sizes}
-                style={{ ...inhalerImgStyle }}
+                style={{ ...inhaler5ImgStyle }}
               />
               <Img
                 sizes={inhaler6.sizes}
-                style={{ ...inhalerImgStyle }}
+                style={{ ...inhaler6ImgStyle }}
               />
             </ThreeInhalers>
             <BucketBorder />
