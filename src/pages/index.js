@@ -82,15 +82,6 @@ const VideoButton = styled.button`
   padding: 2vw 1.75vw;
 `;
 
-const TorsoImgsWrapper = styled.div`
-  sup {
-    color: #706f6f;
-  }
-  span {
-    color: #007fc8;
-  }
-`;
-
 const BubblesAndBanner = styled.div`
   position: relative;
   display: flex;
@@ -122,42 +113,56 @@ const BetterControlTextAndTorsoImgWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const Torso1Wrapper = styled.div``;
-const Torso2Wrapper = styled.div``;
+const TorsoWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  sup {
+    color: #706f6f;
+  }
+  span {
+    color: #007fc8;
+  }
+`;
+
+const TorsoTextWrapper = styled.div`
+  width: 48%;
+`;
+
+const TorsoImgWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
 const InhalingRedImgWrapper = styled.div`
-  width: 85%;
-  margin: 0 auto 1.5em;
+  width: 38.4%;
+  margin-top: 1.1vw;
+`;
+const InhalingWithLogoImgWrapper = styled.div`
+  width: 48%;
 `;
 const InhalerImgCaption = styled.p`
-  margin-top: 0.25em;
-  width: 65%;
+  margin-top: 0.2em;
 `;
-const imgSharedStyle = {
-  marginTop: '1.5em'
-};
-const inhalingRedImgStyle = {
-  ...imgSharedStyle
-};
-const inhalingWithLogoImgStyle = {
-  ...imgSharedStyle
-};
-const EasyInstructionsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-const EasyInstructionsImgAndTextWrapper = styled.div``;
-const easyInstructions1ImgStyle = {
-  width: '50%'
-};
-const easyInstructions2ImgStyle = {
-  width: '50%'
-};
-const easyInstructions3ImgStyle = {
-  width: '50%'
-};
-const easyInstructions4ImgStyle = {
-  width: '50%'
-};
+
+const inhalingRedImgStyle = {};
+const inhalingWithLogoImgStyle = {};
+// const EasyInstructionsWrapper = styled.div`
+//   display: flex;
+//   flex-direction: column;
+// `;
+// const EasyInstructionsImgAndTextWrapper = styled.div``;
+// const easyInstructions1ImgStyle = {
+//   width: '50%'
+// };
+// const easyInstructions2ImgStyle = {
+//   width: '50%'
+// };
+// const easyInstructions3ImgStyle = {
+//   width: '50%'
+// };
+// const easyInstructions4ImgStyle = {
+//   width: '50%'
+// };
 
 const bubblesImgStyle = {};
 const macbookImgStyle = {};
@@ -196,8 +201,8 @@ const IndexPage = ({ data }) => {
             People who use a valved holding chamber with their inhaler have
             better control.<sup>1</sup>
           </H2>
-          <TorsoImgsWrapper>
-            <Torso1Wrapper>
+          <TorsoWrapper>
+            <TorsoTextWrapper>
               <H3>
                 Did you <span>know?</span>
               </H3>
@@ -213,15 +218,8 @@ const IndexPage = ({ data }) => {
                 This is why doctors recommend using an{' '}
                 <span>AeroChamber Plus Flow-Vu</span> Chamber with your inhaler.
               </p>
-              <InhalingRedImgWrapper>
-                <Img
-                  sizes={inhalingRed.sizes}
-                  style={{ ...inhalingRedImgStyle }}
-                />
-                <InhalerImgCaption>Inhaler alone</InhalerImgCaption>
-              </InhalingRedImgWrapper>
-            </Torso1Wrapper>
-            <Torso2Wrapper>
+            </TorsoTextWrapper>
+            <TorsoTextWrapper>
               <H3>
                 <span>Ensure</span> your inhaler <span>medicine</span> is
                 delivered where it is needed
@@ -235,22 +233,28 @@ const IndexPage = ({ data }) => {
                 Using an <span>AeroChamber Plus Flow-Vu Chamber</span> with your
                 inhaler helps ensure the medicine is delivered to your lungs.
               </p>
-              <div>
-                <Img
-                  sizes={inhalingWithLogo.sizes}
-                  style={{ ...inhalingWithLogoImgStyle }}
-                />
-                <InhalerImgCaption style={{ marginLeft: '7%' }}>
-                  Inhaler with{' '}
-                  <span style={{ color: '#007fc8', fontWeight: 'bold' }}>
-                    AeroChamber Plus{' '}
-                  </span>Brand of Chamber
-                </InhalerImgCaption>
-              </div>
-            </Torso2Wrapper>
-          </TorsoImgsWrapper>
+            </TorsoTextWrapper>
+          </TorsoWrapper>
+          <TorsoImgWrapper>
+            <InhalingRedImgWrapper>
+              <Img sizes={inhalingRed.sizes} style={{ ...inhalingRedImgStyle }} />
+              <InhalerImgCaption>Inhaler alone</InhalerImgCaption>
+            </InhalingRedImgWrapper>
+            <InhalingWithLogoImgWrapper>
+              <Img
+                sizes={inhalingWithLogo.sizes}
+                style={{ ...inhalingWithLogoImgStyle }}
+              />
+              <InhalerImgCaption style={{ marginLeft: '7%' }}>
+                Inhaler with{' '}
+                <span style={{ color: '#007fc8', fontWeight: 'bold' }}>
+                  AeroChamber Plus{' '}
+                </span>Brand of Chamber
+              </InhalerImgCaption>
+            </InhalingWithLogoImgWrapper>
+          </TorsoImgWrapper>
         </BetterControlTextAndTorsoImgWrapper>
-        <EasyInstructionsWrapper>
+        {/* <EasyInstructionsWrapper>
           <H3 style={{ fontSize: '5.1vw' }}>
             <span style={{ fontSize: '5.1vw' }}>Easy</span> as 1-2-3
           </H3>
@@ -297,7 +301,7 @@ const IndexPage = ({ data }) => {
               provide visual assurance of correct use and medication delivery.
             </p>
           </EasyInstructionsImgAndTextWrapper>
-        </EasyInstructionsWrapper>
+        </EasyInstructionsWrapper> */}
       </InhalerTipsWrapper>
       <BubblesAndBanner>
         <Img sizes={bubblesBG.sizes} style={{ ...bubblesImgStyle }} />
