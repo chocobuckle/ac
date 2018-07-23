@@ -127,18 +127,17 @@ const TorsoWrapper = styled.div`
 const TorsoTextWrapper = styled.div`
   width: 48%;
 `;
-
 const TorsoImgWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
 `;
 const InhalingRedImgWrapper = styled.div`
-  width: 38.4%;
-  margin-top: 1.1vw;
+  width: 41.1%;
+  margin-top: 1.3vw;
 `;
 const InhalingWithLogoImgWrapper = styled.div`
-  width: 48%;
+  width: 51.5%;
 `;
 const InhalerImgCaption = styled.p`
   margin-top: 0.2em;
