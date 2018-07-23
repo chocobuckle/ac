@@ -40,6 +40,7 @@ const IndexWrapper = styled.div`
     font-weight: 200;
     margin-top: 0.5em;
     position: relative;
+    font-size: 4vw;
   }
 `;
 
@@ -134,23 +135,34 @@ const InhalerImgCaption = styled.p`
 `;
 const inhalingRedImgStyle = {};
 const inhalingWithLogoImgStyle = {};
-// const EasyInstructionsWrapper = styled.div`
-//   display: flex;
-//   flex-direction: column;
-// `;
-// const EasyInstructionsImgAndTextWrapper = styled.div``;
-// const easyInstructions1ImgStyle = {
-//   width: '50%'
-// };
-// const easyInstructions2ImgStyle = {
-//   width: '50%'
-// };
-// const easyInstructions3ImgStyle = {
-//   width: '50%'
-// };
-// const flowVuLogoImgStyle = {
-//   width: '50%'
-// };
+
+const EasyInstructionsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const EasyInstructionsImgAndTextWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+const easyInstructions1ImgStyle = {
+  marginLeft: '4vw',
+  marginRight: '2vw',
+  maxWidth: '117px',
+  width: '22vw'
+};
+const easyInstructions2ImgStyle = {
+  maxWidth: '178px',
+  width: '32.5vw'
+};
+const easyInstructions3ImgStyle = {
+  marginRight: '2.5vw',
+  marginTop: '2vw',
+  width: '40vw'
+};
+const flowVuLogoImgStyle = {
+  width: '26vw'
+};
 
 const bubblesImgStyle = {};
 const whiteBannerChildImgStyle = {
@@ -231,6 +243,16 @@ const AdultOrChild = H3.extend`
   text-align: center;
   margin-top: 0.5em;
 `;
+const Footnotes = styled.div`
+  margin-top: 2vw;
+  text-align: right;
+`;
+const Footnote = styled.p`
+  span {
+    color: #000;
+    font-weight: bold;
+  }
+`;
 
 const IndexPage = ({ data }) => {
   const {
@@ -240,7 +262,7 @@ const IndexPage = ({ data }) => {
     easyInstructions1,
     easyInstructions2,
     easyInstructions3,
-    easyInstructions4,
+    flowVuLogo,
     inhaler1,
     inhaler2,
     inhaler3,
@@ -324,54 +346,57 @@ const IndexPage = ({ data }) => {
             </InhalingWithLogoImgWrapper>
           </TorsoImgWrapper>
         </BetterControlTextAndTorsoImgWrapper>
-        {/* <EasyInstructionsWrapper>
-          <H3 style={{ fontSize: '5.1vw' }}>
-            <span style={{ fontSize: '5.1vw' }}>Easy</span> as 1-2-3
+        <EasyInstructionsWrapper>
+          <H3 style={{ fontSize: '5.7vw', margin: '0.5em auto' }}>
+            <span style={{ fontSize: '5.7vw' }}>Easy</span> as 1-2-3
           </H3>
           <EasyInstructionsImgAndTextWrapper>
             <Img
               sizes={easyInstructions1.sizes}
               style={{ ...easyInstructions1ImgStyle }}
             />
-            <p>Shake inhaler and remove cap.</p>
+            <p style={{ width: '30vw' }}>Shake inhaler and remove cap.</p>
           </EasyInstructionsImgAndTextWrapper>
-          <EasyInstructionsImgAndTextWrapper>
+          <EasyInstructionsImgAndTextWrapper
+            style={{
+              position: 'relative',
+              marginTop: '-0.8em'
+            }}>
+            <p style={{ width: '25vw' }}>Insert inhaler into chamber.</p>
             <Img
               sizes={easyInstructions2.sizes}
               style={{ ...easyInstructions2ImgStyle }}
             />
-            <p>Insert inhaler into chamber.</p>
           </EasyInstructionsImgAndTextWrapper>
-          <EasyInstructionsImgAndTextWrapper>
+          <EasyInstructionsImgAndTextWrapper style={{ alignItems: 'flex-start', marginTop: '0.65em' }}>
             <Img
               sizes={easyInstructions3.sizes}
               style={{ ...easyInstructions3ImgStyle }}
             />
-            <p>
+            <p style={{ width: '30vw' }}>
               Press inhaler and inhale slowly and deeply, holding your breath
               for 5-10 seconds.
               <span
                 style={{
                   display: 'block',
                   fontStyle: 'italic',
-                  fontWeight: '600'
+                  fontWeight: '600',
+                  margin: '0.125em auto'
                 }}>
                 OR
               </span>Press inhaler and breathe in and out through the chamber
               for 2-3 breaths.
             </p>
           </EasyInstructionsImgAndTextWrapper>
-          <EasyInstructionsImgAndTextWrapper>
-            <Img
-              sizes={flowVuLogo.sizes}
-              style={{ ...flowVuLogoImgStyle }}
-            />
-            <p>
-              The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation Indicator moves as you inhale and helps
-              provide visual assurance of correct use and medication delivery.
+          <EasyInstructionsImgAndTextWrapper style={{ alignItems: 'flex-start', marginTop: '1.75em' }}>
+            <p style={{ width: '42vw' }}>
+              The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation
+              Indicator moves as you inhale and helps provide visual assurance
+              of correct use and medication delivery.
             </p>
+            <Img sizes={flowVuLogo.sizes} style={{ ...flowVuLogoImgStyle }} />
           </EasyInstructionsImgAndTextWrapper>
-        </EasyInstructionsWrapper> */}
+        </EasyInstructionsWrapper>
       </InhalerTipsWrapper>
       <BubblesAndBanner>
         <Img sizes={bubblesBG.sizes} style={{ ...bubblesImgStyle }} />
@@ -404,15 +429,21 @@ const IndexPage = ({ data }) => {
             <ThreeInhalers>
               <figure>
                 <Img sizes={inhaler1.sizes} style={{ ...inhaler1ImgStyle }} />
-                <figcaption style={{ right: '2.5vw' }}>Small<br />Mask</figcaption>
+                <figcaption style={{ right: '2.5vw' }}>
+                  Small<br />Mask
+                </figcaption>
               </figure>
               <figure>
                 <Img sizes={inhaler2.sizes} style={{ ...inhaler2ImgStyle }} />
-                <figcaption style={{ right: '1vw' }}>Medium<br />Mask</figcaption>
+                <figcaption style={{ right: '1vw' }}>
+                  Medium<br />Mask
+                </figcaption>
               </figure>
               <figure>
                 <Img sizes={inhaler3.sizes} style={{ ...inhaler3ImgStyle }} />
-                <figcaption style={{ right: '2.2vw' }}>Youth<br />Mouthpiece</figcaption>
+                <figcaption style={{ right: '2.2vw' }}>
+                  Youth<br />Mouthpiece
+                </figcaption>
               </figure>
             </ThreeInhalers>
             <BucketBorder />
@@ -426,15 +457,26 @@ const IndexPage = ({ data }) => {
               </figure>
               <figure>
                 <Img sizes={inhaler5.sizes} style={{ ...inhaler5ImgStyle }} />
-                <figcaption style={{ left: '5.7vw' }}>Small<br />Mask</figcaption>
+                <figcaption style={{ left: '5.7vw' }}>
+                  Small<br />Mask
+                </figcaption>
               </figure>
               <figure>
                 <Img sizes={inhaler6.sizes} style={{ ...inhaler6ImgStyle }} />
-                <figcaption style={{ left: '3.2vw' }}>Large<br />Mask</figcaption>
+                <figcaption style={{ left: '3.2vw' }}>
+                  Large<br />Mask
+                </figcaption>
               </figure>
             </ThreeInhalers>
             <BucketBorder />
             <AdultOrChild>ADULT</AdultOrChild>
+            <Footnotes>
+              <Footnote>Children should transition to a mouthpiece around the age of 5</Footnote>
+              <Footnote><span>1.</span> McIvor et al. Optimizing the Delivery of Inhaled Medication for Respiratory Patients: The Role of Valved Holding Chambers.</Footnote>
+              <Footnote><span>2.</span></Footnote>
+              <Footnote><span>3.</span></Footnote>
+              <Footnote><span>4.</span></Footnote>
+            </Footnotes>
           </InhalerAndBucketBorderWrapper>
         </SixInhalerImgsWrapper>
       </SixInhalers>
