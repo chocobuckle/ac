@@ -15,7 +15,8 @@ const IndexWrapper = styled.div`
   sup,
   h1,
   h2,
-  h3 {
+  h3,
+  figcaption {
     font-family: Myriad Pro, sans-serif;
   }
 
@@ -32,6 +33,14 @@ const IndexWrapper = styled.div`
 
   span {
     color: #007fc8;
+  }
+
+  figcaption {
+    text-align: center;
+    font-weight: 200;
+    margin-top: 0.5em;
+    position: relative;
+    line-height: 1.175em;
   }
 `;
 
@@ -188,15 +197,43 @@ const ThreeInhalers = styled.div`
   margin: 0 auto;
   width: 90%;
 `;
+
 const inhaler1ImgStyle = { width: '20vw', maxWidth: '138px' };
-const inhaler2ImgStyle = { width: '24.5vw', maxWidth: '173px'};
+const inhaler2ImgStyle = { width: '24.5vw', maxWidth: '173px' };
 const inhaler3ImgStyle = { width: '16.5vw', maxWidth: '117px' };
-const inhaler4ImgStyle = { width: '16.5vw', maxWidth: '120px', position: 'relative', left: '1.5vw' };
-const inhaler5ImgStyle = { width: '23vw', maxWidth: '178px', position: 'relative', left: '8vw'};
-const inhaler6ImgStyle = { width: '28.5vw', maxWidth: '222px', position: 'relative', left: '5.5vw' };
-
-
-const BucketBorder = styled.div``;
+const inhaler4ImgStyle = {
+  width: '16.5vw',
+  maxWidth: '120px',
+  position: 'relative',
+  left: '1.5vw'
+};
+const inhaler5ImgStyle = {
+  width: '23vw',
+  maxWidth: '178px',
+  position: 'relative',
+  left: '8vw',
+  marginBottom: '-1.45em'
+};
+const inhaler6ImgStyle = {
+  width: '28.5vw',
+  maxWidth: '222px',
+  position: 'relative',
+  left: '5.5vw',
+  marginBottom: '-1.45em'
+};
+const BucketBorder = styled.div`
+  border: 0.5vw solid #007fc8;
+  width: 100%;
+  height: 7vw;
+  border-top: none;
+  margin-top: -2.5em;
+`;
+const AdultOrChild = H3.extend`
+  font-size: 4.4vw;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.5em;
+`;
 
 const IndexPage = ({ data }) => {
   const {
@@ -368,37 +405,39 @@ const IndexPage = ({ data }) => {
         <SixInhalerImgsWrapper>
           <InhalerAndBucketBorderWrapper>
             <ThreeInhalers>
-              <Img
-                sizes={inhaler1.sizes}
-                style={{ ...inhaler1ImgStyle }}
-              />
-              <Img
-                sizes={inhaler2.sizes}
-                style={{ ...inhaler2ImgStyle }}
-              />
-              <Img
-                sizes={inhaler3.sizes}
-                style={{ ...inhaler3ImgStyle }}
-              />
+              <figure>
+                <Img sizes={inhaler1.sizes} style={{ ...inhaler1ImgStyle }} />
+                <figcaption style={{ right: '2.5vw' }}>Small<br />Mask</figcaption>
+              </figure>
+              <figure>
+                <Img sizes={inhaler2.sizes} style={{ ...inhaler2ImgStyle }} />
+                <figcaption style={{ right: '1vw' }}>Medium<br />Mask</figcaption>
+              </figure>
+              <figure>
+                <Img sizes={inhaler3.sizes} style={{ ...inhaler3ImgStyle }} />
+                <figcaption style={{ right: '1.6vw' }}>Youth<br />Mouthpiece</figcaption>
+              </figure>
             </ThreeInhalers>
             <BucketBorder />
+            <AdultOrChild>CHILD</AdultOrChild>
           </InhalerAndBucketBorderWrapper>
           <InhalerAndBucketBorderWrapper>
             <ThreeInhalers>
-              <Img
-                sizes={inhaler4.sizes}
-                style={{ ...inhaler4ImgStyle }}
-              />
-              <Img
-                sizes={inhaler5.sizes}
-                style={{ ...inhaler5ImgStyle }}
-              />
-              <Img
-                sizes={inhaler6.sizes}
-                style={{ ...inhaler6ImgStyle }}
-              />
+              <figure>
+                <Img sizes={inhaler4.sizes} style={{ ...inhaler4ImgStyle }} />
+                <figcaption>Mouthpiece</figcaption>
+              </figure>
+              <figure>
+                <Img sizes={inhaler5.sizes} style={{ ...inhaler5ImgStyle }} />
+                <figcaption style={{ left: '5.7vw', top: '4.55vw' }}>Small<br />Mask</figcaption>
+              </figure>
+              <figure>
+                <Img sizes={inhaler6.sizes} style={{ ...inhaler6ImgStyle }} />
+                <figcaption style={{ left: '3.2vw', top: '4.55vw' }}>Large<br />Mask</figcaption>
+              </figure>
             </ThreeInhalers>
-            <BucketBorder />
+            <BucketBorder style={{ marginTop: '-1.4em' }} />
+            <AdultOrChild>ADULT</AdultOrChild>
           </InhalerAndBucketBorderWrapper>
         </SixInhalerImgsWrapper>
       </SixInhalers>
