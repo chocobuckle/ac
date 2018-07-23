@@ -166,10 +166,6 @@ const flowVuLogoImgStyle = {
 };
 
 const bubblesImgStyle = {};
-const whiteBannerChildImgStyle = {
-  maxWidth: '135px',
-  width: '10vw'
-};
 const BubblesAndBanner = styled.div`
   display: flex;
   flex-direction: column;
@@ -188,8 +184,12 @@ const WhiteBannerChildImgFlexWrapper = styled.div`
   justify-content: space-evenly;
   margin: 0 auto;
   padding: 0.5em 0;
-  width: 60vw;
+  width: 80vw;
 `;
+const whiteBannerChildImgStyle = {
+  maxWidth: '135px',
+  width: '20vw'
+};
 
 const SixInhalers = ContentWrapper.extend``;
 const SixInhalerImgsWrapper = styled.div`
@@ -348,8 +348,16 @@ const IndexPage = ({ data }) => {
           </TorsoImgWrapper>
         </BetterControlTextAndTorsoImgWrapper>
         <EasyInstructionsWrapper>
-          <H2 style={{ color: '#007fc8', fontWeight: '400', margin: '0.5em auto' }}>
-            <span style={{ fontWeight: 'bold', fontStyle: 'italic' }}>Easy</span> as 1-2-3
+          <H2
+            style={{
+              color: '#007fc8',
+              fontWeight: '400',
+              margin: '0.5em auto'
+            }}>
+            <span style={{ fontWeight: 'bold', fontStyle: 'italic' }}>
+              Easy
+            </span>{' '}
+            as 1-2-3
           </H2>
           <EasyInstructionsImgAndTextWrapper>
             <Img
@@ -369,12 +377,13 @@ const IndexPage = ({ data }) => {
               style={{ ...easyInstructions2ImgStyle }}
             />
           </EasyInstructionsImgAndTextWrapper>
-          <EasyInstructionsImgAndTextWrapper style={{ alignItems: 'center', marginTop: '-0.2em' }}>
+          <EasyInstructionsImgAndTextWrapper
+            style={{ alignItems: 'center', marginTop: '-0.2em' }}>
             <Img
               sizes={easyInstructions3.sizes}
               style={{ ...easyInstructions3ImgStyle }}
             />
-            <p style={{ }}>
+            <p style={{}}>
               Press inhaler and inhale slowly and deeply, holding your breath
               for 5-10 seconds.
               <span
@@ -389,8 +398,9 @@ const IndexPage = ({ data }) => {
               for 2-3 breaths.
             </p>
           </EasyInstructionsImgAndTextWrapper>
-          <EasyInstructionsImgAndTextWrapper style={{ alignItems: 'flex-start', marginTop: '2em' }}>
-            <p style={{ }}>
+          <EasyInstructionsImgAndTextWrapper
+            style={{ alignItems: 'flex-start', marginTop: '2em' }}>
+            <p style={{}}>
               The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation
               Indicator moves as you inhale and helps provide visual assurance
               of correct use and medication delivery.
@@ -405,7 +415,11 @@ const IndexPage = ({ data }) => {
           <WhiteBannerChildImgFlexWrapper>
             <Img
               sizes={dishwasherSafe.sizes}
-              style={{ ...whiteBannerChildImgStyle }}
+              style={{
+                ...whiteBannerChildImgStyle,
+                postion: 'relative',
+                top: '1vw'
+              }}
             />
             <Img
               sizes={replace12Months.sizes}
@@ -472,11 +486,23 @@ const IndexPage = ({ data }) => {
             <BucketBorder />
             <AdultOrChild>ADULT</AdultOrChild>
             <Footnotes>
-              <Footnote>Children should transition to a mouthpiece around the age of 5</Footnote>
-              <Footnote><span>1.</span> McIvor et al. Optimizing the Delivery of Inhaled Medication for Respiratory Patients: The Role of Valved Holding Chambers.</Footnote>
-              <Footnote><span>2.</span></Footnote>
-              <Footnote><span>3.</span></Footnote>
-              <Footnote><span>4.</span></Footnote>
+              <Footnote>
+                Children should transition to a mouthpiece around the age of 5
+              </Footnote>
+              <Footnote>
+                <span>1.</span> McIvor et al. Optimizing the Delivery of Inhaled
+                Medication for Respiratory Patients: The Role of Valved Holding
+                Chambers.
+              </Footnote>
+              <Footnote>
+                <span>2.</span>
+              </Footnote>
+              <Footnote>
+                <span>3.</span>
+              </Footnote>
+              <Footnote>
+                <span>4.</span>
+              </Footnote>
             </Footnotes>
           </InhalerAndBucketBorderWrapper>
         </SixInhalerImgsWrapper>
