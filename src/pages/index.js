@@ -35,6 +35,13 @@ const IndexWrapper = styled.div`
   }
 `;
 
+const H1 = styled.h1`
+  font-size: 6vw;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 1vw;
+`;
+
 const H2 = styled.h2`
   font-size: 5.3vw;
   margin-bottom: 3vw;
@@ -63,12 +70,11 @@ const Macbook = ContentWrapper.extend`
     rgba(255, 255, 255, 1) 49.44%
   );
 `;
-
+const macbookImgStyle = {};
 const VideoButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
-
 const VideoButton = styled.button`
   background: linear-gradient(
     90deg,
@@ -80,29 +86,6 @@ const VideoButton = styled.button`
   font-size: 4vw;
   margin: 0 1.5vw;
   padding: 2vw 1.75vw;
-`;
-
-const BubblesAndBanner = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-const WhiteBanner = styled.div`
-  background: rgb(255, 255, 255, 0.5);
-  left: 0;
-  position: absolute;
-  right: 0;
-`;
-
-const WhiteBannerChildImgFlexWrapper = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  padding: 0.5em 0;
-  width: 60vw;
 `;
 
 const InhalerTipsWrapper = ContentWrapper.extend`
@@ -123,7 +106,6 @@ const TorsoWrapper = styled.div`
     color: #007fc8;
   }
 `;
-
 const TorsoTextWrapper = styled.div`
   width: 48%;
 `;
@@ -142,7 +124,6 @@ const InhalingWithLogoImgWrapper = styled.div`
 const InhalerImgCaption = styled.p`
   margin-top: 0.2em;
 `;
-
 const inhalingRedImgStyle = {};
 const inhalingWithLogoImgStyle = {};
 // const EasyInstructionsWrapper = styled.div`
@@ -159,16 +140,45 @@ const inhalingWithLogoImgStyle = {};
 // const easyInstructions3ImgStyle = {
 //   width: '50%'
 // };
-// const easyInstructions4ImgStyle = {
+// const flowVuLogoImgStyle = {
 //   width: '50%'
 // };
 
 const bubblesImgStyle = {};
-const macbookImgStyle = {};
 const whiteBannerChildImgStyle = {
   maxWidth: '135px',
   width: '10vw'
 };
+const BubblesAndBanner = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+const WhiteBanner = styled.div`
+  background: rgb(255, 255, 255, 0.5);
+  left: 0;
+  position: absolute;
+  right: 0;
+`;
+const WhiteBannerChildImgFlexWrapper = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  width: 60vw;
+`;
+
+const SixInhalers = ContentWrapper.extend``;
+const SixInhalerImgsWrapper = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+`;
+const InhalerAndBucketBorderWrapper = styled.div``;
+const ThreeInhalers = styled.div``;
+const inhalerImgStyle = {};
+const BucketBorder = styled.div``;
 
 const IndexPage = ({ data }) => {
   const {
@@ -179,6 +189,12 @@ const IndexPage = ({ data }) => {
     easyInstructions2,
     easyInstructions3,
     easyInstructions4,
+    inhaler1,
+    inhaler2,
+    inhaler3,
+    inhaler4,
+    inhaler5,
+    inhaler6,
     bubblesBG,
     dishwasherSafe,
     bpaFree,
@@ -236,7 +252,10 @@ const IndexPage = ({ data }) => {
           </TorsoWrapper>
           <TorsoImgWrapper>
             <InhalingRedImgWrapper>
-              <Img sizes={inhalingRed.sizes} style={{ ...inhalingRedImgStyle }} />
+              <Img
+                sizes={inhalingRed.sizes}
+                style={{ ...inhalingRedImgStyle }}
+              />
               <InhalerImgCaption>Inhaler alone</InhalerImgCaption>
             </InhalingRedImgWrapper>
             <InhalingWithLogoImgWrapper>
@@ -292,8 +311,8 @@ const IndexPage = ({ data }) => {
           </EasyInstructionsImgAndTextWrapper>
           <EasyInstructionsImgAndTextWrapper>
             <Img
-              sizes={easyInstructions4.sizes}
-              style={{ ...easyInstructions4ImgStyle }}
+              sizes={flowVuLogo.sizes}
+              style={{ ...flowVuLogoImgStyle }}
             />
             <p>
               The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation Indicator moves as you inhale and helps
@@ -321,6 +340,50 @@ const IndexPage = ({ data }) => {
           </WhiteBannerChildImgFlexWrapper>
         </WhiteBanner>
       </BubblesAndBanner>
+      <SixInhalers>
+        <H1 style={{ color: '#007FC8', marginBottom: 0 }}>
+          AeroChamber Plus Flow-Vu
+        </H1>
+        <H2 style={{ color: '#858585', fontWeight: 400 }}>
+          Anti Static Valved Holding Chamber (VHC)
+        </H2>
+        <SixInhalerImgsWrapper>
+          <InhalerAndBucketBorderWrapper>
+            <ThreeInhalers>
+              <Img
+                sizes={inhaler1.sizes}
+                style={{ ...inhalerImgStyle }}
+              />
+              <Img
+                sizes={inhaler2.sizes}
+                style={{ ...inhalerImgStyle }}
+              />
+              <Img
+                sizes={inhaler3.sizes}
+                style={{ ...inhalerImgStyle }}
+              />
+            </ThreeInhalers>
+            <BucketBorder />
+          </InhalerAndBucketBorderWrapper>
+          <InhalerAndBucketBorderWrapper>
+            <ThreeInhalers>
+              <Img
+                sizes={inhaler4.sizes}
+                style={{ ...inhalerImgStyle }}
+              />
+              <Img
+                sizes={inhaler5.sizes}
+                style={{ ...inhalerImgStyle }}
+              />
+              <Img
+                sizes={inhaler6.sizes}
+                style={{ ...inhalerImgStyle }}
+              />
+            </ThreeInhalers>
+            <BucketBorder />
+          </InhalerAndBucketBorderWrapper>
+        </SixInhalerImgsWrapper>
+      </SixInhalers>
     </IndexWrapper>
   );
 };
@@ -350,7 +413,7 @@ export const query = graphql`
       }
     }
     easyInstructions1: imageSharp(
-      id: { regex: "/home/home_instructions_1.png/" }
+      id: { regex: "/home/easy_instructions_1.png/" }
     ) {
       sizes(maxWidth: 117) {
         src
@@ -362,7 +425,7 @@ export const query = graphql`
       }
     }
     easyInstructions2: imageSharp(
-      id: { regex: "/home/home_instructions_2.png/" }
+      id: { regex: "/home/easy_instructions_2.png/" }
     ) {
       sizes(maxWidth: 178) {
         src
@@ -374,7 +437,7 @@ export const query = graphql`
       }
     }
     easyInstructions3: imageSharp(
-      id: { regex: "/home/home_instructions_3.png/" }
+      id: { regex: "/home/easy_instructions_3.png/" }
     ) {
       sizes(maxWidth: 206) {
         src
@@ -385,7 +448,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    easyInstructions4: imageSharp(id: { regex: "/home/flow_vu_large.png/" }) {
+    flowVuLogo: imageSharp(id: { regex: "/home/flow_vu_large.png/" }) {
       sizes(maxWidth: 178) {
         src
         srcSet
@@ -437,6 +500,66 @@ export const query = graphql`
     }
     bpaFree: imageSharp(id: { regex: "/home/bpa_free.png/" }) {
       sizes(maxWidth: 135) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    inhaler1: imageSharp(id: { regex: "/home/inhaler1.png/" }) {
+      sizes(maxWidth: 138) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    inhaler2: imageSharp(id: { regex: "/home/inhaler2.png/" }) {
+      sizes(maxWidth: 173) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    inhaler3: imageSharp(id: { regex: "/home/inhaler3.png/" }) {
+      sizes(maxWidth: 117) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    inhaler4: imageSharp(id: { regex: "/home/inhaler4.png/" }) {
+      sizes(maxWidth: 120) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    inhaler5: imageSharp(id: { regex: "/home/inhaler5.png/" }) {
+      sizes(maxWidth: 178) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    inhaler6: imageSharp(id: { regex: "/home/inhaler6.png/" }) {
+      sizes(maxWidth: 222) {
         src
         srcSet
         srcWebp
