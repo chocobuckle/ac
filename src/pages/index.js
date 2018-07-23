@@ -97,7 +97,7 @@ const VideoButton = styled.button`
   padding: 2vw 1.75vw;
 `;
 
-const InhalerTipsWrapper = ContentWrapper.extend`
+const InhalerTips = ContentWrapper.extend`
   display: flex;
   flex-direction: column;
 `;
@@ -284,7 +284,7 @@ const IndexPage = ({ data }) => {
           <VideoButton>VIDEO 3</VideoButton>
         </VideoButtonWrapper>
       </Macbook>
-      <InhalerTipsWrapper>
+      <InhalerTips>
         <BetterControlTextAndTorsoImgWrapper>
           <H2>
             People who use a valved holding chamber with their inhaler have
@@ -397,7 +397,7 @@ const IndexPage = ({ data }) => {
             <Img sizes={flowVuLogo.sizes} style={{ ...flowVuLogoImgStyle }} />
           </EasyInstructionsImgAndTextWrapper>
         </EasyInstructionsWrapper>
-      </InhalerTipsWrapper>
+      </InhalerTips>
       <BubblesAndBanner>
         <Img sizes={bubblesBG.sizes} style={{ ...bubblesImgStyle }} />
         <WhiteBanner>
