@@ -40,7 +40,6 @@ const IndexWrapper = styled.div`
     font-weight: 200;
     margin-top: 0.5em;
     position: relative;
-    line-height: 1.175em;
   }
 `;
 
@@ -193,7 +192,7 @@ const InhalerAndBucketBorderWrapper = styled.div`
 const ThreeInhalers = styled.div`
   align-items: flex-end;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
   width: 90%;
 `;
@@ -211,15 +210,13 @@ const inhaler5ImgStyle = {
   width: '23vw',
   maxWidth: '178px',
   position: 'relative',
-  left: '8vw',
-  marginBottom: '-1.45em'
+  left: '8vw'
 };
 const inhaler6ImgStyle = {
   width: '28.5vw',
   maxWidth: '222px',
   position: 'relative',
-  left: '5.5vw',
-  marginBottom: '-1.45em'
+  left: '5.5vw'
 };
 const BucketBorder = styled.div`
   border: 0.5vw solid #007fc8;
@@ -415,7 +412,7 @@ const IndexPage = ({ data }) => {
               </figure>
               <figure>
                 <Img sizes={inhaler3.sizes} style={{ ...inhaler3ImgStyle }} />
-                <figcaption style={{ right: '1.6vw' }}>Youth<br />Mouthpiece</figcaption>
+                <figcaption style={{ right: '2.2vw' }}>Youth<br />Mouthpiece</figcaption>
               </figure>
             </ThreeInhalers>
             <BucketBorder />
@@ -429,14 +426,14 @@ const IndexPage = ({ data }) => {
               </figure>
               <figure>
                 <Img sizes={inhaler5.sizes} style={{ ...inhaler5ImgStyle }} />
-                <figcaption style={{ left: '5.7vw', top: '4.55vw' }}>Small<br />Mask</figcaption>
+                <figcaption style={{ left: '5.7vw' }}>Small<br />Mask</figcaption>
               </figure>
               <figure>
                 <Img sizes={inhaler6.sizes} style={{ ...inhaler6ImgStyle }} />
-                <figcaption style={{ left: '3.2vw', top: '4.55vw' }}>Large<br />Mask</figcaption>
+                <figcaption style={{ left: '3.2vw' }}>Large<br />Mask</figcaption>
               </figure>
             </ThreeInhalers>
-            <BucketBorder style={{ marginTop: '-1.4em' }} />
+            <BucketBorder />
             <AdultOrChild>ADULT</AdultOrChild>
           </InhalerAndBucketBorderWrapper>
         </SixInhalerImgsWrapper>
