@@ -14,7 +14,8 @@ const IndexWrapper = styled.div`
   b,
   sup,
   h1,
-  h2 {
+  h2,
+  h3 {
     font-family: Myriad Pro, sans-serif;
   }
 
@@ -36,9 +37,22 @@ const IndexWrapper = styled.div`
 
 const H2 = styled.h2`
   font-size: 5.3vw;
-  margin-bottom: 2vw;
+  margin-bottom: 3vw;
   span {
     font-size: 5.3vw;
+  }
+`;
+
+const H3 = styled.h3`
+  font-weight: 200;
+  font-size: 4.7vw;
+  margin-bottom: 1.5vw;
+  color: #007fc8;
+  span {
+    color: #004899;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 4.7vw;
   }
 `;
 
@@ -69,7 +83,14 @@ const VideoButton = styled.button`
   padding: 2vw 1.75vw;
 `;
 
-const TorsoImgsWrapper = styled.div``;
+const TorsoImgsWrapper = styled.div`
+  sup {
+    color: #706f6f;
+  }
+  span {
+    color: #007fc8;
+  }
+`;
 
 const BubblesAndBanner = styled.div`
   position: relative;
@@ -94,7 +115,17 @@ const WhiteBannerChildImgFlexWrapper = styled.div`
   width: 60vw;
 `;
 
-const InhalerTipsWrapper = ContentWrapper.extend``;
+const InhalerTipsWrapper = ContentWrapper.extend`
+  display: flex;
+  flex-direction: column;
+`;
+const BetterControlTextAndTorsoImgWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const Torso1Wrapper = styled.div``;
+const Torso2Wrapper = styled.div``;
+const HomeInstructionsWrapper = styled.div``;
 
 const bubblesImgStyle = {};
 const macbookImgStyle = {};
@@ -102,8 +133,24 @@ const whiteBannerChildImgStyle = {
   maxWidth: '135px',
   width: '10vw'
 };
-const inhalingRedImgStyle = {};
-const inhalingWithLogoImgStyle = {};
+const InhalingRedImgWrapper = styled.div`
+  width: 85%;
+  margin: 0 auto 1.5em;
+`;
+const InhalerImgCaption = styled.p`
+  margin-top: 0.25em;
+  width: 65%;
+`;
+const imgSharedStyle = {
+  marginTop: '1.5em'
+};
+const inhalingRedImgStyle = {
+  ...imgSharedStyle
+};
+const inhalingWithLogoImgStyle = {
+  ...imgSharedStyle
+};
+
 const homeInstructions1ImgStyle = {};
 const homeInstructions2ImgStyle = {};
 const homeInstructions3ImgStyle = {};
@@ -132,29 +179,77 @@ const IndexPage = ({ data }) => {
         </VideoButtonWrapper>
       </Macbook>
       <InhalerTipsWrapper>
-        <H2>
-          People who use a valved holding chamber with their inhaler have better
-          control.<sup>1</sup>
-        </H2>
-        <TorsoImgsWrapper>
-          <Img sizes={inhalingRed.sizes} style={{ ...inhalingRedImgStyle }} />
+        <BetterControlTextAndTorsoImgWrapper>
+          <H2>
+            People who use a valved holding chamber with their inhaler have
+            better control.<sup>1</sup>
+          </H2>
+          <TorsoImgsWrapper>
+            <Torso1Wrapper>
+              <H3>
+                Did you <span>know?</span>
+              </H3>
+              <p>
+                Guidelines recommend chambers for children and adults.<sup>
+                  2
+                </sup>
+              </p>
+              <p>
+                The majority of adults do not use their inhalers properly.<sup>
+                  3
+                </sup>{' '}
+                This is why doctors recommend using an{' '}
+                <span>
+                  AeroChamber Plus Flow-Vu
+                </span>{' '}
+                Chamber with your inhaler.
+              </p>
+              <InhalingRedImgWrapper>
+                <Img
+                  sizes={inhalingRed.sizes}
+                  style={{ ...inhalingRedImgStyle }}
+                />
+                <InhalerImgCaption>Inhaler alone</InhalerImgCaption>
+              </InhalingRedImgWrapper>
+            </Torso1Wrapper>
+            <Torso2Wrapper>
+              <H3>
+                <span>Ensure</span> your inhaler <span>medicine</span> is
+                delivered where it is needed
+              </H3>
+              <p>
+                Inhalers can be challenging because the medicine comes out very
+                quickly and can end up in your mouth and throat. This can lead
+                to side effects such as sore throat and oral infections.
+              </p>
+              <p>
+                Using an <span>AeroChamber Plus Flow-Vu Chamber</span> with your inhaler
+                helps ensure the medicine is delivered to your lungs.
+              </p>
+              <div>
+                <Img
+                  sizes={inhalingWithLogo.sizes}
+                  style={{ ...inhalingWithLogoImgStyle }}
+                />
+                <InhalerImgCaption style={{ marginLeft: '7%'}}>Inhaler with <span style={{ color: '#007fc8', fontWeight: 'bold' }}>AeroChamber Plus </span>Brand of Chamber</InhalerImgCaption>
+              </div>
+            </Torso2Wrapper>
+          </TorsoImgsWrapper>
+        </BetterControlTextAndTorsoImgWrapper>
+        <HomeInstructionsWrapper>
           <Img
-            sizes={inhalingWithLogo.sizes}
-            style={{ ...inhalingWithLogoImgStyle }}
+            sizes={homeInstructions1.sizes}
+            style={{ ...homeInstructions1ImgStyle }}
           />
-        </TorsoImgsWrapper>
-        {/* <Img
-          sizes={homeInstructions1.sizes}
-          style={{ ...homeInstructions1ImgStyle }}
-        />
-        <Img
-          sizes={homeInstructions2.sizes}
-          style={{ ...homeInstructions2ImgStyle }}
-        />
-        <Img
-          sizes={homeInstructions3.sizes}
-          style={{ ...homeInstructions3ImgStyle }}
-        /> */}
+          <Img
+            sizes={homeInstructions2.sizes}
+            style={{ ...homeInstructions2ImgStyle }}
+          />
+          <Img
+            sizes={homeInstructions3.sizes}
+            style={{ ...homeInstructions3ImgStyle }}
+          />
+        </HomeInstructionsWrapper>
       </InhalerTipsWrapper>
       <BubblesAndBanner>
         <Img sizes={bubblesBG.sizes} style={{ ...bubblesImgStyle }} />
