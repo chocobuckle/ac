@@ -49,7 +49,6 @@ const H3 = styled.h3`
   margin-bottom: 1.5vw;
   color: #007fc8;
   span {
-    color: #004899;
     font-weight: bold;
     font-style: italic;
     font-size: 4.7vw;
@@ -125,14 +124,6 @@ const BetterControlTextAndTorsoImgWrapper = styled.div`
 `;
 const Torso1Wrapper = styled.div``;
 const Torso2Wrapper = styled.div``;
-const HomeInstructionsWrapper = styled.div``;
-
-const bubblesImgStyle = {};
-const macbookImgStyle = {};
-const whiteBannerChildImgStyle = {
-  maxWidth: '135px',
-  width: '10vw'
-};
 const InhalingRedImgWrapper = styled.div`
   width: 85%;
   margin: 0 auto 1.5em;
@@ -150,19 +141,40 @@ const inhalingRedImgStyle = {
 const inhalingWithLogoImgStyle = {
   ...imgSharedStyle
 };
+const EasyInstructionsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const EasyInstructionsImgAndTextWrapper = styled.div``;
+const easyInstructions1ImgStyle = {
+  width: '50%'
+};
+const easyInstructions2ImgStyle = {
+  width: '50%'
+};
+const easyInstructions3ImgStyle = {
+  width: '50%'
+};
+const easyInstructions4ImgStyle = {
+  width: '50%'
+};
 
-const homeInstructions1ImgStyle = {};
-const homeInstructions2ImgStyle = {};
-const homeInstructions3ImgStyle = {};
+const bubblesImgStyle = {};
+const macbookImgStyle = {};
+const whiteBannerChildImgStyle = {
+  maxWidth: '135px',
+  width: '10vw'
+};
 
 const IndexPage = ({ data }) => {
   const {
     macbook,
     inhalingRed,
     inhalingWithLogo,
-    homeInstructions1,
-    homeInstructions2,
-    homeInstructions3,
+    easyInstructions1,
+    easyInstructions2,
+    easyInstructions3,
+    easyInstructions4,
     bubblesBG,
     dishwasherSafe,
     bpaFree,
@@ -199,10 +211,7 @@ const IndexPage = ({ data }) => {
                   3
                 </sup>{' '}
                 This is why doctors recommend using an{' '}
-                <span>
-                  AeroChamber Plus Flow-Vu
-                </span>{' '}
-                Chamber with your inhaler.
+                <span>AeroChamber Plus Flow-Vu</span> Chamber with your inhaler.
               </p>
               <InhalingRedImgWrapper>
                 <Img
@@ -223,33 +232,72 @@ const IndexPage = ({ data }) => {
                 to side effects such as sore throat and oral infections.
               </p>
               <p>
-                Using an <span>AeroChamber Plus Flow-Vu Chamber</span> with your inhaler
-                helps ensure the medicine is delivered to your lungs.
+                Using an <span>AeroChamber Plus Flow-Vu Chamber</span> with your
+                inhaler helps ensure the medicine is delivered to your lungs.
               </p>
               <div>
                 <Img
                   sizes={inhalingWithLogo.sizes}
                   style={{ ...inhalingWithLogoImgStyle }}
                 />
-                <InhalerImgCaption style={{ marginLeft: '7%'}}>Inhaler with <span style={{ color: '#007fc8', fontWeight: 'bold' }}>AeroChamber Plus </span>Brand of Chamber</InhalerImgCaption>
+                <InhalerImgCaption style={{ marginLeft: '7%' }}>
+                  Inhaler with{' '}
+                  <span style={{ color: '#007fc8', fontWeight: 'bold' }}>
+                    AeroChamber Plus{' '}
+                  </span>Brand of Chamber
+                </InhalerImgCaption>
               </div>
             </Torso2Wrapper>
           </TorsoImgsWrapper>
         </BetterControlTextAndTorsoImgWrapper>
-        <HomeInstructionsWrapper>
-          <Img
-            sizes={homeInstructions1.sizes}
-            style={{ ...homeInstructions1ImgStyle }}
-          />
-          <Img
-            sizes={homeInstructions2.sizes}
-            style={{ ...homeInstructions2ImgStyle }}
-          />
-          <Img
-            sizes={homeInstructions3.sizes}
-            style={{ ...homeInstructions3ImgStyle }}
-          />
-        </HomeInstructionsWrapper>
+        <EasyInstructionsWrapper>
+          <H3 style={{ fontSize: '5.1vw' }}>
+            <span style={{ fontSize: '5.1vw' }}>Easy</span> as 1-2-3
+          </H3>
+          <EasyInstructionsImgAndTextWrapper>
+            <Img
+              sizes={easyInstructions1.sizes}
+              style={{ ...easyInstructions1ImgStyle }}
+            />
+            <p>Shake inhaler and remove cap.</p>
+          </EasyInstructionsImgAndTextWrapper>
+          <EasyInstructionsImgAndTextWrapper>
+            <Img
+              sizes={easyInstructions2.sizes}
+              style={{ ...easyInstructions2ImgStyle }}
+            />
+            <p>Insert inhaler into chamber.</p>
+          </EasyInstructionsImgAndTextWrapper>
+          <EasyInstructionsImgAndTextWrapper>
+            <Img
+              sizes={easyInstructions3.sizes}
+              style={{ ...easyInstructions3ImgStyle }}
+            />
+            <p>
+              Press inhaler and inhale slowly and deeply, holding your breath
+              for 5-10 seconds.
+              <span
+                style={{
+                  display: 'block',
+                  fontStyle: 'italic',
+                  fontWeight: '600'
+                }}>
+                OR
+              </span>Press inhaler and breathe in and out through the chamber
+              for 2-3 breaths.
+            </p>
+          </EasyInstructionsImgAndTextWrapper>
+          <EasyInstructionsImgAndTextWrapper>
+            <Img
+              sizes={easyInstructions4.sizes}
+              style={{ ...easyInstructions4ImgStyle }}
+            />
+            <p>
+              The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation Indicator moves as you inhale and helps
+              provide visual assurance of correct use and medication delivery.
+            </p>
+          </EasyInstructionsImgAndTextWrapper>
+        </EasyInstructionsWrapper>
       </InhalerTipsWrapper>
       <BubblesAndBanner>
         <Img sizes={bubblesBG.sizes} style={{ ...bubblesImgStyle }} />
@@ -298,7 +346,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    homeInstructions1: imageSharp(
+    easyInstructions1: imageSharp(
       id: { regex: "/home/home_instructions_1.png/" }
     ) {
       sizes(maxWidth: 117) {
@@ -310,7 +358,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    homeInstructions2: imageSharp(
+    easyInstructions2: imageSharp(
       id: { regex: "/home/home_instructions_2.png/" }
     ) {
       sizes(maxWidth: 178) {
@@ -322,10 +370,20 @@ export const query = graphql`
         aspectRatio
       }
     }
-    homeInstructions3: imageSharp(
+    easyInstructions3: imageSharp(
       id: { regex: "/home/home_instructions_3.png/" }
     ) {
       sizes(maxWidth: 206) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    easyInstructions4: imageSharp(id: { regex: "/home/flow_vu_large.png/" }) {
+      sizes(maxWidth: 178) {
         src
         srcSet
         srcWebp
