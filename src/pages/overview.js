@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import { ContentWrapper } from 'helpers/sharedStyles';
 import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
+import IndicationsForUse from 'components/IndicationsForUse';
 
 const OverviewWrapper = styled.div`
   line-height: 4.5vw;
@@ -45,12 +46,6 @@ const H2 = styled.h2`
 
 const AdditionalFeatures = styled.section`
   background: #f5f5f5;
-`;
-
-const IndicationsForUse = ContentWrapper.extend``;
-
-const CautionsList = styled.ul`
-  margin-left: none;
 `;
 
 function Overview({ data }) {
@@ -105,26 +100,7 @@ function Overview({ data }) {
         smallMask={data.smallMask}
         largeMask={data.largeMask}
       />
-      <IndicationsForUse>
-        <H2>Indications For Use</H2>
-        <p>
-          This product is intended to be used by patients who are under the care
-          or treatment of a physician or licensed healthcare professional. The
-          device is intended to be used by these patients to administer
-          aerosolized medication from most pressurized Metered Dose Inhalers.
-          The intended environments for use include the home, hospitals and
-          clinics.
-        </p>
-        <H2>Cautions:</H2>
-        <CautionsList>
-          <li>
-            PRODUCT MAY BE PERMANENTLY DAMAGED IF BOILED, STERILIZED, OR CLEANED
-            IN A DISHWASHER AT TEMPERATURES ABOVE 158°F (70°C).
-          </li>
-          <li>Do not leave the chamber unattended with children.</li>
-        </CautionsList>
-        <b>Please see Instructions for Use</b>
-      </IndicationsForUse>
+      <IndicationsForUse />
     </OverviewWrapper>
   );
 }

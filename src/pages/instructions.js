@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
+import IndicationsForUse from 'components/IndicationsForUse';
 
 const InstructionsWrapper = styled.div`
   line-height: 4.5vw;
@@ -50,6 +51,7 @@ function Instructions({ data }) {
         smallMask={data.smallMask}
         largeMask={data.largeMask}
       />
+      <IndicationsForUse />
     </InstructionsWrapper>
   );
 }
