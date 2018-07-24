@@ -288,15 +288,12 @@ const IndexPage = ({ data }) => {
                 Did you <span>know?</span>
               </H3>
               <p>
-                Guidelines recommend chambers for children and adults.<sup>
-                  2
-                </sup>
+                Guidelines recommend chambers for children and adults.
+                <sup>2</sup>
               </p>
               <p>
-                The majority of adults do not use their inhalers properly.<sup>
-                  3
-                </sup>{' '}
-                This is why doctors recommend using an{' '}
+                The majority of adults do not use their inhalers properly.
+                <sup>3</sup> This is why doctors recommend using an{' '}
                 <span>AeroChamber Plus Flow-Vu</span> Chamber with your inhaler.
               </p>
             </TorsoTextWrapper>
