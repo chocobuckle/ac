@@ -16,6 +16,7 @@ const IndexWrapper = styled.div`
   h1,
   h2,
   h3,
+  h6,
   figcaption {
     font-family: Myriad Pro, sans-serif;
   }
@@ -196,7 +197,7 @@ const SixInhalerImgsWrapper = styled.div`
 `;
 const InhalerAndBucketBorderWrapper = styled.div`
   display: flex;
-  flex-direction: column;;
+  flex-direction: column;
   width: 100%;
 `;
 const ThreeInhalers = styled.div`
@@ -229,14 +230,19 @@ const AdultOrChild = H3.extend`
   text-align: center;
   margin-top: 2.15vw;
 `;
-const Footnotes = styled.div`
-  margin-top: 2vw;
+const Footnotes = ContentWrapper.extend`
   text-align: right;
+  padding: 0 0;
 `;
-const Footnote = styled.p`
+const FootnoteHeader = styled.p``;
+const FootnoteSmallPrint = styled.h6`
+  font-weight: 400;
+  font-size: 2.6vw;
+  margin-bottom: 0.3em;
   span {
     color: #000;
     font-weight: bold;
+    font-size: 2.6vw;
   }
 `;
 
@@ -426,7 +432,7 @@ const IndexPage = ({ data }) => {
         </H2>
         <SixInhalerImgsWrapper>
           <InhalerAndBucketBorderWrapper style={{ marginBottom: '5vw' }}>
-            <ThreeInhalers style={{ position: 'relative', left: '2vw'}}>
+            <ThreeInhalers style={{ position: 'relative', left: '2vw' }}>
               <figure>
                 <Img sizes={inhaler1.sizes} style={{ ...inhaler1ImgStyle }} />
                 <figcaption style={{ position: 'relative', right: '15.5%' }}>
@@ -450,7 +456,7 @@ const IndexPage = ({ data }) => {
             <AdultOrChild>CHILD</AdultOrChild>
           </InhalerAndBucketBorderWrapper>
           <InhalerAndBucketBorderWrapper>
-            <ThreeInhalers style={{ position: 'relative', left: '3.25vw'}}>
+            <ThreeInhalers style={{ position: 'relative', left: '3.25vw' }}>
               <figure>
                 <Img sizes={inhaler4.sizes} style={{ ...inhaler4ImgStyle }} />
                 <figcaption style={{ position: 'relative', right: '16.75%' }}>
@@ -474,28 +480,33 @@ const IndexPage = ({ data }) => {
             </ThreeInhalers>
             <BucketBorder />
             <AdultOrChild>ADULT</AdultOrChild>
-            {/* <Footnotes>
-              <Footnote>
-                Children should transition to a mouthpiece around the age of 5
-              </Footnote>
-              <Footnote>
-                <span>1.</span> McIvor et al. Optimizing the Delivery of Inhaled
-                Medication for Respiratory Patients: The Role of Valved Holding
-                Chambers.
-              </Footnote>
-              <Footnote>
-                <span>2.</span>
-              </Footnote>
-              <Footnote>
-                <span>3.</span>
-              </Footnote>
-              <Footnote>
-                <span>4.</span>
-              </Footnote>
-            </Footnotes> */}
           </InhalerAndBucketBorderWrapper>
         </SixInhalerImgsWrapper>
       </SixInhalers>
+      <Footnotes>
+        <FootnoteHeader>
+          Children should transition to a mouthpiece around the age of 5
+        </FootnoteHeader>
+        <FootnoteSmallPrint>
+          <span>1.</span> McIvor et al. Optimizing the Delivery of Inhaled
+          Medication for Respiratory Patients: The Role of Valved Holding
+          Chambers.
+        </FootnoteSmallPrint>
+        <FootnoteSmallPrint>
+          <span>2.</span> Global Initiative for Asthma. Global strategy for
+          asthma management and prevention 2011. Available at:<br />
+          <a
+            href="http://ginasthma.org/2018-gina-report-global-strategy-for-asthma-management-and-prevention/"
+            target="_blank"
+            rel="noopener noreferrer">
+            http://ginasthma.org/2018-gina-report-global-strategy-for-asthma-management-and-prevention/
+          </a>
+        </FootnoteSmallPrint>
+        <FootnoteSmallPrint>
+          <span>3.</span> Plaza et al. Medical Personnel and Patient Skill in
+          the Use of Metered Dose Inhalers: A Multicentric Study.
+        </FootnoteSmallPrint>
+      </Footnotes>
     </IndexWrapper>
   );
 };
