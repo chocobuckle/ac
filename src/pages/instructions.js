@@ -55,14 +55,15 @@ const SubMenuTab = styled.div`
   bottom: 7.75vw;
   width: 24.5%;
 
-  background-color: ${({ subHeaderNumber, smallMask, activeSubheader }) => {
+  background-color: ${({ subHeaderNumber, smallMask, activeSubMenuTab }) => {
     if (smallMask) {
-      return subHeaderNumber === activeSubheader ? `#f2a900;` : `#fceecc;`;
+      return subHeaderNumber === activeSubMenuTab ? `#f2a900;` : `#fceecc;`;
     }
 
-    return subHeaderNumber === activeSubheader ? `#004899;` : `#ccdaeb;`;
-  }}
+    return subHeaderNumber === activeSubMenuTab ? `#004899;` : `#ccdaeb;`;
+  }};
 `;
+
 const SubMenuTitle = styled.p`
   && {
     color: #fff;
@@ -76,12 +77,22 @@ const SubMenuTitle = styled.p`
 
 class Instructions extends Component {
   state = {
-    activeSubheader: 1
+    activeSubMenuTab: 1
+  };
+
+  handleSubMenu = (selectedSubMenuTab) => {
+    this.setState((prevState) => {
+      if (selectedSubMenuTab !== prevState.activeSubMenuTab) {
+        return {
+          activeSubMenuTab: selectedSubMenuTab
+        };
+      }
+    });
   };
 
   render() {
     const { data } = this.props;
-    const { activeSubheader } = this.state;
+    const { activeSubMenuTab } = this.state;
     return (
       <InstructionsWrapper>
         <OverviewAndInstructionsSharedSection
@@ -101,28 +112,60 @@ class Instructions extends Component {
         <InstructionsMenu>
           <SubMenuWrapper>
             <SubMenuTab
-              subHeaderNumber={1}
+              activeSubMenuTab={activeSubMenuTab}
+              onClick={() => this.handleSubMenu(1)}
               smallMask
-              activeSubheader={activeSubheader}>
+              subHeaderNumber={1}>
               <SubMenuTitle>Small/Medium Mask</SubMenuTitle>
               <SubMenuTitle>Instructions for Use</SubMenuTitle>
             </SubMenuTab>
             <SubMenuTab
-              subHeaderNumber={2}
+              activeSubMenuTab={activeSubMenuTab}
+              onClick={() => this.handleSubMenu(2)}
               smallMask
-              activeSubheader={activeSubheader}>
+              subHeaderNumber={2}>
               <SubMenuTitle>Small/Medium Mask</SubMenuTitle>
               <SubMenuTitle>Cleaning Instructions</SubMenuTitle>
             </SubMenuTab>
-            <SubMenuTab subHeaderNumber={3} activeSubheader={activeSubheader}>
+            <SubMenuTab
+              activeSubMenuTab={activeSubMenuTab}
+              onClick={() => this.handleSubMenu(3)}
+              subHeaderNumber={3}>
               <SubMenuTitle>Large Mask/Mouthpiece</SubMenuTitle>
               <SubMenuTitle>Instructions for Use</SubMenuTitle>
             </SubMenuTab>
-            <SubMenuTab subHeaderNumber={4} activeSubheader={activeSubheader}>
+            <SubMenuTab
+              activeSubMenuTab={activeSubMenuTab}
+              onClick={() => this.handleSubMenu(4)}
+              subHeaderNumber={4}>
               <SubMenuTitle>Large Mask/Mouthpiece</SubMenuTitle>
               <SubMenuTitle>Cleaning Instructions</SubMenuTitle>
             </SubMenuTab>
           </SubMenuWrapper>
+          {
+            activeSubMenuTab === 1
+              && (
+                <div>11111</div>
+              )
+          }
+          {
+            activeSubMenuTab === 2
+              && (
+                <div>22222</div>
+              )
+          }
+          {
+            activeSubMenuTab === 3
+              && (
+                <div>33333</div>
+              )
+          }
+          {
+            activeSubMenuTab === 4
+              && (
+                <div>44444</div>
+              )
+          }
         </InstructionsMenu>
       </InstructionsWrapper>
     );
