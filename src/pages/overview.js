@@ -108,7 +108,7 @@ function Overview({ data }) {
 export const query = graphql`
   query OverviewQuery {
     bpaAndDishwasherSafe: imageSharp(
-      id: { regex: "/overview/bpa_and_dishwasher_safe.png/" }
+      id: { regex: "/shared/bpa_and_dishwasher_safe.png/" }
     ) {
       sizes(maxWidth: 749) {
         src
@@ -129,7 +129,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    bear: imageSharp(id: { regex: "/overview/bear.png/" }) {
+    bear: imageSharp(id: { regex: "/shared/bear.png/" }) {
       sizes(maxWidth: 1636) {
         src
         srcSet
@@ -140,7 +140,7 @@ export const query = graphql`
       }
     }
     smallMask: imageSharp(
-      id: { regex: "/overview/small_mask_medium_mask.png/" }
+      id: { regex: "/shared/small_mask_medium_mask.png/" }
     ) {
       sizes(maxWidth: 851) {
         src
@@ -152,7 +152,7 @@ export const query = graphql`
       }
     }
     largeMask: imageSharp(
-      id: { regex: "/overview/large_mask_mouthpiece.png/" }
+      id: { regex: "/shared/large_mask_mouthpiece.png/" }
     ) {
       sizes(maxWidth: 851) {
         src
@@ -163,7 +163,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    download: imageSharp(id: { regex: "/overview/download.png/" }) {
+    download: imageSharp(id: { regex: "/shared/download.png/" }) {
       sizes(maxWidth: 238) {
         src
         srcSet
