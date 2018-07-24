@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { ContentWrapper } from '../helpers/sharedStyles';
+import { ContentWrapper } from 'helpers/sharedStyles';
 
 const ContactWrapper = ContentWrapper.extend`
   line-height: 4.5vw;

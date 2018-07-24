@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import { ContentWrapper } from '../helpers/sharedStyles';
+import { ContentWrapper } from 'helpers/sharedStyles';
 
 const IndexWrapper = styled.div`
   line-height: 4.5vw;

@@ -1,20 +1,53 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { ContentWrapper } from '../helpers/sharedStyles';
-import DownloadInstructionsForUse from '../components/DownloadInstructionsForUse';
+import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
+import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 
+const InstructionsWrapper = styled.div`
+  line-height: 4.5vw;
 
-function Instructions() {
+  p,
+  span,
+  ul,
+  li,
+  b,
+  sup,
+  h1,
+  h2 {
+    font-family: Myriad Pro, sans-serif;
+  }
+
+  h1,
+  h2 {
+    color: #004899;
+  }
+
+  p,
+  span {
+    font-size: 3.9vw;
+    margin-bottom: 2.25vw;
+  }
+
+  span {
+    color: #007fc8;
+  }
+`;
+
+function Instructions({ data }) {
   return (
-    <div>
+    <InstructionsWrapper>
+      <OverviewAndInstructionsSharedSection
+        macbook={data.macbook}
+        bpaAndDishwasherSafe={data.bpaAndDishwasherSafe}
+      />
       <DownloadInstructionsForUse
         download={data.download}
         bear={data.bear}
         smallMask={data.smallMask}
         largeMask={data.largeMask}
       />
-    </div>
+    </InstructionsWrapper>
   );
 }
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { ContentWrapper } from '../../helpers/sharedStyles';
+import { ContentWrapper } from 'helpers/sharedStyles';
 
 const H2 = styled.h2`
+  color: #004899;
   font-size: 5.3vw;
   margin-bottom: 2vw;
   span {
@@ -40,9 +41,9 @@ const maskImgStyle = {
   width: '21vw'
 };
 
-function DownloadInstructionsForUse({ download, bear, smallMask, largeMask }) {
+function DownloadInstructionsForUse({ style, download, bear, smallMask, largeMask }) {
   return (
-    <ContentWrapper style={{ borderBottom: '1px solid #000' }}>
+    <ContentWrapper style={style}>
       <H2AndDownloadWrapper>
         <H2 style={{ marginBottom: 0 }}>Download Instructions for Use</H2>
         <Img sizes={download.sizes} style={{ ...downloadImgStyle }} />
