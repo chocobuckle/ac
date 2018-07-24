@@ -43,31 +43,24 @@ const macbookImgStyle = {
   width: '70vw'
 };
 
-function OverviewAndInstructionsSharedSection({ macbook, bpaAndDishwasherSafe }) {
+function OverviewAndInstructionsSharedSection({
+  bpaAndDishwasherSafe,
+  headerFirstLine,
+  headerSecondLine,
+  subHeaderText,
+  macbook
+}) {
   return (
     <ContentWrapper>
       <H1Wrapper>
-        <H1>AeroChamber Plus® Flow-Vu®:</H1>
-        <H1>Seeing Is The Difference</H1>
+        <H1>{headerFirstLine}</H1>
+        <H1>{headerSecondLine}</H1>
       </H1Wrapper>
-      <p>
-        <span>AeroChamber Plus® Flow-Vu®</span> is an anti-static valved holding
-        chamber designed with patients in mind. Patients can use an{' '}
-        <span>AeroChamber Plus® Flow-Vu®</span> to help improve medication
-        delivery from a metered dose inhaler (MDI).
-      </p>
-      <p>
-        Watch <b>Seeing Is the Difference</b> for a behind-the-scenes look at
-        how
-        <span> AeroChamber Plus®</span> is designed, manufactured, and tested:
-      </p>
+      <div style={{ textAlign: 'center' }} dangerouslySetInnerHTML={{__html: subHeaderText}} />
       <BPAImgAndTextAndMacbookImgWrapper>
         <Img sizes={macbook.sizes} style={{ ...macbookImgStyle }} />
         <BPAImgAndTextWrapper>
-          <Img
-            sizes={bpaAndDishwasherSafe.sizes}
-            style={{ ...BPAImgStyle }}
-          />
+          <Img sizes={bpaAndDishwasherSafe.sizes} style={{ ...BPAImgStyle }} />
           <p
             style={{
               color: '#007fc8',

@@ -57,6 +57,19 @@ function Overview({ data }) {
   return (
     <OverviewWrapper>
       <OverviewAndInstructionsSharedSection
+        headerFirstLine="AeroChamber Plus® Flow-Vu®:"
+        headerSecondLine="Seeing Is The Difference"
+        subHeaderText="<p>
+          <span>AeroChamber Plus® Flow-Vu®</span> is an anti-static valved holding
+          chamber designed with patients in mind. Patients can use an{' '}
+          <span>AeroChamber Plus® Flow-Vu®</span> to help improve medication
+          delivery from a metered dose inhaler (MDI).
+        </p>
+        <p>
+          Watch <b>Seeing Is the Difference</b> for a behind-the-scenes look at
+          how
+          <span> AeroChamber Plus®</span> is designed, manufactured, and tested:
+        </p>"
         macbook={data.macbook}
         bpaAndDishwasherSafe={data.bpaAndDishwasherSafe}
       />
@@ -86,7 +99,7 @@ function Overview({ data }) {
         </ContentWrapper>
       </AdditionalFeatures>
       <DownloadInstructionsForUse
-        style={{ borderBottom: '1px solid #000'}}
+        style={{ borderBottom: '1px solid #000' }}
         download={data.download}
         bear={data.bear}
         smallMask={data.smallMask}

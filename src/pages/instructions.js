@@ -38,6 +38,9 @@ function Instructions({ data }) {
   return (
     <InstructionsWrapper>
       <OverviewAndInstructionsSharedSection
+        headerFirstLine="Learning How to Use Your"
+        headerSecondLine="AeroChamber Plus® Flow-Vu®"
+        subHeaderText="<p>Watch the video below for instructions on using your <span>AeroChamber Plus®</span> with a metered dose inhaler, and for cleaning directions.</p>"
         macbook={data.macbook}
         bpaAndDishwasherSafe={data.bpaAndDishwasherSafe}
       />
