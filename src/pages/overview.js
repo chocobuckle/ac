@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { ContentWrapper } from '../helpers/sharedStyles';
+import DownloadInstructionsForUse from '../components/DownloadInstructionsForUse';
 
 const OverviewWrapper = styled.div`
   line-height: 4.5vw;
@@ -63,7 +64,7 @@ const SeeingIsTheDifference = ContentWrapper.extend`
 const AdditionalFeatures = styled.section`
   background: #f5f5f5;
 `;
-const DownloadInstructions = ContentWrapper.extend``;
+
 const IndicationsForUse = ContentWrapper.extend``;
 
 const BPAImgAndTextWrapper = styled.div`
@@ -76,48 +77,19 @@ const BPAImgAndTextAndMacbookImgWrapper = styled.div`
   align-items: center;
 `;
 
-const H2AndDownloadWrapper = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  margin-bottom: 2vw;
-`;
-
-const BearAndMaskImgWrapper = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-`;
-
 const CautionsList = styled.ul`
   margin-left: none;
 `;
-
-const bearImgStyle = {
-  margin: '0 2vw',
-  width: '37.5vw'
-};
 
 const BPAImgStyle = {
   maxWidth: '749px',
   marginBottom: '2vw'
 };
 
-const downloadImgStyle = {
-  marginLeft: '2.75vw',
-  width: '7vw'
-};
-
 const macbookImgStyle = {
   maxWidth: '886px',
   marginBottom: '2vw',
   width: '70vw'
-};
-
-const maskImgStyle = {
-  margin: '0 2vw',
-  width: '21vw'
 };
 
 function Overview({ data }) {
@@ -184,24 +156,12 @@ function Overview({ data }) {
           </span>
         </ContentWrapper>
       </AdditionalFeatures>
-      <DownloadInstructions style={{ borderBottom: '1px solid #000' }}>
-        <H2AndDownloadWrapper>
-          <H2 style={{ marginBottom: 0 }}>Download Instructions for Use</H2>
-          <Img sizes={data.download.sizes} style={{ ...downloadImgStyle }} />
-        </H2AndDownloadWrapper>
-        <p>
-          Printed in English and Spanish and featuring the child-friendly
-          <span>
-            {' '}
-            AeroBear®<sup>1</sup>
-          </span>
-        </p>
-        <BearAndMaskImgWrapper>
-          <Img sizes={data.bear.sizes} style={{ ...bearImgStyle }} />
-          <Img sizes={data.smallMask.sizes} style={{ ...maskImgStyle }} />
-          <Img sizes={data.largeMask.sizes} style={{ ...maskImgStyle }} />
-        </BearAndMaskImgWrapper>
-      </DownloadInstructions>
+      <DownloadInstructionsForUse
+        download={data.download}
+        bear={data.bear}
+        smallMask={data.smallMask}
+        largeMask={data.largeMask}
+      />
       <IndicationsForUse>
         <H2>Indications For Use</H2>
         <p>
