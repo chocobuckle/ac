@@ -50,18 +50,17 @@ const SubMenuWrapper = styled.div`
   justify-content: space-between;
 `;
 const SubMenuTab = styled.div`
-  background-color: ${({ subHeaderNumber, smallMask, activeSubheader }) => {
-    return smallMask && subHeaderNumber === activeSubheader
-      ? '#f2a900'
-      : smallMask && subHeaderNumber !== activeSubheader
-        ? '#fceecc'
-        : !smallMask && subHeaderNumber === activeSubheader
-          ? '#004899'
-          : '#ccdaeb';
-  }};
-  color: #fff;
   border-radius: 1.75vw;
+  color: #fff;
   width: 24%;
+
+  background-color: ${({ subHeaderNumber, smallMask, activeSubheader }) => {
+    if (smallMask) {
+      return subHeaderNumber === activeSubheader ? `#f2a900;` : `#fceecc;`;
+    }
+
+    return subHeaderNumber === activeSubheader ? `#004899;` : `#ccdaeb;`;
+  }}
 `;
 const SubMenuTitle = styled.p`
   && {
