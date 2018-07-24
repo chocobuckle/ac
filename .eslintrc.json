@@ -4,9 +4,16 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["airbnb"],
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "globals": {
     "PRODUCTION": false,

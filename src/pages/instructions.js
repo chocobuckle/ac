@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
@@ -35,25 +35,30 @@ const InstructionsWrapper = styled.div`
   }
 `;
 
-function Instructions({ data }) {
-  return (
-    <InstructionsWrapper>
-      <OverviewAndInstructionsSharedSection
-        headerFirstLine="Learning How to Use Your"
-        headerSecondLine="AeroChamber Plus® Flow-Vu®"
-        subHeaderText="<p>Watch the video below for instructions on using your <span>AeroChamber Plus®</span> with a metered dose inhaler, and for cleaning directions.</p>"
-        macbook={data.macbook}
-        bpaAndDishwasherSafe={data.bpaAndDishwasherSafe}
-      />
-      <DownloadInstructionsForUse
-        download={data.download}
-        bear={data.bear}
-        smallMask={data.smallMask}
-        largeMask={data.largeMask}
-      />
-      <IndicationsForUse />
-    </InstructionsWrapper>
-  );
+class Instructions extends Component {
+  state = {};
+
+  render() {
+    const { data } = this.props;
+    return (
+      <InstructionsWrapper>
+        <OverviewAndInstructionsSharedSection
+          headerFirstLine="Learning How to Use Your"
+          headerSecondLine="AeroChamber Plus® Flow-Vu®"
+          subHeaderText="<p>Watch the video below for instructions on using your <span>AeroChamber Plus®</span> with a metered dose inhaler, and for cleaning directions.</p>"
+          macbook={data.macbook}
+          bpaAndDishwasherSafe={data.bpaAndDishwasherSafe}
+        />
+        <DownloadInstructionsForUse
+          download={data.download}
+          bear={data.bear}
+          smallMask={data.smallMask}
+          largeMask={data.largeMask}
+        />
+        <IndicationsForUse />
+      </InstructionsWrapper>
+    );
+  }
 }
 
 export const query = graphql`
