@@ -35,24 +35,25 @@ const InstructionsWrapper = styled.div`
   }
 `;
 
-const smallNotActive = '#fceecc';
-const smallActive = '#f2a900';
-const largeNotActive = '#ccdaeb';
-const largeActive = '#004899';
-
 const InstructionsMenu = ContentWrapper.extend`
   border: 0.75vw solid #f2a900;
-  border-radius: 1.75vw;
+  border-radius: 1.5vw;
+  margin-top: 5vw;
 `;
 
 const SubMenuWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
+
 const SubMenuTab = styled.div`
-  border-radius: 1.75vw;
+  border-radius: 1vw;
   color: #fff;
-  width: 24%;
+  cursor: pointer;
+  padding: 0.35em 0;
+  position: relative;
+  bottom: 7.75vw;
+  width: 24.5%;
 
   background-color: ${({ subHeaderNumber, smallMask, activeSubheader }) => {
     if (smallMask) {
