@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
 import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
@@ -77,11 +77,24 @@ const SubMenuTitle = styled.p`
   }
 `;
 
-const InstructionImgAndTextWrapper = styled.div``;
+const InstructionImgAndTextWrapper = styled.div`
+  display: flex;
+  margin: 3vw auto 6vw;
+  width: 75vw;
+`;
 
 const InstructionImg = styled(Img)`
   max-width: 217px;
   width: 20vw;
+`;
+
+const InstructionText = styled.p`
+  && {
+    font-size: 1.8vw;
+    line-height: 2.8vw;
+    position: relative;
+    right: 6vw;
+  }
 `;
 
 class Instructions extends Component {
@@ -152,24 +165,179 @@ class Instructions extends Component {
             </SubMenuTab>
           </SubMenuWrapper>
           {activeSubMenuTab === 1 && (
-            <InstructionImgAndTextWrapper>
-              <InstructionImg sizes={data.SMInstruct_1.sizes} />
-              {/* <p>
+            <div>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.SMInstruct_1.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
                   Carefully examine the product for damage, missing parts, or
-                  foreign objects. Remove any foreign objects prior to use.
-                  The product should be replaced IMMEDIATELY if there are any
+                  foreign objects. Remove any foreign objects prior to use. The
+                  product should be replaced IMMEDIATELY if there are any
                   damaged or missing parts. If necessary, use the Metered Dose
                   Inhaler (MDI) alone until a replacement is obtained. If the
                   patient's symptoms worsen, please seek immediate medical
                   attention.
-                </p> */}
-            </InstructionImgAndTextWrapper>
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.SMInstruct_2.sizes} />
+                <InstructionText style={{ top: '3.5vw' }}>
+                  Remove cap from the MDI.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.SMInstruct_3.sizes} />
+                <InstructionText style={{ top: '3.5vw' }}>
+                  Shake the MDI immediately before each use as per the
+                  instructions supplied with the MDI.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.SMInstruct_4.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
+                  Insert the MDI into the backpiece of the chamber.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.SMInstruct_5.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
+                  Apply mask to face and ensure an eective seal. The Flow-Vu®
+                  Inspiratory Flow Indicator (IFI) only moves if a good seal is
+                  created.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.SMInstruct_6.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
+                  Press the MDI at the beginning of a slow inhalation as the
+                  Flow-Vu® Inspiratory Flow Indicator moves toward the patient.
+                  Use the Flow-Vu® Inspiratory Flow Indicator to count breaths.
+                  Maintain seal for 5-6 breaths after the MDI is pressed.
+                  Administer 1 pu at a time.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.SMInstruct_7.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
+                  Follow instructions supplied with the MDI on how long to wait
+                  before repeating steps 3-6 as prescribed.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+            </div>
           )}
           {activeSubMenuTab === 2 && (
-            <InstructionImgAndTextWrapper>22222</InstructionImgAndTextWrapper>
+            <div>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.SMClean_1.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
+                  Remove the backpiece. To detach the frontpiece, twist chamber
+                  as shown.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.SMClean_2.sizes} />
+                <InstructionText style={{ top: '3.5vw' }}>
+                  Soak the parts for 15 minutes in a mild solution of liquid
+                  dish detergent and lukewarm clean water. Agitate gently.
+                  <p />
+                  <InstructionText style={{ left: '0', top: '-1.5vw' }}>
+                    Rinse parts in clean water.
+                  </InstructionText>
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.SMClean_3.sizes} />
+                <InstructionText style={{ top: '3.5vw' }}>
+                  Shake out excess water from the parts and allow to air dry in
+                  a vertical position. Ensure parts are dry before reassembly.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.SMClean_4.sizes} />
+                <InstructionText style={{ top: '3.25vw' }}>
+                  To reassemble, t the frontpiece on the end of the chamber and
+                  twist rmly until securely locked into position.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.SMClean_5.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
+                  Center the Alignment Feature on the backpiece with the
+                  Flow-Vu® Inspiratory Flow Indicator, as shown. Press rmly to
+                  attach the backpiece.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+            </div>
           )}
           {activeSubMenuTab === 3 && (
-            <InstructionImgAndTextWrapper>33333</InstructionImgAndTextWrapper>
+            <div>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.LMInstruct_1.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
+                  Carefully examine the product for damage, missing parts or
+                  foreign objects. Remove any foreign objects prior to use. The
+                  product should be replaced IMMEDIATELY if there are any
+                  damaged or missing parts. If necessary, use the Metered Dose
+                  Inhaler (MDI) alone until a replacement is obtained. If
+                  symptoms worsen, please seek immediate medical attention.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.LMInstruct_2.sizes} />
+                <InstructionText style={{ top: '3.5vw' }}>
+                  Remove caps from the MDI and chamber.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.LMInstruct_3.sizes} />
+                <InstructionText style={{ top: '3.5vw' }}>
+                  Shake the MDI immediately before each use as per the
+                  instructions supplied with the MDI.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.LMInstruct_4.sizes} />
+                <InstructionText style={{ top: '3.25vw' }}>
+                  Insert the MDI into the backpiece of the chamber.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.LMInstruct_5.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
+                  Put mouthpiece into mouth and close lips around it to ensure
+                  an eective seal. The Flow-Vu® Inspiratory Flow Indicator (IFI)
+                  only moves if the patient has a good seal. Apply mask to face
+                  and ensure an eective seal. The Flow-Vu® Inspiratory Flow
+                  Indicator only moves if a good seal is created.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.LMInstruct_6.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
+                  Breathe out gently and press the MDI at the beginning of a
+                  slow inhalation. Use the Flow-Vu® IFI to assist in the
+                  coordination of this step. Breathe in slowly and deeply
+                  through the mouth until a full breath has been taken. Hold
+                  breath for 5-10 seconds, if possible. Otherwise, keep lips
+                  tight on the mouthpiece breathing normally 2-3 times through
+                  the chamber after the MDI is pressed. Slow down inhalation if
+                  you hear the FlowSignal® Whistle sound. It means that you are
+                  inhaling too quickly. Administer 1 pu at a time. Breathe out
+                  gently and press the MDI at the beginning of a slow inhalation
+                  as the Flow-Vu® IFI moves toward you. Use the Flow-Vu® IFI to
+                  count breaths. Maintain seal for 5-6 breaths after the MDI is
+                  pressed. Slow down inhalation if you hear the FlowSignal®
+                  Whistle sound. It means that you are inhaling too quickly.
+                  Administer 1 pu at a time.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.LMInstruct_7.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
+                  Follow instructions supplied with the MDI on how long to wait
+                  before repeating steps 3-6 as prescribed.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+            </div>
           )}
           {activeSubMenuTab === 4 && (
             <InstructionImgAndTextWrapper>44444</InstructionImgAndTextWrapper>
