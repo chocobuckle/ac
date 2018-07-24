@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
 import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 import IndicationsForUse from 'components/IndicationsForUse';
+import { ContentWrapper } from 'helpers/sharedStyles';
 
 const InstructionsWrapper = styled.div`
   line-height: 4.5vw;
@@ -35,11 +35,53 @@ const InstructionsWrapper = styled.div`
   }
 `;
 
+const smallNotActive = '#fceecc';
+const smallActive = '#f2a900';
+const largeNotActive = '#ccdaeb';
+const largeActive = '#004899';
+
+const InstructionsMenu = ContentWrapper.extend`
+  border: 0.75vw solid #f2a900;
+  border-radius: 1.75vw;
+`;
+
+const SubMenuWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const SubMenuTab = styled.div`
+  background-color: ${({ subHeaderNumber, smallMask, activeSubheader }) => {
+    return smallMask && subHeaderNumber === activeSubheader
+      ? '#f2a900'
+      : smallMask && subHeaderNumber !== activeSubheader
+        ? '#fceecc'
+        : !smallMask && subHeaderNumber === activeSubheader
+          ? '#004899'
+          : '#ccdaeb';
+  }};
+  color: #fff;
+  border-radius: 1.75vw;
+  width: 24%;
+`;
+const SubMenuTitle = styled.p`
+  && {
+    color: #fff;
+    font-size: 1.8vw;
+    font-weight: bold;
+    line-height: 2.8vw;
+    margin-bottom: 0;
+    text-align: center;
+  }
+`;
+
 class Instructions extends Component {
-  state = {};
+  state = {
+    activeSubheader: 1
+  };
 
   render() {
     const { data } = this.props;
+    const { activeSubheader } = this.state;
     return (
       <InstructionsWrapper>
         <OverviewAndInstructionsSharedSection
@@ -55,7 +97,33 @@ class Instructions extends Component {
           smallMask={data.smallMask}
           largeMask={data.largeMask}
         />
-        <IndicationsForUse />
+        {/* <IndicationsForUse /> */}
+        <InstructionsMenu>
+          <SubMenuWrapper>
+            <SubMenuTab
+              subHeaderNumber={1}
+              smallMask
+              activeSubheader={activeSubheader}>
+              <SubMenuTitle>Small/Medium Mask</SubMenuTitle>
+              <SubMenuTitle>Instructions for Use</SubMenuTitle>
+            </SubMenuTab>
+            <SubMenuTab
+              subHeaderNumber={2}
+              smallMask
+              activeSubheader={activeSubheader}>
+              <SubMenuTitle>Small/Medium Mask</SubMenuTitle>
+              <SubMenuTitle>Cleaning Instructions</SubMenuTitle>
+            </SubMenuTab>
+            <SubMenuTab subHeaderNumber={3} activeSubheader={activeSubheader}>
+              <SubMenuTitle>Large Mask/Mouthpiece</SubMenuTitle>
+              <SubMenuTitle>Instructions for Use</SubMenuTitle>
+            </SubMenuTab>
+            <SubMenuTab subHeaderNumber={4} activeSubheader={activeSubheader}>
+              <SubMenuTitle>Large Mask/Mouthpiece</SubMenuTitle>
+              <SubMenuTitle>Cleaning Instructions</SubMenuTitle>
+            </SubMenuTab>
+          </SubMenuWrapper>
+        </InstructionsMenu>
       </InstructionsWrapper>
     );
   }
