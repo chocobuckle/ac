@@ -36,14 +36,18 @@ const InstructionsWrapper = styled.div`
 `;
 
 const InstructionsMenu = ContentWrapper.extend`
-  border: 0.75vw solid #f2a900;
   border-radius: 1.5vw;
+  border: 0.75vw solid #f2a900;
   margin-top: 5vw;
+  position: relative;
 `;
 
 const SubMenuWrapper = styled.div`
+  bottom: 6.75vw;
   display: flex;
   justify-content: space-around;
+  position: absolute;
+  width: 100%;
 `;
 
 const SubMenuTab = styled.div`
@@ -51,8 +55,6 @@ const SubMenuTab = styled.div`
   color: #fff;
   cursor: pointer;
   padding: 0.35em 0;
-  position: relative;
-  bottom: 7.75vw;
   width: 24.5%;
 
   background-color: ${({ subHeaderNumber, smallMask, activeSubMenuTab }) => {
