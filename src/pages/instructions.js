@@ -156,6 +156,7 @@ class Instructions extends Component {
           <SelectedInstructions>
             {activeSubMenuTab === 1 && (
               <InstructionImgAndTextWrapper>
+                <Img sizes={data.SMInstruct_1.sizes} />
                 {/* <p>
                   Carefully examine the product for damage, missing parts, or
                   foreign objects. Remove any foreign objects prior to use.
@@ -266,7 +267,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_1: imageSharp(id: { regex: "/instructions/SMInstruct_1.png/" }) {
+    SMInstruct_1: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_1.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -276,7 +277,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_2: imageSharp(id: { regex: "/instructions/SMInstruct_2.png/" }) {
+    SMInstruct_2: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_2.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -286,7 +287,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_3: imageSharp(id: { regex: "/instructions/SMInstruct_3.png/" }) {
+    SMInstruct_3: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_3.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -296,7 +297,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_4: imageSharp(id: { regex: "/instructions/SMInstruct_4.png/" }) {
+    SMInstruct_4: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_4.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -306,7 +307,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_5: imageSharp(id: { regex: "/instructions/SMInstruct_5.png/" }) {
+    SMInstruct_5: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_5.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -316,7 +317,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_5b: imageSharp(id: { regex: "/instructions/SMInstruct_5b.png/" }) {
+    SMInstruct_5b: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_5b.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -326,7 +327,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_6: imageSharp(id: { regex: "/instructions/SMInstruct_6.png/" }) {
+    SMInstruct_6: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_6.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -336,7 +337,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_7: imageSharp(id: { regex: "/instructions/SMInstruct_7.png/" }) {
+    SMInstruct_7: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_7.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -346,7 +347,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMClean_1: imageSharp(id: { regex: "/instructions/SMClean_1.png/" }) {
+    SMClean_1: imageSharp(id: { regex: "/instructions/SMClean/SMClean_1.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -356,7 +357,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMClean_2: imageSharp(id: { regex: "/instructions/SMClean_2.png/" }) {
+    SMClean_2: imageSharp(id: { regex: "/instructions/SMClean/SMClean_2.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -366,7 +367,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMClean_2b: imageSharp(id: { regex: "/instructions/SMClean_2b.png/" }) {
+    SMClean_2b: imageSharp(id: { regex: "/instructions/SMClean/SMClean_2b.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -376,7 +377,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMClean_3: imageSharp(id: { regex: "/instructions/SMClean_3.png/" }) {
+    SMClean_3: imageSharp(id: { regex: "/instructions/SMClean/SMClean_3.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -386,7 +387,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMClean_4: imageSharp(id: { regex: "/instructions/SMClean_4.png/" }) {
+    SMClean_4: imageSharp(id: { regex: "/instructions/SMClean/SMClean_4.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -396,7 +397,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMClean_5: imageSharp(id: { regex: "/instructions/SMClean_5.png/" }) {
+    SMClean_5: imageSharp(id: { regex: "/instructions/SMClean/SMClean_5.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -406,7 +407,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_1: imageSharp(id: { regex: "/instructions/LMInstruct_1.png/" }) {
+    LMInstruct_1: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_1.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -416,7 +417,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_2: imageSharp(id: { regex: "/instructions/LMInstruct_2.png/" }) {
+    LMInstruct_2: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_2.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -426,7 +427,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_3: imageSharp(id: { regex: "/instructions/LMInstruct_3.png/" }) {
+    LMInstruct_3: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_3.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -436,7 +437,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_4: imageSharp(id: { regex: "/instructions/LMInstruct_4.png/" }) {
+    LMInstruct_4: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_4.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -446,7 +447,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_5: imageSharp(id: { regex: "/instructions/LMInstruct_5.png/" }) {
+    LMInstruct_5: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_5.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -456,7 +457,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_6: imageSharp(id: { regex: "/instructions/LMInstruct_6.png/" }) {
+    LMInstruct_6: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_6.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -466,7 +467,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_7: imageSharp(id: { regex: "/instructions/LMInstruct_7.png/" }) {
+    LMInstruct_7: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_7.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -476,7 +477,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMClean_1: imageSharp(id: { regex: "/instructions/LMClean_1.png/" }) {
+    LMClean_1: imageSharp(id: { regex: "/instructions/LMClean/LMClean_1.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -486,7 +487,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMClean_2: imageSharp(id: { regex: "/instructions/LMClean_2.png/" }) {
+    LMClean_2: imageSharp(id: { regex: "/instructions/LMClean/LMClean_2.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -496,7 +497,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMClean_2b: imageSharp(id: { regex: "/instructions/LMClean_2b.png/" }) {
+    LMClean_2b: imageSharp(id: { regex: "/instructions/LMClean/LMClean_2b.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -506,7 +507,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMClean_3: imageSharp(id: { regex: "/instructions/LMClean_3.png/" }) {
+    LMClean_3: imageSharp(id: { regex: "/instructions/LMClean/LMClean_3.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -516,7 +517,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMClean_4: imageSharp(id: { regex: "/instructions/LMClean_4.png/" }) {
+    LMClean_4: imageSharp(id: { regex: "/instructions/LMClean/LMClean_4.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -526,7 +527,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMClean_5: imageSharp(id: { regex: "/instructions/LMClean_5.png/" }) {
+    LMClean_5: imageSharp(id: { regex: "/instructions/LMClean/LMClean_5.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
