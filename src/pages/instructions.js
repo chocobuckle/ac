@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 import IndicationsForUse from 'components/IndicationsForUse';
+import TabMenuPDFDownload from 'components/TabMenuPDFDownload';
 import Img from 'gatsby-image';
 import { ContentWrapper } from 'helpers/sharedStyles';
 
@@ -119,7 +120,7 @@ const HelpfulTips = styled.div`
   border-radius: 1vw;
   box-shadow: 3px 3px 7px 1px rgba(0,0,0,0.2);
   width: 93.5%;
-  margin: 0 auto 10em;
+  margin: 0 auto 1vw;
   padding: 0.6em;
 
   div:last-child {
@@ -311,6 +312,7 @@ class Instructions extends Component {
                   </TipText>
                 </TipWrapper>
               </HelpfulTips>
+              <TabMenuPDFDownload download={data.download} SMInstructPDF={data.SMInstruct_PDF} />
             </div>
           )}
           {activeSubMenuTab === 2 && (
@@ -677,7 +679,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_PDF: imageSharp(id: { regex: "/instructions/pdf.png/" }) {
+    SMInstruct_PDF: imageSharp(id: { regex: "/instructions/SMInstruct/pdf.png/" }) {
       sizes(maxWidth: 137) {
         src
         srcSet

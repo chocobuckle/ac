@@ -6,6 +6,7 @@ import { ContentWrapper } from 'helpers/sharedStyles';
 const H2 = styled.h2`
   color: #004899;
   font-size: 5.3vw;
+  font-weight: 600;
   margin-bottom: 2vw;
   span {
     font-size: 5.3vw;
