@@ -282,23 +282,20 @@ class Instructions extends Component {
                     width: '10.5vw'
                   }}
                 />
-                <InstructionText style={{ fontWeight: 'bold', left: '3.4vw' }}>
-                  Dishwasher safe under the following conditions:
+                <InstructionText style={{ left: '3.4vw', marginBottom: 0 }}>
+                  <b>Dishwasher safe under the following conditions:</b>
                   <br /><br />
-                  <InstructionText style={{ fontWeight: '400', left: '2.6vw'}}>
-                    <ul style={{ margin: 0, lineHeight: '2vw' }}>
-                      <li>
-                        Avoid heavy or other cycles that include heated dry over
-                        158°F
-                      </li>
-                      <li>Parts must be placed in the top rack ONLY</li>
-                      <li>Secure product face up, as pictured</li>
-                      <li>Use dishwasher detergent and rinse aid</li>
-                      <li>Do not boil or sterilize</li>
-                    </ul>
-                    <br />
-                    <InstructionText style={{ right: '2.6vw' }}>SEE CAUTIONS, 1ST BULLET, BELOW</InstructionText>
-                  </InstructionText>
+                  <ul style={{ lineHeight: '2vw', margin: '0 0 2vw 3.5vw' }}>
+                    <li>
+                      Avoid heavy or other cycles that include heated dry over
+                      158°F
+                    </li>
+                    <li>Parts must be placed in the top rack ONLY</li>
+                    <li>Secure product face up, as pictured</li>
+                    <li>Use dishwasher detergent and rinse aid</li>
+                    <li>Do not boil or sterilize</li>
+                  </ul>
+                  SEE CAUTIONS, 1ST BULLET, BELOW
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
