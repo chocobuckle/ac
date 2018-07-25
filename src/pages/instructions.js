@@ -262,12 +262,43 @@ class Instructions extends Component {
                   as shown.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper style={{ marginBottom: '4.5vw' }}>
                 <InstructionImg sizes={data.SMClean_2.sizes} />
                 <InstructionText style={{ top: '4vw' }}>
                   Soak the parts for 15 minutes in a mild solution of liquid
-                  dish detergent and lukewarm clean water. Agitate gently. Rinse
-                  parts in clean water.
+                  dish detergent and lukewarm clean water. Agitate gently.
+                  <br />
+                  <br />
+                  Rinse parts in clean water.
+                  <br />
+                  <br />
+                  OR
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper style={{ marginBottom: 0 }}>
+                <InstructionImg
+                  sizes={data.SMClean_2b.sizes}
+                  style={{
+                    width: '10.5vw'
+                  }}
+                />
+                <InstructionText style={{ fontWeight: 'bold', left: '3.4vw' }}>
+                  Dishwasher safe under the following conditions:
+                  <br /><br />
+                  <InstructionText style={{ fontWeight: '400', left: '2.6vw'}}>
+                    <ul style={{ margin: 0, lineHeight: '2vw' }}>
+                      <li>
+                        Avoid heavy or other cycles that include heated dry over
+                        158°F
+                      </li>
+                      <li>Parts must be placed in the top rack ONLY</li>
+                      <li>Secure product face up, as pictured</li>
+                      <li>Use dishwasher detergent and rinse aid</li>
+                      <li>Do not boil or sterilize</li>
+                    </ul>
+                    <br />
+                    <InstructionText style={{ right: '2.6vw' }}>SEE CAUTIONS, 1ST BULLET, BELOW</InstructionText>
+                  </InstructionText>
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
@@ -367,6 +398,11 @@ class Instructions extends Component {
           )}
           {activeSubMenuTab === 4 && (
             <div>
+              <InstructionsBlueHeader>
+                CLEANING INSTRUCTIONS FOR THE LARGE MASK AND MOUTHPIECE
+                CHAMBERS. THIS PRODUCT CAN BE USED RIGHT OUT OF THE PACKAGE AND
+                THEN CLEANED WEEKLY.
+              </InstructionsBlueHeader>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_1.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
