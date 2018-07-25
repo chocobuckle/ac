@@ -75,7 +75,6 @@ const SubMenuTitle = styled.p`
     color: #fff;
     font-size: 2.3vw;
     flex-wrap: wrap;
-    font-weight: bold;
     line-height: 2.8vw;
     margin-bottom: 0;
     text-align: center;
@@ -86,6 +85,18 @@ const InstructionImgAndTextWrapper = styled.div`
   display: flex;
   margin: 3vw auto 6vw;
   width: 80vw;
+`;
+
+const InstructionsBlueHeader = styled.p`
+  && {
+    color: #004899;
+    font-size: 2.5vw;
+    font-weight: 400;
+    line-height: 3vw;
+    margin: 1.75vw auto 0;
+    text-align: center;
+    width: 80vw;
+  }
 `;
 
 const InstructionImg = styled(Img)`
@@ -209,6 +220,14 @@ class Instructions extends Component {
                   Inspiratory Flow Indicator (IFI) only moves if a good seal is
                   created.
                 </InstructionText>
+                <InstructionImg
+                  sizes={data.SMInstruct_5b.sizes}
+                  style={{
+                    position: 'relative',
+                    right: '5vw',
+                    width: '12.25vw'
+                  }}
+                />
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_6.sizes} />
@@ -231,6 +250,11 @@ class Instructions extends Component {
           )}
           {activeSubMenuTab === 2 && (
             <div>
+              <InstructionsBlueHeader>
+                CLEANING INSTRUCTIONS FOR THE SMALL AND MEDIUM MASK CHAMBERS.
+                THIS PRODUCT CAN BE USED RIGHT OUT OF THE PACKAGE AND THEN
+                CLEANED WEEKLY.
+              </InstructionsBlueHeader>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_1.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
@@ -242,8 +266,8 @@ class Instructions extends Component {
                 <InstructionImg sizes={data.SMClean_2.sizes} />
                 <InstructionText style={{ top: '4vw' }}>
                   Soak the parts for 15 minutes in a mild solution of liquid
-                  dish detergent and lukewarm clean water. Agitate gently.
-                  Rinse parts in clean water.
+                  dish detergent and lukewarm clean water. Agitate gently. Rinse
+                  parts in clean water.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
