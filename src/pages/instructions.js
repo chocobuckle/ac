@@ -85,7 +85,7 @@ const SubMenuTitle = styled.p`
 const InstructionImgAndTextWrapper = styled.div`
   display: flex;
   margin: 3vw auto 6vw;
-  width: 75vw;
+  width: 80vw;
 `;
 
 const InstructionImg = styled(Img)`
@@ -95,7 +95,7 @@ const InstructionImg = styled(Img)`
 
 const InstructionText = styled.p`
   && {
-    font-size: 1.8vw;
+    font-size: 2.4vw;
     line-height: 2.8vw;
     position: relative;
     right: 6vw;
@@ -173,7 +173,7 @@ class Instructions extends Component {
             <div>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_1.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   Carefully examine the product for damage, missing parts, or
                   foreign objects. Remove any foreign objects prior to use. The
                   product should be replaced IMMEDIATELY if there are any
@@ -185,26 +185,26 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_2.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '4vw' }}>
                   Remove cap from the MDI.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_3.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '4vw' }}>
                   Shake the MDI immediately before each use as per the
                   instructions supplied with the MDI.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_4.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   Insert the MDI into the backpiece of the chamber.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_5.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   Apply mask to face and ensure an eective seal. The Flow-Vu®
                   Inspiratory Flow Indicator (IFI) only moves if a good seal is
                   created.
@@ -212,7 +212,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_6.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   Press the MDI at the beginning of a slow inhalation as the
                   Flow-Vu® Inspiratory Flow Indicator moves toward the patient.
                   Use the Flow-Vu® Inspiratory Flow Indicator to count breaths.
@@ -222,7 +222,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_7.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   Follow instructions supplied with the MDI on how long to wait
                   before repeating steps 3-6 as prescribed.
                 </InstructionText>
@@ -233,14 +233,14 @@ class Instructions extends Component {
             <div>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_1.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   Remove the backpiece. To detach the frontpiece, twist chamber
                   as shown.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_2.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '4vw' }}>
                   Soak the parts for 15 minutes in a mild solution of liquid
                   dish detergent and lukewarm clean water. Agitate gently.
                   Rinse parts in clean water.
@@ -248,21 +248,21 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_3.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '4vw' }}>
                   Shake out excess water from the parts and allow to air dry in
                   a vertical position. Ensure parts are dry before reassembly.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_4.sizes} />
-                <InstructionText style={{ top: '3.25vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   To reassemble, t the frontpiece on the end of the chamber and
                   twist rmly until securely locked into position.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_5.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   Center the Alignment Feature on the backpiece with the
                   Flow-Vu® Inspiratory Flow Indicator, as shown. Press rmly to
                   attach the backpiece.
@@ -274,7 +274,7 @@ class Instructions extends Component {
             <div>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_1.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   Carefully examine the product for damage, missing parts or
                   foreign objects. Remove any foreign objects prior to use. The
                   product should be replaced IMMEDIATELY if there are any
@@ -298,7 +298,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_4.sizes} />
-                <InstructionText style={{ top: '3.25vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   Insert the MDI into the backpiece of the chamber.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
@@ -334,7 +334,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_7.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   Follow instructions supplied with the MDI on how long to wait
                   before repeating steps 3-6 as prescribed.
                 </InstructionText>
@@ -345,14 +345,14 @@ class Instructions extends Component {
             <div>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_1.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   Remove the backpiece. To detach the frontpiece, twist chamber
                   as shown. Remove the mouthpiece cap.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_2.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '3.75vw' }}>
                   Soak the parts for 15 minutes in a mild solution of liquid
                   dish detergent and lukewarm clean water. Agitate gently. Rinse
                   parts in clean water.
@@ -360,14 +360,14 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_3.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '3.75vw' }}>
                   Shake out excess water from the parts and allow to air dry in
                   a vertical position. Ensure parts are dry before reassembly.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_4.sizes} />
-                <InstructionText style={{ top: '3.25vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   To reassemble, fit the frontpiece on the end of the chamber
                   and twist firmly until securely locked into position. For
                   mouthpiece models, the protective cap should always be placed
@@ -376,7 +376,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_5.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+                <InstructionText style={{ top: '3.5vw' }}>
                   Center the Alignment Feature on the backpiece with the
                   Flow-Vu® Inspiratory Flow Indicator, as shown. Press firmly to
                   attach the backpiece.
