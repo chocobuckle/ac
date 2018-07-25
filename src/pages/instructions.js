@@ -113,6 +113,34 @@ const InstructionText = styled.p`
   }
 `;
 
+const HelpfulTips = styled.div`
+  background: rgba(245, 245, 245, 1);
+  border: 0.5vw solid #007fc8;
+  border-radius: 1vw;
+  font-size: 3vw;
+  line-height: 1.25em;
+  width: 93.5%;
+  margin: 0 auto;
+  padding: 0.6em;
+
+  div:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+const TipWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2.25vw;
+`;
+
+const TipImg = styled(Img)`
+  max-width: 55px;
+  margin-right: 2vw;
+  width: 6.5vw;
+`;
+
 class Instructions extends Component {
   state = {
     activeSubMenuTab: 1
@@ -246,6 +274,35 @@ class Instructions extends Component {
                   before repeating steps 3-6 as prescribed.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
+              <HelpfulTips>
+                <h6 style={{ color: '#004899', fontWeight: '600', 'marginBottom': '0.6em' }}>
+                  Helpful Tips
+                </h6>
+                <TipWrapper>
+                  <TipImg
+                    sizes={data.SMInstruct_PawPrint.sizes}
+                  />
+                  <b>Give praise and rewards.</b>
+                </TipWrapper>
+                <TipWrapper>
+                  <TipImg
+                    sizes={data.SMInstruct_PawPrint.sizes}
+                  />
+                  <b>
+                    Use teddy bears or dolls to "pretend" to use the chamber to
+                    make it look like a game.
+                  </b>
+                </TipWrapper>
+                <TipWrapper>
+                  <TipImg
+                    sizes={data.SMInstruct_PawPrint.sizes}
+                  />
+                  <b>
+                    If possible, give treatments when the child is happy and not
+                    crying.
+                  </b>
+                </TipWrapper>
+              </HelpfulTips>
             </div>
           )}
           {activeSubMenuTab === 2 && (
@@ -601,7 +658,7 @@ export const query = graphql`
       }
     }
     SMInstruct_PawPrint: imageSharp(
-      id: { regex: "/instructions/PawPrint.png/" }
+      id: { regex: "/instructions/SMInstruct/PawPrint.png/" }
     ) {
       sizes(maxWidth: 55) {
         src
