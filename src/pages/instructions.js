@@ -39,14 +39,14 @@ const InstructionsWrapper = styled.div`
 const InstructionsMenu = ContentWrapper.extend`
   border-radius: 1.5vw;
   border: 0.75vw solid #f2a900;
-  margin-top: 5vw;
+  margin-top: 6.5vw;
   padding: 0;
 `;
 
 const SubMenuWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-top: -6vw;
+  margin-top: -6.25vw;
   width: 100%;
 `;
 
