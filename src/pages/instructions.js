@@ -117,7 +117,7 @@ const HelpfulTips = styled.div`
   background: rgba(245, 245, 245, 1);
   border: 0.5vw solid #007fc8;
   border-radius: 1vw;
-  box-shadow: 2px 2px 7px 2px rgba(0,0,0,0.2);
+  box-shadow: 3px 3px 7px 1px rgba(0,0,0,0.2);
   font-size: 3vw;
   line-height: 1.25em;
   width: 93.5%;
