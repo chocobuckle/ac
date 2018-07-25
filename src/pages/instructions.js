@@ -340,7 +340,47 @@ class Instructions extends Component {
             </div>
           )}
           {activeSubMenuTab === 4 && (
-            <InstructionImgAndTextWrapper>44444</InstructionImgAndTextWrapper>
+            <div>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.LMClean_1.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
+                  Remove the backpiece. To detach the frontpiece, twist chamber
+                  as shown. Remove the mouthpiece cap.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.LMClean_2.sizes} />
+                <InstructionText style={{ top: '3.5vw' }}>
+                  Soak the parts for 15 minutes in a mild solution of liquid
+                  dish detergent and lukewarm clean water. Agitate gently. Rinse
+                  parts in clean water.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.LMClean_3.sizes} />
+                <InstructionText style={{ top: '3.5vw' }}>
+                  Shake out excess water from the parts and allow to air dry in
+                  a vertical position. Ensure parts are dry before reassembly.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.LMClean_4.sizes} />
+                <InstructionText style={{ top: '3.25vw' }}>
+                  To reassemble, fit the frontpiece on the end of the chamber
+                  and twist firmly until securely locked into position. For
+                  mouthpiece models, the protective cap should always be placed
+                  on the mouthpiece when the chamber is not in use.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper>
+                <InstructionImg sizes={data.LMClean_5.sizes} />
+                <InstructionText style={{ top: '3vw' }}>
+                  Center the Alignment Feature on the backpiece with the
+                  Flow-Vu® Inspiratory Flow Indicator, as shown. Press firmly to
+                  attach the backpiece.
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+            </div>
           )}
         </InstructionsMenu>
       </InstructionsWrapper>
