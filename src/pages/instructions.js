@@ -286,16 +286,29 @@ class Instructions extends Component {
                   <b>Dishwasher safe under the following conditions:</b>
                   <br />
                   <br />
-                  <ul style={{ lineHeight: '2vw', margin: '0 0 2vw 3.5vw' }}>
-                    <li>
-                      Avoid heavy or other cycles that include heated dry over
-                      158°F
-                    </li>
-                    <li>Parts must be placed in the top rack ONLY</li>
-                    <li>Secure product face up, as pictured</li>
-                    <li>Use dishwasher detergent and rinse aid</li>
-                    <li>Do not boil or sterilize</li>
-                  </ul>
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper
+                style={{ flexDirection: 'column', marginBottom: '-12.5vw' }}>
+                <ul
+                  style={{
+                    fontSize: '2.4vw',
+                    position: 'relative',
+                    left: '13.75vw',
+                    lineHeight: '1.75vw',
+                    margin: '0 0 2vw 3.5vw',
+                    bottom: '8.5vw'
+                  }}>
+                  <li>
+                    Avoid heavy or other cycles that include heated dry over
+                    158°F
+                  </li>
+                  <li>Parts must be placed in the top rack ONLY</li>
+                  <li>Secure product face up, as pictured</li>
+                  <li>Use dishwasher detergent and rinse aid</li>
+                  <li>Do not boil or sterilize</li>
+                </ul>
+                <InstructionText style={{ bottom: '11vw', left: '13.75vw' }}>
                   SEE CAUTIONS, 1ST BULLET, BELOW
                 </InstructionText>
               </InstructionImgAndTextWrapper>
@@ -355,9 +368,10 @@ class Instructions extends Component {
                   Insert the MDI into the backpiece of the chamber.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper style={{
-                flexDirection: 'column'
-              }}>
+              <InstructionImgAndTextWrapper
+                style={{
+                  flexDirection: 'column'
+                }}>
                 <InstructionImg
                   sizes={data.LMInstruct_5.sizes}
                   style={{
@@ -365,17 +379,39 @@ class Instructions extends Component {
                     width: '64vw'
                   }}
                 />
-                <InstructionText style={{ left: '14vw', top: '1.5vw', width: '61.25vw' }}>
+                <InstructionText
+                  style={{
+                    left: '14vw',
+                    marginBottom: 0,
+                    top: '1.75vw',
+                    width: '61.25vw'
+                  }}>
                   Put mouthpiece into mouth and close lips around it to ensure
                   an eective seal. The Flow-Vu® Inspiratory Flow Indicator (IFI)
-                  only moves if the patient has a good seal. Apply mask to face
-                  and ensure an eective seal. The Flow-Vu® Inspiratory Flow
-                  Indicator only moves if a good seal is created.
+                  only moves if the patient has a good seal.<br />
+                  <br />Apply mask to face and ensure an eective seal. The
+                  Flow-Vu® Inspiratory Flow Indicator only moves if a good seal
+                  is created.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper>
-                <InstructionImg sizes={data.LMInstruct_6.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+              <InstructionImgAndTextWrapper
+                style={{
+                  flexDirection: 'column'
+                }}>
+                <InstructionImg
+                  sizes={data.LMInstruct_6.sizes}
+                  style={{
+                    maxWidth: '688px',
+                    width: '64vw'
+                  }}
+                />
+                <InstructionText
+                  style={{
+                    left: '14vw',
+                    marginBottom: 0,
+                    top: '1.75vw',
+                    width: '61.25vw'
+                  }}>
                   Breathe out gently and press the MDI at the beginning of a
                   slow inhalation. Use the Flow-Vu® IFI to assist in the
                   coordination of this step. Breathe in slowly and deeply
@@ -384,13 +420,13 @@ class Instructions extends Component {
                   tight on the mouthpiece breathing normally 2-3 times through
                   the chamber after the MDI is pressed. Slow down inhalation if
                   you hear the FlowSignal® Whistle sound. It means that you are
-                  inhaling too quickly. Administer 1 pu at a time. Breathe out
-                  gently and press the MDI at the beginning of a slow inhalation
-                  as the Flow-Vu® IFI moves toward you. Use the Flow-Vu® IFI to
-                  count breaths. Maintain seal for 5-6 breaths after the MDI is
-                  pressed. Slow down inhalation if you hear the FlowSignal®
-                  Whistle sound. It means that you are inhaling too quickly.
-                  Administer 1 pu at a time.
+                  inhaling too quickly. Administer 1 pu at a time.<br />
+                  <br />Breathe out gently and press the MDI at the beginning of
+                  a slow inhalation as the Flow-Vu® IFI moves toward you. Use
+                  the Flow-Vu® IFI to count breaths. Maintain seal for 5-6
+                  breaths after the MDI is pressed. Slow down inhalation if you
+                  hear the FlowSignal® Whistle sound. It means that you are
+                  inhaling too quickly. Administer 1 pu at a time.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
@@ -420,8 +456,9 @@ class Instructions extends Component {
                 <InstructionImg sizes={data.LMClean_2.sizes} />
                 <InstructionText style={{ top: '3.75vw' }}>
                   Soak the parts for 15 minutes in a mild solution of liquid
-                  dish detergent and lukewarm clean water. Agitate gently. Rinse
-                  parts in clean water.
+                  dish detergent and lukewarm clean water. Agitate gently.
+                  <br />
+                  <br />Rinse parts in clean water.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
