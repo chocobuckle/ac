@@ -31,7 +31,7 @@ const OverviewWrapper = styled.div`
     margin-bottom: 2.25vw;
   }
 
-  span {
+  b {
     color: #007fc8;
   }
 `;
@@ -39,9 +39,6 @@ const OverviewWrapper = styled.div`
 const H2 = styled.h2`
   font-size: 5.3vw;
   margin-bottom: 2vw;
-  span {
-    font-size: 5.3vw;
-  }
 `;
 
 const AdditionalFeatures = styled.section`
@@ -71,7 +68,7 @@ function Overview({ data }) {
       <AdditionalFeatures>
         <ContentWrapper>
           <H2>
-            Additional features of <span>AeroChamber Plus® Flow-Vu®</span> VHC
+            Additional features of <b>AeroChamber Plus® Flow-Vu®</b> VHC
           </H2>
           <p>
             <span>"EZ Flow" Exhalation Valve</span> - Directs exhaled medication

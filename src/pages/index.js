@@ -53,9 +53,6 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   font-size: 5.3vw;
   margin-bottom: 3vw;
-  span {
-    font-size: 5.3vw;
-  }
 `;
 
 const H3 = styled.h3`
@@ -63,11 +60,6 @@ const H3 = styled.h3`
   font-size: 4.7vw;
   margin-bottom: 1.5vw;
   color: #007fc8;
-  span {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 4.7vw;
-  }
 `;
 
 const Macbook = ContentWrapper.extend`
@@ -78,7 +70,7 @@ const Macbook = ContentWrapper.extend`
     rgba(255, 255, 255, 1) 49.44%
   );
 `;
-const macbookImgStyle = {};
+
 const VideoButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -118,13 +110,13 @@ const TorsoTextWrapper = styled.div`
   width: 48%;
 `;
 const TorsoImgWrapper = styled.div`
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 `;
 const InhalingRedImgWrapper = styled.div`
-  width: 41.1%;
   margin-top: 1.3vw;
+  width: 41.1%;
 `;
 const InhalingWithLogoImgWrapper = styled.div`
   width: 51.5%;
@@ -132,17 +124,15 @@ const InhalingWithLogoImgWrapper = styled.div`
 const InhalerImgCaption = styled.p`
   margin-top: 0.75vw;
 `;
-const inhalingRedImgStyle = {};
-const inhalingWithLogoImgStyle = {};
 
 const EasyInstructionsWrapper = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;
 const EasyInstructionsImgAndTextWrapper = styled.div`
-  display: flex;
   align-items: center;
+  display: flex;
 `;
 const easyInstructions1ImgStyle = {
   marginLeft: '4vw',
@@ -164,7 +154,6 @@ const flowVuLogoImgStyle = {
   width: '26vw'
 };
 
-const bubblesImgStyle = {};
 const BubblesAndBanner = styled.div`
   display: flex;
   flex-direction: column;
@@ -239,11 +228,6 @@ const FootnoteSmallPrint = styled.h6`
   font-weight: 400;
   font-size: 2.6vw;
   margin-bottom: 0.3em;
-  span {
-    color: #000;
-    font-weight: bold;
-    font-size: 2.6vw;
-  }
 `;
 
 const IndexPage = ({ data }) => {
@@ -269,7 +253,7 @@ const IndexPage = ({ data }) => {
   return (
     <IndexWrapper>
       <Macbook>
-        <Img sizes={macbook.sizes} style={{ ...macbookImgStyle }} />
+        <Img sizes={macbook.sizes} />
         <VideoButtonWrapper>
           <VideoButton>VIDEO 1</VideoButton>
           <VideoButton>VIDEO 2</VideoButton>
@@ -285,7 +269,7 @@ const IndexPage = ({ data }) => {
           <TorsoWrapper>
             <TorsoTextWrapper>
               <H3>
-                Did you <span>know?</span>
+                Did you <em><b>know?</b></em>
               </H3>
               <p>
                 Guidelines recommend chambers for children and adults.
@@ -299,7 +283,7 @@ const IndexPage = ({ data }) => {
             </TorsoTextWrapper>
             <TorsoTextWrapper>
               <H3>
-                <span>Ensure</span> your inhaler <span>medicine</span> is
+                <em><b>Ensure</b></em> your inhaler <em><b>medicine</b></em> is
                 delivered where it is needed
               </H3>
               <p>
@@ -317,14 +301,12 @@ const IndexPage = ({ data }) => {
             <InhalingRedImgWrapper>
               <Img
                 sizes={inhalingRed.sizes}
-                style={{ ...inhalingRedImgStyle }}
               />
               <InhalerImgCaption>Inhaler alone</InhalerImgCaption>
             </InhalingRedImgWrapper>
             <InhalingWithLogoImgWrapper>
               <Img
                 sizes={inhalingWithLogo.sizes}
-                style={{ ...inhalingWithLogoImgStyle }}
               />
               <InhalerImgCaption style={{ marginLeft: '7%' }}>
                 Inhaler with{' '}
@@ -341,10 +323,7 @@ const IndexPage = ({ data }) => {
               color: '#007fc8',
               fontWeight: '400',
               margin: '0.5em auto'
-            }}>
-            <span style={{ fontWeight: 'bold', fontStyle: 'italic' }}>
-              Easy
-            </span>{' '}
+            }}><em><b>Easy </b></em>
             as 1-2-3
           </H2>
           <EasyInstructionsImgAndTextWrapper>
@@ -398,7 +377,7 @@ const IndexPage = ({ data }) => {
         </EasyInstructionsWrapper>
       </InhalerTips>
       <BubblesAndBanner>
-        <Img sizes={bubblesBG.sizes} style={{ ...bubblesImgStyle }} />
+        <Img sizes={bubblesBG.sizes} />
         <WhiteBanner>
           <WhiteBannerChildImgFlexWrapper>
             <Img
@@ -485,12 +464,12 @@ const IndexPage = ({ data }) => {
           Children should transition to a mouthpiece around the age of 5
         </FootnoteHeader>
         <FootnoteSmallPrint>
-          <span>1.</span> McIvor et al. Optimizing the Delivery of Inhaled
+          <b>1.</b> McIvor et al. Optimizing the Delivery of Inhaled
           Medication for Respiratory Patients: The Role of Valved Holding
           Chambers.
         </FootnoteSmallPrint>
         <FootnoteSmallPrint>
-          <span>2.</span> Global Initiative for Asthma. Global strategy for
+          <b>2.</b> Global Initiative for Asthma. Global strategy for
           asthma management and prevention 2011. Available at:<br />
           <a
             href="http://ginasthma.org/2018-gina-report-global-strategy-for-asthma-management-and-prevention/"
@@ -500,7 +479,7 @@ const IndexPage = ({ data }) => {
           </a>
         </FootnoteSmallPrint>
         <FootnoteSmallPrint>
-          <span>3.</span> Plaza et al. Medical Personnel and Patient Skill in
+          <b>3.</b> Plaza et al. Medical Personnel and Patient Skill in
           the Use of Metered Dose Inhalers: A Multicentric Study.
         </FootnoteSmallPrint>
       </Footnotes>
