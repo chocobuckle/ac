@@ -118,8 +118,6 @@ const HelpfulTips = styled.div`
   border: 0.5vw solid #007fc8;
   border-radius: 1vw;
   box-shadow: 3px 3px 7px 1px rgba(0,0,0,0.2);
-  font-size: 3vw;
-  line-height: 1.25em;
   width: 93.5%;
   margin: 0 auto 10em;
   padding: 0.6em;
@@ -140,6 +138,15 @@ const TipImg = styled(Img)`
   max-width: 55px;
   margin-right: 2vw;
   width: 6.5vw;
+`;
+
+const TipText = styled.p`
+  && {
+    font-size: 3vw;
+    line-height: 1.25em;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
 `;
 
 class Instructions extends Component {
@@ -283,25 +290,25 @@ class Instructions extends Component {
                   <TipImg
                     sizes={data.SMInstruct_PawPrint.sizes}
                   />
-                  <b>Give praise and rewards.</b>
+                  <TipText>Give praise and rewards.</TipText>
                 </TipWrapper>
                 <TipWrapper>
                   <TipImg
                     sizes={data.SMInstruct_PawPrint.sizes}
                   />
-                  <b>
+                  <TipText>
                     Use teddy bears or dolls to "pretend" to use the chamber to
                     make it look like a game.
-                  </b>
+                  </TipText>
                 </TipWrapper>
                 <TipWrapper>
                   <TipImg
                     sizes={data.SMInstruct_PawPrint.sizes}
                   />
-                  <b>
+                  <TipText>
                     If possible, give treatments when the child is happy and not
                     crying.
-                  </b>
+                  </TipText>
                 </TipWrapper>
               </HelpfulTips>
             </div>
