@@ -46,7 +46,7 @@ const InstructionsMenu = ContentWrapper.extend`
 const SubMenuWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-top: -4vw;
+  margin-top: -6vw;
   width: 100%;
 `;
 
@@ -54,7 +54,11 @@ const SubMenuTab = styled.div`
   border-radius: 1vw;
   color: #fff;
   cursor: pointer;
-  padding: 0.35em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2em 0.3em;
   width: 24.5%;
 
   background-color: ${({ subHeaderNumber, smallMask, activeSubMenuTab }) => {
@@ -69,7 +73,8 @@ const SubMenuTab = styled.div`
 const SubMenuTitle = styled.p`
   && {
     color: #fff;
-    font-size: 1.8vw;
+    font-size: 2.3vw;
+    flex-wrap: wrap;
     font-weight: bold;
     line-height: 2.8vw;
     margin-bottom: 0;
@@ -238,10 +243,7 @@ class Instructions extends Component {
                 <InstructionText style={{ top: '3.5vw' }}>
                   Soak the parts for 15 minutes in a mild solution of liquid
                   dish detergent and lukewarm clean water. Agitate gently.
-                  <p />
-                  <InstructionText style={{ left: '0', top: '-1.5vw' }}>
-                    Rinse parts in clean water.
-                  </InstructionText>
+                  Rinse parts in clean water.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
