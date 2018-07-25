@@ -284,7 +284,8 @@ class Instructions extends Component {
                 />
                 <InstructionText style={{ left: '3.4vw', marginBottom: 0 }}>
                   <b>Dishwasher safe under the following conditions:</b>
-                  <br /><br />
+                  <br />
+                  <br />
                   <ul style={{ lineHeight: '2vw', margin: '0 0 2vw 3.5vw' }}>
                     <li>
                       Avoid heavy or other cycles that include heated dry over
@@ -354,9 +355,17 @@ class Instructions extends Component {
                   Insert the MDI into the backpiece of the chamber.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper>
-                <InstructionImg sizes={data.LMInstruct_5.sizes} />
-                <InstructionText style={{ top: '3vw' }}>
+              <InstructionImgAndTextWrapper style={{
+                flexDirection: 'column'
+              }}>
+                <InstructionImg
+                  sizes={data.LMInstruct_5.sizes}
+                  style={{
+                    maxWidth: '688px',
+                    width: '64vw'
+                  }}
+                />
+                <InstructionText style={{ left: '14vw', top: '1.5vw', width: '61.25vw' }}>
                   Put mouthpiece into mouth and close lips around it to ensure
                   an eective seal. The Flow-Vu® Inspiratory Flow Indicator (IFI)
                   only moves if the patient has a good seal. Apply mask to face
@@ -754,7 +763,7 @@ export const query = graphql`
     LMInstruct_5: imageSharp(
       id: { regex: "/instructions/LMInstruct/LMInstruct_5.png/" }
     ) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 688) {
         src
         srcSet
         srcWebp
@@ -766,7 +775,7 @@ export const query = graphql`
     LMInstruct_6: imageSharp(
       id: { regex: "/instructions/LMInstruct/LMInstruct_6.png/" }
     ) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 688) {
         src
         srcSet
         srcWebp
