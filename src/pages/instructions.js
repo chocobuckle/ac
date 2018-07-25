@@ -295,7 +295,7 @@ class Instructions extends Component {
                     fontSize: '2.4vw',
                     position: 'relative',
                     left: '13.75vw',
-                    lineHeight: '1.75vw',
+                    lineHeight: '2.2vw',
                     margin: '0 0 2vw 3.5vw',
                     bottom: '8.5vw'
                   }}>
@@ -308,7 +308,7 @@ class Instructions extends Component {
                   <li>Use dishwasher detergent and rinse aid</li>
                   <li>Do not boil or sterilize</li>
                 </ul>
-                <InstructionText style={{ bottom: '11vw', left: '13.75vw' }}>
+                <InstructionText style={{ bottom: '10.5vw', left: '13.75vw' }}>
                   SEE CAUTIONS, 1ST BULLET, BELOW
                 </InstructionText>
               </InstructionImgAndTextWrapper>
@@ -452,13 +452,54 @@ class Instructions extends Component {
                   as shown. Remove the mouthpiece cap.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper style={{ marginBottom: '4.5vw' }}>
                 <InstructionImg sizes={data.LMClean_2.sizes} />
-                <InstructionText style={{ top: '3.75vw' }}>
+                <InstructionText style={{ top: '4vw' }}>
                   Soak the parts for 15 minutes in a mild solution of liquid
                   dish detergent and lukewarm clean water. Agitate gently.
                   <br />
-                  <br />Rinse parts in clean water.
+                  <br />
+                  Rinse parts in clean water.
+                  <br />
+                  <br />
+                  OR
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper style={{ marginBottom: 0 }}>
+                <InstructionImg
+                  sizes={data.LMClean_2b.sizes}
+                  style={{
+                    width: '10.5vw'
+                  }}
+                />
+                <InstructionText style={{ left: '3.4vw', marginBottom: 0 }}>
+                  <b>Dishwasher safe under the following conditions:</b>
+                  <br />
+                  <br />
+                </InstructionText>
+              </InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper
+                style={{ flexDirection: 'column', marginBottom: '-12.5vw' }}>
+                <ul
+                  style={{
+                    fontSize: '2.4vw',
+                    position: 'relative',
+                    left: '13.75vw',
+                    lineHeight: '2.2vw',
+                    margin: '0 0 2vw 3.5vw',
+                    bottom: '8.5vw'
+                  }}>
+                  <li>
+                    Avoid heavy or other cycles that include heated dry over
+                    158°F
+                  </li>
+                  <li>Parts must be placed in the top rack ONLY</li>
+                  <li>Secure product face up, as pictured</li>
+                  <li>Use dishwasher detergent and rinse aid</li>
+                  <li>Do not boil or sterilize</li>
+                </ul>
+                <InstructionText style={{ bottom: '10.5vw', left: '13.75vw' }}>
+                  SEE CAUTIONS, 1ST BULLET, BELOW
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
