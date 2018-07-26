@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
 import { ContentWrapper } from 'helpers/sharedStyles';
 import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 import IndicationsForUse from 'components/IndicationsForUse';
+import InhalerAnimation from 'components/InhalerAnimation';
 
 const OverviewWrapper = styled.div`
   line-height: 4.5vw;
@@ -65,6 +65,7 @@ function Overview({ data }) {
         macbook={data.macbook}
         bpaAndDishwasherSafe={data.bpaAndDishwasherSafe}
       />
+      <InhalerAnimation animationClickyThing={data.animationClickyThing} inhalerAnimationImg={data.inhalerAnimationImg} />
       <AdditionalFeatures>
         <ContentWrapper>
           <H2>
@@ -118,6 +119,26 @@ export const query = graphql`
     }
     macbook: imageSharp(id: { regex: "/misc/macbook_small.png/" }) {
       sizes(maxWidth: 886) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    inhalerAnimationImg: imageSharp(id: { regex: "/overview/inhaler_animation_img.png/" }) {
+      sizes(maxWidth: 933) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    animationClickyThing: imageSharp(id: { regex: "/overview/clicky_thing.png/" }) {
+      sizes(maxWidth: 99) {
         src
         srcSet
         srcWebp
