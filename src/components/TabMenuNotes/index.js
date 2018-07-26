@@ -11,6 +11,7 @@ const H2 = styled.h2`
 
 const List = styled.ul`
   list-style: 'none';
+  margin-left: 0;
 `;
 
 const ListItem = styled.li``;
@@ -37,26 +38,28 @@ function TabMenuNotes() {
     <Wrapper>
       <ContentWrapper>
         <H2>Notes</H2>
-        <List>
-          <ListItem>
-            Storage and operating range is 5°C–40°C (41°F–104°F) at 15% to 95%
-            relative humidity
-          </ListItem>
-          <ListItem>
-            Product may need to be replaced after 12 months of use.
-            Environmental conditions, storage and proper cleaning can affect
-            product life span
-          </ListItem>
-          <ListItem>Do not share this medical device</ListItem>
-          <ListItem>
-            If you notice medication build-up in your chamber, wash the inside
-            of the chamber gently with a soft cloth
-          </ListItem>
-          <ListItem>
-            Dishwashing with overly dirty dishes is not recommended
-          </ListItem>
-          <ListItem>Dishwasher validated up to 158°F (70°C)</ListItem>
-        </List>
+        <ContentWrapper style={{ padding: 0 }}>
+          <List>
+            <ListItem>
+              Storage and operating range is 5°C–40°C (41°F–104°F) at 15% to 95%
+              relative humidity
+            </ListItem>
+            <ListItem>
+              Product may need to be replaced after 12 months of use.
+              Environmental conditions, storage and proper cleaning can affect
+              product life span
+            </ListItem>
+            <ListItem>Do not share this medical device</ListItem>
+            <ListItem>
+              If you notice medication build-up in your chamber, wash the inside
+              of the chamber gently with a soft cloth
+            </ListItem>
+            <ListItem>
+              Dishwashing with overly dirty dishes is not recommended
+            </ListItem>
+            <ListItem>Dishwasher validated up to 158°F (70°C)</ListItem>
+          </List>
+        </ContentWrapper>
       </ContentWrapper>
     </Wrapper>
   );
