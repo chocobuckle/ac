@@ -96,44 +96,6 @@ const AnimationInfoList = styled.ul`
   padding: 1.5vw;
 `;
 
-function getHeader(activeClickyThingNumber) {
-  switch (activeClickyThingNumber) {
-    case 1:
-      return 'ComfortSeal Mask';
-    case 2:
-      return 'EZ Flow Exhalation Valve';
-    case 3:
-      return 'New Flow-Vu Inhalation Indicator';
-    case 4:
-      return 'FlowSignal Whistle';
-    case 5:
-      return 'Responsive One-Way Inspiratory Valve';
-    case 6:
-      return 'New Anti-Static Chamber';
-    default:
-      break;
-  }
-}
-
-function getListItems(activeClickyThingNumber) {
-  switch (activeClickyThingNumber) {
-    case 1:
-      return { __html: '<li style="font-size: 3.75vw; margin-left: 4vw">Flexible, anatomically designed</li><li>Specifically designed paediatric options</li>' };
-    case 2:
-      return 'EZ Flow Exhalation Valve';
-    case 3:
-      return 'New Flow-Vu Inhalation Indicator';
-    case 4:
-      return 'FlowSignal Whistle';
-    case 5:
-      return 'Responsive One-Way Inspiratory Valve';
-    case 6:
-      return 'New Anti-Static Chamber';
-    default:
-      break;
-  }
-}
-
 class InhalerAnimation extends Component {
   state = {
     activeClickyThingNumber: 1
@@ -280,12 +242,64 @@ class InhalerAnimation extends Component {
             <SelectedNumber>{activeClickyThingNumber}</SelectedNumber>
           </RedBall>
           <AnimationInfoHeader>
-            {getHeader(activeClickyThingNumber)}
+            {activeClickyThingNumber === 1 && 'ComfortSeal Mask'}
+            {activeClickyThingNumber === 2 && 'EZ Flow Exhalation Valve'}
+            {activeClickyThingNumber === 3 &&
+              'New Flow-Vu Inhalation Indicator'}
+            {activeClickyThingNumber === 4 && 'FlowSignal Whistle'}
+            {activeClickyThingNumber === 5 &&
+              'Responsive One-Way Inspiratory Valve'}
+            {activeClickyThingNumber === 6 && 'New Anti-Static Chamber'}
           </AnimationInfoHeader>
         </RedBallAndInfoHeaderWrapper>
-        <AnimationInfoList
-          dangerouslySetInnerHTML={getListItems(activeClickyThingNumber)}
-        />
+        <AnimationInfoList>
+          {activeClickyThingNumber === 1 && (
+            <div>
+              <li>Flexible, anatomically designed</li>
+              <li>Specifically designed paediatric options</li>
+            </div>
+          )}
+          {activeClickyThingNumber === 2 && (
+            <div>
+              <li>Minimize re-breathing</li>
+              <li>Directs exhaled flow away from the patients face</li>
+            </div>
+          )}
+          {activeClickyThingNumber === 3 && (
+            <div>
+              <li>
+                Opens with minimal inspiratory effort, closes on exhalation
+              </li>
+              <li>
+                Retains medication inside the chamber for the next breath
+                suspension time
+              </li>
+            </div>
+          )}
+          {activeClickyThingNumber === 4 && (
+            <div>
+              <li>Sounds when the patient is inhaling too rapidly</li>
+              <li>Encourages patients to breathe slowly</li>
+            </div>
+          )}
+          {activeClickyThingNumber === 5 && (
+            <div>
+              <li>
+                Opens with minimal inspiratory effort, closes on exhalation
+              </li>
+              <li>
+                Retains medication inside the chamber for the next breath
+                suspension time
+              </li>
+            </div>
+          )}
+          {activeClickyThingNumber === 6 && (
+            <div>
+              <li>Can be used out of package without pre-treatment</li>
+              <li>Maximizes aerosol suspension time </li>
+            </div>
+          )}
+        </AnimationInfoList>
       </ContentWrapper>
     );
   }
