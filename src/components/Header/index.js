@@ -25,17 +25,20 @@ const logoImgStyle = {
 
 const List = styled.ul`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   list-style: none;
   margin: 0 auto;
-  margin-bottom: 1vw;
+  margin: 0.25em 0;
   text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 const ListItem = styled.li`
   font-family: Myriad Pro, sans-serif;
-  font-size: 6vw;
-  margin-bottom: 2vw;
+  font-size: 1.3rem;
+  margin-bottom: 0.35em;
   text-decoration: none;
 `;
 
@@ -60,26 +63,26 @@ const Header = ({ logoSizes }) => (
       </LogoWrapper>
       <nav>
         <List>
-          <ListItem>
+          <ListItem style={{ textAlign: 'right', paddingRight: '4.5vw', width: '50%' }}>
             <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} exact to="/">
               Home
             </HeaderLink>
           </ListItem>
-          <ListItem>
+          <ListItem style={{ textAlign: 'left', paddingLeft: '4.5vw', width: '50%' }}>
             <HeaderLink
               activeStyle={{ ...headerLinkActiveStyle }}
               to="/overview">
               Overview
             </HeaderLink>
           </ListItem>
-          <ListItem>
+          <ListItem style={{ textAlign: 'right', paddingRight: '4.5vw', width: '50%' }}>
             <HeaderLink
               activeStyle={{ ...headerLinkActiveStyle }}
               to="/instructions">
-              Instructions For Use
+              Instructions
             </HeaderLink>
           </ListItem>
-          <ListItem>
+          <ListItem style={{ textAlign: 'left', paddingLeft: '4.5vw', width: '50%' }}>
             <HeaderLink
               activeStyle={{ ...headerLinkActiveStyle }}
               to="/contact">
@@ -87,6 +90,7 @@ const Header = ({ logoSizes }) => (
             </HeaderLink>
           </ListItem>
         </List>
+        <div style={{ borderRight: '0.15em solid #fff', height: '3.6em', width: 0, margin: '-4.3em auto 0.75em' }} />
       </nav>
     </HeaderWrapper>
   </div>
