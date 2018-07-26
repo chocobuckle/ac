@@ -46,6 +46,7 @@
     "no-confusing-arrow": "off",
     "no-console": "warn",
     "no-extend-native": "off",
+    "no-fallthrough": "off",
     "no-multi-spaces": "off",
     "no-param-reassign": ["error", { "props": false }],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
