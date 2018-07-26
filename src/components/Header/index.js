@@ -90,7 +90,7 @@ const Header = ({ logoSizes }) => (
             </HeaderLink>
           </ListItem>
         </List>
-        <div style={{ borderRight: '0.15em solid #fff', height: '3.6em', width: 0, margin: '-4.3em auto 0.75em' }} />
+        <div style={{ borderRight: '0.1125em solid #fff', height: '3.7em', width: 0, margin: '-4.33em auto 0.65em' }} />
       </nav>
     </HeaderWrapper>
   </div>
