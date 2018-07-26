@@ -15,6 +15,7 @@ const InstructionsWrapper = styled.div`
   ul,
   li,
   b,
+  a,
   sup,
   h1,
   h2 {
@@ -26,6 +27,11 @@ const InstructionsWrapper = styled.div`
     color: #004899;
   }
 
+  a {
+    color: #007fc8;
+  }
+
+  a,
   p,
   span {
     font-size: 3.9vw;
@@ -118,7 +124,7 @@ const HelpfulTips = styled.div`
   background: rgba(245, 245, 245, 1);
   border: 0.5vw solid #007fc8;
   border-radius: 1vw;
-  box-shadow: 3px 3px 7px 1px rgba(0,0,0,0.2);
+  box-shadow: 3px 3px 7px 1px rgba(0, 0, 0, 0.2);
   width: 93.5%;
   margin: 0 auto 1vw;
   padding: 0.6em;
@@ -284,35 +290,39 @@ class Instructions extends Component {
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <HelpfulTips>
-                <h6 style={{ color: '#004899', fontWeight: '600', 'marginBottom': '0.6em' }}>
+                <h6
+                  style={{
+                    color: '#004899',
+                    fontWeight: '600',
+                    marginBottom: '0.6em'
+                  }}>
                   Helpful Tips
                 </h6>
                 <TipWrapper>
-                  <TipImg
-                    sizes={data.SMInstruct_PawPrint.sizes}
-                  />
+                  <TipImg sizes={data.SMInstruct_PawPrint.sizes} />
                   <TipText>Give praise and rewards.</TipText>
                 </TipWrapper>
                 <TipWrapper>
-                  <TipImg
-                    sizes={data.SMInstruct_PawPrint.sizes}
-                  />
+                  <TipImg sizes={data.SMInstruct_PawPrint.sizes} />
                   <TipText>
                     Use teddy bears or dolls to "pretend" to use the chamber to
                     make it look like a game.
                   </TipText>
                 </TipWrapper>
                 <TipWrapper>
-                  <TipImg
-                    sizes={data.SMInstruct_PawPrint.sizes}
-                  />
+                  <TipImg sizes={data.SMInstruct_PawPrint.sizes} />
                   <TipText>
                     If possible, give treatments when the child is happy and not
                     crying.
                   </TipText>
                 </TipWrapper>
               </HelpfulTips>
-              <TabMenuPDFDownload download={data.download} SMInstructPDF={data.SMInstruct_PDF} />
+              <div>
+                <TabMenuPDFDownload
+                  download={data.download}
+                  SMInstructPDF={data.SMInstruct_PDF}
+                />
+              </div>
             </div>
           )}
           {activeSubMenuTab === 2 && (
@@ -679,7 +689,9 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_PDF: imageSharp(id: { regex: "/instructions/SMInstruct/pdf.png/" }) {
+    SMInstruct_PDF: imageSharp(
+      id: { regex: "/instructions/SMInstruct/pdf.png/" }
+    ) {
       sizes(maxWidth: 137) {
         src
         srcSet
