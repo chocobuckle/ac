@@ -94,6 +94,10 @@ const AnimationInfoList = styled.ul`
   margin-top: 0.75vw;
   margin-bottom: 0;
   padding: 1.5vw;
+
+  li {
+    margin-left: 6vw;
+  }
 `;
 
 class InhalerAnimation extends Component {
