@@ -85,7 +85,7 @@ const RedBallAndInfoHeaderWrapper = styled.div`
 `;
 
 const AnimationInfoList = styled.ul`
-  border: 1vw solid #007FC8;
+  border: 1vw solid #007fc8;
   border-right: 0;
   border-bottom: 0;
   border-radius: 0.4vw;
@@ -100,6 +100,25 @@ function getHeader(activeClickyThingNumber) {
   switch (activeClickyThingNumber) {
     case 1:
       return 'ComfortSeal Mask';
+    case 2:
+      return 'EZ Flow Exhalation Valve';
+    case 3:
+      return 'New Flow-Vu Inhalation Indicator';
+    case 4:
+      return 'FlowSignal Whistle';
+    case 5:
+      return 'Responsive One-Way Inspiratory Valve';
+    case 6:
+      return 'New Anti-Static Chamber';
+    default:
+      break;
+  }
+}
+
+function getListItems(activeClickyThingNumber) {
+  switch (activeClickyThingNumber) {
+    case 1:
+      return { __html: '<li style="font-size: 3.75vw; margin-left: 4vw">Flexible, anatomically designed</li><li>Specifically designed paediatric options</li>' };
     case 2:
       return 'EZ Flow Exhalation Valve';
     case 3:
@@ -264,9 +283,9 @@ class InhalerAnimation extends Component {
             {getHeader(activeClickyThingNumber)}
           </AnimationInfoHeader>
         </RedBallAndInfoHeaderWrapper>
-        <AnimationInfoList>
-          TEST
-        </AnimationInfoList>
+        <AnimationInfoList
+          dangerouslySetInnerHTML={getListItems(activeClickyThingNumber)}
+        />
       </ContentWrapper>
     );
   }
