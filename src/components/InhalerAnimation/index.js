@@ -5,6 +5,13 @@ import { ContentWrapper } from 'helpers/sharedStyles';
 
 const ClickyThingWrapper = styled.div`
   position: relative;
+  cursor: pointer;
+  width: 0%;
+  transition: all .2s ease-in-out;
+  :hover {
+    transform: scale(1.2);
+    transform-origin: bottom right;
+  }
 `;
 
 const ClickyThingNumber = styled.p`
@@ -34,7 +41,19 @@ const flipHorizontalAndVertical = {
 };
 
 class InhalerAnimation extends Component {
-  state = {};
+  state = {
+    activeClickyThingNumber: 1
+  };
+
+  handleClick = (clickyThingNumber) => {
+    this.setState((prevState) => {
+      if (clickyThingNumber !== prevState.activeClickyThingNumber) {
+        return {
+          activeClickyThingNumber: clickyThingNumber
+        };
+      }
+    });
+  };
 
   render() {
     const { animationClickyThing, inhalerAnimationImg } = this.props;
@@ -45,6 +64,7 @@ class InhalerAnimation extends Component {
           style={{ maxWidth: '933px', width: '73vw', margin: '0 auto' }}
         />
         <ClickyThingWrapper
+          onClick={() => this.handleClick(1)}
           style={{
             bottom: '28vw',
             left: '1.5vw'
@@ -65,6 +85,7 @@ class InhalerAnimation extends Component {
           </ClickyThingNumber>
         </ClickyThingWrapper>
         <ClickyThingWrapper
+          onClick={() => this.handleClick(2)}
           style={{
             bottom: '46vw',
             left: '34vw'
@@ -82,6 +103,7 @@ class InhalerAnimation extends Component {
           </ClickyThingNumber>
         </ClickyThingWrapper>
         <ClickyThingWrapper
+          onClick={() => this.handleClick(3)}
           style={{
             bottom: '48.5vw',
             left: '42.5vw'
@@ -99,6 +121,7 @@ class InhalerAnimation extends Component {
           </ClickyThingNumber>
         </ClickyThingWrapper>
         <ClickyThingWrapper
+          onClick={() => this.handleClick(4)}
           style={{
             bottom: '48.5vw',
             left: '80vw'
@@ -116,6 +139,7 @@ class InhalerAnimation extends Component {
           </ClickyThingNumber>
         </ClickyThingWrapper>
         <ClickyThingWrapper
+          onClick={() => this.handleClick(5)}
           style={{
             bottom: '33.5vw',
             left: '65vw'
@@ -133,8 +157,9 @@ class InhalerAnimation extends Component {
           </ClickyThingNumber>
         </ClickyThingWrapper>
         <ClickyThingWrapper
+          onClick={() => this.handleClick(6)}
           style={{
-            bottom: '39.5vw',
+            bottom: '40.5vw',
             left: '42vw'
           }}>
           <Img
