@@ -40,11 +40,6 @@ const flipHorizontalAndVertical = {
   transform: 'scale(-1,-1)'
 };
 
-const AnimationInfo = styled.div`
-  width: 69vw;
-  margin: 0 auto;
-`;
-
 const RedBall = styled.div`
   align-items: center;
   background-color: #e84e1b;
@@ -93,10 +88,16 @@ const AnimationInfoList = styled.ul`
   margin-left: 6vw;
   margin-top: 0.75vw;
   margin-bottom: 0;
-  padding: 1.5vw;
+  padding: 1.5vw 1.5vw 0;
 
   li {
-    margin-left: 6vw;
+    font-size: 3.9vw;
+    margin-left: 4.25vw;
+    margin-bottom: 1vw;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
   }
 `;
 

@@ -1,0 +1,18 @@
+body {
+  font-family: Myriad Pro, sans-serif;
+  line-height: 4.5vw;
+}
+
+h1,
+h2 {
+  color: #004899;
+}
+
+p {
+  font-size: 3.9vw;
+  margin-bottom: 2.25vw;
+}
+
+span {
+  color: #007fc8;
+}
