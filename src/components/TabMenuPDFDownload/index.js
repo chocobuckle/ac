@@ -18,7 +18,6 @@ const H2AndDownloadWrapper = styled.div`
 `;
 
 const Wrapper = ContentWrapper.extend`
-  width: 94.5%;
   padding: 4vw 0;
 `;
 
@@ -34,9 +33,9 @@ const downloadImgStyle = {
   width: '6vw'
 };
 
-function TabMenuPDFDownload({ download, SMInstructPDF }) {
+function TabMenuPDFDownload({ style, download, SMInstructPDF }) {
   return (
-    <Wrapper>
+    <Wrapper style={style}>
       <H2AndDownloadWrapper>
         <H2 style={{ marginBottom: 0 }}>Download</H2>
         <Img sizes={download.sizes} style={{ ...downloadImgStyle }} />

@@ -1,12 +1,12 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
-import IndicationsForUse from 'components/IndicationsForUse';
 import TabMenuPDFDownload from 'components/TabMenuPDFDownload';
 import Img from 'gatsby-image';
 import { ContentWrapper } from 'helpers/sharedStyles';
 import TabMenuNotes from 'components/TabMenuNotes';
+import IndicationsForUse from 'components/IndicationsForUse';
 
 const InstructionsWrapper = styled.div`
   line-height: 4.5vw;
@@ -323,6 +323,7 @@ class Instructions extends Component {
                 SMInstructPDF={data.SMInstruct_PDF}
               />
               <TabMenuNotes />
+              <IndicationsForUse />
             </div>
           )}
           {activeSubMenuTab === 2 && (
@@ -411,6 +412,8 @@ class Instructions extends Component {
                   attach the backpiece.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
+              <TabMenuNotes />
+              <IndicationsForUse />
             </div>
           )}
           {activeSubMenuTab === 3 && (
@@ -513,6 +516,13 @@ class Instructions extends Component {
                   before repeating steps 3-6 as prescribed.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
+              <TabMenuPDFDownload
+                style={{ paddingTop: 0 }}
+                download={data.download}
+                SMInstructPDF={data.SMInstruct_PDF}
+              />
+              <TabMenuNotes />
+              <IndicationsForUse />
             </div>
           )}
           {activeSubMenuTab === 4 && (
@@ -603,6 +613,8 @@ class Instructions extends Component {
                   attach the backpiece.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
+              <TabMenuNotes />
+              <IndicationsForUse />
             </div>
           )}
         </InstructionsMenu>

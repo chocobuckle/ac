@@ -34,10 +34,8 @@ const IndicationsForUseWrapper = ContentWrapper.extend`
 
 const H2 = styled.h2`
   font-size: 5.3vw;
+  font-weight: 600;
   margin-bottom: 2vw;
-  span {
-    font-size: 5.3vw;
-  }
 `;
 
 const CautionsList = styled.ul`
