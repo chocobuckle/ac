@@ -6,6 +6,7 @@ import IndicationsForUse from 'components/IndicationsForUse';
 import TabMenuPDFDownload from 'components/TabMenuPDFDownload';
 import Img from 'gatsby-image';
 import { ContentWrapper } from 'helpers/sharedStyles';
+import TabMenuNotes from 'components/TabMenuNotes';
 
 const InstructionsWrapper = styled.div`
   line-height: 4.5vw;
@@ -317,12 +318,11 @@ class Instructions extends Component {
                   </TipText>
                 </TipWrapper>
               </HelpfulTips>
-              <div>
-                <TabMenuPDFDownload
-                  download={data.download}
-                  SMInstructPDF={data.SMInstruct_PDF}
-                />
-              </div>
+              <TabMenuPDFDownload
+                download={data.download}
+                SMInstructPDF={data.SMInstruct_PDF}
+              />
+              <TabMenuNotes />
             </div>
           )}
           {activeSubMenuTab === 2 && (
