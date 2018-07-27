@@ -7,6 +7,8 @@ import Img from 'gatsby-image';
 import { ContentWrapper } from 'helpers/sharedStyles';
 import TabMenuNotes from 'components/TabMenuNotes';
 import IndicationsForUse from 'components/IndicationsForUse';
+import smallMediumPDF from 'static/small_medium_mask_indications.pdf';
+// import largeMouthpiecePDF from 'static/large_mask_mouthpiece_indications.pdf';
 
 const InstructionsWrapper = styled.div`
   line-height: 4.5vw;
@@ -190,7 +192,6 @@ class Instructions extends Component {
           smallMask={data.smallMask}
           largeMask={data.largeMask}
         />
-        {/* <IndicationsForUse /> */}
         <InstructionsMenu>
           <SubMenuWrapper>
             <SubMenuTab
@@ -320,7 +321,9 @@ class Instructions extends Component {
               </HelpfulTips>
               <TabMenuPDFDownload
                 download={data.download}
-                SMInstructPDF={data.SMInstruct_PDF}
+                PDFImage={data.PDFImage}
+                text="AeroChamber Plus® Flow-Vu® VHC Small Mask/Medium Mask"
+                PDFPath={smallMediumPDF}
               />
               <TabMenuNotes />
               <IndicationsForUse />
@@ -519,7 +522,9 @@ class Instructions extends Component {
               <TabMenuPDFDownload
                 style={{ paddingTop: 0 }}
                 download={data.download}
-                SMInstructPDF={data.SMInstruct_PDF}
+                PDFImage={data.PDFImage}
+                // PDFPath={largeMouthpiecePDF}
+                text="AeroChamber Plus® Flow-Vu® VHC Large Mask/Mouthpiece"
               />
               <TabMenuNotes />
               <IndicationsForUse />
@@ -701,7 +706,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_PDF: imageSharp(
+    PDFImage: imageSharp(
       id: { regex: "/instructions/SMInstruct/pdf.png/" }
     ) {
       sizes(maxWidth: 137) {

@@ -223,7 +223,7 @@ const AdultOrChild = H3.extend`
   margin-top: 2.15vw;
 `;
 const Footnotes = ContentWrapper.extend`
-  text-align: right;
+  text-align: left;
   padding: 0 0;
 `;
 const FootnoteHeader = styled.p``;

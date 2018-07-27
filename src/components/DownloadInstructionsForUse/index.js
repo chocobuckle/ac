@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { ContentWrapper } from 'helpers/sharedStyles';
+import smallMediumPDF from 'static/small_medium_mask_indications.pdf';
+// import largeMouthpiecePDF from 'static/large_mask_mouthpiece_indications.pdf';
 
 const H2 = styled.h2`
   color: #004899;
@@ -42,7 +44,14 @@ const maskImgStyle = {
   width: '21vw'
 };
 
-function DownloadInstructionsForUse({ style, download, bear, smallMask, largeMask }) {
+function DownloadInstructionsForUse({
+  style,
+  download,
+  bear,
+  PDFPath,
+  smallMask,
+  largeMask
+}) {
   return (
     <ContentWrapper style={style}>
       <H2AndDownloadWrapper>
@@ -58,8 +67,20 @@ function DownloadInstructionsForUse({ style, download, bear, smallMask, largeMas
       </p>
       <BearAndMaskImgWrapper>
         <Img sizes={bear.sizes} style={{ ...bearImgStyle }} />
-        <Img sizes={smallMask.sizes} style={{ ...maskImgStyle }} />
-        <Img sizes={largeMask.sizes} style={{ ...maskImgStyle }} />
+        <a
+          style={{ cursor: 'pointer', margin: '0 auto' }}
+          href={smallMediumPDF}
+          rel="noopener noreferrer"
+          target="_blank">
+          <Img sizes={smallMask.sizes} style={{ ...maskImgStyle }} />
+        </a>
+        <a
+          style={{ cursor: 'pointer', margin: '0 auto' }}
+          // href={largeMouthpiecePDF}
+          rel="noopener noreferrer"
+          target="_blank">
+          <Img sizes={largeMask.sizes} style={{ ...maskImgStyle }} />
+        </a>
       </BearAndMaskImgWrapper>
     </ContentWrapper>
   );

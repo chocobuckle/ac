@@ -33,7 +33,7 @@ const downloadImgStyle = {
   width: '6vw'
 };
 
-function TabMenuPDFDownload({ style, download, SMInstructPDF }) {
+function TabMenuPDFDownload({ style, download, PDFImage, PDFPath, text }) {
   return (
     <Wrapper style={style}>
       <H2AndDownloadWrapper>
@@ -42,14 +42,15 @@ function TabMenuPDFDownload({ style, download, SMInstructPDF }) {
       </H2AndDownloadWrapper>
       <PDFImageAndTextWrapper>
         <Img
-          sizes={SMInstructPDF.sizes}
-          style={{ maxWidth: '137px', width: '13vw', marginRight: '2.5vw'  }}
+          sizes={PDFImage.sizes}
+          style={{ cursor: 'pointer', maxWidth: '137px', width: '13vw', marginRight: '2.5vw' }}
         />
         <a
-          style={{ fontSize: '3.4vw', width: '60vw'}}
-          href="../downloads/small_medium_mask_indications.pdf"
+          style={{ cursor: 'pointer', fontSize: '3.4vw', width: '60vw' }}
+          href={PDFPath}
+          rel="noopener noreferrer"
           target="_blank">
-          AeroChamber Plus® Flow-Vu® VHC Small Mask/Medium Mask
+          {text}
         </a>
       </PDFImageAndTextWrapper>
     </Wrapper>
