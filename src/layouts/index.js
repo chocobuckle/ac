@@ -13,7 +13,15 @@ const Wrapper = styled.div`
 `;
 
 const Layout = ({ children, data, location }) => {
-  const { site, logo, background, flowVu, footer } = data;
+  const {
+    site,
+    logo,
+    background,
+    flowVu,
+    footer,
+    tevaLogo,
+    respiratory
+  } = data;
   return (
     <div>
       <Helmet
@@ -35,7 +43,11 @@ const Layout = ({ children, data, location }) => {
           location={location.pathname}
         />
         {children()}
-        <Footer footerSizes={footer.sizes} />
+        <Footer
+          footer={footer.sizes}
+          tevaLogo={tevaLogo.sizes}
+          respiratory={respiratory.sizes}
+        />
       </Wrapper>
     </div>
   );
@@ -52,6 +64,26 @@ export const query = graphql`
     }
     logo: imageSharp(id: { regex: "/shared/logo.png/" }) {
       sizes(maxWidth: 300) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    tevaLogo: imageSharp(id: { regex: "/shared/teva_logo.png/" }) {
+      sizes(maxWidth: 125) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    respiratory: imageSharp(id: { regex: "/shared/respiratory.png/" }) {
+      sizes(maxWidth: 234) {
         src
         srcSet
         srcWebp

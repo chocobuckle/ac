@@ -36,17 +36,21 @@ const SmallPrint = styled.p`
   line-height: 1.8em;
 `;
 
-function Footer({ footerSizes }) {
+function Footer({ footer, tevaLogo, respiratory }) {
   return (
     <FooterWrapper>
       <ImgAndContactTeam>
-        <Img sizes={footerSizes} alt="footer" />
+        <Img sizes={footer} alt="footer" />
         <ContactTeam>
           Contact the Teva team for more information on the full respiratory
           portfolio
         </ContactTeam>
       </ImgAndContactTeam>
       <SmallPrintWrapper>
+        <div style={{ display: 'flex', textAlign: 'center', marginBottom: '2.5vw' }}>
+          <Img sizes={tevaLogo} alt="Teva logo" style={{ width: '12.9341vw', marginRight: '0.75vw' }} />
+          <Img sizes={respiratory} alt="Respiratory" style={{ width: '24.4vw' }} />
+        </div>
         <SmallPrint>
           Teva Pharmaceuticals, Floor 1, Wing A, Building 1
         </SmallPrint>
