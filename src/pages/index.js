@@ -70,27 +70,52 @@ const Macbook = styled.div`
     rgba(255, 255, 255, 0.04) 3.83%,
     rgba(255, 255, 255, 1) 49.44%
   );
-  margin-top: -42.75vw;
+  margin-top: -54vw;
   position: relative;
   z-index: 1;
+`;
+
+const VideoPlayerWrapper = styled.div`
+  left: 0.789vw;
+  margin: 0 auto -38.5vw;
+  padding-top: 44.275%;
+  position: relative;
+  width: 64.3889vw;
 `;
 
 const VideoButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 const VideoButton = styled.button`
   background: linear-gradient(
     90deg,
     rgba(0, 72, 153, 1) 15.05%,
     rgba(0, 127, 200, 1) 100%
   );
-  color: #fff;
-  cursor: pointer;
-  font-size: 4vw;
-  margin: 0 1.5vw;
-  padding: 2vw 1.75vw;
+  ${'' /* font-size: 4vw; */} margin: 0 1.5vw;
+  padding: 1.5vw 1.75vw;
+  display: flex;
+  align-items: center;
+
+  :hover {
+    cursor: pointer;
+  }
+
+  span {
+    color: #fff;
+    font-size: 3.5vw;
+    position: relative;
+    top: 0.25vw;
+    margin-bottom: 0;
+  }
 `;
+
+const playButtonStyle = {
+  width: '3.5vw',
+  marginRight: '1vw'
+};
 
 const InhalerTips = ContentWrapper.extend`
   display: flex;
@@ -237,6 +262,7 @@ const FootnoteSmallPrint = styled.h6`
 const IndexPage = ({ data }) => {
   const {
     macbook,
+    playButton,
     inhalingRed,
     inhalingWithLogo,
     easyInstructions1,
@@ -258,20 +284,32 @@ const IndexPage = ({ data }) => {
     <IndexWrapper>
       <Macbook>
         <ContentWrapper>
-          <Img sizes={macbook.sizes} style={{ marginTop: '15vw' }} />
-          <div style={{ width: '64.3889vw', paddingTop: '44.275%', margin: '0 auto -38.5vw', position: 'relative', left: '0.789vw' }}>
+          <Img sizes={macbook.sizes} style={{ marginTop: '26.5vw' }} />
+          <VideoPlayerWrapper>
             <VimeoPlayer
               url="https://vimeo.com/281972542"
               playing
+              loop
               width="100%"
               height="100%"
               style={{ position: 'absolute', left: 0, bottom: '24.575vw' }}
             />
-          </div>
+          </VideoPlayerWrapper>
           <VideoButtonWrapper>
-            <VideoButton>VIDEO 1</VideoButton>
-            <VideoButton>VIDEO 2</VideoButton>
-            <VideoButton>VIDEO 3</VideoButton>
+            <VideoButton>
+              <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
+              <span>VIDEO 1</span>
+            </VideoButton>
+            <VideoButton>
+              {' '}
+              <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
+              <span>VIDEO 2</span>
+            </VideoButton>
+            <VideoButton>
+              {' '}
+              <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
+              <span>VIDEO 3</span>
+            </VideoButton>
           </VideoButtonWrapper>
         </ContentWrapper>
       </Macbook>
@@ -511,6 +549,16 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query IndexQuery {
+    playButton: imageSharp(id: { regex: "/home/play_button.png/" }) {
+      sizes(maxWidth: 31) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
     inhalingRed: imageSharp(id: { regex: "/home/inhaling_red.png/" }) {
       sizes(maxWidth: 350) {
         src
