@@ -2,6 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { ContentWrapper } from 'helpers/sharedStyles';
+import VimeoPlayer from 'react-player/lib/players/Vimeo';
 
 const IndexWrapper = styled.div`
   line-height: 4.5vw;
@@ -258,6 +259,15 @@ const IndexPage = ({ data }) => {
       <Macbook>
         <ContentWrapper>
           <Img sizes={macbook.sizes} style={{ marginTop: '15vw' }} />
+          <div style={{ width: '64.3889vw', paddingTop: '44.275%', margin: '0 auto -38.5vw', position: 'relative', left: '0.789vw' }}>
+            <VimeoPlayer
+              url="https://vimeo.com/281972542"
+              playing
+              width="100%"
+              height="100%"
+              style={{ position: 'absolute', left: 0, bottom: '24.575vw' }}
+            />
+          </div>
           <VideoButtonWrapper>
             <VideoButton>VIDEO 1</VideoButton>
             <VideoButton>VIDEO 2</VideoButton>
