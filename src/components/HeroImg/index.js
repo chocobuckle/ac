@@ -30,7 +30,8 @@ const flowVuImgStyle = {
   left: '72.25vw',
   maxWidth: '263px',
   position: 'absolute',
-  width: '17.5vw'
+  width: '17.5vw',
+  zIndex: 2
 };
 
 function HeroImg({ backgroundImgSizes, flowVuSizes }) {

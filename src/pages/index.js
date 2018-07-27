@@ -62,13 +62,16 @@ const H3 = styled.h3`
   color: #007fc8;
 `;
 
-const Macbook = ContentWrapper.extend`
+const Macbook = styled.div`
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 2.12%,
     rgba(255, 255, 255, 0.04) 3.83%,
     rgba(255, 255, 255, 1) 49.44%
   );
+  margin-top: -42.75vw;
+  position: relative;
+  z-index: 1;
 `;
 
 const VideoButtonWrapper = styled.div`
@@ -253,12 +256,14 @@ const IndexPage = ({ data }) => {
   return (
     <IndexWrapper>
       <Macbook>
-        <Img sizes={macbook.sizes} />
-        <VideoButtonWrapper>
-          <VideoButton>VIDEO 1</VideoButton>
-          <VideoButton>VIDEO 2</VideoButton>
-          <VideoButton>VIDEO 3</VideoButton>
-        </VideoButtonWrapper>
+        <ContentWrapper>
+          <Img sizes={macbook.sizes} style={{ marginTop: '15vw' }} />
+          <VideoButtonWrapper>
+            <VideoButton>VIDEO 1</VideoButton>
+            <VideoButton>VIDEO 2</VideoButton>
+            <VideoButton>VIDEO 3</VideoButton>
+          </VideoButtonWrapper>
+        </ContentWrapper>
       </Macbook>
       <InhalerTips>
         <BetterControlTextAndTorsoImgWrapper>
@@ -269,7 +274,10 @@ const IndexPage = ({ data }) => {
           <TorsoWrapper>
             <TorsoTextWrapper>
               <H3>
-                Did you <em><b>know?</b></em>
+                Did you{' '}
+                <em>
+                  <b>know?</b>
+                </em>
               </H3>
               <p>
                 Guidelines recommend chambers for children and adults.
@@ -283,8 +291,14 @@ const IndexPage = ({ data }) => {
             </TorsoTextWrapper>
             <TorsoTextWrapper>
               <H3>
-                <em><b>Ensure</b></em> your inhaler <em><b>medicine</b></em> is
-                delivered where it is needed
+                <em>
+                  <b>Ensure</b>
+                </em>{' '}
+                your inhaler{' '}
+                <em>
+                  <b>medicine</b>
+                </em>{' '}
+                is delivered where it is needed
               </H3>
               <p>
                 Inhalers can be challenging because the medicine comes out very
@@ -299,15 +313,11 @@ const IndexPage = ({ data }) => {
           </TorsoWrapper>
           <TorsoImgWrapper>
             <InhalingRedImgWrapper>
-              <Img
-                sizes={inhalingRed.sizes}
-              />
+              <Img sizes={inhalingRed.sizes} />
               <InhalerImgCaption>Inhaler alone</InhalerImgCaption>
             </InhalingRedImgWrapper>
             <InhalingWithLogoImgWrapper>
-              <Img
-                sizes={inhalingWithLogo.sizes}
-              />
+              <Img sizes={inhalingWithLogo.sizes} />
               <InhalerImgCaption style={{ marginLeft: '7%' }}>
                 Inhaler with{' '}
                 <span style={{ color: '#007fc8', fontWeight: 'bold' }}>
@@ -323,7 +333,10 @@ const IndexPage = ({ data }) => {
               color: '#007fc8',
               fontWeight: '400',
               margin: '0.5em auto'
-            }}><em><b>Easy </b></em>
+            }}>
+            <em>
+              <b>Easy </b>
+            </em>
             as 1-2-3
           </H2>
           <EasyInstructionsImgAndTextWrapper>
@@ -464,13 +477,12 @@ const IndexPage = ({ data }) => {
           Children should transition to a mouthpiece around the age of 5
         </FootnoteHeader>
         <FootnoteSmallPrint>
-          <b>1.</b> McIvor et al. Optimizing the Delivery of Inhaled
-          Medication for Respiratory Patients: The Role of Valved Holding
-          Chambers.
+          <b>1.</b> McIvor et al. Optimizing the Delivery of Inhaled Medication
+          for Respiratory Patients: The Role of Valved Holding Chambers.
         </FootnoteSmallPrint>
         <FootnoteSmallPrint>
-          <b>2.</b> Global Initiative for Asthma. Global strategy for
-          asthma management and prevention 2011. Available at:<br />
+          <b>2.</b> Global Initiative for Asthma. Global strategy for asthma
+          management and prevention 2011. Available at:<br />
           <a
             href="http://ginasthma.org/2018-gina-report-global-strategy-for-asthma-management-and-prevention/"
             target="_blank"
@@ -479,8 +491,8 @@ const IndexPage = ({ data }) => {
           </a>
         </FootnoteSmallPrint>
         <FootnoteSmallPrint>
-          <b>3.</b> Plaza et al. Medical Personnel and Patient Skill in
-          the Use of Metered Dose Inhalers: A Multicentric Study.
+          <b>3.</b> Plaza et al. Medical Personnel and Patient Skill in the Use
+          of Metered Dose Inhalers: A Multicentric Study.
         </FootnoteSmallPrint>
       </Footnotes>
     </IndexWrapper>
