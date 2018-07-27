@@ -34,18 +34,22 @@ const flowVuImgStyle = {
   zIndex: 2
 };
 
-function HeroImg({ backgroundImgSizes, flowVuSizes }) {
+function HeroImg({ backgroundImgSizes, flowVuSizes, location }) {
   return (
     <HeroImgAndTextWrapper>
       <Img sizes={backgroundImgSizes} />
-      <HeroTextWrapper>
-        <HeroText>Helps Patients Inhale</HeroText>
-        <HeroText>Metered Dose Inhaler (MDI’s)</HeroText>
-        <HeroText>
-          Medications Correctly<sup>1</sup>
-        </HeroText>
-      </HeroTextWrapper>
-      <Img sizes={flowVuSizes} style={{ ...flowVuImgStyle }} />
+      {location !== '/contact' && (
+        <HeroTextWrapper>
+          <HeroText>Helps Patients Inhale</HeroText>
+          <HeroText>Metered Dose Inhaler (MDI’s)</HeroText>
+          <HeroText>
+            Medications Correctly<sup>1</sup>
+          </HeroText>
+        </HeroTextWrapper>
+      )}
+      {location !== '/contact' && (
+        <Img sizes={flowVuSizes} style={{ ...flowVuImgStyle }} />
+      )}
     </HeroImgAndTextWrapper>
   );
 }

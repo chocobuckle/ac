@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
-const Layout = ({ children, data }) => {
+const Layout = ({ children, data, location }) => {
   const { site, logo, background, flowVu, footer } = data;
   return (
     <div>
@@ -32,6 +32,7 @@ const Layout = ({ children, data }) => {
         <HeroImg
           backgroundImgSizes={background.sizes}
           flowVuSizes={flowVu.sizes}
+          location={location.pathname}
         />
         {children()}
         <Footer footerSizes={footer.sizes} />
