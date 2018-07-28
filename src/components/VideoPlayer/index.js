@@ -3,10 +3,19 @@ import styled from 'styled-components';
 import VimeoPlayer from 'react-player/lib/players/Vimeo';
 
 const VideoPlayerWrapper = styled.div`
-  margin: ${({ activeVideoURL }) => activeVideoURL ? '0.35vw auto -38.5vw' : '0.35vw auto -31vw'};
-  padding-top: ${({ activeVideoURL }) => activeVideoURL ? '45.8%' : '36.8%'};
   position: relative;
-  width: ${({ activeVideoURL }) => activeVideoURL ? '65.4vw' : '52.2vw'};
+  ${({ activeVideoURL }) =>
+    activeVideoURL
+      ? `
+        width: 65.4vw;
+        padding-top: 45.8%;
+        margin: 0.35vw auto -38.5vw;
+      `
+      : `
+        width: 52.2vw;
+        padding-top: 36.8%;
+        margin: 0.35vw auto -31vw;
+      `};
 `;
 
 function VideoPlayer({ activeVideoURL, handleVideoLoading }) {
