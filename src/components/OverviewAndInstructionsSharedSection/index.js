@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { ContentWrapper } from 'helpers/sharedStyles';
+import VideoPlayer from 'components/VideoPlayer';
 
 // const OverviewAndInstructionsSharedSection = ContentWrapper.extend`
 //   ${'' /* background: linear-gradient(
@@ -79,6 +80,7 @@ function OverviewAndInstructionsSharedSection({
       <ContentWrapper>
         <BPAImgAndTextAndMacbookImgWrapper>
           <Img sizes={macbook.sizes} style={{ ...macbookImgStyle }} />
+          <VideoPlayer />
           <BPAImgAndTextWrapper>
             <Img
               sizes={bpaAndDishwasherSafe.sizes}

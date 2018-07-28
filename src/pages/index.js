@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { ContentWrapper } from 'helpers/sharedStyles';
-import VimeoPlayer from 'react-player/lib/players/Vimeo';
+import VideoPlayer from 'components/VideoPlayer';
 import spinner from 'images/shared/spinner.gif';
 
 const IndexWrapper = styled.div`
@@ -83,13 +83,6 @@ const spinnerStyle = {
   left: '30.75vw',
   bottom: '9.25vw'
 };
-
-const VideoPlayerWrapper = styled.div`
-  margin: 0.35vw auto -38.5vw;
-  padding-top: 45.8%;
-  position: relative;
-  width: 65.4vw;
-`;
 
 const VideoButtonWrapper = styled.div`
   display: flex;
@@ -318,8 +311,16 @@ class IndexPage extends Component {
         <Macbook>
           <ContentWrapper>
             <div style={{ position: 'relative', width: '100%' }}>
-              <Img sizes={macbook.sizes} style={{ marginTop: '26.5vw', width: '86vw', marginLeft: 'auto', marginRight: 'auto' }} />
-              {(!videoHasLoaded) && (
+              <Img
+                sizes={macbook.sizes}
+                style={{
+                  marginTop: '26.5vw',
+                  width: '86vw',
+                  marginLeft: 'auto',
+                  marginRight: 'auto'
+                }}
+              />
+              {!videoHasLoaded && (
                 <img
                   src={spinner}
                   alt="loading spinner"
@@ -327,17 +328,10 @@ class IndexPage extends Component {
                 />
               )}
             </div>
-            <VideoPlayerWrapper>
-              <VimeoPlayer
-                url={activeVideoURL}
-                playing
-                loop
-                onReady={() => this.handleVideoLoading()}
-                width="100%"
-                height="100%"
-                style={{ position: 'absolute', left: 0, bottom: '24.575vw' }}
-              />
-            </VideoPlayerWrapper>
+            <VideoPlayer
+              activeVideoURL={activeVideoURL}
+              handleVideoLoading={this.handleVideoLoading}
+            />
             <VideoButtonWrapper>
               <VideoButton
                 onClick={() =>
