@@ -80,8 +80,8 @@ const spinnerStyle = {
   width: '30vw',
   position: 'absolute',
   zIndex: 1,
-  left: '30.75vw',
-  bottom: '9.25vw'
+  left: '35vw',
+  bottom: '23.75vw'
 };
 
 const VideoButtonWrapper = styled.div`
@@ -310,24 +310,22 @@ class IndexPage extends Component {
       <IndexWrapper>
         <Macbook>
           <ContentWrapper>
-            <div style={{ position: 'relative', width: '100%' }}>
-              <Img
-                sizes={macbook.sizes}
-                style={{
-                  marginTop: '26.5vw',
-                  width: '86vw',
-                  marginLeft: 'auto',
-                  marginRight: 'auto'
-                }}
+            <Img
+              sizes={macbook.sizes}
+              style={{
+                marginTop: '26.5vw',
+                width: '86vw',
+                marginLeft: 'auto',
+                marginRight: 'auto'
+              }}
+            />
+            {!videoHasLoaded && (
+              <img
+                src={spinner}
+                alt="loading spinner"
+                style={{ ...spinnerStyle }}
               />
-              {!videoHasLoaded && (
-                <img
-                  src={spinner}
-                  alt="loading spinner"
-                  style={{ ...spinnerStyle }}
-                />
-              )}
-            </div>
+            )}
             <VideoPlayer
               activeVideoURL={activeVideoURL}
               handleVideoLoading={this.handleVideoLoading}

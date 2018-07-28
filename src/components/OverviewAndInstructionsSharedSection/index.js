@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { ContentWrapper } from 'helpers/sharedStyles';
@@ -56,51 +56,64 @@ const Gradient = styled.div`
   z-index: 1;
 `;
 
-function OverviewAndInstructionsSharedSection({
-  bpaAndDishwasherSafe,
-  headerFirstLine,
-  headerSecondLine,
-  subHeaderText,
-  macbook
-}) {
-  return (
-    <div>
-      <Gradient>
-        <ContentWrapper>
-          <H1Wrapper style={{ marginTop: '25vw' }}>
-            <H1>{headerFirstLine}</H1>
-            <H1>{headerSecondLine}</H1>
-          </H1Wrapper>
-          <div
-            style={{ textAlign: 'center' }}
-            dangerouslySetInnerHTML={{ __html: subHeaderText }}
-          />
-        </ContentWrapper>
-      </Gradient>
-      <ContentWrapper>
-        <BPAImgAndTextAndMacbookImgWrapper>
-          <Img sizes={macbook.sizes} style={{ ...macbookImgStyle }} />
-          <VideoPlayer />
-          <BPAImgAndTextWrapper>
-            <Img
-              sizes={bpaAndDishwasherSafe.sizes}
-              style={{ ...BPAImgStyle }}
+class OverviewAndInstructionsSharedSection extends Component {
+  state = {
+    videoHasLoaded: false
+  };
+
+  handleVideoLoading = () => {
+    this.setState({
+      videoHasLoaded: true
+    });
+  };
+
+  render() {
+    const {
+      bpaAndDishwasherSafe,
+      headerFirstLine,
+      headerSecondLine,
+      subHeaderText,
+      macbook
+    } = this.props;
+    return (
+      <div>
+        <Gradient>
+          <ContentWrapper>
+            <H1Wrapper style={{ marginTop: '25vw' }}>
+              <H1>{headerFirstLine}</H1>
+              <H1>{headerSecondLine}</H1>
+            </H1Wrapper>
+            <div
+              style={{ textAlign: 'center' }}
+              dangerouslySetInnerHTML={{ __html: subHeaderText }}
             />
-            <p
-              style={{
-                color: '#007fc8',
-                fontSize: '3vw',
-                lineHeight: '1.5em',
-                marginBottom: 0
-              }}>
-              AeroChamber Plus® Flow-Vu® is dishwasher safe on the top rack at
-              temperatures up to 158°F (70°C).
-            </p>
-          </BPAImgAndTextWrapper>
-        </BPAImgAndTextAndMacbookImgWrapper>
-      </ContentWrapper>
-    </div>
-  );
+          </ContentWrapper>
+        </Gradient>
+        <ContentWrapper>
+          <BPAImgAndTextAndMacbookImgWrapper>
+            <Img sizes={macbook.sizes} style={{ ...macbookImgStyle }} />
+            <VideoPlayer handleVideoLoading={this.handleVideoLoading} />
+            <BPAImgAndTextWrapper>
+              <Img
+                sizes={bpaAndDishwasherSafe.sizes}
+                style={{ ...BPAImgStyle }}
+              />
+              <p
+                style={{
+                  color: '#007fc8',
+                  fontSize: '3vw',
+                  lineHeight: '1.5em',
+                  marginBottom: 0
+                }}>
+                AeroChamber Plus® Flow-Vu® is dishwasher safe on the top rack at
+                temperatures up to 158°F (70°C).
+              </p>
+            </BPAImgAndTextWrapper>
+          </BPAImgAndTextAndMacbookImgWrapper>
+        </ContentWrapper>
+      </div>
+    );
+  }
 }
 
 export default OverviewAndInstructionsSharedSection;
