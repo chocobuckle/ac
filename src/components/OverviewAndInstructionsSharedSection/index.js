@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { ContentWrapper } from 'helpers/sharedStyles';
 import VideoPlayer from 'components/VideoPlayer';
+import spinner from 'images/shared/spinner.gif';
 
 // const OverviewAndInstructionsSharedSection = ContentWrapper.extend`
 //   ${'' /* background: linear-gradient(
@@ -21,6 +22,14 @@ const H1Wrapper = styled.div`
 const H1 = styled.h1`
   font-size: 6vw;
   margin-bottom: 1vw;
+`;
+
+const Spinner = styled.img`
+  width: 30vw;
+  position: absolute;
+  z-index: 1;
+  left: 30.75vw;
+  bottom: 8.25vw;
 `;
 
 const BPAImgAndTextWrapper = styled.div`
@@ -75,6 +84,7 @@ class OverviewAndInstructionsSharedSection extends Component {
       subHeaderText,
       macbook
     } = this.props;
+    const { videoHasLoaded } = this.state;
     return (
       <div>
         <Gradient>
@@ -92,7 +102,12 @@ class OverviewAndInstructionsSharedSection extends Component {
         <ContentWrapper>
           <BPAImgAndTextAndMacbookImgWrapper>
             <Img sizes={macbook.sizes} style={{ ...macbookImgStyle }} />
-            <VideoPlayer handleVideoLoading={this.handleVideoLoading} />
+            <div style={{ width: '100%', position: 'relative' }}>
+              {!videoHasLoaded && (
+                <Spinner src={spinner} alt="loading spinner" />
+              )}
+              <VideoPlayer handleVideoLoading={this.handleVideoLoading} />
+            </div>
             <BPAImgAndTextWrapper>
               <Img
                 sizes={bpaAndDishwasherSafe.sizes}
