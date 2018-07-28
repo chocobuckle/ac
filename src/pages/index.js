@@ -3,6 +3,7 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { ContentWrapper } from 'helpers/sharedStyles';
 import VimeoPlayer from 'react-player/lib/players/Vimeo';
+import spinner from 'images/shared/spinner.gif';
 
 const IndexWrapper = styled.div`
   line-height: 4.5vw;
@@ -75,12 +76,16 @@ const Macbook = styled.div`
   z-index: 1;
 `;
 
+const spinnerStyle = {
+  width: '30vw',
+  maxWidth: '200px'
+};
+
 const VideoPlayerWrapper = styled.div`
-  left: 0.789vw;
-  margin: 0 auto -38.5vw;
-  padding-top: 44.275%;
+  margin: 0.35vw auto -38.5vw;
+  padding-top: 45.8%;
   position: relative;
-  width: 64.3889vw;
+  width: 65.4vw;
 `;
 
 const VideoButtonWrapper = styled.div`
@@ -107,7 +112,7 @@ const VideoButton = styled.button`
     color: #fff;
     font-size: 3.5vw;
     position: relative;
-    top: 0.1vw;
+    top: 0.25vw;
     margin-bottom: 0;
   }
 `;
@@ -261,16 +266,24 @@ const FootnoteSmallPrint = styled.h6`
 
 class IndexPage extends Component {
   state = {
-    activeVideoURL: 'https://vimeo.com/281972542'
+    activeVideoURL: 'https://vimeo.com/281972542',
+    videoHasLoaded: false
   };
 
   handleVideoSelection = (selectedVideoURL) => {
     this.setState((prevState) => {
       if (selectedVideoURL !== prevState.activeVideoURL) {
         return {
-          activeVideoURL: selectedVideoURL
+          activeVideoURL: selectedVideoURL,
+          videoHasLoaded: false
         };
       }
+    });
+  };
+
+  handleVideoLoading = () => {
+    this.setState({
+      videoHasLoaded: true
     });
   };
 
@@ -296,17 +309,27 @@ class IndexPage extends Component {
       bpaFree,
       replace12Months
     } = data;
-    const { activeVideoURL } = this.state;
+    const { activeVideoURL, videoHasLoaded } = this.state;
     return (
       <IndexWrapper>
         <Macbook>
           <ContentWrapper>
-            <Img sizes={macbook.sizes} style={{ marginTop: '26.5vw' }} />
+            <div style={{ position: 'relative', width: '100%' }}>
+              <Img sizes={macbook.sizes} style={{ marginTop: '26.5vw', width: '86vw', marginLeft: 'auto', marginRight: 'auto' }} />
+              {/* {(!videoHasLoaded || videoHasLoaded) && (
+                <img
+                  src={spinner}
+                  alt="loading spinner"
+                  style={{ ...spinnerStyle }}
+                />
+              )} */}
+            </div>
             <VideoPlayerWrapper>
               <VimeoPlayer
                 url={activeVideoURL}
                 playing
                 loop
+                onReady={() => this.handleVideoLoading()}
                 width="100%"
                 height="100%"
                 style={{ position: 'absolute', left: 0, bottom: '24.575vw' }}
