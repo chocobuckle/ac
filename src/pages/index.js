@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { ContentWrapper } from 'helpers/sharedStyles';
@@ -107,7 +107,7 @@ const VideoButton = styled.button`
     color: #fff;
     font-size: 3.5vw;
     position: relative;
-    top: 0.25vw;
+    top: 0.1vw;
     margin-bottom: 0;
   }
 `;
@@ -259,293 +259,321 @@ const FootnoteSmallPrint = styled.h6`
   margin-bottom: 0.3em;
 `;
 
-const IndexPage = ({ data }) => {
-  const {
-    macbook,
-    playButton,
-    inhalingRed,
-    inhalingWithLogo,
-    easyInstructions1,
-    easyInstructions2,
-    easyInstructions3,
-    flowVuLogo,
-    inhaler1,
-    inhaler2,
-    inhaler3,
-    inhaler4,
-    inhaler5,
-    inhaler6,
-    bubblesBG,
-    dishwasherSafe,
-    bpaFree,
-    replace12Months
-  } = data;
-  return (
-    <IndexWrapper>
-      <Macbook>
-        <ContentWrapper>
-          <Img sizes={macbook.sizes} style={{ marginTop: '26.5vw' }} />
-          <VideoPlayerWrapper>
-            <VimeoPlayer
-              url="https://vimeo.com/281972542"
-              playing
-              loop
-              width="100%"
-              height="100%"
-              style={{ position: 'absolute', left: 0, bottom: '24.575vw' }}
-            />
-          </VideoPlayerWrapper>
-          <VideoButtonWrapper>
-            <VideoButton>
-              <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
-              <span>VIDEO 1</span>
-            </VideoButton>
-            <VideoButton>
-              {' '}
-              <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
-              <span>VIDEO 2</span>
-            </VideoButton>
-            <VideoButton>
-              {' '}
-              <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
-              <span>VIDEO 3</span>
-            </VideoButton>
-          </VideoButtonWrapper>
-        </ContentWrapper>
-      </Macbook>
-      <InhalerTips>
-        <BetterControlTextAndTorsoImgWrapper>
-          <H2>
-            People who use a valved holding chamber with their inhaler have
-            better control.<sup>1</sup>
-          </H2>
-          <TorsoWrapper>
-            <TorsoTextWrapper>
-              <H3>
-                Did you{' '}
-                <em>
-                  <b>know?</b>
-                </em>
-              </H3>
-              <p>
-                Guidelines recommend chambers for children and adults.
-                <sup>2</sup>
-              </p>
-              <p>
-                The majority of adults do not use their inhalers properly.
-                <sup>3</sup> This is why doctors recommend using an{' '}
-                <span>AeroChamber Plus Flow-Vu</span> Chamber with your inhaler.
-              </p>
-            </TorsoTextWrapper>
-            <TorsoTextWrapper>
-              <H3>
-                <em>
-                  <b>Ensure</b>
-                </em>{' '}
-                your inhaler{' '}
-                <em>
-                  <b>medicine</b>
-                </em>{' '}
-                is delivered where it is needed
-              </H3>
-              <p>
-                Inhalers can be challenging because the medicine comes out very
-                quickly and can end up in your mouth and throat. This can lead
-                to side effects such as sore throat and oral infections.
-              </p>
-              <p>
-                Using an <span>AeroChamber Plus Flow-Vu Chamber</span> with your
-                inhaler helps ensure the medicine is delivered to your lungs.
-              </p>
-            </TorsoTextWrapper>
-          </TorsoWrapper>
-          <TorsoImgWrapper>
-            <InhalingRedImgWrapper>
-              <Img sizes={inhalingRed.sizes} />
-              <InhalerImgCaption>Inhaler alone</InhalerImgCaption>
-            </InhalingRedImgWrapper>
-            <InhalingWithLogoImgWrapper>
-              <Img sizes={inhalingWithLogo.sizes} />
-              <InhalerImgCaption style={{ marginLeft: '7%' }}>
-                Inhaler with{' '}
-                <span style={{ color: '#007fc8', fontWeight: 'bold' }}>
-                  AeroChamber Plus{' '}
-                </span>Brand of Chamber
-              </InhalerImgCaption>
-            </InhalingWithLogoImgWrapper>
-          </TorsoImgWrapper>
-        </BetterControlTextAndTorsoImgWrapper>
-        <EasyInstructionsWrapper>
-          <H2
-            style={{
-              color: '#007fc8',
-              fontWeight: '400',
-              margin: '0.5em auto'
-            }}>
-            <em>
-              <b>Easy </b>
-            </em>
-            as 1-2-3
-          </H2>
-          <EasyInstructionsImgAndTextWrapper>
-            <Img
-              sizes={easyInstructions1.sizes}
-              style={{ ...easyInstructions1ImgStyle }}
-            />
-            <p>Shake inhaler and remove cap.</p>
-          </EasyInstructionsImgAndTextWrapper>
-          <EasyInstructionsImgAndTextWrapper
-            style={{
-              position: 'relative',
-              marginTop: '-0.9em'
-            }}>
-            <p>Insert inhaler into chamber.</p>
-            <Img
-              sizes={easyInstructions2.sizes}
-              style={{ ...easyInstructions2ImgStyle }}
-            />
-          </EasyInstructionsImgAndTextWrapper>
-          <EasyInstructionsImgAndTextWrapper
-            style={{ alignItems: 'center', marginTop: '-0.2em' }}>
-            <Img
-              sizes={easyInstructions3.sizes}
-              style={{ ...easyInstructions3ImgStyle }}
-            />
-            <p style={{}}>
-              Press inhaler and inhale slowly and deeply, holding your breath
-              for 5-10 seconds.
-              <span
-                style={{
-                  display: 'block',
-                  fontStyle: 'italic',
-                  fontWeight: 'bold',
-                  margin: '0.125em auto'
-                }}>
-                OR
-              </span>Press inhaler and breathe in and out through the chamber
-              for 2-3 breaths.
-            </p>
-          </EasyInstructionsImgAndTextWrapper>
-          <EasyInstructionsImgAndTextWrapper
-            style={{ alignItems: 'flex-start', marginTop: '2em' }}>
-            <p style={{}}>
-              The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation
-              Indicator moves as you inhale and helps provide visual assurance
-              of correct use and medication delivery.
-            </p>
-            <Img sizes={flowVuLogo.sizes} style={{ ...flowVuLogoImgStyle }} />
-          </EasyInstructionsImgAndTextWrapper>
-        </EasyInstructionsWrapper>
-      </InhalerTips>
-      <BubblesAndBanner>
-        <Img sizes={bubblesBG.sizes} />
-        <WhiteBanner>
-          <WhiteBannerChildImgFlexWrapper>
-            <Img
-              sizes={dishwasherSafe.sizes}
+class IndexPage extends Component {
+  state = {
+    activeVideoURL: 'https://vimeo.com/281972542'
+  };
+
+  handleVideoSelection = (selectedVideoURL) => {
+    this.setState((prevState) => {
+      if (selectedVideoURL !== prevState.activeVideoURL) {
+        return {
+          activeVideoURL: selectedVideoURL
+        };
+      }
+    });
+  };
+
+  render() {
+    const { data } = this.props;
+    const {
+      macbook,
+      playButton,
+      inhalingRed,
+      inhalingWithLogo,
+      easyInstructions1,
+      easyInstructions2,
+      easyInstructions3,
+      flowVuLogo,
+      inhaler1,
+      inhaler2,
+      inhaler3,
+      inhaler4,
+      inhaler5,
+      inhaler6,
+      bubblesBG,
+      dishwasherSafe,
+      bpaFree,
+      replace12Months
+    } = data;
+    const { activeVideoURL } = this.state;
+    return (
+      <IndexWrapper>
+        <Macbook>
+          <ContentWrapper>
+            <Img sizes={macbook.sizes} style={{ marginTop: '26.5vw' }} />
+            <VideoPlayerWrapper>
+              <VimeoPlayer
+                url={activeVideoURL}
+                playing
+                loop
+                width="100%"
+                height="100%"
+                style={{ position: 'absolute', left: 0, bottom: '24.575vw' }}
+              />
+            </VideoPlayerWrapper>
+            <VideoButtonWrapper>
+              <VideoButton
+                onClick={() =>
+                  this.handleVideoSelection('https://vimeo.com/281972542')
+                }>
+                <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
+                <span>VIDEO 1</span>
+              </VideoButton>
+              <VideoButton
+                onClick={() =>
+                  this.handleVideoSelection('https://vimeo.com/281972758')
+                }>
+                <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
+                <span>VIDEO 2</span>
+              </VideoButton>
+              <VideoButton
+                onClick={() =>
+                  this.handleVideoSelection('https://vimeo.com/281972704')
+                }>
+                <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
+                <span>VIDEO 3</span>
+              </VideoButton>
+            </VideoButtonWrapper>
+          </ContentWrapper>
+        </Macbook>
+        <InhalerTips>
+          <BetterControlTextAndTorsoImgWrapper>
+            <H2>
+              People who use a valved holding chamber with their inhaler have
+              better control.<sup>1</sup>
+            </H2>
+            <TorsoWrapper>
+              <TorsoTextWrapper>
+                <H3>
+                  Did you{' '}
+                  <em>
+                    <b>know?</b>
+                  </em>
+                </H3>
+                <p>
+                  Guidelines recommend chambers for children and adults.
+                  <sup>2</sup>
+                </p>
+                <p>
+                  The majority of adults do not use their inhalers properly.
+                  <sup>3</sup> This is why doctors recommend using an{' '}
+                  <span>AeroChamber Plus Flow-Vu</span> Chamber with your
+                  inhaler.
+                </p>
+              </TorsoTextWrapper>
+              <TorsoTextWrapper>
+                <H3>
+                  <em>
+                    <b>Ensure</b>
+                  </em>{' '}
+                  your inhaler{' '}
+                  <em>
+                    <b>medicine</b>
+                  </em>{' '}
+                  is delivered where it is needed
+                </H3>
+                <p>
+                  Inhalers can be challenging because the medicine comes out
+                  very quickly and can end up in your mouth and throat. This can
+                  lead to side effects such as sore throat and oral infections.
+                </p>
+                <p>
+                  Using an <span>AeroChamber Plus Flow-Vu Chamber</span> with
+                  your inhaler helps ensure the medicine is delivered to your
+                  lungs.
+                </p>
+              </TorsoTextWrapper>
+            </TorsoWrapper>
+            <TorsoImgWrapper>
+              <InhalingRedImgWrapper>
+                <Img sizes={inhalingRed.sizes} />
+                <InhalerImgCaption>Inhaler alone</InhalerImgCaption>
+              </InhalingRedImgWrapper>
+              <InhalingWithLogoImgWrapper>
+                <Img sizes={inhalingWithLogo.sizes} />
+                <InhalerImgCaption style={{ marginLeft: '7%' }}>
+                  Inhaler with{' '}
+                  <span style={{ color: '#007fc8', fontWeight: 'bold' }}>
+                    AeroChamber Plus{' '}
+                  </span>Brand of Chamber
+                </InhalerImgCaption>
+              </InhalingWithLogoImgWrapper>
+            </TorsoImgWrapper>
+          </BetterControlTextAndTorsoImgWrapper>
+          <EasyInstructionsWrapper>
+            <H2
               style={{
-                ...whiteBannerChildImgStyle,
-                postion: 'relative',
-                top: '1vw'
-              }}
-            />
-            <Img
-              sizes={replace12Months.sizes}
-              style={{ ...whiteBannerChildImgStyle }}
-            />
-            <Img
-              sizes={bpaFree.sizes}
-              style={{ ...whiteBannerChildImgStyle }}
-            />
-          </WhiteBannerChildImgFlexWrapper>
-        </WhiteBanner>
-      </BubblesAndBanner>
-      <SixInhalers>
-        <H1 style={{ color: '#007FC8', marginBottom: 0 }}>
-          AeroChamber Plus Flow-Vu
-        </H1>
-        <H2 style={{ color: '#858585', fontWeight: 400 }}>
-          Anti Static Valved Holding Chamber (VHC)
-        </H2>
-        <SixInhalerImgsWrapper>
-          <InhalerAndBucketBorderWrapper style={{ marginBottom: '5vw' }}>
-            <ThreeInhalers style={{ position: 'relative', left: '2vw' }}>
-              <figure>
-                <Img sizes={inhaler1.sizes} style={{ ...inhaler1ImgStyle }} />
-                <figcaption style={{ position: 'relative', right: '15.5%' }}>
-                  Small<br />Mask
-                </figcaption>
-              </figure>
-              <figure>
-                <Img sizes={inhaler2.sizes} style={{ ...inhaler2ImgStyle }} />
-                <figcaption style={{ position: 'relative', right: '7.5%' }}>
-                  Medium<br />Mask
-                </figcaption>
-              </figure>
-              <figure>
-                <Img sizes={inhaler3.sizes} style={{ ...inhaler3ImgStyle }} />
-                <figcaption style={{ position: 'relative', right: '17%' }}>
-                  Youth<br />Mouthpiece
-                </figcaption>
-              </figure>
-            </ThreeInhalers>
-            <BucketBorder />
-            <AdultOrChild>CHILD</AdultOrChild>
-          </InhalerAndBucketBorderWrapper>
-          <InhalerAndBucketBorderWrapper>
-            <ThreeInhalers style={{ position: 'relative', left: '3.25vw' }}>
-              <figure>
-                <Img sizes={inhaler4.sizes} style={{ ...inhaler4ImgStyle }} />
-                <figcaption style={{ position: 'relative', right: '16.75%' }}>
-                  Mouthpiece
-                  <br />
-                  <br />
-                </figcaption>
-              </figure>
-              <figure>
-                <Img sizes={inhaler5.sizes} style={{ ...inhaler5ImgStyle }} />
-                <figcaption style={{ position: 'relative', right: '11.75%' }}>
-                  Small<br />Mask
-                </figcaption>
-              </figure>
-              <figure>
-                <Img sizes={inhaler6.sizes} style={{ ...inhaler6ImgStyle }} />
-                <figcaption style={{ position: 'relative', right: '9.5%' }}>
-                  Large<br />Mask
-                </figcaption>
-              </figure>
-            </ThreeInhalers>
-            <BucketBorder />
-            <AdultOrChild>ADULT</AdultOrChild>
-          </InhalerAndBucketBorderWrapper>
-        </SixInhalerImgsWrapper>
-      </SixInhalers>
-      <Footnotes>
-        <FootnoteHeader>
-          Children should transition to a mouthpiece around the age of 5
-        </FootnoteHeader>
-        <FootnoteSmallPrint>
-          <b>1.</b> McIvor et al. Optimizing the Delivery of Inhaled Medication
-          for Respiratory Patients: The Role of Valved Holding Chambers.
-        </FootnoteSmallPrint>
-        <FootnoteSmallPrint>
-          <b>2.</b> Global Initiative for Asthma. Global strategy for asthma
-          management and prevention 2011. Available at:<br />
-          <a
-            href="http://ginasthma.org/2018-gina-report-global-strategy-for-asthma-management-and-prevention/"
-            target="_blank"
-            rel="noopener noreferrer">
-            http://ginasthma.org/2018-gina-report-global-strategy-for-asthma-management-and-prevention/
-          </a>
-        </FootnoteSmallPrint>
-        <FootnoteSmallPrint>
-          <b>3.</b> Plaza et al. Medical Personnel and Patient Skill in the Use
-          of Metered Dose Inhalers: A Multicentric Study.
-        </FootnoteSmallPrint>
-      </Footnotes>
-    </IndexWrapper>
-  );
-};
+                color: '#007fc8',
+                fontWeight: '400',
+                margin: '0.5em auto'
+              }}>
+              <em>
+                <b>Easy </b>
+              </em>
+              as 1-2-3
+            </H2>
+            <EasyInstructionsImgAndTextWrapper>
+              <Img
+                sizes={easyInstructions1.sizes}
+                style={{ ...easyInstructions1ImgStyle }}
+              />
+              <p>Shake inhaler and remove cap.</p>
+            </EasyInstructionsImgAndTextWrapper>
+            <EasyInstructionsImgAndTextWrapper
+              style={{
+                position: 'relative',
+                marginTop: '-0.9em'
+              }}>
+              <p>Insert inhaler into chamber.</p>
+              <Img
+                sizes={easyInstructions2.sizes}
+                style={{ ...easyInstructions2ImgStyle }}
+              />
+            </EasyInstructionsImgAndTextWrapper>
+            <EasyInstructionsImgAndTextWrapper
+              style={{ alignItems: 'center', marginTop: '-0.2em' }}>
+              <Img
+                sizes={easyInstructions3.sizes}
+                style={{ ...easyInstructions3ImgStyle }}
+              />
+              <p style={{}}>
+                Press inhaler and inhale slowly and deeply, holding your breath
+                for 5-10 seconds.
+                <span
+                  style={{
+                    display: 'block',
+                    fontStyle: 'italic',
+                    fontWeight: 'bold',
+                    margin: '0.125em auto'
+                  }}>
+                  OR
+                </span>Press inhaler and breathe in and out through the chamber
+                for 2-3 breaths.
+              </p>
+            </EasyInstructionsImgAndTextWrapper>
+            <EasyInstructionsImgAndTextWrapper
+              style={{ alignItems: 'flex-start', marginTop: '2em' }}>
+              <p style={{}}>
+                The <span style={{ fontWeight: '600' }}>Flow-Vu</span>{' '}
+                Inhalation Indicator moves as you inhale and helps provide
+                visual assurance of correct use and medication delivery.
+              </p>
+              <Img sizes={flowVuLogo.sizes} style={{ ...flowVuLogoImgStyle }} />
+            </EasyInstructionsImgAndTextWrapper>
+          </EasyInstructionsWrapper>
+        </InhalerTips>
+        <BubblesAndBanner>
+          <Img sizes={bubblesBG.sizes} />
+          <WhiteBanner>
+            <WhiteBannerChildImgFlexWrapper>
+              <Img
+                sizes={dishwasherSafe.sizes}
+                style={{
+                  ...whiteBannerChildImgStyle,
+                  postion: 'relative',
+                  top: '1vw'
+                }}
+              />
+              <Img
+                sizes={replace12Months.sizes}
+                style={{ ...whiteBannerChildImgStyle }}
+              />
+              <Img
+                sizes={bpaFree.sizes}
+                style={{ ...whiteBannerChildImgStyle }}
+              />
+            </WhiteBannerChildImgFlexWrapper>
+          </WhiteBanner>
+        </BubblesAndBanner>
+        <SixInhalers>
+          <H1 style={{ color: '#007FC8', marginBottom: 0 }}>
+            AeroChamber Plus Flow-Vu
+          </H1>
+          <H2 style={{ color: '#858585', fontWeight: 400 }}>
+            Anti Static Valved Holding Chamber (VHC)
+          </H2>
+          <SixInhalerImgsWrapper>
+            <InhalerAndBucketBorderWrapper style={{ marginBottom: '5vw' }}>
+              <ThreeInhalers style={{ position: 'relative', left: '2vw' }}>
+                <figure>
+                  <Img sizes={inhaler1.sizes} style={{ ...inhaler1ImgStyle }} />
+                  <figcaption style={{ position: 'relative', right: '15.5%' }}>
+                    Small<br />Mask
+                  </figcaption>
+                </figure>
+                <figure>
+                  <Img sizes={inhaler2.sizes} style={{ ...inhaler2ImgStyle }} />
+                  <figcaption style={{ position: 'relative', right: '7.5%' }}>
+                    Medium<br />Mask
+                  </figcaption>
+                </figure>
+                <figure>
+                  <Img sizes={inhaler3.sizes} style={{ ...inhaler3ImgStyle }} />
+                  <figcaption style={{ position: 'relative', right: '17%' }}>
+                    Youth<br />Mouthpiece
+                  </figcaption>
+                </figure>
+              </ThreeInhalers>
+              <BucketBorder />
+              <AdultOrChild>CHILD</AdultOrChild>
+            </InhalerAndBucketBorderWrapper>
+            <InhalerAndBucketBorderWrapper>
+              <ThreeInhalers style={{ position: 'relative', left: '3.25vw' }}>
+                <figure>
+                  <Img sizes={inhaler4.sizes} style={{ ...inhaler4ImgStyle }} />
+                  <figcaption style={{ position: 'relative', right: '16.75%' }}>
+                    Mouthpiece
+                    <br />
+                    <br />
+                  </figcaption>
+                </figure>
+                <figure>
+                  <Img sizes={inhaler5.sizes} style={{ ...inhaler5ImgStyle }} />
+                  <figcaption style={{ position: 'relative', right: '11.75%' }}>
+                    Small<br />Mask
+                  </figcaption>
+                </figure>
+                <figure>
+                  <Img sizes={inhaler6.sizes} style={{ ...inhaler6ImgStyle }} />
+                  <figcaption style={{ position: 'relative', right: '9.5%' }}>
+                    Large<br />Mask
+                  </figcaption>
+                </figure>
+              </ThreeInhalers>
+              <BucketBorder />
+              <AdultOrChild>ADULT</AdultOrChild>
+            </InhalerAndBucketBorderWrapper>
+          </SixInhalerImgsWrapper>
+        </SixInhalers>
+        <Footnotes>
+          <FootnoteHeader>
+            Children should transition to a mouthpiece around the age of 5
+          </FootnoteHeader>
+          <FootnoteSmallPrint>
+            <b>1.</b> McIvor et al. Optimizing the Delivery of Inhaled
+            Medication for Respiratory Patients: The Role of Valved Holding
+            Chambers.
+          </FootnoteSmallPrint>
+          <FootnoteSmallPrint>
+            <b>2.</b> Global Initiative for Asthma. Global strategy for asthma
+            management and prevention 2011. Available at:<br />
+            <a
+              href="http://ginasthma.org/2018-gina-report-global-strategy-for-asthma-management-and-prevention/"
+              target="_blank"
+              rel="noopener noreferrer">
+              http://ginasthma.org/2018-gina-report-global-strategy-for-asthma-management-and-prevention/
+            </a>
+          </FootnoteSmallPrint>
+          <FootnoteSmallPrint>
+            <b>3.</b> Plaza et al. Medical Personnel and Patient Skill in the
+            Use of Metered Dose Inhalers: A Multicentric Study.
+          </FootnoteSmallPrint>
+        </Footnotes>
+      </IndexWrapper>
+    );
+  }
+}
 
 export const query = graphql`
   query IndexQuery {
