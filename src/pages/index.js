@@ -78,7 +78,10 @@ const Macbook = styled.div`
 
 const spinnerStyle = {
   width: '30vw',
-  maxWidth: '200px'
+  position: 'absolute',
+  zIndex: 1,
+  left: '30.75vw',
+  bottom: '9.25vw'
 };
 
 const VideoPlayerWrapper = styled.div`
@@ -316,13 +319,13 @@ class IndexPage extends Component {
           <ContentWrapper>
             <div style={{ position: 'relative', width: '100%' }}>
               <Img sizes={macbook.sizes} style={{ marginTop: '26.5vw', width: '86vw', marginLeft: 'auto', marginRight: 'auto' }} />
-              {/* {(!videoHasLoaded || videoHasLoaded) && (
+              {(!videoHasLoaded) && (
                 <img
                   src={spinner}
                   alt="loading spinner"
                   style={{ ...spinnerStyle }}
                 />
-              )} */}
+              )}
             </div>
             <VideoPlayerWrapper>
               <VimeoPlayer
