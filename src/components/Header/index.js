@@ -11,6 +11,7 @@ const HeaderWrapper = styled.div`
     rgba(0, 72, 153, 1) 15.05%,
     rgba(0, 127, 200, 1) 100%
   );
+  border-bottom: 0.1vw solid #fff;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -65,16 +66,14 @@ const Header = ({ logoSizes }) => (
         <Img alt="logo" sizes={logoSizes} style={{ ...logoImgStyle }} />
       </Link>
     </LogoWrapper>
-    <Menu>
+    <Menu width="60vw">
       <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} exact to="/">
         Home
       </HeaderLink>
       <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} to="/overview">
         Overview
       </HeaderLink>
-      <HeaderLink
-        activeStyle={{ ...headerLinkActiveStyle }}
-        to="/instructions">
+      <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} to="/instructions">
         Instructions
       </HeaderLink>
       <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} to="/contact">

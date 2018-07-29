@@ -20,14 +20,19 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: #fff;
 }
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 72, 153, 1) 15.05%,
+    rgba(0, 127, 200, 1) 100%
+  );
+  border-right: 0.1vw solid #fff;
   padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  font-size: 6vw;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -38,12 +43,13 @@
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
-  padding: 0.8em;
+  padding: 2vw;
 }
 
 /* Individual item */
 .bm-item {
   display: inline-block;
+  margin-bottom: 5vw;
 }
 
 /* Styling of overlay */
