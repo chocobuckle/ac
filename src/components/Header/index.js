@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
@@ -59,28 +59,59 @@ const headerLinkActiveStyle = {
   color: '#f2b006'
 };
 
-const Header = ({ logoSizes }) => (
-  <HeaderWrapper>
-    <LogoWrapper>
-      <Link to="/">
-        <Img alt="logo" sizes={logoSizes} style={{ ...logoImgStyle }} />
-      </Link>
-    </LogoWrapper>
-    <Menu width="60vw">
-      <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} exact to="/">
-        Home
-      </HeaderLink>
-      <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} to="/overview">
-        Overview
-      </HeaderLink>
-      <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} to="/instructions">
-        Instructions
-      </HeaderLink>
-      <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} to="/contact">
-        Contact
-      </HeaderLink>
-    </Menu>
-  </HeaderWrapper>
-);
+class Header extends Component {
+  state = {
+    isOpen: false
+  };
+
+  handleMenuItemClick = () => {
+    this.setState((prevState) => {
+      return {
+        isOpen: prevState.isOpen
+      };
+    });
+  };
+
+  render() {
+    const { logoSizes } = this.props;
+    const { isOpen } = this.state;
+    return (
+      <HeaderWrapper>
+        <LogoWrapper>
+          <Link to="/">
+            <Img alt="logo" sizes={logoSizes} style={{ ...logoImgStyle }} />
+          </Link>
+        </LogoWrapper>
+        <Menu width="60vw" isOpen={isOpen}>
+          <HeaderLink
+            onClick={() => this.handleMenuItemClick()}
+            activeStyle={{ ...headerLinkActiveStyle }}
+            exact
+            to="/">
+            Home
+          </HeaderLink>
+          <HeaderLink
+            onClick={() => this.handleMenuItemClick()}
+            activeStyle={{ ...headerLinkActiveStyle }}
+            to="/overview">
+            Overview
+          </HeaderLink>
+          <HeaderLink
+            onClick={() => this.handleMenuItemClick()}
+            activeStyle={{ ...headerLinkActiveStyle }}
+            to="/instructions">
+            Instructions
+          </HeaderLink>
+          <HeaderLink
+            onClick={() => this.handleMenuItemClick()}
+            activeStyle={{ ...headerLinkActiveStyle }}
+            to="/contact">
+            Contact
+          </HeaderLink>
+        </Menu>
+      </HeaderWrapper>
+    );
+  }
+}
 
 export default Header;
