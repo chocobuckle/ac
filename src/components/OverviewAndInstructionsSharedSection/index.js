@@ -56,9 +56,8 @@ const macbookImgStyle = {
 const Gradient = styled.div`
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0) 2.12%,
-    rgba(255, 255, 255, 0.04) 3.83%,
-    rgba(255, 255, 255, 1) 43.44%
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 42%
   );
   margin-top: -55.5vw;
   position: relative;
@@ -89,7 +88,7 @@ class OverviewAndInstructionsSharedSection extends Component {
       <div>
         <Gradient>
           <ContentWrapper>
-            <H1Wrapper style={{ marginTop: '25vw' }}>
+            <H1Wrapper style={{ marginTop: '21.75vw' }}>
               <H1>{headerFirstLine}</H1>
               <H1>{headerSecondLine}</H1>
             </H1Wrapper>
