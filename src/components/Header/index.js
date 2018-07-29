@@ -84,26 +84,26 @@ class Header extends Component {
         </LogoWrapper>
         <Menu width="60vw" isOpen={isOpen} onStateChange={(state) => this.handleStateChange(state)}>
           <HeaderLink
-            onClick={() => this.closeMenu()}
+            onClick={() => this.handleMenuItemClick()}
             activeStyle={{ ...headerLinkActiveStyle }}
             exact
             to="/">
             Home
           </HeaderLink>
           <HeaderLink
-            onClick={() => this.closeMenu()}
+            onClick={() => this.handleMenuItemClick()}
             activeStyle={{ ...headerLinkActiveStyle }}
             to="/overview">
             Overview
           </HeaderLink>
           <HeaderLink
-            onClick={() => this.closeMenu()}
+            onClick={() => this.handleMenuItemClick()}
             activeStyle={{ ...headerLinkActiveStyle }}
             to="/instructions">
             Instructions
           </HeaderLink>
           <HeaderLink
-            onClick={() => this.closeMenu()}
+            onClick={() => this.handleMenuItemClick()}
             activeStyle={{ ...headerLinkActiveStyle }}
             to="/contact">
             Contact
