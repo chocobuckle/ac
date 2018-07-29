@@ -33,52 +33,66 @@ const Address = styled.div`
   }
 `;
 
+const Gradient = styled.div`
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 5%,
+    rgba(255, 255, 255, 0.65) 9%,
+    rgba(255, 255, 255, 1) 16%
+  );
+  margin-top: -116.5vw;
+  position: relative;
+  z-index: 1;
+`;
+
 function Contact({ data }) {
   return (
-    <ContentWrapper style={{ paddingBottom: 0 }}>
-      <H1 style={{ marginBottom: '4vw' }}>Contact Us</H1>
-      <FlexColumnWrapper>
-        <H2>Commercial Division</H2>
-        <H2>Co. Louth, Ireland</H2>
+    <Gradient>
+      <ContentWrapper style={{ paddingBottom: 0 }}>
+        <H1 style={{ marginTop: '29vw', marginBottom: '4vw' }}>Contact Us</H1>
+        <FlexColumnWrapper>
+          <H2>Commercial Division</H2>
+          <H2>Co. Louth, Ireland</H2>
 
-        <Address>
+          <Address>
+            <Text>
+              <b>Teva Pharmaceuticals</b>
+            </Text>
+            <Text>Finnabair Business Park, Dundalk,</Text>
+            <Text>Co. Louth, Ireland.</Text>
+          </Address>
+
           <Text>
-            <b>Teva Pharmaceuticals</b>
+            <LightBlueSpan>Freephone:</LightBlueSpan> 1800 - 201 700
           </Text>
-          <Text>Finnabair Business Park, Dundalk,</Text>
-          <Text>Co. Louth, Ireland.</Text>
-        </Address>
+          <Text>
+            <LightBlueSpan>Tel:</LightBlueSpan> 051-321740
+          </Text>
+          <Text>
+            <LightBlueSpan>Fax:</LightBlueSpan> 042 - 9351516
+          </Text>
+          <Text style={{ marginBottom: 0 }}>
+            <LightBlueSpan>Email:</LightBlueSpan> info@teva.ie
+          </Text>
 
-        <Text>
-          <LightBlueSpan>Freephone:</LightBlueSpan> 1800 - 201 700
-        </Text>
-        <Text>
-          <LightBlueSpan>Tel:</LightBlueSpan> 051-321740
-        </Text>
-        <Text>
-          <LightBlueSpan>Fax:</LightBlueSpan> 042 - 9351516
-        </Text>
-        <Text style={{ marginBottom: 0 }}>
-          <LightBlueSpan>Email:</LightBlueSpan> info@teva.ie
-        </Text>
+          <H2 style={{ margin: '4vw 0' }}>Retails Representatives</H2>
 
-        <H2 style={{ margin: '4vw 0' }}>Retails Representatives</H2>
-
-        <LightBlueSpan>Phil Osborn (Group accounts)</LightBlueSpan>
-        <Text>087 050 8779 - phil.osborn@teva.ie</Text>
-        <LightBlueSpan>Avril Ryan (South East)</LightBlueSpan>
-        <Text>087 223 4895 - avril.ryan@teva.ie</Text>
-        <LightBlueSpan>Jane Clements (West)</LightBlueSpan>
-        <Text>087 120 9148 - jane.clements@teva.ie</Text>
-        <LightBlueSpan>Paul Moran (Midlands)</LightBlueSpan>
-        <Text>087 799 2896 - paul.moran@teva.ie</Text>
-        <LightBlueSpan>Sinead Finucane (South West)</LightBlueSpan>
-        <Text>087 799 2858 - sinead.finucane@teva.ie</Text>
-        <LightBlueSpan>Collin Botha (North East)</LightBlueSpan>
-        <Text>087 668 5876 - collin.botha@teva.ie</Text>
-        <Img sizes={data.map.sizes} />
-      </FlexColumnWrapper>
-    </ContentWrapper>
+          <LightBlueSpan>Phil Osborn (Group accounts)</LightBlueSpan>
+          <Text>087 050 8779 - phil.osborn@teva.ie</Text>
+          <LightBlueSpan>Avril Ryan (South East)</LightBlueSpan>
+          <Text>087 223 4895 - avril.ryan@teva.ie</Text>
+          <LightBlueSpan>Jane Clements (West)</LightBlueSpan>
+          <Text>087 120 9148 - jane.clements@teva.ie</Text>
+          <LightBlueSpan>Paul Moran (Midlands)</LightBlueSpan>
+          <Text>087 799 2896 - paul.moran@teva.ie</Text>
+          <LightBlueSpan>Sinead Finucane (South West)</LightBlueSpan>
+          <Text>087 799 2858 - sinead.finucane@teva.ie</Text>
+          <LightBlueSpan>Collin Botha (North East)</LightBlueSpan>
+          <Text>087 668 5876 - collin.botha@teva.ie</Text>
+          <Img sizes={data.map.sizes} />
+        </FlexColumnWrapper>
+      </ContentWrapper>
+    </Gradient>
   );
 }
 
