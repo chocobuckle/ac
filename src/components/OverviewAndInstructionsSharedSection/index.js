@@ -54,11 +54,19 @@ const macbookImgStyle = {
 };
 
 const Gradient = styled.div`
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 42%
-  );
+  background: ${({ pathname }) => {
+    return pathname === '/overview'
+      ? `linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 37%
+      );`
+      : `linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 54%
+      );`;
+  }}
   margin-top: -55.5vw;
   position: relative;
   z-index: 1;
@@ -81,12 +89,13 @@ class OverviewAndInstructionsSharedSection extends Component {
       headerFirstLine,
       headerSecondLine,
       subHeaderText,
-      macbook
+      macbook,
+      pathname
     } = this.props;
     const { videoHasLoaded } = this.state;
     return (
       <div>
-        <Gradient>
+        <Gradient pathname={pathname}>
           <ContentWrapper>
             <H1Wrapper style={{ marginTop: '21.75vw' }}>
               <H1>{headerFirstLine}</H1>

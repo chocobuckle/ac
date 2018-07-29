@@ -175,7 +175,7 @@ class Instructions extends Component {
   };
 
   render() {
-    const { data } = this.props;
+    const { data, location } = this.props;
     const { activeSubMenuTab } = this.state;
     return (
       <InstructionsWrapper>
@@ -185,6 +185,7 @@ class Instructions extends Component {
           subHeaderText="<p>Watch the video below for instructions on using your <span>AeroChamber Plus®</span> with a metered dose inhaler, and for cleaning directions.</p>"
           macbook={data.macbook}
           bpaAndDishwasherSafe={data.bpaAndDishwasherSafe}
+          pathname={location.pathname}
         />
         <DownloadInstructionsForUse
           download={data.download}

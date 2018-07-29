@@ -45,7 +45,7 @@ const AdditionalFeatures = styled.section`
   background: #f5f5f5;
 `;
 
-function Overview({ data }) {
+function Overview({ data, location }) {
   return (
     <OverviewWrapper>
       <OverviewAndInstructionsSharedSection
@@ -64,6 +64,7 @@ function Overview({ data }) {
         </p>"
         macbook={data.macbook}
         bpaAndDishwasherSafe={data.bpaAndDishwasherSafe}
+        pathname={location.pathname}
       />
       <InhalerAnimation animationClickyThing={data.animationClickyThing} inhalerAnimationImg={data.inhalerAnimationImg} />
       <AdditionalFeatures>
