@@ -29,7 +29,7 @@ const Spinner = styled.img`
   position: absolute;
   z-index: 1;
   left: 30.75vw;
-  bottom: 8.25vw;
+  bottom: 8vw;
 `;
 
 const BPAImgAndTextWrapper = styled.div`
