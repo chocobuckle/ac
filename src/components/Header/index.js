@@ -64,13 +64,13 @@ class Header extends Component {
     isOpen: false
   };
 
-  handleMenuItemClick = () => {
-    this.setState((prevState) => {
-      return {
-        isOpen: prevState.isOpen
-      };
-    });
-  };
+  handleStateChange = (state) => {
+    this.setState({isOpen: state.isOpen})
+  }
+
+  closeMenu = () => {
+    this.setState({isOpen: false})
+  }
 
   render() {
     const { logoSizes } = this.props;
@@ -82,28 +82,28 @@ class Header extends Component {
             <Img alt="logo" sizes={logoSizes} style={{ ...logoImgStyle }} />
           </Link>
         </LogoWrapper>
-        <Menu width="60vw" isOpen={isOpen}>
+        <Menu width="60vw" isOpen={isOpen} onStateChange={(state) => this.handleStateChange(state)}>
           <HeaderLink
-            onClick={() => this.handleMenuItemClick()}
+            onClick={() => this.closeMenu()}
             activeStyle={{ ...headerLinkActiveStyle }}
             exact
             to="/">
             Home
           </HeaderLink>
           <HeaderLink
-            onClick={() => this.handleMenuItemClick()}
+            onClick={() => this.closeMenu()}
             activeStyle={{ ...headerLinkActiveStyle }}
             to="/overview">
             Overview
           </HeaderLink>
           <HeaderLink
-            onClick={() => this.handleMenuItemClick()}
+            onClick={() => this.closeMenu()}
             activeStyle={{ ...headerLinkActiveStyle }}
             to="/instructions">
             Instructions
           </HeaderLink>
           <HeaderLink
-            onClick={() => this.handleMenuItemClick()}
+            onClick={() => this.closeMenu()}
             activeStyle={{ ...headerLinkActiveStyle }}
             to="/contact">
             Contact
