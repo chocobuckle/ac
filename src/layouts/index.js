@@ -37,17 +37,19 @@ const Layout = ({ children, data, location }) => {
           padding: 0
         }}>
         <Header logoSizes={logo.sizes} />
-        <HeroImg
-          backgroundImgSizes={background.sizes}
-          flowVuSizes={flowVu.sizes}
-          location={location.pathname}
-        />
-        {children()}
-        <Footer
-          footer={footer.sizes}
-          tevaLogo={tevaLogo.sizes}
-          respiratory={respiratory.sizes}
-        />
+        <div style={{ position: 'relative', top: '25.1vw' }}>
+          <HeroImg
+            backgroundImgSizes={background.sizes}
+            flowVuSizes={flowVu.sizes}
+            location={location.pathname}
+          />
+          {children()}
+          <Footer
+            footer={footer.sizes}
+            tevaLogo={tevaLogo.sizes}
+            respiratory={respiratory.sizes}
+          />
+        </div>
       </Wrapper>
     </div>
   );

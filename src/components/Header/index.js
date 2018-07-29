@@ -1,7 +1,9 @@
 import React from 'react';
+import { slide as Menu } from 'react-burger-menu';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import './index.css';
 
 const HeaderWrapper = styled.div`
   background: linear-gradient(
@@ -11,6 +13,9 @@ const HeaderWrapper = styled.div`
   );
   display: flex;
   flex-direction: column;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
 `;
 
 const LogoWrapper = styled.h1`
@@ -20,27 +25,27 @@ const LogoWrapper = styled.h1`
 
 const logoImgStyle = {
   maxWidth: '300px',
-  width: '65vw'
+  width: '50vw'
 };
 
-const List = styled.ul`
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  margin: 0 auto;
-  margin: 0.25em 0;
-  text-align: center;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`;
+// const List = styled.ul`
+//   display: flex;
+//   flex-direction: row;
+//   list-style: none;
+//   margin: 0 auto;
+//   margin: 0.25em 0;
+//   text-align: center;
+//   width: 100%;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+// `;
 
-const ListItem = styled.li`
-  font-family: Myriad Pro, sans-serif;
-  font-size: 1.3rem;
-  margin-bottom: 0.35em;
-  text-decoration: none;
-`;
+// const ListItem = styled.li`
+//   font-family: Myriad Pro, sans-serif;
+//   font-size: 1.3rem;
+//   margin-bottom: 0.35em;
+//   text-decoration: none;
+// `;
 
 const HeaderLink = styled(Link)`
   color: #fff;
@@ -54,46 +59,29 @@ const headerLinkActiveStyle = {
 };
 
 const Header = ({ logoSizes }) => (
-  <div>
-    <HeaderWrapper>
-      <LogoWrapper>
-        <Link to="/">
-          <Img alt="logo" sizes={logoSizes} style={{ ...logoImgStyle }} />
-        </Link>
-      </LogoWrapper>
-      <nav>
-        <List>
-          <ListItem style={{ textAlign: 'right', paddingRight: '4.5vw', width: '50%' }}>
-            <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} exact to="/">
-              Home
-            </HeaderLink>
-          </ListItem>
-          <ListItem style={{ textAlign: 'left', paddingLeft: '4.5vw', width: '50%' }}>
-            <HeaderLink
-              activeStyle={{ ...headerLinkActiveStyle }}
-              to="/overview">
-              Overview
-            </HeaderLink>
-          </ListItem>
-          <ListItem style={{ textAlign: 'right', paddingRight: '4.5vw', width: '50%' }}>
-            <HeaderLink
-              activeStyle={{ ...headerLinkActiveStyle }}
-              to="/instructions">
-              Instructions
-            </HeaderLink>
-          </ListItem>
-          <ListItem style={{ textAlign: 'left', paddingLeft: '4.5vw', width: '50%' }}>
-            <HeaderLink
-              activeStyle={{ ...headerLinkActiveStyle }}
-              to="/contact">
-              Contact
-            </HeaderLink>
-          </ListItem>
-        </List>
-        <div style={{ borderRight: '0.1125em solid #fff', height: '3.6em', width: 0, margin: '-4.15em auto 0.65em' }} />
-      </nav>
-    </HeaderWrapper>
-  </div>
+  <HeaderWrapper>
+    <LogoWrapper>
+      <Link to="/">
+        <Img alt="logo" sizes={logoSizes} style={{ ...logoImgStyle }} />
+      </Link>
+    </LogoWrapper>
+    <Menu>
+      <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} exact to="/">
+        Home
+      </HeaderLink>
+      <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} to="/overview">
+        Overview
+      </HeaderLink>
+      <HeaderLink
+        activeStyle={{ ...headerLinkActiveStyle }}
+        to="/instructions">
+        Instructions
+      </HeaderLink>
+      <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} to="/contact">
+        Contact
+      </HeaderLink>
+    </Menu>
+  </HeaderWrapper>
 );
 
 export default Header;
