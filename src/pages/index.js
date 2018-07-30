@@ -228,6 +228,7 @@ const FootnoteSmallPrint = Text.extend`
   font-weight: 400;
   font-size: 2.6vw;
   margin-bottom: 0.3em;
+  line-height: 1.45em;
 `;
 
 class IndexPage extends Component {
