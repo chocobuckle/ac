@@ -523,14 +523,14 @@ class Instructions extends Component {
               </InstructionsBlueHeader>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_1.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '1.4em' }}>
                   Remove the backpiece. To detach the frontpiece, twist chamber as shown. Remove the
                   mouthpiece cap.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper style={{ marginBottom: '4.5vw' }}>
                 <InstructionImg sizes={data.LMClean_2.sizes} />
-                <InstructionText style={{ top: '4vw' }}>
+                <InstructionText style={{ top: '1.65em' }}>
                   Soak the parts for 15 minutes in a mild solution of liquid dish detergent and
                   lukewarm clean water. Agitate gently.
                   <br />
@@ -578,14 +578,14 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_3.sizes} />
-                <InstructionText style={{ top: '3.75vw' }}>
+                <InstructionText style={{ top: '1.65em' }}>
                   Shake out excess water from the parts and allow to air dry in a vertical position.
                   Ensure parts are dry before reassembly.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_4.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '1.4em' }}>
                   To reassemble, fit the frontpiece on the end of the chamber and twist firmly until
                   securely locked into position. For mouthpiece models, the protective cap should
                   always be placed on the mouthpiece when the chamber is not in use.
@@ -593,7 +593,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_5.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '1.4em' }}>
                   Center the Alignment Feature on the backpiece with the Flow-Vu® Inspiratory Flow
                   Indicator, as shown. Press firmly to attach the backpiece.
                 </InstructionText>
