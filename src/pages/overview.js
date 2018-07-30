@@ -47,7 +47,7 @@ function Overview({ data, location }) {
       <OverviewAndInstructionsSharedSection
         headerFirstLine="AeroChamber Plus® Flow-Vu®:"
         headerSecondLine="Seeing Is The Difference"
-        subHeaderText="<p> style='margin-bottom: 0;'
+        subHeaderText="<p style='margin-bottom: 0;'>
           <span style='color: #007fc8; font-weight: 600;'>AeroChamber Plus® Flow-Vu®</span> is an anti-static valved holding
           chamber designed with patients in mind. Patients can use an{' '}
           <span style='color: #007fc8; font-weight: 600;'>AeroChamber Plus® Flow-Vu®</span> to help improve medication
