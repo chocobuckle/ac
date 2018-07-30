@@ -55,3 +55,9 @@ export const InstructionText = Text.extend`
   position: relative;
   right: 2.95em;
 `;
+
+export const List = styled.ul`
+  list-style: 'none';
+  font-size: 3.9vw;
+  margin-left: 0;
+`;

@@ -1,36 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ContentWrapper } from 'helpers/sharedStyles';
-
-const H2 = styled.h2`
-  color: #004899;
-  font-size: 5.3vw;
-  font-weight: 600;
-  margin-bottom: 2vw;
-`;
-
-const List = styled.ul`
-  list-style: 'none';
-  margin-left: 0;
-`;
-
-const ListItem = styled.li``;
+import { ContentWrapper, H2, List } from 'helpers/sharedStyles';
 
 const Wrapper = styled.div`
   background: rgba(245, 245, 245, 1);
+`;
 
-  ul,
-  li {
-    font-size: 3.4vw;
-  }
-
-  li {
-    margin-bottom: 1.4vw;
-  }
-
-  ul:last-child {
-    margin-bottom: 0;
-  }
+const ListItem = styled.li`
+  margin-bottom: 0.8em;
 `;
 
 function TabMenuNotes() {
@@ -57,7 +34,7 @@ function TabMenuNotes() {
             <ListItem>
               Dishwashing with overly dirty dishes is not recommended
             </ListItem>
-            <ListItem>Dishwasher validated up to 158°F (70°C)</ListItem>
+            <ListItem style={{ marginBottom: 0 }}>Dishwasher validated up to 158°F (70°C)</ListItem>
           </List>
         </ContentWrapper>
       </ContentWrapper>
