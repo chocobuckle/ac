@@ -379,7 +379,8 @@ class Instructions extends Component {
                     left: '13.75vw',
                     lineHeight: '2.2vw',
                     margin: '0 0 2vw 3.5vw',
-                    bottom: '8.5vw'
+                    bottom: '8.5vw',
+                    width: '65vw'
                   }}>
                   <li>
                     Avoid heavy or other cycles that include heated dry over
@@ -390,7 +391,8 @@ class Instructions extends Component {
                   <li>Use dishwasher detergent and rinse aid</li>
                   <li>Do not boil or sterilize</li>
                 </ul>
-                <InstructionText style={{ bottom: '10.5vw', left: '13.75vw' }}>
+                <InstructionText
+                  style={{ width: '40vw', bottom: '10.5vw', left: '13.75vw' }}>
                   SEE CAUTIONS, 1ST BULLET, BELOW
                 </InstructionText>
               </InstructionImgAndTextWrapper>
@@ -580,7 +582,8 @@ class Instructions extends Component {
                     left: '13.75vw',
                     lineHeight: '2.2vw',
                     margin: '0 0 2vw 3.5vw',
-                    bottom: '8.5vw'
+                    bottom: '8.5vw',
+                    width: '65vw'
                   }}>
                   <li>
                     Avoid heavy or other cycles that include heated dry over
@@ -591,7 +594,7 @@ class Instructions extends Component {
                   <li>Use dishwasher detergent and rinse aid</li>
                   <li>Do not boil or sterilize</li>
                 </ul>
-                <InstructionText style={{ bottom: '10.5vw', left: '13.75vw' }}>
+                <InstructionText style={{ width: '40vw', bottom: '10.5vw', left: '13.75vw' }}>
                   SEE CAUTIONS, 1ST BULLET, BELOW
                 </InstructionText>
               </InstructionImgAndTextWrapper>
@@ -707,9 +710,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    PDFImage: imageSharp(
-      id: { regex: "/instructions/SMInstruct/pdf.png/" }
-    ) {
+    PDFImage: imageSharp(id: { regex: "/instructions/SMInstruct/pdf.png/" }) {
       sizes(maxWidth: 137) {
         src
         srcSet
