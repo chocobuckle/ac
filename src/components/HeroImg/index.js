@@ -10,7 +10,7 @@ const HeroTextWrapper = styled.div`
   font-weight: 100;
   left: 5vw;
   position: absolute;
-  top: 22vw;
+  top: 21vw;
   p:nth-child(2) {
     font-style: italic;
   }
@@ -21,7 +21,7 @@ const HeroText = styled.p`
   font-family: Myriad Pro, sans-serif;
   font-weight: 100;
   font-size: 4.5vw;
-  line-height: 1.4em;
+  line-height: 1.3em;
   margin-bottom: 0;
 `;
 
