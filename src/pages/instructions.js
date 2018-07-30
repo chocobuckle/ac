@@ -231,26 +231,22 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_1.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  Carefully examine the product for damage, missing parts, or
-                  foreign objects. Remove any foreign objects prior to use. The
-                  product should be replaced IMMEDIATELY if there are any
-                  damaged or missing parts. If necessary, use the Metered Dose
-                  Inhaler (MDI) alone until a replacement is obtained. If the
-                  patient's symptoms worsen, please seek immediate medical
-                  attention.
+                  Carefully examine the product for damage, missing parts, or foreign objects.
+                  Remove any foreign objects prior to use. The product should be replaced
+                  IMMEDIATELY if there are any damaged or missing parts. If necessary, use the
+                  Metered Dose Inhaler (MDI) alone until a replacement is obtained. If the patient's
+                  symptoms worsen, please seek immediate medical attention.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_2.sizes} />
-                <InstructionText style={{ top: '4vw' }}>
-                  Remove cap from the MDI.
-                </InstructionText>
+                <InstructionText style={{ top: '4vw' }}>Remove cap from the MDI.</InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_3.sizes} />
                 <InstructionText style={{ top: '4vw' }}>
-                  Shake the MDI immediately before each use as per the
-                  instructions supplied with the MDI.
+                  Shake the MDI immediately before each use as per the instructions supplied with
+                  the MDI.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
@@ -262,9 +258,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_5.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  Apply mask to face and ensure an eective seal. The Flow-Vu®
-                  Inspiratory Flow Indicator (IFI) only moves if a good seal is
-                  created.
+                  Apply mask to face and ensure an eective seal. The Flow-Vu® Inspiratory Flow
+                  Indicator (IFI) only moves if a good seal is created.
                 </InstructionText>
                 <InstructionImg
                   sizes={data.SMInstruct_5b.sizes}
@@ -278,18 +273,17 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_6.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  Press the MDI at the beginning of a slow inhalation as the
-                  Flow-Vu® Inspiratory Flow Indicator moves toward the patient.
-                  Use the Flow-Vu® Inspiratory Flow Indicator to count breaths.
-                  Maintain seal for 5-6 breaths after the MDI is pressed.
-                  Administer 1 pu at a time.
+                  Press the MDI at the beginning of a slow inhalation as the Flow-Vu® Inspiratory
+                  Flow Indicator moves toward the patient. Use the Flow-Vu® Inspiratory Flow
+                  Indicator to count breaths. Maintain seal for 5-6 breaths after the MDI is
+                  pressed. Administer 1 pu at a time.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_7.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  Follow instructions supplied with the MDI on how long to wait
-                  before repeating steps 3-6 as prescribed.
+                  Follow instructions supplied with the MDI on how long to wait before repeating
+                  steps 3-6 as prescribed.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <HelpfulTips>
@@ -308,15 +302,14 @@ class Instructions extends Component {
                 <TipWrapper>
                   <TipImg sizes={data.SMInstruct_PawPrint.sizes} />
                   <TipText>
-                    Use teddy bears or dolls to "pretend" to use the chamber to
-                    make it look like a game.
+                    Use teddy bears or dolls to "pretend" to use the chamber to make it look like a
+                    game.
                   </TipText>
                 </TipWrapper>
                 <TipWrapper>
                   <TipImg sizes={data.SMInstruct_PawPrint.sizes} />
                   <TipText>
-                    If possible, give treatments when the child is happy and not
-                    crying.
+                    If possible, give treatments when the child is happy and not crying.
                   </TipText>
                 </TipWrapper>
               </HelpfulTips>
@@ -333,22 +326,20 @@ class Instructions extends Component {
           {activeSubMenuTab === 2 && (
             <div>
               <InstructionsBlueHeader>
-                CLEANING INSTRUCTIONS FOR THE SMALL AND MEDIUM MASK CHAMBERS.
-                THIS PRODUCT CAN BE USED RIGHT OUT OF THE PACKAGE AND THEN
-                CLEANED WEEKLY.
+                CLEANING INSTRUCTIONS FOR THE SMALL AND MEDIUM MASK CHAMBERS. THIS PRODUCT CAN BE
+                USED RIGHT OUT OF THE PACKAGE AND THEN CLEANED WEEKLY.
               </InstructionsBlueHeader>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_1.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  Remove the backpiece. To detach the frontpiece, twist chamber
-                  as shown.
+                  Remove the backpiece. To detach the frontpiece, twist chamber as shown.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper style={{ marginBottom: '4.5vw' }}>
                 <InstructionImg sizes={data.SMClean_2.sizes} />
                 <InstructionText style={{ top: '4vw' }}>
-                  Soak the parts for 15 minutes in a mild solution of liquid
-                  dish detergent and lukewarm clean water. Agitate gently.
+                  Soak the parts for 15 minutes in a mild solution of liquid dish detergent and
+                  lukewarm clean water. Agitate gently.
                   <br />
                   <br />
                   Rinse parts in clean water.
@@ -382,40 +373,35 @@ class Instructions extends Component {
                     bottom: '8.5vw',
                     width: '65vw'
                   }}>
-                  <li>
-                    Avoid heavy or other cycles that include heated dry over
-                    158°F
-                  </li>
+                  <li>Avoid heavy or other cycles that include heated dry over 158°F</li>
                   <li>Parts must be placed in the top rack ONLY</li>
                   <li>Secure product face up, as pictured</li>
                   <li>Use dishwasher detergent and rinse aid</li>
                   <li>Do not boil or sterilize</li>
                 </ul>
-                <InstructionText
-                  style={{ width: '40vw', bottom: '10.5vw', left: '13.75vw' }}>
+                <InstructionText style={{ width: '40vw', bottom: '10.5vw', left: '13.75vw' }}>
                   SEE CAUTIONS, 1ST BULLET, BELOW
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_3.sizes} />
                 <InstructionText style={{ top: '4vw' }}>
-                  Shake out excess water from the parts and allow to air dry in
-                  a vertical position. Ensure parts are dry before reassembly.
+                  Shake out excess water from the parts and allow to air dry in a vertical position.
+                  Ensure parts are dry before reassembly.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_4.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  To reassemble, t the frontpiece on the end of the chamber and
-                  twist rmly until securely locked into position.
+                  To reassemble, t the frontpiece on the end of the chamber and twist rmly until
+                  securely locked into position.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_5.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  Center the Alignment Feature on the backpiece with the
-                  Flow-Vu® Inspiratory Flow Indicator, as shown. Press rmly to
-                  attach the backpiece.
+                  Center the Alignment Feature on the backpiece with the Flow-Vu® Inspiratory Flow
+                  Indicator, as shown. Press rmly to attach the backpiece.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <TabMenuNotes />
@@ -427,12 +413,11 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_1.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  Carefully examine the product for damage, missing parts or
-                  foreign objects. Remove any foreign objects prior to use. The
-                  product should be replaced IMMEDIATELY if there are any
-                  damaged or missing parts. If necessary, use the Metered Dose
-                  Inhaler (MDI) alone until a replacement is obtained. If
-                  symptoms worsen, please seek immediate medical attention.
+                  Carefully examine the product for damage, missing parts or foreign objects. Remove
+                  any foreign objects prior to use. The product should be replaced IMMEDIATELY if
+                  there are any damaged or missing parts. If necessary, use the Metered Dose Inhaler
+                  (MDI) alone until a replacement is obtained. If symptoms worsen, please seek
+                  immediate medical attention.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
@@ -444,8 +429,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_3.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  Shake the MDI immediately before each use as per the
-                  instructions supplied with the MDI.
+                  Shake the MDI immediately before each use as per the instructions supplied with
+                  the MDI.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
@@ -472,12 +457,11 @@ class Instructions extends Component {
                     top: '1.75vw',
                     width: '61.25vw'
                   }}>
-                  Put mouthpiece into mouth and close lips around it to ensure
-                  an eective seal. The Flow-Vu® Inspiratory Flow Indicator (IFI)
-                  only moves if the patient has a good seal.<br />
-                  <br />Apply mask to face and ensure an eective seal. The
-                  Flow-Vu® Inspiratory Flow Indicator only moves if a good seal
-                  is created.
+                  Put mouthpiece into mouth and close lips around it to ensure an eective seal. The
+                  Flow-Vu® Inspiratory Flow Indicator (IFI) only moves if the patient has a good
+                  seal.<br />
+                  <br />Apply mask to face and ensure an eective seal. The Flow-Vu® Inspiratory Flow
+                  Indicator only moves if a good seal is created.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper
@@ -498,28 +482,25 @@ class Instructions extends Component {
                     top: '1.75vw',
                     width: '61.25vw'
                   }}>
-                  Breathe out gently and press the MDI at the beginning of a
-                  slow inhalation. Use the Flow-Vu® IFI to assist in the
-                  coordination of this step. Breathe in slowly and deeply
-                  through the mouth until a full breath has been taken. Hold
-                  breath for 5-10 seconds, if possible. Otherwise, keep lips
-                  tight on the mouthpiece breathing normally 2-3 times through
-                  the chamber after the MDI is pressed. Slow down inhalation if
-                  you hear the FlowSignal® Whistle sound. It means that you are
+                  Breathe out gently and press the MDI at the beginning of a slow inhalation. Use
+                  the Flow-Vu® IFI to assist in the coordination of this step. Breathe in slowly and
+                  deeply through the mouth until a full breath has been taken. Hold breath for 5-10
+                  seconds, if possible. Otherwise, keep lips tight on the mouthpiece breathing
+                  normally 2-3 times through the chamber after the MDI is pressed. Slow down
+                  inhalation if you hear the FlowSignal® Whistle sound. It means that you are
                   inhaling too quickly. Administer 1 pu at a time.<br />
-                  <br />Breathe out gently and press the MDI at the beginning of
-                  a slow inhalation as the Flow-Vu® IFI moves toward you. Use
-                  the Flow-Vu® IFI to count breaths. Maintain seal for 5-6
-                  breaths after the MDI is pressed. Slow down inhalation if you
-                  hear the FlowSignal® Whistle sound. It means that you are
-                  inhaling too quickly. Administer 1 pu at a time.
+                  <br />Breathe out gently and press the MDI at the beginning of a slow inhalation
+                  as the Flow-Vu® IFI moves toward you. Use the Flow-Vu® IFI to count breaths.
+                  Maintain seal for 5-6 breaths after the MDI is pressed. Slow down inhalation if
+                  you hear the FlowSignal® Whistle sound. It means that you are inhaling too
+                  quickly. Administer 1 pu at a time.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_7.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  Follow instructions supplied with the MDI on how long to wait
-                  before repeating steps 3-6 as prescribed.
+                  Follow instructions supplied with the MDI on how long to wait before repeating
+                  steps 3-6 as prescribed.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <TabMenuPDFDownload
@@ -536,22 +517,21 @@ class Instructions extends Component {
           {activeSubMenuTab === 4 && (
             <div>
               <InstructionsBlueHeader>
-                CLEANING INSTRUCTIONS FOR THE LARGE MASK AND MOUTHPIECE
-                CHAMBERS. THIS PRODUCT CAN BE USED RIGHT OUT OF THE PACKAGE AND
-                THEN CLEANED WEEKLY.
+                CLEANING INSTRUCTIONS FOR THE LARGE MASK AND MOUTHPIECE CHAMBERS. THIS PRODUCT CAN
+                BE USED RIGHT OUT OF THE PACKAGE AND THEN CLEANED WEEKLY.
               </InstructionsBlueHeader>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_1.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  Remove the backpiece. To detach the frontpiece, twist chamber
-                  as shown. Remove the mouthpiece cap.
+                  Remove the backpiece. To detach the frontpiece, twist chamber as shown. Remove the
+                  mouthpiece cap.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper style={{ marginBottom: '4.5vw' }}>
                 <InstructionImg sizes={data.LMClean_2.sizes} />
                 <InstructionText style={{ top: '4vw' }}>
-                  Soak the parts for 15 minutes in a mild solution of liquid
-                  dish detergent and lukewarm clean water. Agitate gently.
+                  Soak the parts for 15 minutes in a mild solution of liquid dish detergent and
+                  lukewarm clean water. Agitate gently.
                   <br />
                   <br />
                   Rinse parts in clean water.
@@ -585,10 +565,7 @@ class Instructions extends Component {
                     bottom: '8.5vw',
                     width: '65vw'
                   }}>
-                  <li>
-                    Avoid heavy or other cycles that include heated dry over
-                    158°F
-                  </li>
+                  <li>Avoid heavy or other cycles that include heated dry over 158°F</li>
                   <li>Parts must be placed in the top rack ONLY</li>
                   <li>Secure product face up, as pictured</li>
                   <li>Use dishwasher detergent and rinse aid</li>
@@ -601,25 +578,23 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_3.sizes} />
                 <InstructionText style={{ top: '3.75vw' }}>
-                  Shake out excess water from the parts and allow to air dry in
-                  a vertical position. Ensure parts are dry before reassembly.
+                  Shake out excess water from the parts and allow to air dry in a vertical position.
+                  Ensure parts are dry before reassembly.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_4.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  To reassemble, fit the frontpiece on the end of the chamber
-                  and twist firmly until securely locked into position. For
-                  mouthpiece models, the protective cap should always be placed
-                  on the mouthpiece when the chamber is not in use.
+                  To reassemble, fit the frontpiece on the end of the chamber and twist firmly until
+                  securely locked into position. For mouthpiece models, the protective cap should
+                  always be placed on the mouthpiece when the chamber is not in use.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_5.sizes} />
                 <InstructionText style={{ top: '3.5vw' }}>
-                  Center the Alignment Feature on the backpiece with the
-                  Flow-Vu® Inspiratory Flow Indicator, as shown. Press firmly to
-                  attach the backpiece.
+                  Center the Alignment Feature on the backpiece with the Flow-Vu® Inspiratory Flow
+                  Indicator, as shown. Press firmly to attach the backpiece.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <TabMenuNotes />
@@ -634,9 +609,7 @@ class Instructions extends Component {
 
 export const query = graphql`
   query InstructionsQuery {
-    bpaAndDishwasherSafe: imageSharp(
-      id: { regex: "/shared/bpa_and_dishwasher_safe.png/" }
-    ) {
+    bpaAndDishwasherSafe: imageSharp(id: { regex: "/shared/bpa_and_dishwasher_safe.png/" }) {
       sizes(maxWidth: 749) {
         src
         srcSet
@@ -666,9 +639,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    smallMask: imageSharp(
-      id: { regex: "/shared/small_mask_medium_mask.png/" }
-    ) {
+    smallMask: imageSharp(id: { regex: "/shared/small_mask_medium_mask.png/" }) {
       sizes(maxWidth: 851) {
         src
         srcSet
@@ -698,9 +669,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_PawPrint: imageSharp(
-      id: { regex: "/instructions/SMInstruct/PawPrint.png/" }
-    ) {
+    SMInstruct_PawPrint: imageSharp(id: { regex: "/instructions/SMInstruct/PawPrint.png/" }) {
       sizes(maxWidth: 55) {
         src
         srcSet
@@ -720,9 +689,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_1: imageSharp(
-      id: { regex: "/instructions/SMInstruct/SMInstruct_1.png/" }
-    ) {
+    SMInstruct_1: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_1.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -732,9 +699,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_2: imageSharp(
-      id: { regex: "/instructions/SMInstruct/SMInstruct_2.png/" }
-    ) {
+    SMInstruct_2: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_2.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -744,9 +709,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_3: imageSharp(
-      id: { regex: "/instructions/SMInstruct/SMInstruct_3.png/" }
-    ) {
+    SMInstruct_3: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_3.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -756,9 +719,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_4: imageSharp(
-      id: { regex: "/instructions/SMInstruct/SMInstruct_4.png/" }
-    ) {
+    SMInstruct_4: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_4.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -768,9 +729,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_5: imageSharp(
-      id: { regex: "/instructions/SMInstruct/SMInstruct_5.png/" }
-    ) {
+    SMInstruct_5: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_5.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -780,9 +739,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_5b: imageSharp(
-      id: { regex: "/instructions/SMInstruct/SMInstruct_5b.png/" }
-    ) {
+    SMInstruct_5b: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_5b.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -792,9 +749,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_6: imageSharp(
-      id: { regex: "/instructions/SMInstruct/SMInstruct_6.png/" }
-    ) {
+    SMInstruct_6: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_6.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -804,9 +759,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMInstruct_7: imageSharp(
-      id: { regex: "/instructions/SMInstruct/SMInstruct_7.png/" }
-    ) {
+    SMInstruct_7: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_7.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -816,9 +769,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMClean_1: imageSharp(
-      id: { regex: "/instructions/SMClean/SMClean_1.png/" }
-    ) {
+    SMClean_1: imageSharp(id: { regex: "/instructions/SMClean/SMClean_1.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -828,9 +779,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMClean_2: imageSharp(
-      id: { regex: "/instructions/SMClean/SMClean_2.png/" }
-    ) {
+    SMClean_2: imageSharp(id: { regex: "/instructions/SMClean/SMClean_2.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -840,9 +789,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMClean_2b: imageSharp(
-      id: { regex: "/instructions/SMClean/SMClean_2b.png/" }
-    ) {
+    SMClean_2b: imageSharp(id: { regex: "/instructions/SMClean/SMClean_2b.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -852,9 +799,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMClean_3: imageSharp(
-      id: { regex: "/instructions/SMClean/SMClean_3.png/" }
-    ) {
+    SMClean_3: imageSharp(id: { regex: "/instructions/SMClean/SMClean_3.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -864,9 +809,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMClean_4: imageSharp(
-      id: { regex: "/instructions/SMClean/SMClean_4.png/" }
-    ) {
+    SMClean_4: imageSharp(id: { regex: "/instructions/SMClean/SMClean_4.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -876,9 +819,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    SMClean_5: imageSharp(
-      id: { regex: "/instructions/SMClean/SMClean_5.png/" }
-    ) {
+    SMClean_5: imageSharp(id: { regex: "/instructions/SMClean/SMClean_5.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -888,9 +829,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_1: imageSharp(
-      id: { regex: "/instructions/LMInstruct/LMInstruct_1.png/" }
-    ) {
+    LMInstruct_1: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_1.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -900,9 +839,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_2: imageSharp(
-      id: { regex: "/instructions/LMInstruct/LMInstruct_2.png/" }
-    ) {
+    LMInstruct_2: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_2.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -912,9 +849,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_3: imageSharp(
-      id: { regex: "/instructions/LMInstruct/LMInstruct_3.png/" }
-    ) {
+    LMInstruct_3: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_3.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -924,9 +859,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_4: imageSharp(
-      id: { regex: "/instructions/LMInstruct/LMInstruct_4.png/" }
-    ) {
+    LMInstruct_4: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_4.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -936,9 +869,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_5: imageSharp(
-      id: { regex: "/instructions/LMInstruct/LMInstruct_5.png/" }
-    ) {
+    LMInstruct_5: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_5.png/" }) {
       sizes(maxWidth: 688) {
         src
         srcSet
@@ -948,9 +879,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_6: imageSharp(
-      id: { regex: "/instructions/LMInstruct/LMInstruct_6.png/" }
-    ) {
+    LMInstruct_6: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_6.png/" }) {
       sizes(maxWidth: 688) {
         src
         srcSet
@@ -960,9 +889,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMInstruct_7: imageSharp(
-      id: { regex: "/instructions/LMInstruct/LMInstruct_7.png/" }
-    ) {
+    LMInstruct_7: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_7.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -972,9 +899,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMClean_1: imageSharp(
-      id: { regex: "/instructions/LMClean/LMClean_1.png/" }
-    ) {
+    LMClean_1: imageSharp(id: { regex: "/instructions/LMClean/LMClean_1.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -984,9 +909,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMClean_2: imageSharp(
-      id: { regex: "/instructions/LMClean/LMClean_2.png/" }
-    ) {
+    LMClean_2: imageSharp(id: { regex: "/instructions/LMClean/LMClean_2.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -996,9 +919,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMClean_2b: imageSharp(
-      id: { regex: "/instructions/LMClean/LMClean_2b.png/" }
-    ) {
+    LMClean_2b: imageSharp(id: { regex: "/instructions/LMClean/LMClean_2b.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -1008,9 +929,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMClean_3: imageSharp(
-      id: { regex: "/instructions/LMClean/LMClean_3.png/" }
-    ) {
+    LMClean_3: imageSharp(id: { regex: "/instructions/LMClean/LMClean_3.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -1020,9 +939,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMClean_4: imageSharp(
-      id: { regex: "/instructions/LMClean/LMClean_4.png/" }
-    ) {
+    LMClean_4: imageSharp(id: { regex: "/instructions/LMClean/LMClean_4.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
@@ -1032,9 +949,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    LMClean_5: imageSharp(
-      id: { regex: "/instructions/LMClean/LMClean_5.png/" }
-    ) {
+    LMClean_5: imageSharp(id: { regex: "/instructions/LMClean/LMClean_5.png/" }) {
       sizes(maxWidth: 217) {
         src
         srcSet
