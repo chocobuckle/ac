@@ -51,8 +51,7 @@ export const Text = styled.p`
 
 export const InstructionText = Text.extend`
   font-size: 2.75vw;
-  line-height: 3.4vw;
+  line-height: 1.45em;
   position: relative;
-  right: 7.5vw;
-  top: 4.2vw;
+  right: 2.69em;
 `;
