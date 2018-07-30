@@ -328,10 +328,10 @@ class IndexPage extends Component {
                     <b> know?</b>
                   </em>
                 </H3>
-                <p>
+                <Text>
                   Guidelines recommend chambers for children and adults.
                   <sup>2</sup>
-                </p>
+                </Text>
                 <p>
                   The majority of adults do not use their inhalers properly.
                   <sup>3</sup> This is why doctors recommend using an{' '}

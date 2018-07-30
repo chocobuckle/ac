@@ -182,7 +182,7 @@ class Instructions extends Component {
         <OverviewAndInstructionsSharedSection
           headerFirstLine="Learning How to Use Your"
           headerSecondLine="AeroChamber Plus® Flow-Vu®"
-          subHeaderText="<p>Watch the video below for instructions on using your <span style='color: #007fc8; font-weight: 600;'>AeroChamber Plus®</span> with a metered dose inhaler, and for cleaning directions.</p>"
+          subHeaderText="<p style='margin-bottom: 0;'>Watch the video below for instructions on using your <span style='color: #007fc8; font-weight: 600;'>AeroChamber Plus®</span> with a metered dose inhaler, and for cleaning directions.</p>"
           macbook={data.macbook}
           bpaAndDishwasherSafe={data.bpaAndDishwasherSafe}
           pathname={location.pathname}
