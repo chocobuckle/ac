@@ -7,7 +7,7 @@ function IndicationsForUse() {
   return (
     <IndicationsForUseWrapper>
       <H2>Indications For Use</H2>
-      <Text>
+      <Text style={{ marginBottom: '0.75em' }}>
         This product is intended to be used by patients who are under the care
         or treatment of a physician or licensed healthcare professional. The
         device is intended to be used by these patients to administer
