@@ -77,6 +77,7 @@ const SubMenuTitle = H6.extend`
   line-height: 1.25em;
   margin-bottom: 0;
   text-align: center;
+  font-weight: 600;
 `;
 
 const InstructionImgAndTextWrapper = styled.div`
@@ -95,7 +96,7 @@ const InstructionsBlueHeader = H5.extend`
 `;
 
 const InstructionImg = styled(Img)`
-  max-width: 217px;
+  max-width: 857px;
   width: 28vw;
 `;
 
@@ -216,7 +217,9 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_2.sizes} />
-                <InstructionText style={{ top: '1.55em' }}>Remove cap from the MDI.</InstructionText>
+                <InstructionText style={{ top: '1.55em' }}>
+                  Remove cap from the MDI.
+                </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_3.sizes} />
@@ -234,15 +237,16 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_5.sizes} />
                 <InstructionText style={{ top: '1.4em' }}>
-                  Apply mask to face and ensure an eective seal. The Flow-Vu® Inspiratory Flow
+                  Apply mask to face and ensure an effective seal. The Flow-Vu® Inspiratory Flow
                   Indicator (IFI) only moves if a good seal is created.
                 </InstructionText>
                 <InstructionImg
                   sizes={data.SMInstruct_5b.sizes}
                   style={{
                     position: 'relative',
-                    right: '5vw',
-                    width: '12.25vw'
+                    right: '2vw',
+                    width: '17vw',
+                    bottom: '1.3vw'
                   }}
                 />
               </InstructionImgAndTextWrapper>
@@ -311,7 +315,7 @@ class Instructions extends Component {
                   Remove the backpiece. To detach the frontpiece, twist chamber as shown.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper style={{ marginBottom: '2.55em' }}>
+              <InstructionImgAndTextWrapper style={{ marginBottom: '1.9em' }}>
                 <InstructionImg sizes={data.SMClean_2.sizes} />
                 <InstructionText style={{ top: '1.6em' }}>
                   Soak the parts for 15 minutes in a mild solution of liquid dish detergent and
@@ -324,11 +328,11 @@ class Instructions extends Component {
                   OR
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper style={{ marginBottom: 0 }}>
+              <InstructionImgAndTextWrapper>
                 <InstructionImg
                   sizes={data.SMClean_2b.sizes}
                   style={{
-                    width: '4.5em'
+                    width: '3em'
                   }}
                 />
                 <InstructionText style={{ left: '1.4em', width: '60vw' }}>
@@ -336,13 +340,13 @@ class Instructions extends Component {
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper
-                style={{ flexDirection: 'column', marginBottom: '-3.9em' }}>
+                style={{ flexDirection: 'column', marginTop: '2em', marginBottom: '-3.25em' }}>
                 <ul
                   style={{
                     fontSize: '3vw',
                     position: 'relative',
                     left: '5.9em',
-                    lineHeight: '1.5em',
+                    lineHeight: '1.25em',
                     bottom: '3em',
                     width: '55vw'
                   }}>
@@ -352,7 +356,8 @@ class Instructions extends Component {
                   <li>Use dishwasher detergent and rinse aid</li>
                   <li>Do not boil or sterilize</li>
                 </ul>
-                <InstructionText style={{ width: '50vw', position: 'relative', left: '6.25em', top: '-4.25em' }}>
+                <InstructionText
+                  style={{ width: '60vw', position: 'relative', left: '5.25em', top: '-4.75em' }}>
                   SEE CAUTIONS, 1ST BULLET, BELOW
                 </InstructionText>
               </InstructionImgAndTextWrapper>
@@ -663,7 +668,7 @@ export const query = graphql`
       }
     }
     SMInstruct_1: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_1.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -673,7 +678,7 @@ export const query = graphql`
       }
     }
     SMInstruct_2: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_2.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -683,7 +688,7 @@ export const query = graphql`
       }
     }
     SMInstruct_3: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_3.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -693,7 +698,7 @@ export const query = graphql`
       }
     }
     SMInstruct_4: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_4.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -703,7 +708,7 @@ export const query = graphql`
       }
     }
     SMInstruct_5: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_5.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -713,7 +718,7 @@ export const query = graphql`
       }
     }
     SMInstruct_5b: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_5b.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 532) {
         src
         srcSet
         srcWebp
@@ -723,7 +728,7 @@ export const query = graphql`
       }
     }
     SMInstruct_6: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_6.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -733,7 +738,7 @@ export const query = graphql`
       }
     }
     SMInstruct_7: imageSharp(id: { regex: "/instructions/SMInstruct/SMInstruct_7.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -743,7 +748,7 @@ export const query = graphql`
       }
     }
     SMClean_1: imageSharp(id: { regex: "/instructions/SMClean/SMClean_1.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -753,7 +758,7 @@ export const query = graphql`
       }
     }
     SMClean_2: imageSharp(id: { regex: "/instructions/SMClean/SMClean_2.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -763,7 +768,7 @@ export const query = graphql`
       }
     }
     SMClean_2b: imageSharp(id: { regex: "/instructions/SMClean/SMClean_2b.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 481) {
         src
         srcSet
         srcWebp
@@ -773,7 +778,7 @@ export const query = graphql`
       }
     }
     SMClean_3: imageSharp(id: { regex: "/instructions/SMClean/SMClean_3.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -783,7 +788,7 @@ export const query = graphql`
       }
     }
     SMClean_4: imageSharp(id: { regex: "/instructions/SMClean/SMClean_4.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -793,7 +798,7 @@ export const query = graphql`
       }
     }
     SMClean_5: imageSharp(id: { regex: "/instructions/SMClean/SMClean_5.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -803,7 +808,7 @@ export const query = graphql`
       }
     }
     LMInstruct_1: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_1.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -813,7 +818,7 @@ export const query = graphql`
       }
     }
     LMInstruct_2: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_2.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -823,7 +828,7 @@ export const query = graphql`
       }
     }
     LMInstruct_3: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_3.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -833,7 +838,7 @@ export const query = graphql`
       }
     }
     LMInstruct_4: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_4.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -863,7 +868,7 @@ export const query = graphql`
       }
     }
     LMInstruct_7: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_7.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -873,7 +878,7 @@ export const query = graphql`
       }
     }
     LMClean_1: imageSharp(id: { regex: "/instructions/LMClean/LMClean_1.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -883,7 +888,7 @@ export const query = graphql`
       }
     }
     LMClean_2: imageSharp(id: { regex: "/instructions/LMClean/LMClean_2.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -893,7 +898,7 @@ export const query = graphql`
       }
     }
     LMClean_2b: imageSharp(id: { regex: "/instructions/LMClean/LMClean_2b.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 478) {
         src
         srcSet
         srcWebp
@@ -903,7 +908,7 @@ export const query = graphql`
       }
     }
     LMClean_3: imageSharp(id: { regex: "/instructions/LMClean/LMClean_3.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -913,7 +918,7 @@ export const query = graphql`
       }
     }
     LMClean_4: imageSharp(id: { regex: "/instructions/LMClean/LMClean_4.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -923,7 +928,7 @@ export const query = graphql`
       }
     }
     LMClean_5: imageSharp(id: { regex: "/instructions/LMClean/LMClean_5.png/" }) {
-      sizes(maxWidth: 217) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
