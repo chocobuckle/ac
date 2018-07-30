@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ContentWrapper } from 'helpers/sharedStyles';
+import { ContentWrapper, H2, LightBlueSpan, Text } from 'helpers/sharedStyles';
 import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 import IndicationsForUse from 'components/IndicationsForUse';
@@ -19,26 +19,20 @@ const OverviewWrapper = styled.div`
   h2 {
     font-family: Myriad Pro, sans-serif;
   }
-
-  h1,
-  h2 {
-    color: #004899;
-  }
-
-  p,
-  span {
-    font-size: 3.9vw;
-    margin-bottom: 2.25vw;
-  }
-`;
-
-const H2 = styled.h2`
-  font-size: 5.3vw;
-  margin-bottom: 2vw;
 `;
 
 const AdditionalFeatures = styled.section`
   background: #f5f5f5;
+`;
+
+const AFText = Text.extend`
+  font-size: 3vw;
+`;
+
+const AFSpan = styled.span`
+  color: #007fc8;
+  font-weight: 600;
+  font-style: italic;
 `;
 
 function Overview({ data, location }) {
@@ -47,13 +41,12 @@ function Overview({ data, location }) {
       <OverviewAndInstructionsSharedSection
         headerFirstLine="AeroChamber Plus® Flow-Vu®:"
         headerSecondLine="Seeing Is The Difference"
-        subHeaderText="<p style='margin-bottom: 0;'>
+        subHeaderText="<p>
           <span style='color: #007fc8; font-weight: 600;'>AeroChamber Plus® Flow-Vu®</span> is an anti-static valved holding
-          chamber designed with patients in mind. Patients can use an{' '}
-          <span style='color: #007fc8; font-weight: 600;'>AeroChamber Plus® Flow-Vu®</span> to help improve medication
+          chamber designed with patients in mind. Patients can use an <span style='color: #007fc8; font-weight: 600;'>AeroChamber Plus® Flow-Vu®</span> to help improve medication
           delivery from a metered dose inhaler (MDI).
         </p>
-        <p>
+        <p style='margin-bottom: 0;'>
           Watch <span style='font-weight: 600;'>Seeing Is the Difference</span> for a behind-the-scenes look at
           how
           <span> AeroChamber Plus®</span> is designed, manufactured, and tested:
@@ -66,26 +59,26 @@ function Overview({ data, location }) {
       <AdditionalFeatures>
         <ContentWrapper>
           <H2>
-            Additional features of <b>AeroChamber Plus® Flow-Vu®</b> VHC
+            Additional Features of <em style={{ color: '#007fc8', fontWeight: 700 }}>AeroChamber Plus® Flow-Vu®</em> VHC
           </H2>
-          <p>
-            <span>"EZ Flow" Exhalation Valve</span> - Directs exhaled medication
+          <AFText>
+            <AFSpan>"EZ Flow" Exhalation Valve</AFSpan> - Directs exhaled medication
             away from the patient's face and eyes.<sup>5</sup>
-          </p>
-          <p>
-            <span>Inhalation Valve</span> - Built-in, low-resistance, 1-way
+          </AFText>
+          <AFText>
+            <AFSpan>Inhalation Valve</AFSpan> - Built-in, low-resistance, 1-way
             valve opens easily and prevents exhalation back into the chamber.
             <sup>5</sup>
-          </p>
-          <p>
-            <span>Anti-static Chamber</span> - Improves the delivery of MDIs
+          </AFText>
+          <AFText>
+            <AFSpan>Anti-static Chamber</AFSpan> - Improves the delivery of MDIs
             used with AeroChamber® due to medication not adhering to chamber
             walls.<sup>6</sup>
-          </p>
-          <span>
+          </AFText>
+          <AFSpan>
             Not made (or manufactured) with BPA (bisphenol A), phthalates,
             latex, lead, or PVC<sup>1,7</sup>
-          </span>
+          </AFSpan>
         </ContentWrapper>
       </AdditionalFeatures>
       <DownloadInstructionsForUse
