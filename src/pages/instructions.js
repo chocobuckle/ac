@@ -96,7 +96,7 @@ const InstructionsBlueHeader = H5.extend`
 
 const InstructionImg = styled(Img)`
   max-width: 217px;
-  width: 25vw;
+  width: 28vw;
 `;
 
 const HelpfulTips = styled.div`
@@ -206,7 +206,7 @@ class Instructions extends Component {
             <div>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_1.sizes} />
-                <InstructionText style={{ top: '4.2vw' }}>
+                <InstructionText style={{ top: '1.4em' }}>
                   Carefully examine the product for damage, missing parts, or foreign objects.
                   Remove any foreign objects prior to use. The product should be replaced
                   IMMEDIATELY if there are any damaged or missing parts. If necessary, use the
@@ -216,24 +216,24 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_2.sizes} />
-                <InstructionText style={{ top: '4.7vw' }}>Remove cap from the MDI.</InstructionText>
+                <InstructionText style={{ top: '1.55em' }}>Remove cap from the MDI.</InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_3.sizes} />
-                <InstructionText style={{ top: '4.7vw' }}>
+                <InstructionText style={{ top: '1.6em' }}>
                   Shake the MDI immediately before each use as per the instructions supplied with
                   the MDI.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_4.sizes} />
-                <InstructionText style={{ top: '4.1vw' }}>
+                <InstructionText style={{ top: '1.4em' }}>
                   Insert the MDI into the backpiece of the chamber.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_5.sizes} />
-                <InstructionText style={{ top: '4.1vw' }}>
+                <InstructionText style={{ top: '1.4em' }}>
                   Apply mask to face and ensure an eective seal. The Flow-Vu® Inspiratory Flow
                   Indicator (IFI) only moves if a good seal is created.
                 </InstructionText>
@@ -248,7 +248,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_6.sizes} />
-                <InstructionText style={{ top: '4vw' }}>
+                <InstructionText style={{ top: '1.3em' }}>
                   Press the MDI at the beginning of a slow inhalation as the Flow-Vu® Inspiratory
                   Flow Indicator moves toward the patient. Use the Flow-Vu® Inspiratory Flow
                   Indicator to count breaths. Maintain seal for 5-6 breaths after the MDI is
@@ -257,7 +257,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_7.sizes} />
-                <InstructionText style={{ top: '4vw' }}>
+                <InstructionText style={{ top: '1.4em' }}>
                   Follow instructions supplied with the MDI on how long to wait before repeating
                   steps 3-6 as prescribed.
                 </InstructionText>
@@ -307,13 +307,13 @@ class Instructions extends Component {
               </InstructionsBlueHeader>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_1.sizes} />
-                <InstructionText style={{ top: '4vw' }}>
+                <InstructionText style={{ top: '1.4em' }}>
                   Remove the backpiece. To detach the frontpiece, twist chamber as shown.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper style={{ marginBottom: '4.5vw' }}>
+              <InstructionImgAndTextWrapper style={{ marginBottom: '2.55em' }}>
                 <InstructionImg sizes={data.SMClean_2.sizes} />
-                <InstructionText style={{ top: '4.8vw' }}>
+                <InstructionText style={{ top: '1.6em' }}>
                   Soak the parts for 15 minutes in a mild solution of liquid dish detergent and
                   lukewarm clean water. Agitate gently.
                   <br />
@@ -328,26 +328,23 @@ class Instructions extends Component {
                 <InstructionImg
                   sizes={data.SMClean_2b.sizes}
                   style={{
-                    width: '10.5vw'
+                    width: '4.5em'
                   }}
                 />
-                <InstructionText style={{ left: '6.6vw', marginBottom: 0 }}>
+                <InstructionText style={{ left: '1.4em', width: '60vw' }}>
                   <b>Dishwasher safe under the following conditions:</b>
-                  <br />
-                  <br />
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper
-                style={{ flexDirection: 'column', marginBottom: '-6.5vw' }}>
+                style={{ flexDirection: 'column', marginBottom: '-3.9em' }}>
                 <ul
                   style={{
-                    fontSize: '2.4vw',
+                    fontSize: '3vw',
                     position: 'relative',
-                    left: '16.425vw',
-                    lineHeight: '3vw',
-                    margin: '0 0 2vw 3.5vw',
-                    bottom: '4vw',
-                    width: '60vw'
+                    left: '5.9em',
+                    lineHeight: '1.5em',
+                    bottom: '3em',
+                    width: '55vw'
                   }}>
                   <li>Avoid heavy or other cycles that include heated dry over 158°F</li>
                   <li>Parts must be placed in the top rack ONLY</li>
@@ -355,27 +352,27 @@ class Instructions extends Component {
                   <li>Use dishwasher detergent and rinse aid</li>
                   <li>Do not boil or sterilize</li>
                 </ul>
-                <InstructionText style={{ width: '50vw', position: 'relative', left: '17vw', top: '-5.5vw' }}>
+                <InstructionText style={{ width: '50vw', position: 'relative', left: '6.25em', top: '-4.25em' }}>
                   SEE CAUTIONS, 1ST BULLET, BELOW
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_3.sizes} />
-                <InstructionText style={{ top: '4.8vw' }}>
+                <InstructionText style={{ top: '1.65em' }}>
                   Shake out excess water from the parts and allow to air dry in a vertical position.
                   Ensure parts are dry before reassembly.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_4.sizes} />
-                <InstructionText style={{ top: '4.4vw' }}>
+                <InstructionText style={{ top: '1.45em' }}>
                   To reassemble, t the frontpiece on the end of the chamber and twist rmly until
                   securely locked into position.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_5.sizes} />
-                <InstructionText style={{ top: '4.2vw' }}>
+                <InstructionText style={{ top: '1.4em' }}>
                   Center the Alignment Feature on the backpiece with the Flow-Vu® Inspiratory Flow
                   Indicator, as shown. Press rmly to attach the backpiece.
                 </InstructionText>
