@@ -40,9 +40,9 @@ const flipHorizontalAndVertical = {
   transform: 'scale(-1,-1)'
 };
 
-const RedBall = styled.div`
+const YellowBall = styled.div`
   align-items: center;
-  background-color: #e84e1b;
+  background-color: #f3b106;
   border-radius: 50%;
   display: flex;
   height: 6vw;
@@ -72,7 +72,7 @@ const AnimationInfoHeader = styled.p`
   }
 `;
 
-const RedBallAndInfoHeaderWrapper = styled.div`
+const YellowBallAndInfoHeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   margin: -27vw auto 0;
@@ -242,10 +242,10 @@ class InhalerAnimation extends Component {
             6
           </ClickyThingNumber>
         </ClickyThingWrapper>
-        <RedBallAndInfoHeaderWrapper>
-          <RedBall>
+        <YellowBallAndInfoHeaderWrapper>
+          <YellowBall>
             <SelectedNumber>{activeClickyThingNumber}</SelectedNumber>
-          </RedBall>
+          </YellowBall>
           <AnimationInfoHeader>
             {activeClickyThingNumber === 1 && 'ComfortSeal Mask'}
             {activeClickyThingNumber === 2 && 'EZ Flow Exhalation Valve'}
@@ -256,7 +256,7 @@ class InhalerAnimation extends Component {
               'Responsive One-Way Inspiratory Valve'}
             {activeClickyThingNumber === 6 && 'New Anti-Static Chamber'}
           </AnimationInfoHeader>
-        </RedBallAndInfoHeaderWrapper>
+        </YellowBallAndInfoHeaderWrapper>
         <AnimationInfoList>
           {activeClickyThingNumber === 1 && (
             <div>

@@ -32,7 +32,6 @@ const Layout = ({ children, data, location }) => {
         ]}
       />
       <Wrapper
-        id="outer-container"
         style={{
           margin: '0 auto',
           padding: 0
