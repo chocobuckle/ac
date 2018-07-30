@@ -357,7 +357,13 @@ class Instructions extends Component {
                   <li>Do not boil or sterilize</li>
                 </ul>
                 <InstructionText
-                  style={{ width: '60vw', position: 'relative', left: '6.75em', marginTop: '1em', top: '-5.75em' }}>
+                  style={{
+                    width: '60vw',
+                    position: 'relative',
+                    left: '6.75em',
+                    marginTop: '1em',
+                    top: '-5.75em'
+                  }}>
                   SEE CAUTIONS, 1ST BULLET, BELOW
                 </InstructionText>
               </InstructionImgAndTextWrapper>
@@ -421,19 +427,34 @@ class Instructions extends Component {
                 style={{
                   flexDirection: 'column'
                 }}>
-                <InstructionImg
-                  sizes={data.LMInstruct_5.sizes}
+                <div
                   style={{
-                    maxWidth: '688px',
-                    width: '64vw'
-                  }}
-                />
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between'
+                  }}>
+                  <InstructionImg sizes={data.LMInstruct_5.sizes} />
+                  <InstructionImg
+                    sizes={data.LMInstruct_5b.sizes}
+                    style={{
+                      position: 'relative',
+                      right: '4vw',
+                      width: '12vw'
+                    }}
+                  />
+                  <InstructionImg
+                    sizes={data.LMInstruct_5c.sizes}
+                    style={{
+                      width: '15.45vw'
+                    }}
+                  />
+                </div>
                 <InstructionText
                   style={{
-                    left: '14vw',
+                    left: '19.5vw',
                     marginBottom: 0,
                     top: '1.75vw',
-                    width: '61.25vw'
+                    width: '55vw'
                   }}>
                   Put mouthpiece into mouth and close lips around it to ensure an eective seal. The
                   Flow-Vu® Inspiratory Flow Indicator (IFI) only moves if the patient has a good
@@ -446,19 +467,21 @@ class Instructions extends Component {
                 style={{
                   flexDirection: 'column'
                 }}>
-                <InstructionImg
-                  sizes={data.LMInstruct_6.sizes}
-                  style={{
-                    maxWidth: '688px',
-                    width: '64vw'
-                  }}
-                />
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <InstructionImg sizes={data.LMInstruct_6.sizes} />
+                  <InstructionImg
+                    sizes={data.LMInstruct_6b.sizes}
+                    style={{
+                      width: '15.45vw'
+                    }}
+                  />
+                </div>
                 <InstructionText
                   style={{
-                    left: '14vw',
+                    left: '19.5vw',
                     marginBottom: 0,
                     top: '1.75vw',
-                    width: '61.25vw'
+                    width: '55vw'
                   }}>
                   Breathe out gently and press the MDI at the beginning of a slow inhalation. Use
                   the Flow-Vu® IFI to assist in the coordination of this step. Breathe in slowly and
@@ -476,7 +499,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_7.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '1.555em' }}>
                   Follow instructions supplied with the MDI on how long to wait before repeating
                   steps 3-6 as prescribed.
                 </InstructionText>
@@ -848,7 +871,27 @@ export const query = graphql`
       }
     }
     LMInstruct_5: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_5.png/" }) {
-      sizes(maxWidth: 688) {
+      sizes(maxWidth: 857) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    LMInstruct_5b: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_5b.png/" }) {
+      sizes(maxWidth: 857) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    LMInstruct_5c: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_5c.png/" }) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
@@ -858,7 +901,17 @@ export const query = graphql`
       }
     }
     LMInstruct_6: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_6.png/" }) {
-      sizes(maxWidth: 688) {
+      sizes(maxWidth: 867) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    LMInstruct_6b: imageSharp(id: { regex: "/instructions/LMInstruct/LMInstruct_6b.png/" }) {
+      sizes(maxWidth: 857) {
         src
         srcSet
         srcWebp
