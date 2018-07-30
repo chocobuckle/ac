@@ -81,7 +81,7 @@ const spinnerStyle = {
   position: 'absolute',
   zIndex: 1,
   left: '35vw',
-  bottom: '23vw'
+  bottom: '21.5vw'
 };
 
 const VideoButtonWrapper = styled.div`
