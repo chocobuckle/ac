@@ -448,7 +448,7 @@ class IndexPage extends Component {
           <H3 style={{ color: '#858585' }}>Anti Static Valved Holding Chamber (VHC)</H3>
           <SixInhalerImgsWrapper>
             <InhalerAndBucketBorderWrapper style={{ marginBottom: '5vw' }}>
-              <ThreeInhalers style={{ position: 'relative', left: '2vw' }}>
+              <ThreeInhalers style={{ position: 'relative', left: '1vw' }}>
                 <figure>
                   <Img sizes={inhaler1.sizes} style={{ ...inhaler1ImgStyle }} />
                   <Figcaption style={{ right: '15.5%' }}>
