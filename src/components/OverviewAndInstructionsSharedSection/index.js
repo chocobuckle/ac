@@ -1,27 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { ContentWrapper } from 'helpers/sharedStyles';
+import { ContentWrapper, H2 } from 'helpers/sharedStyles';
 import VideoPlayer from 'components/VideoPlayer';
 import spinner from 'images/shared/spinner.gif';
 
-// const OverviewAndInstructionsSharedSection = ContentWrapper.extend`
-//   ${'' /* background: linear-gradient(
-//     180deg,
-//     rgba(20, 255, 255, 0) 2.12%,
-//     rgba(20, 255, 255, 0.04) 3.83%,
-//     rgba(20, 255, 255, 1) 49.44%
-//   ); */} text-align: center;
-// `;
-
-const H1Wrapper = styled.div`
-  margin: 2vw auto;
+const H2Wrapper = styled.div`
+  margin: 1em auto;
   text-align: center;
-`;
-
-const H1 = styled.h1`
-  font-size: 6vw;
-  margin-bottom: 1vw;
 `;
 
 const Spinner = styled.img`
@@ -33,7 +19,8 @@ const Spinner = styled.img`
 `;
 
 const BPAImgAndTextWrapper = styled.div`
-  width: 42vw;
+  width: 31vw;
+  text-align: center;
 `;
 
 const BPAImgAndTextAndMacbookImgWrapper = styled.div`
@@ -44,7 +31,8 @@ const BPAImgAndTextAndMacbookImgWrapper = styled.div`
 
 const BPAImgStyle = {
   maxWidth: '749px',
-  marginBottom: '2vw'
+  marginBottom: '2vw',
+  width: '30vw'
 };
 
 const macbookImgStyle = {
@@ -97,10 +85,10 @@ class OverviewAndInstructionsSharedSection extends Component {
       <div>
         <Gradient pathname={pathname}>
           <ContentWrapper>
-            <H1Wrapper style={{ marginTop: '21.75vw' }}>
-              <H1>{headerFirstLine}</H1>
-              <H1>{headerSecondLine}</H1>
-            </H1Wrapper>
+            <H2Wrapper style={{ marginTop: '21.75vw' }}>
+              <H2 style={{ marginBottom: '0.25em' }}>{headerFirstLine}</H2>
+              <H2>{headerSecondLine}</H2>
+            </H2Wrapper>
             <div
               style={{ textAlign: 'center' }}
               dangerouslySetInnerHTML={{ __html: subHeaderText }}

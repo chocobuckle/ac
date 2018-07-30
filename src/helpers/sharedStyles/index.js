@@ -7,12 +7,20 @@ export const ContentWrapper = styled.div`
 `;
 
 export const H1 = styled.h1`
+  color: #004899;
+  font-family: Myriad Pro, sans-serif;
   font-size: 7.75vw;
   font-weight: 600;
+  margin-bottom: 0.5em;
 `;
 
 export const H2 = H1.withComponent('h2').extend`
   font-size: 5.3vw;
+`;
+
+export const H3 = H1.withComponent('h3').extend`
+  font-weight: 200;
+  font-size: 4.7vw;
 `;
 
 export const LightBlueSpan = styled.span`
@@ -25,5 +33,6 @@ export const FlexColumnWrapper = styled.div`
 `;
 
 export const Text = styled.p`
+  font-size: 3.9vw;
   margin-bottom: 0.5em;
 `;

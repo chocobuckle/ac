@@ -1,67 +1,40 @@
 import React, { Component } from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import { ContentWrapper } from 'helpers/sharedStyles';
+import { ContentWrapper, H2, H3, Text } from 'helpers/sharedStyles';
 import VideoPlayer from 'components/VideoPlayer';
 import spinner from 'images/shared/spinner.gif';
 
 const IndexWrapper = styled.div`
-  line-height: 4.5vw;
-
-  p,
-  span,
-  ul,
-  li,
-  button,
-  b,
-  sup,
-  h1,
-  h2,
-  h3,
-  h6,
-  figcaption {
-    font-family: Myriad Pro, sans-serif;
-  }
-
-  h1,
-  h2 {
-    color: #004899;
-  }
-
-  p,
-  span {
-    font-size: 3.9vw;
-    margin-bottom: 2.25vw;
-  }
-
   span {
     color: #007fc8;
   }
-
-  figcaption {
-    text-align: center;
-    font-weight: 200;
-    font-size: 4vw;
-  }
 `;
 
-const H1 = styled.h1`
-  font-size: 6vw;
-  font-weight: bold;
-  font-style: italic;
-  margin-bottom: 1vw;
-`;
+// const H1 = styled.h1`
+//   font-size: 6vw;
+//   font-weight: bold;
+//   font-style: italic;
+//   margin-bottom: 1vw;
+// `;
 
-const H2 = styled.h2`
-  font-size: 5.3vw;
-  margin-bottom: 3vw;
-`;
+// const H2 = styled.h2`
+//   font-size: 5.3vw;
+//   margin-bottom: 3vw;
+// `;
 
-const H3 = styled.h3`
-  font-weight: 200;
-  font-size: 4.7vw;
-  margin-bottom: 1.5vw;
-  color: #007fc8;
+// const H3 = styled.h3`
+//   font-weight: 200;
+//   font-size: 4.7vw;
+//   margin-bottom: 1.5vw;
+//   color: #007fc8;
+// `;
+
+const Figcaption = styled.figcaption`
+  text-align: center;
+  font-weight: 100;
+  font-size: 3.25vw;
+  position: relative;
 `;
 
 const Macbook = styled.div`
@@ -90,11 +63,7 @@ const VideoButtonWrapper = styled.div`
 `;
 
 const VideoButton = styled.button`
-  background: linear-gradient(
-    90deg,
-    rgba(0, 72, 153, 1) 15.05%,
-    rgba(0, 127, 200, 1) 100%
-  );
+  background: linear-gradient(90deg, rgba(0, 72, 153, 1) 15.05%, rgba(0, 127, 200, 1) 100%);
   ${'' /* font-size: 4vw; */} margin: 0 1.5vw;
   padding: 1.5vw 1.75vw;
   display: flex;
@@ -241,20 +210,21 @@ const BucketBorder = styled.div`
   border: 0.5vw solid #007fc8;
   border-top: none;
   height: 7vw;
-  margin-top: -11vw;
+  margin-top: -10.25vw;
 `;
 const AdultOrChild = H3.extend`
+  color: #007fc8;
   font-size: 4.4vw;
   font-weight: 600;
   text-align: center;
-  margin-top: 2.15vw;
+  margin-top: 0.5em;
 `;
 const Footnotes = ContentWrapper.extend`
   text-align: left;
   padding: 0 0;
 `;
-const FootnoteHeader = styled.p``;
-const FootnoteSmallPrint = styled.h6`
+
+const FootnoteSmallPrint = Text.extend`
   font-weight: 400;
   font-size: 2.6vw;
   margin-bottom: 0.3em;
@@ -320,35 +290,22 @@ class IndexPage extends Component {
               }}
             />
             {!videoHasLoaded && (
-              <img
-                src={spinner}
-                alt="loading spinner"
-                style={{ ...spinnerStyle }}
-              />
+              <img src={spinner} alt="loading spinner" style={{ ...spinnerStyle }} />
             )}
             <VideoPlayer
               activeVideoURL={activeVideoURL}
               handleVideoLoading={this.handleVideoLoading}
             />
             <VideoButtonWrapper>
-              <VideoButton
-                onClick={() =>
-                  this.handleVideoSelection('https://vimeo.com/281972542')
-                }>
+              <VideoButton onClick={() => this.handleVideoSelection('https://vimeo.com/281972542')}>
                 <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
                 <span>VIDEO 1</span>
               </VideoButton>
-              <VideoButton
-                onClick={() =>
-                  this.handleVideoSelection('https://vimeo.com/281972758')
-                }>
+              <VideoButton onClick={() => this.handleVideoSelection('https://vimeo.com/281972758')}>
                 <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
                 <span>VIDEO 2</span>
               </VideoButton>
-              <VideoButton
-                onClick={() =>
-                  this.handleVideoSelection('https://vimeo.com/281972704')
-                }>
+              <VideoButton onClick={() => this.handleVideoSelection('https://vimeo.com/281972704')}>
                 <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
                 <span>VIDEO 3</span>
               </VideoButton>
@@ -358,15 +315,16 @@ class IndexPage extends Component {
         <InhalerTips>
           <BetterControlTextAndTorsoImgWrapper>
             <H2>
-              People who use a valved holding chamber with their inhaler have
-              better control.<sup>1</sup>
+              People who use a valved holding chamber with their inhaler have better control.<sup>
+                1
+              </sup>
             </H2>
             <TorsoWrapper>
               <TorsoTextWrapper>
-                <H3>
-                  Did you{' '}
+                <H3 style={{ color: '#007fc8' }}>
+                  Did you
                   <em>
-                    <b>know?</b>
+                    <b> know?</b>
                   </em>
                 </H3>
                 <p>
@@ -376,30 +334,26 @@ class IndexPage extends Component {
                 <p>
                   The majority of adults do not use their inhalers properly.
                   <sup>3</sup> This is why doctors recommend using an{' '}
-                  <span>AeroChamber Plus Flow-Vu</span> Chamber with your
-                  inhaler.
+                  <span>AeroChamber Plus Flow-Vu</span> Chamber with your inhaler.
                 </p>
               </TorsoTextWrapper>
               <TorsoTextWrapper>
-                <H3>
+                <H3 style={{ color: '#007fc8' }}>
                   <em>
-                    <b>Ensure</b>
-                  </em>{' '}
-                  your inhaler{' '}
+                    <b>Ensure </b>
+                  </em>your inhaler
                   <em>
-                    <b>medicine</b>
-                  </em>{' '}
-                  is delivered where it is needed
+                    <b> medicine </b>
+                  </em>is delivered where it is needed
                 </H3>
                 <p>
-                  Inhalers can be challenging because the medicine comes out
-                  very quickly and can end up in your mouth and throat. This can
-                  lead to side effects such as sore throat and oral infections.
+                  Inhalers can be challenging because the medicine comes out very quickly and can
+                  end up in your mouth and throat. This can lead to side effects such as sore throat
+                  and oral infections.
                 </p>
                 <p>
-                  Using an <span>AeroChamber Plus Flow-Vu Chamber</span> with
-                  your inhaler helps ensure the medicine is delivered to your
-                  lungs.
+                  Using an <span>AeroChamber Plus Flow-Vu Chamber</span> with your inhaler helps
+                  ensure the medicine is delivered to your lungs.
                 </p>
               </TorsoTextWrapper>
             </TorsoWrapper>
@@ -412,9 +366,8 @@ class IndexPage extends Component {
                 <Img sizes={inhalingWithLogo.sizes} />
                 <InhalerImgCaption style={{ marginLeft: '7%' }}>
                   Inhaler with{' '}
-                  <span style={{ color: '#007fc8', fontWeight: 'bold' }}>
-                    AeroChamber Plus{' '}
-                  </span>Brand of Chamber
+                  <span style={{ color: '#007fc8', fontWeight: 'bold' }}>AeroChamber Plus </span>Brand
+                  of Chamber
                 </InhalerImgCaption>
               </InhalingWithLogoImgWrapper>
             </TorsoImgWrapper>
@@ -432,10 +385,7 @@ class IndexPage extends Component {
               as 1-2-3
             </H2>
             <EasyInstructionsImgAndTextWrapper>
-              <Img
-                sizes={easyInstructions1.sizes}
-                style={{ ...easyInstructions1ImgStyle }}
-              />
+              <Img sizes={easyInstructions1.sizes} style={{ ...easyInstructions1ImgStyle }} />
               <p>Shake inhaler and remove cap.</p>
             </EasyInstructionsImgAndTextWrapper>
             <EasyInstructionsImgAndTextWrapper
@@ -444,20 +394,13 @@ class IndexPage extends Component {
                 marginTop: '-0.9em'
               }}>
               <p>Insert inhaler into chamber.</p>
-              <Img
-                sizes={easyInstructions2.sizes}
-                style={{ ...easyInstructions2ImgStyle }}
-              />
+              <Img sizes={easyInstructions2.sizes} style={{ ...easyInstructions2ImgStyle }} />
             </EasyInstructionsImgAndTextWrapper>
             <EasyInstructionsImgAndTextWrapper
               style={{ alignItems: 'center', marginTop: '-0.2em' }}>
-              <Img
-                sizes={easyInstructions3.sizes}
-                style={{ ...easyInstructions3ImgStyle }}
-              />
+              <Img sizes={easyInstructions3.sizes} style={{ ...easyInstructions3ImgStyle }} />
               <p style={{}}>
-                Press inhaler and inhale slowly and deeply, holding your breath
-                for 5-10 seconds.
+                Press inhaler and inhale slowly and deeply, holding your breath for 5-10 seconds.
                 <span
                   style={{
                     display: 'block',
@@ -466,16 +409,15 @@ class IndexPage extends Component {
                     margin: '0.125em auto'
                   }}>
                   OR
-                </span>Press inhaler and breathe in and out through the chamber
-                for 2-3 breaths.
+                </span>Press inhaler and breathe in and out through the chamber for 2-3 breaths.
               </p>
             </EasyInstructionsImgAndTextWrapper>
             <EasyInstructionsImgAndTextWrapper
               style={{ alignItems: 'flex-start', marginTop: '2em' }}>
               <p style={{}}>
-                The <span style={{ fontWeight: '600' }}>Flow-Vu</span>{' '}
-                Inhalation Indicator moves as you inhale and helps provide
-                visual assurance of correct use and medication delivery.
+                The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation Indicator moves as
+                you inhale and helps provide visual assurance of correct use and medication
+                delivery.
               </p>
               <Img sizes={flowVuLogo.sizes} style={{ ...flowVuLogoImgStyle }} />
             </EasyInstructionsImgAndTextWrapper>
@@ -493,70 +435,62 @@ class IndexPage extends Component {
                   top: '1vw'
                 }}
               />
-              <Img
-                sizes={replace12Months.sizes}
-                style={{ ...whiteBannerChildImgStyle }}
-              />
-              <Img
-                sizes={bpaFree.sizes}
-                style={{ ...whiteBannerChildImgStyle }}
-              />
+              <Img sizes={replace12Months.sizes} style={{ ...whiteBannerChildImgStyle }} />
+              <Img sizes={bpaFree.sizes} style={{ ...whiteBannerChildImgStyle }} />
             </WhiteBannerChildImgFlexWrapper>
           </WhiteBanner>
         </BubblesAndBanner>
         <SixInhalers>
-          <H1 style={{ color: '#007FC8', marginBottom: 0 }}>
-            AeroChamber Plus Flow-Vu
-          </H1>
-          <H2 style={{ color: '#858585', fontWeight: 400 }}>
-            Anti Static Valved Holding Chamber (VHC)
+          <H2 style={{ color: '#007FC8', marginTop: '1em', marginBottom: 0 }}>
+            <em>AeroChamber Plus Flow-Vu</em>
           </H2>
+          <H3 style={{ color: '#858585' }}>Anti Static Valved Holding Chamber (VHC)</H3>
           <SixInhalerImgsWrapper>
             <InhalerAndBucketBorderWrapper style={{ marginBottom: '5vw' }}>
               <ThreeInhalers style={{ position: 'relative', left: '2vw' }}>
                 <figure>
                   <Img sizes={inhaler1.sizes} style={{ ...inhaler1ImgStyle }} />
-                  <figcaption style={{ position: 'relative', right: '15.5%' }}>
+                  <Figcaption style={{ right: '15.5%' }}>
                     Small<br />Mask
-                  </figcaption>
+                  </Figcaption>
                 </figure>
                 <figure>
                   <Img sizes={inhaler2.sizes} style={{ ...inhaler2ImgStyle }} />
-                  <figcaption style={{ position: 'relative', right: '7.5%' }}>
+                  <Figcaption style={{ right: '7.5%' }}>
                     Medium<br />Mask
-                  </figcaption>
+                  </Figcaption>
                 </figure>
                 <figure>
                   <Img sizes={inhaler3.sizes} style={{ ...inhaler3ImgStyle }} />
-                  <figcaption style={{ position: 'relative', right: '17%' }}>
+                  <Figcaption style={{ right: '17%' }}>
                     Youth<br />Mouthpiece
-                  </figcaption>
+                  </Figcaption>
                 </figure>
               </ThreeInhalers>
               <BucketBorder />
               <AdultOrChild>CHILD</AdultOrChild>
             </InhalerAndBucketBorderWrapper>
             <InhalerAndBucketBorderWrapper>
-              <ThreeInhalers style={{ position: 'relative', left: '3.25vw' }}>
+              <ThreeInhalers style={{ left: '3.25vw' }}>
                 <figure>
                   <Img sizes={inhaler4.sizes} style={{ ...inhaler4ImgStyle }} />
-                  <figcaption style={{ position: 'relative', right: '16.75%' }}>
+                  <Figcaption style={{ right: '16.75%' }}>
                     Mouthpiece
                     <br />
                     <br />
-                  </figcaption>
+                  </Figcaption>
                 </figure>
                 <figure>
                   <Img sizes={inhaler5.sizes} style={{ ...inhaler5ImgStyle }} />
-                  <figcaption style={{ position: 'relative', right: '11.75%' }}>
+                  <Figcaption style={{ right: '11.75%' }}>
                     Small<br />Mask
-                  </figcaption>
+                  </Figcaption>
                 </figure>
                 <figure>
                   <Img sizes={inhaler6.sizes} style={{ ...inhaler6ImgStyle }} />
-                  <figcaption style={{ position: 'relative', right: '9.5%' }}>
+                  <Figcaption style={{ right: '9.5%' }}>
                     Large<br />Mask
-                  </figcaption>
+                  </Figcaption>
                 </figure>
               </ThreeInhalers>
               <BucketBorder />
@@ -565,17 +499,14 @@ class IndexPage extends Component {
           </SixInhalerImgsWrapper>
         </SixInhalers>
         <Footnotes>
-          <FootnoteHeader>
-            Children should transition to a mouthpiece around the age of 5
-          </FootnoteHeader>
+          <Text>Children should transition to a mouthpiece around the age of 5</Text>
           <FootnoteSmallPrint>
-            <b>1.</b> McIvor et al. Optimizing the Delivery of Inhaled
-            Medication for Respiratory Patients: The Role of Valved Holding
-            Chambers.
+            <b>1.</b> McIvor et al. Optimizing the Delivery of Inhaled Medication for Respiratory
+            Patients: The Role of Valved Holding Chambers.
           </FootnoteSmallPrint>
           <FootnoteSmallPrint>
-            <b>2.</b> Global Initiative for Asthma. Global strategy for asthma
-            management and prevention 2011. Available at:<br />
+            <b>2.</b> Global Initiative for Asthma. Global strategy for asthma management and
+            prevention 2011. Available at:<br />
             <a
               href="http://ginasthma.org/2018-gina-report-global-strategy-for-asthma-management-and-prevention/"
               target="_blank"
@@ -584,8 +515,8 @@ class IndexPage extends Component {
             </a>
           </FootnoteSmallPrint>
           <FootnoteSmallPrint>
-            <b>3.</b> Plaza et al. Medical Personnel and Patient Skill in the
-            Use of Metered Dose Inhalers: A Multicentric Study.
+            <b>3.</b> Plaza et al. Medical Personnel and Patient Skill in the Use of Metered Dose
+            Inhalers: A Multicentric Study.
           </FootnoteSmallPrint>
         </Footnotes>
       </IndexWrapper>
@@ -615,9 +546,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    inhalingWithLogo: imageSharp(
-      id: { regex: "/home/inhaling_with_logo.png/" }
-    ) {
+    inhalingWithLogo: imageSharp(id: { regex: "/home/inhaling_with_logo.png/" }) {
       sizes(maxWidth: 350) {
         src
         srcSet
@@ -627,9 +556,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    easyInstructions1: imageSharp(
-      id: { regex: "/home/easy_instructions_1.png/" }
-    ) {
+    easyInstructions1: imageSharp(id: { regex: "/home/easy_instructions_1.png/" }) {
       sizes(maxWidth: 117) {
         src
         srcSet
@@ -639,9 +566,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    easyInstructions2: imageSharp(
-      id: { regex: "/home/easy_instructions_2.png/" }
-    ) {
+    easyInstructions2: imageSharp(id: { regex: "/home/easy_instructions_2.png/" }) {
       sizes(maxWidth: 178) {
         src
         srcSet
@@ -651,9 +576,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    easyInstructions3: imageSharp(
-      id: { regex: "/home/easy_instructions_3.png/" }
-    ) {
+    easyInstructions3: imageSharp(id: { regex: "/home/easy_instructions_3.png/" }) {
       sizes(maxWidth: 206) {
         src
         srcSet
