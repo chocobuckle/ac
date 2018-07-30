@@ -18,9 +18,13 @@ export const H2 = H1.withComponent('h2').extend`
   font-size: 5.3vw;
 `;
 
-export const H3 = H1.withComponent('h3').extend`
+export const H3 = H2.withComponent('h3').extend`
   font-weight: 200;
   font-size: 4.7vw;
+`;
+
+export const H6 = H3.withComponent('h6').extend`
+  font-size: 2.75vw;
 `;
 
 export const LightBlueSpan = styled.span`

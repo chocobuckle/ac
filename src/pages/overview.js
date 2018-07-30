@@ -30,10 +30,6 @@ const OverviewWrapper = styled.div`
     font-size: 3.9vw;
     margin-bottom: 2.25vw;
   }
-
-  b {
-    color: #007fc8;
-  }
 `;
 
 const H2 = styled.h2`
@@ -52,13 +48,13 @@ function Overview({ data, location }) {
         headerFirstLine="AeroChamber Plus® Flow-Vu®:"
         headerSecondLine="Seeing Is The Difference"
         subHeaderText="<p>
-          <span>AeroChamber Plus® Flow-Vu®</span> is an anti-static valved holding
+          <span style='color: #007fc8; font-weight: 600;'>AeroChamber Plus® Flow-Vu®</span> is an anti-static valved holding
           chamber designed with patients in mind. Patients can use an{' '}
-          <span>AeroChamber Plus® Flow-Vu®</span> to help improve medication
+          <span style='color: #007fc8; font-weight: 600;'>AeroChamber Plus® Flow-Vu®</span> to help improve medication
           delivery from a metered dose inhaler (MDI).
         </p>
         <p>
-          Watch <b>Seeing Is the Difference</b> for a behind-the-scenes look at
+          Watch <span style='font-weight: 600;'>Seeing Is the Difference</span> for a behind-the-scenes look at
           how
           <span> AeroChamber Plus®</span> is designed, manufactured, and tested:
         </p>"
