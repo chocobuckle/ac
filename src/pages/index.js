@@ -462,7 +462,7 @@ class IndexPage extends Component {
                 </figure>
                 <figure>
                   <Img sizes={inhaler3.sizes} style={{ ...inhaler3ImgStyle }} />
-                  <Figcaption style={{ right: '17%' }}>
+                  <Figcaption style={{ right: '11%' }}>
                     Youth<br />Mouthpiece
                   </Figcaption>
                 </figure>
@@ -471,10 +471,10 @@ class IndexPage extends Component {
               <AdultOrChild>CHILD</AdultOrChild>
             </InhalerAndBucketBorderWrapper>
             <InhalerAndBucketBorderWrapper>
-              <ThreeInhalers style={{ left: '3.25vw' }}>
+              <ThreeInhalers style={{ position: 'relative', left: '3.25vw' }}>
                 <figure>
                   <Img sizes={inhaler4.sizes} style={{ ...inhaler4ImgStyle }} />
-                  <Figcaption style={{ right: '16.75%' }}>
+                  <Figcaption style={{ right: '12.75%' }}>
                     Mouthpiece
                     <br />
                     <br />
