@@ -1,35 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { ContentWrapper } from 'helpers/sharedStyles';
-
-const H1 = styled.h1`
-  font-size: 7.75vw;
-  font-weight: 600;
-  margin-bottom: 0;
-`;
-
-const H2 = H1.withComponent('h2').extend`
-  font-size: 5.3vw;
-`;
-
-const LightBlueSpan = styled.span`
-  color: #007fc8;
-`;
-
-const FlexColumnWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Text = styled.p`
-  margin-bottom: 0.5em;
-`;
+import {
+  ContentWrapper,
+  H1,
+  H2,
+  LightBlueSpan,
+  Text,
+  FlexColumnWrapper
+} from 'helpers/sharedStyles';
 
 const Address = styled.div`
   margin: 0.8em 0;
   p {
-    margin-bottom: 0.5vw;
+    margin-bottom: 0.08em;
   }
 `;
 
@@ -37,7 +21,8 @@ const Gradient = styled.div`
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 5%,
-    rgba(255, 255, 255, 0.65) 9%,
+    rgba(255, 255, 255, 0.65) 8%,
+    rgba(255, 255, 255, 0.85) 12%,
     rgba(255, 255, 255, 1) 16%
   );
   margin-top: -116.5vw;
@@ -49,9 +34,9 @@ function Contact({ data }) {
   return (
     <Gradient>
       <ContentWrapper style={{ paddingBottom: 0 }}>
-        <H1 style={{ marginTop: '3.75em', marginBottom: '0.5em' }}>Contact Us</H1>
+        <H1 style={{ marginTop: '3.75em' }}>Contact Us</H1>
         <FlexColumnWrapper>
-          <H2>Commercial Division</H2>
+          <H2 style={{ marginBottom: 0 }}>Commercial Division</H2>
           <H2>Co. Louth, Ireland</H2>
 
           <Address>
