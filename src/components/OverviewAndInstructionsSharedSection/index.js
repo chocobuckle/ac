@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { ContentWrapper, H2, H6 } from 'helpers/sharedStyles';
+import { ContentWrapper, H2, H5 } from 'helpers/sharedStyles';
 import VideoPlayer from 'components/VideoPlayer';
 import spinner from 'images/shared/spinner.gif';
 
@@ -95,7 +95,7 @@ class OverviewAndInstructionsSharedSection extends Component {
             />
           </ContentWrapper>
         </Gradient>
-        <ContentWrapper>
+        <ContentWrapper style={{ paddingTop: '0.5em' }}>
           <BPAImgAndTextAndMacbookImgWrapper>
             <Img sizes={macbook.sizes} style={{ ...macbookImgStyle }} />
             <div style={{ width: '100%', position: 'relative' }}>
@@ -109,7 +109,7 @@ class OverviewAndInstructionsSharedSection extends Component {
                 sizes={bpaAndDishwasherSafe.sizes}
                 style={{ ...BPAImgStyle }}
               />
-              <H6
+              <H5
                 style={{
                   color: '#007fc8',
                   fontWeight: 400,
@@ -117,7 +117,7 @@ class OverviewAndInstructionsSharedSection extends Component {
                 }}>
                 AeroChamber Plus® Flow-Vu® is dishwasher safe on the top rack at
                 temperatures up to 158°F (70°C).
-              </H6>
+              </H5>
             </BPAImgAndTextWrapper>
           </BPAImgAndTextAndMacbookImgWrapper>
         </ContentWrapper>

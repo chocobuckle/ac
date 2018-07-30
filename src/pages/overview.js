@@ -1,35 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ContentWrapper, H2, LightBlueSpan, Text } from 'helpers/sharedStyles';
+import { ContentWrapper, H2, H4, Text } from 'helpers/sharedStyles';
 import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 import IndicationsForUse from 'components/IndicationsForUse';
 import InhalerAnimation from 'components/InhalerAnimation';
 
-const OverviewWrapper = styled.div`
-  line-height: 4.5vw;
-
-  p,
-  span,
-  ul,
-  li,
-  b,
-  sup,
-  h1,
-  h2 {
-    font-family: Myriad Pro, sans-serif;
-  }
-`;
+const OverviewWrapper = styled.div``;
 
 const AdditionalFeatures = styled.section`
   background: #f5f5f5;
 `;
 
-const AFText = Text.extend`
-  font-size: 3vw;
+const AFText = H4.extend`
+  color: #000;
 `;
 
-const AFSpan = styled.span`
+const AFSpan = H4.withComponent('span').extend`
   color: #007fc8;
   font-weight: 600;
   font-style: italic;

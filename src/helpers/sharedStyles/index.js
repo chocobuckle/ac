@@ -23,8 +23,16 @@ export const H3 = H2.withComponent('h3').extend`
   font-size: 4.7vw;
 `;
 
-export const H6 = H3.withComponent('h6').extend`
+export const H4 = H3.withComponent('h4').extend`
+  font-size: 3.1vw;
+`;
+
+export const H5 = H4.withComponent('h5').extend`
   font-size: 2.75vw;
+`;
+
+export const H6 = H5.withComponent('h6').extend`
+  font-size: 2.2vw;
 `;
 
 export const LightBlueSpan = styled.span`
@@ -39,4 +47,12 @@ export const FlexColumnWrapper = styled.div`
 export const Text = styled.p`
   font-size: 3.9vw;
   margin-bottom: 0.25em;
+`;
+
+export const InstructionText = Text.extend`
+  font-size: 2.75vw;
+  line-height: 2.8vw;
+  position: relative;
+  right: 7.5vw;
+  top: 4.2vw;
 `;
