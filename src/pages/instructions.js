@@ -343,7 +343,7 @@ class Instructions extends Component {
                 style={{ flexDirection: 'column', marginTop: '6vw', marginBottom: '-17vw' }}>
                 <ul
                   style={{
-                    fontSize: '3vw',
+                    fontSize: '2.85vw',
                     position: 'relative',
                     left: '6.3em',
                     lineHeight: '1.25em',
@@ -530,7 +530,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper style={{ marginBottom: '4.5vw' }}>
                 <InstructionImg sizes={data.LMClean_2.sizes} />
-                <InstructionText style={{ top: '1.65em' }}>
+                <InstructionText style={{ top: '1.65em', marginBottom: '1.7em' }}>
                   Soak the parts for 15 minutes in a mild solution of liquid dish detergent and
                   lukewarm clean water. Agitate gently.
                   <br />
@@ -545,26 +545,25 @@ class Instructions extends Component {
                 <InstructionImg
                   sizes={data.LMClean_2b.sizes}
                   style={{
-                    width: '10.5vw'
+                    width: '15.45vw'
                   }}
                 />
-                <InstructionText style={{ left: '3.4vw', marginBottom: 0 }}>
+                <InstructionText style={{ left: '1.4em', marginBottom: 0 }}>
                   <b>Dishwasher safe under the following conditions:</b>
                   <br />
                   <br />
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper
-                style={{ flexDirection: 'column', marginBottom: '-12.5vw' }}>
+                style={{ flexDirection: 'column', marginBottom: '-17vw' }}>
                 <ul
                   style={{
-                    fontSize: '2.4vw',
+                    fontSize: '3vw',
                     position: 'relative',
-                    left: '13.75vw',
-                    lineHeight: '2.2vw',
-                    margin: '0 0 2vw 3.5vw',
-                    bottom: '8.5vw',
-                    width: '65vw'
+                    left: '6.3em',
+                    lineHeight: '1.25em',
+                    bottom: '3.5em',
+                    width: '55vw'
                   }}>
                   <li>Avoid heavy or other cycles that include heated dry over 158°F</li>
                   <li>Parts must be placed in the top rack ONLY</li>
@@ -572,7 +571,14 @@ class Instructions extends Component {
                   <li>Use dishwasher detergent and rinse aid</li>
                   <li>Do not boil or sterilize</li>
                 </ul>
-                <InstructionText style={{ width: '40vw', bottom: '10.5vw', left: '13.75vw' }}>
+                <InstructionText
+                  style={{
+                    width: '60vw',
+                    position: 'relative',
+                    left: '6.75em',
+                    marginTop: '1em',
+                    top: '-6.25em'
+                  }}>
                   SEE CAUTIONS, 1ST BULLET, BELOW
                 </InstructionText>
               </InstructionImgAndTextWrapper>
@@ -585,7 +591,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_4.sizes} />
-                <InstructionText style={{ top: '1.4em' }}>
+                <InstructionText style={{ top: '1.5em' }}>
                   To reassemble, fit the frontpiece on the end of the chamber and twist firmly until
                   securely locked into position. For mouthpiece models, the protective cap should
                   always be placed on the mouthpiece when the chamber is not in use.
