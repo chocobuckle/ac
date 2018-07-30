@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import { ContentWrapper } from 'helpers/sharedStyles';
 
 const H1 = styled.h1`
-  font-size: 7vw;
+  font-size: 7.75vw;
   font-weight: 600;
   margin-bottom: 0;
 `;
@@ -23,13 +23,13 @@ const FlexColumnWrapper = styled.div`
 `;
 
 const Text = styled.p`
-  margin-bottom: 1vw;
+  margin-bottom: 0.5em;
 `;
 
 const Address = styled.div`
-  margin: 4vw 0;
+  margin: 0.8em 0;
   p {
-    margin-bottom: 0;
+    margin-bottom: 0.5vw;
   }
 `;
 
@@ -49,7 +49,7 @@ function Contact({ data }) {
   return (
     <Gradient>
       <ContentWrapper style={{ paddingBottom: 0 }}>
-        <H1 style={{ marginTop: '29vw', marginBottom: '4vw' }}>Contact Us</H1>
+        <H1 style={{ marginTop: '3.75em', marginBottom: '0.5em' }}>Contact Us</H1>
         <FlexColumnWrapper>
           <H2>Commercial Division</H2>
           <H2>Co. Louth, Ireland</H2>
@@ -66,7 +66,7 @@ function Contact({ data }) {
             <LightBlueSpan>Freephone:</LightBlueSpan> 1800 - 201 700
           </Text>
           <Text>
-            <LightBlueSpan>Tel:</LightBlueSpan> 051-321740
+            <LightBlueSpan>Tel:</LightBlueSpan> 051 - 321740
           </Text>
           <Text>
             <LightBlueSpan>Fax:</LightBlueSpan> 042 - 9351516
@@ -75,20 +75,32 @@ function Contact({ data }) {
             <LightBlueSpan>Email:</LightBlueSpan> info@teva.ie
           </Text>
 
-          <H2 style={{ margin: '4vw 0' }}>Retails Representatives</H2>
+          <H2 style={{ margin: '0.75em 0' }}>Retails Representatives</H2>
 
-          <LightBlueSpan>Phil Osborn (Group accounts)</LightBlueSpan>
-          <Text>087 050 8779 - phil.osborn@teva.ie</Text>
-          <LightBlueSpan>Avril Ryan (South East)</LightBlueSpan>
-          <Text>087 223 4895 - avril.ryan@teva.ie</Text>
-          <LightBlueSpan>Jane Clements (West)</LightBlueSpan>
-          <Text>087 120 9148 - jane.clements@teva.ie</Text>
-          <LightBlueSpan>Paul Moran (Midlands)</LightBlueSpan>
-          <Text>087 799 2896 - paul.moran@teva.ie</Text>
-          <LightBlueSpan>Sinead Finucane (South West)</LightBlueSpan>
-          <Text>087 799 2858 - sinead.finucane@teva.ie</Text>
-          <LightBlueSpan>Collin Botha (North East)</LightBlueSpan>
-          <Text>087 668 5876 - collin.botha@teva.ie</Text>
+          <Text>
+            <LightBlueSpan>Phil Osborn (Group accounts)</LightBlueSpan>
+            <br />087 050 8779 - phil.osborn@teva.ie
+          </Text>
+          <Text>
+            <LightBlueSpan>Avril Ryan (South East)</LightBlueSpan>
+            <br />087 223 4895 - avril.ryan@teva.ie
+          </Text>
+          <Text>
+            <LightBlueSpan>Jane Clements (West)</LightBlueSpan>
+            <br />087 120 9148 - jane.clements@teva.ie
+          </Text>
+          <Text>
+            <LightBlueSpan>Paul Moran (Midlands)</LightBlueSpan>
+            <br />087 799 2896 - paul.moran@teva.ie
+          </Text>
+          <Text>
+            <LightBlueSpan>Sinead Finucane (South West)</LightBlueSpan>
+            <br />087 799 2858 - sinead.finucane@teva.ie
+          </Text>
+          <Text style={{ marginBottom: 0 }}>
+            <LightBlueSpan>Collin Botha (North East)</LightBlueSpan>
+            <br />087 668 5876 - collin.botha@teva.ie
+          </Text>
           <Img sizes={data.map.sizes} />
         </FlexColumnWrapper>
       </ContentWrapper>
