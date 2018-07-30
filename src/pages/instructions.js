@@ -451,9 +451,9 @@ class Instructions extends Component {
                 </div>
                 <InstructionText
                   style={{
-                    left: '19.5vw',
+                    left: '6.85em',
                     marginBottom: 0,
-                    top: '1.75vw',
+                    top: '0.6em',
                     width: '55vw'
                   }}>
                   Put mouthpiece into mouth and close lips around it to ensure an eective seal. The
@@ -478,9 +478,9 @@ class Instructions extends Component {
                 </div>
                 <InstructionText
                   style={{
-                    left: '19.5vw',
+                    left: '6.85em',
                     marginBottom: 0,
-                    top: '1.75vw',
+                    top: '0.6em',
                     width: '55vw'
                   }}>
                   Breathe out gently and press the MDI at the beginning of a slow inhalation. Use
@@ -499,7 +499,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_7.sizes} />
-                <InstructionText style={{ top: '1.555em' }}>
+                <InstructionText style={{ top: '1.55em' }}>
                   Follow instructions supplied with the MDI on how long to wait before repeating
                   steps 3-6 as prescribed.
                 </InstructionText>
