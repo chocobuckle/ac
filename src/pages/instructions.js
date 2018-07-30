@@ -315,7 +315,7 @@ class Instructions extends Component {
                   Remove the backpiece. To detach the frontpiece, twist chamber as shown.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper style={{ marginBottom: '1.9em' }}>
+              <InstructionImgAndTextWrapper style={{ marginBottom: '8vw' }}>
                 <InstructionImg sizes={data.SMClean_2.sizes} />
                 <InstructionText style={{ top: '1.6em' }}>
                   Soak the parts for 15 minutes in a mild solution of liquid dish detergent and
@@ -332,7 +332,7 @@ class Instructions extends Component {
                 <InstructionImg
                   sizes={data.SMClean_2b.sizes}
                   style={{
-                    width: '3em'
+                    width: '15.45vw'
                   }}
                 />
                 <InstructionText style={{ left: '1.4em', width: '60vw' }}>
@@ -340,14 +340,14 @@ class Instructions extends Component {
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper
-                style={{ flexDirection: 'column', marginTop: '2em', marginBottom: '-3.25em' }}>
+                style={{ flexDirection: 'column', marginTop: '6vw', marginBottom: '-17vw' }}>
                 <ul
                   style={{
                     fontSize: '3vw',
                     position: 'relative',
-                    left: '5.9em',
+                    left: '6.3em',
                     lineHeight: '1.25em',
-                    bottom: '3em',
+                    bottom: '3.5em',
                     width: '55vw'
                   }}>
                   <li>Avoid heavy or other cycles that include heated dry over 158°F</li>
@@ -357,7 +357,7 @@ class Instructions extends Component {
                   <li>Do not boil or sterilize</li>
                 </ul>
                 <InstructionText
-                  style={{ width: '60vw', position: 'relative', left: '5.25em', top: '-4.75em' }}>
+                  style={{ width: '60vw', position: 'relative', left: '6.75em', marginTop: '1em', top: '-5.75em' }}>
                   SEE CAUTIONS, 1ST BULLET, BELOW
                 </InstructionText>
               </InstructionImgAndTextWrapper>
@@ -390,7 +390,7 @@ class Instructions extends Component {
             <div>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_1.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '1.4em' }}>
                   Carefully examine the product for damage, missing parts or foreign objects. Remove
                   any foreign objects prior to use. The product should be replaced IMMEDIATELY if
                   there are any damaged or missing parts. If necessary, use the Metered Dose Inhaler
@@ -400,20 +400,20 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_2.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '1.4em' }}>
                   Remove caps from the MDI and chamber.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_3.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '1.5em' }}>
                   Shake the MDI immediately before each use as per the instructions supplied with
                   the MDI.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_4.sizes} />
-                <InstructionText style={{ top: '3.5vw' }}>
+                <InstructionText style={{ top: '1.4em' }}>
                   Insert the MDI into the backpiece of the chamber.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
