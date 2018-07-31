@@ -62,10 +62,10 @@ function Overview({ data, location }) {
             used with AeroChamber® due to medication not adhering to chamber
             walls.<sup>6</sup>
           </AFText>
-          <AFSpan>
+          <AFText style={{ color: '#007fc8'}}>
             Not made (or manufactured) with BPA (bisphenol A), phthalates,
             latex, lead, or PVC<sup>1,7</sup>
-          </AFSpan>
+          </AFText>
         </ContentWrapper>
       </AdditionalFeatures>
       <DownloadInstructionsForUse
