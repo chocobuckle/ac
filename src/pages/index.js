@@ -11,25 +11,6 @@ const IndexWrapper = styled.div`
   }
 `;
 
-// const H1 = styled.h1`
-//   font-size: 6vw;
-//   font-weight: bold;
-//   font-style: italic;
-//   margin-bottom: 1vw;
-// `;
-
-// const H2 = styled.h2`
-//   font-size: 5.3vw;
-//   margin-bottom: 3vw;
-// `;
-
-// const H3 = styled.h3`
-//   font-weight: 200;
-//   font-size: 4.7vw;
-//   margin-bottom: 1.5vw;
-//   color: #007fc8;
-// `;
-
 const Figcaption = styled.figcaption`
   text-align: center;
   font-weight: 100;

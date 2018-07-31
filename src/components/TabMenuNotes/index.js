@@ -12,11 +12,11 @@ const ListItem = styled.li`
 
 function TabMenuNotes() {
   return (
-    <Wrapper>
+    <Wrapper style={{ padding: '2vw 0' }}>
       <ContentWrapper>
         <H2>Notes</H2>
         <ContentWrapper style={{ padding: 0 }}>
-          <List>
+          <List style={{ marginBottom: 0 }}>
             <ListItem>
               Storage and operating range is 5°C–40°C (41°F–104°F) at 15% to 95%
               relative humidity
