@@ -12,7 +12,7 @@ const ListItem = styled.li`
 
 function TabMenuNotes() {
   return (
-    <Wrapper style={{ padding: '2vw 0' }}>
+    <Wrapper style={{ padding: '0.75em 0' }}>
       <ContentWrapper>
         <H2>Notes</H2>
         <ContentWrapper style={{ padding: 0 }}>

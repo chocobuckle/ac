@@ -4,7 +4,7 @@ import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 import TabMenuPDFDownload from 'components/TabMenuPDFDownload';
 import Img from 'gatsby-image';
-import { ContentWrapper, InstructionText, H5, H6 } from 'helpers/sharedStyles';
+import { ContentWrapper, InstructionText, Text, H3, H5, H6 } from 'helpers/sharedStyles';
 import TabMenuNotes from 'components/TabMenuNotes';
 import IndicationsForUse from 'components/IndicationsForUse';
 import smallMediumPDF from 'static/small_medium_mask_indications.pdf';
@@ -102,13 +102,11 @@ const TipImg = styled(Img)`
   width: 6.5vw;
 `;
 
-const TipText = styled.p`
-  && {
-    font-size: 3vw;
-    line-height: 1.25em;
-    font-weight: 600;
-    margin-bottom: 0;
-  }
+const TipText = Text.extend`
+  font-size: 3vw;
+  line-height: 1.25em;
+  font-weight: 600;
+  margin-bottom: 0;
 `;
 
 class Instructions extends Component {
@@ -242,14 +240,14 @@ class Instructions extends Component {
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <HelpfulTips>
-                <h6
+                <H3
                   style={{
                     color: '#004899',
                     fontWeight: '600',
                     marginBottom: '0.6em'
                   }}>
                   Helpful Tips
-                </h6>
+                </H3>
                 <TipWrapper>
                   <TipImg sizes={data.SMInstruct_PawPrint.sizes} />
                   <TipText>Give praise and rewards.</TipText>

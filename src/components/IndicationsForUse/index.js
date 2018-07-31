@@ -6,7 +6,7 @@ const IndicationsForUseWrapper = ContentWrapper.extend``;
 function IndicationsForUse() {
   return (
     <IndicationsForUseWrapper>
-      <H2>Indications For Use</H2>
+      <H2 style={{ marginTop: '0.75em'}}>Indications For Use</H2>
       <Text style={{ marginBottom: '0.75em' }}>
         This product is intended to be used by patients who are under the care
         or treatment of a physician or licensed healthcare professional. The
