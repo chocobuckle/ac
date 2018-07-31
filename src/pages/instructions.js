@@ -10,32 +10,7 @@ import IndicationsForUse from 'components/IndicationsForUse';
 import smallMediumPDF from 'static/small_medium_mask_indications.pdf';
 // import largeMouthpiecePDF from 'static/large_mask_mouthpiece_indications.pdf';
 
-const InstructionsWrapper = styled.div`
-  p,
-  span,
-  ul,
-  li,
-  b,
-  a,
-  sup,
-  h1,
-  h2 {
-    font-family: Myriad Pro, sans-serif;
-  }
-
-  h1,
-  h2 {
-    color: #004899;
-  }
-
-  a {
-    color: #007fc8;
-  }
-
-  span {
-    color: #007fc8;
-  }
-`;
+const InstructionsWrapper = styled.div``;
 
 const InstructionsMenu = ContentWrapper.extend`
   border-radius: 1.5vw;

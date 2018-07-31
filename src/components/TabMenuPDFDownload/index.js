@@ -1,13 +1,10 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import { ContentWrapper } from 'helpers/sharedStyles';
+import { ContentWrapper, H2 } from 'helpers/sharedStyles';
 
-const H2 = styled.h2`
-  color: #004899;
-  font-size: 5.3vw;
-  font-weight: 600;
-  margin-bottom: 2vw;
+const Wrapper = ContentWrapper.extend`
+  padding: 4vw 0;
 `;
 
 const H2AndDownloadWrapper = styled.div`
@@ -15,10 +12,6 @@ const H2AndDownloadWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-end;
   margin-bottom: 2vw;
-`;
-
-const Wrapper = ContentWrapper.extend`
-  padding: 4vw 0;
 `;
 
 const PDFImageAndTextWrapper = styled.div`
@@ -29,7 +22,7 @@ const downloadImgStyle = {
   marginLeft: '2.75vw',
   maxWidth: '238px',
   positon: 'relative',
-  bottom: '1.55vw',
+  bottom: '1.1vw',
   width: '6vw'
 };
 
@@ -46,7 +39,7 @@ function TabMenuPDFDownload({ style, download, PDFImage, PDFPath, text }) {
           style={{ cursor: 'pointer', maxWidth: '137px', width: '13vw', marginRight: '2.5vw' }}
         />
         <a
-          style={{ cursor: 'pointer', fontSize: '3.4vw', width: '60vw' }}
+          style={{ color: '#007fc8', cursor: 'pointer', fontSize: '3.4vw', width: '60vw' }}
           href={PDFPath}
           rel="noopener noreferrer"
           target="_blank">
