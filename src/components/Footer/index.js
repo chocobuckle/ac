@@ -43,9 +43,9 @@ const SmallPrintAndTevaLogoWrapper = styled.div`
   @media screen and (min-width: 600px) {
     background: none;
     flex-direction: row;
-    padding: 0 3vw;
+    padding: 0 0 0 3vw;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     position: absolute;
     bottom: 1.75vw;
     width: 100%;
@@ -133,8 +133,8 @@ function Footer({ footer, tevaLogo, respiratory }) {
           <Img sizes={respiratory} alt="Respiratory" style={{ width: '24.4vw' }} />
         </TevaLogo1>
         <TevaLogo2>
-          <Img sizes={tevaLogo} alt="Teva logo" style={{ width: '7.525vw', marginRight: '0.75vw' }} />
-          <Img sizes={respiratory} alt="Respiratory" style={{ width: '14.1vw' }} />
+          <Img sizes={tevaLogo} alt="Teva logo" style={{ width: '8.43vw', marginRight: '0.75vw' }} />
+          <Img sizes={respiratory} alt="Respiratory" style={{ width: '15.825vw' }} />
         </TevaLogo2>
         <AddressAndContactDetails>
           <Wrapper1>

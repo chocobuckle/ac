@@ -15,7 +15,7 @@ const HeaderWrapper = styled.div`
   width: 100%;
 
   @media screen and (min-width: 600px) {
-    background: linear-gradient(90deg, rgba(0, 72, 153, 1) 27%, rgba(0, 127, 200, 1) 100%);
+    background: linear-gradient(90deg, rgba(0, 72, 153, 1) 31%, rgba(0, 127, 200, 1) 100%);
     border-bottom: 0;
     flex-direction: row;
     position: relative;
