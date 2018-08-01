@@ -8,7 +8,6 @@ const FooterWrapper = styled.div`
     color: #fff;
     font-family: Myriad Pro, sans-serif;
     margin-bottom: 0;
-    text-align: center;
   }
 `;
 
@@ -32,6 +31,7 @@ const SmallPrintAndTevaLogoWrapper = styled.div`
   padding-bottom: 0.55em;
 
   @media screen and (min-width: 600px) {
+    flex-direction: row;
   }
 `;
 
@@ -49,12 +49,31 @@ const TevaLogo = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 2.5vw;
-  width: 100%;
+
+  @media screen and (min-width: 600px) {
+    margin-bottom: 0;
+    order: 3;
+    width: 30%;
+  }
 `;
 
-const AddressAndContactDetails = styled.div``;
+const AddressAndContactDetails = styled.div`
+  text-align: center;
+  @media screen and (min-width: 600px) {
+    order: 1;
+    width: 50%;
+    text-align: left;
+  }
+`;
 
-const PrivacyPolicy = styled.div``;
+const PrivacyPolicy = styled.div`
+  text-align: center;
+  @media screen and (min-width: 600px) {
+    order: 2;
+    width: 20%;
+    text-align: left;
+  }
+`;
 
 const Wrapper1 = styled.div``;
 
