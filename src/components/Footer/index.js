@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import { Text } from 'helpers/sharedStyles';
 
 const FooterWrapper = styled.div`
   p {
@@ -23,18 +24,35 @@ const ContactTeam = styled.p`
   position: absolute;
 `;
 
-const SmallPrintWrapper = styled.div`
+const SmallPrintAndTevaLogoWrapper = styled.div`
   align-items: center;
   background: #010915;
   display: flex;
   flex-direction: column;
   padding-bottom: 0.55em;
+
+  @media screen and (min-width: 600px) {
+  }
 `;
 
-const SmallPrint = styled.p`
+const SmallPrint = Text.extend`
   font-size: 3.1vw;
   line-height: 1.8em;
+
+  @media screen and (min-width: 600px) {
+    font-size: 2.2vw;
+    line-height: 1.8em;
+  }
 `;
+
+const TevaLogo = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5vw;
+  width: 100%;
+`;
+
+const SmallPrintWrapper = styled.div``;
 
 function Footer({ footer, tevaLogo, respiratory }) {
   return (
@@ -46,26 +64,28 @@ function Footer({ footer, tevaLogo, respiratory }) {
           portfolio
         </ContactTeam>
       </ImgAndContactTeam>
-      <SmallPrintWrapper>
-        <div style={{ display: 'flex', textAlign: 'center', marginBottom: '2.5vw' }}>
+      <SmallPrintAndTevaLogoWrapper>
+        <TevaLogo>
           <Img sizes={tevaLogo} alt="Teva logo" style={{ width: '12.9341vw', marginRight: '0.75vw' }} />
           <Img sizes={respiratory} alt="Respiratory" style={{ width: '24.4vw' }} />
-        </div>
-        <SmallPrint>
-          Teva Pharmaceuticals, Floor 1, Wing A, Building 1
-        </SmallPrint>
-        <SmallPrint>
-          Finnabair Business & Technology Park, Dundalk, Co. Louth, Ireland
-        </SmallPrint>
-        <SmallPrint>
-          Freephone:&nbsp;&nbsp;&nbsp;1800&nbsp;-&nbsp;201&nbsp;700&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Email:
-          info@teva.ie&nbsp;&nbsp;&nbsp;
-        </SmallPrint>
-        <SmallPrint>Web: www.teva.ie</SmallPrint>
-        <SmallPrint>privacy policy | legal</SmallPrint>
-        <SmallPrint>Date of preparation: July 2018</SmallPrint>
-        <SmallPrint>Job Code: IE/AEC/18/0001e</SmallPrint>
-      </SmallPrintWrapper>
+        </TevaLogo>
+        <SmallPrintWrapper>
+          <SmallPrint>
+            Teva Pharmaceuticals, Floor 1, Wing A, Building 1
+          </SmallPrint>
+          <SmallPrint>
+            Finnabair Business & Technology Park, Dundalk, Co. Louth, Ireland
+          </SmallPrint>
+          <SmallPrint>
+            Freephone:&nbsp;&nbsp;&nbsp;1800&nbsp;-&nbsp;201&nbsp;700&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Email:
+            info@teva.ie&nbsp;&nbsp;&nbsp;
+          </SmallPrint>
+          <SmallPrint>Web: www.teva.ie</SmallPrint>
+          <SmallPrint>privacy policy | legal</SmallPrint>
+          <SmallPrint>Date of preparation: July 2018</SmallPrint>
+          <SmallPrint>Job Code: IE/AEC/18/0001e</SmallPrint>
+        </SmallPrintWrapper>
+      </SmallPrintAndTevaLogoWrapper>
     </FooterWrapper>
   );
 }
