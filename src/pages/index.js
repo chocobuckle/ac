@@ -128,15 +128,17 @@ const EasyInstructionsWrapper = styled.div`
 
   h2 {
     color: #007fc8;
-    fontWeight: 400;
+    font-weight: 400;
     margin: 0.5em auto;
   }
 
   @media screen and (min-width: 600px) {
+    align-items: flex-start;
     width: 40%;
 
     h2 {
-      margin-top: 0;
+      margin: 0 0 0.5em;
+      text-align: left;
     }
   }
 `;
