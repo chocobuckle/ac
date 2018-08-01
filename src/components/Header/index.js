@@ -48,9 +48,9 @@ const DesktopLogoWrapper = styled.h1`
     display: block;
     background: rgba(0, 72, 153, 1);
     position: absolute; /* change to absolute */
-    padding: 0.35em 0.125em;
-    left: 0.9em;
-    top: -0.1875em;
+    padding: 0.35em 0.125em 0.4em;
+    left: 1em;
+    top: -0.15em;
   }
 `;
 
@@ -58,7 +58,7 @@ const DesktopLogo = styled(Img)``;
 
 const desktopLogoStyle = {
   maxWidth: '300px',
-  width: '23vw'
+  width: '22vw'
 };
 
 const List = styled.ul`
@@ -70,7 +70,7 @@ const List = styled.ul`
     margin-top: 0;
     margin-bottom: 0;
     width: 70%;
-    justify-content: flex-end;
+    justify-content: space-evenly;
   }
 `;
 
