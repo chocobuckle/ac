@@ -12,6 +12,14 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
+const MainContent = styled.div`
+  position: relative;
+  top: 25.1vw;
+  @media screen and (min-width: 600px) {
+    top: 0;
+  }
+`;
+
 const Layout = ({ children, data, location }) => {
   const {
     site,
@@ -37,7 +45,7 @@ const Layout = ({ children, data, location }) => {
           padding: 0
         }}>
         <Header logoSizes={logo.sizes} />
-        <div style={{ position: 'relative', top: '25.1vw' }}>
+        <MainContent>
           <HeroImg
             backgroundImgSizes={background.sizes}
             flowVuSizes={flowVu.sizes}
@@ -49,7 +57,7 @@ const Layout = ({ children, data, location }) => {
             tevaLogo={tevaLogo.sizes}
             respiratory={respiratory.sizes}
           />
-        </div>
+        </MainContent>
       </Wrapper>
     </div>
   );
