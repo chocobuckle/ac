@@ -6,28 +6,52 @@ import styled from 'styled-components';
 import './index.css';
 
 const HeaderWrapper = styled.div`
-  background: linear-gradient(
-    90deg,
-    rgba(0, 72, 153, 1) 15.05%,
-    rgba(0, 127, 200, 1) 100%
-  );
+  background: linear-gradient(90deg, rgba(0, 72, 153, 1) 15.05%, rgba(0, 127, 200, 1) 100%);
   border-bottom: 0.1vw solid #fff;
   display: flex;
   flex-direction: column;
   position: fixed;
   z-index: 3;
   width: 100%;
+
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 `;
 
 const LogoWrapper = styled.h1`
   margin: 0 auto;
   padding: 2vw 0 3vw;
+
+  @media screen and (min-width: 600px) {
+    margin: 0;
+  }
 `;
 
-const logoImgStyle = {
+const MobileAndTabletLogo  = styled(Img)`
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+`;
+
+const mobileAndTabletLogoStyle = {
   maxWidth: '300px',
   width: '50vw'
 };
+
+const desktopLogoStyle = {
+  maxWidth: '300px',
+  width: '30vw'
+};
+
+const DesktopLogo  = styled(Img)`
+  display: none;
+
+  @media screen and (min-width: 600px) {
+    display: block;
+  }
+`;
 
 // const List = styled.ul`
 //   display: flex;
@@ -65,12 +89,12 @@ class Header extends Component {
   };
 
   handleStateChange = (state) => {
-    this.setState({isOpen: state.isOpen})
-  }
+    this.setState({ isOpen: state.isOpen });
+  };
 
   closeMenu = () => {
-    this.setState({isOpen: false})
-  }
+    this.setState({ isOpen: false });
+  };
 
   render() {
     const { logoSizes } = this.props;
@@ -79,7 +103,8 @@ class Header extends Component {
       <HeaderWrapper>
         <LogoWrapper>
           <Link to="/">
-            <Img alt="logo" sizes={logoSizes} style={{ ...logoImgStyle }} />
+            <MobileAndTabletLogo alt="logo" sizes={logoSizes} style={{ ...mobileAndTabletLogoStyle }} />
+            <DesktopLogo alt="logo" sizes={logoSizes} style={{ ...desktopLogoStyle }} />
           </Link>
         </LogoWrapper>
         <Menu width="60vw" isOpen={isOpen} onStateChange={(state) => this.handleStateChange(state)}>
