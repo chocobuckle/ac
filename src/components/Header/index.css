@@ -10,6 +10,7 @@
 @media screen and (min-width: 600px) {
   .bm-burger-button,
   .bm-menu,
+  .bm-menu-wrap,
   .bm-overlay,
   .bm-cross-button {
     display: none;
