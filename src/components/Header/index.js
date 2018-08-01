@@ -18,6 +18,7 @@ const HeaderWrapper = styled.div`
     background: linear-gradient(90deg, rgba(0, 72, 153, 1) 55%, rgba(0, 127, 200, 1) 100%);
     flex-direction: row;
     justify-content: flex-start;
+    position: relative;
   }
 `;
 
@@ -42,49 +43,44 @@ const mobileAndTabletLogoStyle = {
 
 const DesktopLogoWrapper = styled.h1`
   display: none;
-  margin: 0;
   @media screen and (min-width: 600px) {
     display: block;
     background: rgba(0, 72, 153, 1);
-    margin-left: 1em;
-    position: relative;
-    top: 0.5em; /* scale */
+    margin: 0;
+    position: absolute; /* change to absolute */
+    top: 1.5em;
+    padding: 2.5%;
   }
 `;
 
-const DesktopLogo = styled(Img)`
-  display: none;
-
-  @media screen and (min-width: 600px) {
-    display: block;
-  }
-`;
+const DesktopLogo = styled(Img)``;
 
 const desktopLogoStyle = {
   maxWidth: '300px',
-  width: '25vw',
-  position: 'relative',
-  bottom: '0.25em' /* scale */
+  width: '25vw'
 };
 
-// const List = styled.ul`
-//   display: flex;
-//   flex-direction: row;
-//   list-style: none;
-//   margin: 0 auto;
-//   margin: 0.25em 0;
-//   text-align: center;
-//   width: 100%;
-//   flex-wrap: wrap;
-//   justify-content: space-between;
-// `;
+const List = styled.ul`
+  display: none;
+  @media screen and (min-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0 auto;
+    margin: 0.25em 0;
+    text-align: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+`;
 
-// const ListItem = styled.li`
-//   font-family: Myriad Pro, sans-serif;
-//   font-size: 1.3rem;
-//   margin-bottom: 0.35em;
-//   text-decoration: none;
-// `;
+const ListItem = styled.li`
+  font-family: Myriad Pro, sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.35em;
+  text-decoration: none;
+`;
 
 const HeaderLink = styled(Link)`
   color: #fff;
@@ -115,6 +111,33 @@ class Header extends Component {
     const { isOpen } = this.state;
     return (
       <HeaderWrapper>
+        <DesktopLogoWrapper>
+          <Link to="/">
+            <DesktopLogo alt="logo" sizes={logoSizes} style={{ ...desktopLogoStyle }} />
+          </Link>
+        </DesktopLogoWrapper>
+        <List>
+          <ListItem>
+            <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} exact to="/">
+              Home
+            </HeaderLink>
+          </ListItem>
+          <ListItem>
+            <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} to="/overview">
+              Overview
+            </HeaderLink>
+          </ListItem>
+          <ListItem>
+            <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} to="/instructions">
+              Instructions
+            </HeaderLink>
+          </ListItem>
+          <ListItem>
+            <HeaderLink activeStyle={{ ...headerLinkActiveStyle }} to="/contact">
+              Contact
+            </HeaderLink>
+          </ListItem>
+        </List>
         <MobileAndTabletLogoWrapper>
           <Link to="/">
             <MobileAndTabletLogo
@@ -124,11 +147,6 @@ class Header extends Component {
             />
           </Link>
         </MobileAndTabletLogoWrapper>
-        <DesktopLogoWrapper>
-          <Link to="/">
-            <DesktopLogo alt="logo" sizes={logoSizes} style={{ ...desktopLogoStyle }} />
-          </Link>
-        </DesktopLogoWrapper>
         <Menu width="60vw" isOpen={isOpen} onStateChange={(state) => this.handleStateChange(state)}>
           <HeaderLink
             onClick={() => this.closeMenu()}
