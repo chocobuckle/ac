@@ -27,8 +27,7 @@ const ContactTeam = styled.p`
   @media screen and (min-width: 600px) {
     font-size: 2.2vw;
     padding-left: 3vw;
-    position: relative;
-    bottom: 7.25em;
+    bottom: 5.8em;
     text-align: left;
   }
 `;
@@ -48,7 +47,7 @@ const SmallPrintAndTevaLogoWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    bottom: 4.5vw;
+    bottom: 1.75vw;
     width: 100%;
   }
 `;
@@ -122,7 +121,7 @@ function Footer({ footer, tevaLogo, respiratory }) {
   return (
     <FooterWrapper>
       <ImgAndContactTeam>
-        <Img sizes={footer} alt="footer" />
+        <Img sizes={footer} alt="footer" imgStyle={{ marginBottom: 0 }} />
         <ContactTeam>
           Contact the Teva team for more information on the full respiratory
           portfolio
