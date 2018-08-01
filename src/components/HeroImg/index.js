@@ -23,6 +23,14 @@ const HeroText = styled.p`
   font-size: 4.5vw;
   line-height: 1.3em;
   margin-bottom: 0;
+
+  @media screen and (min-width: 600px) {
+    line-height: 1.225em;
+  }
+
+  @media screen and (min-width: 780px) {
+    line-height: 1.175em;
+  }
 `;
 
 const flowVuImgStyle = {
