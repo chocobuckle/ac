@@ -381,7 +381,7 @@ class IndexPage extends Component {
             <EasyInstructionsImgAndTextWrapper
               style={{ alignItems: 'center', marginTop: '0.5em' }}>
               <Img sizes={easyInstructions3.sizes} style={{ ...easyInstructions3ImgStyle }} />
-              <Text style={{}}>
+              <Text style={{ marginBottom: 0 }}>
                 Press inhaler and inhale slowly and deeply, holding your breath for 5-10 seconds.
                 <span
                   style={{
@@ -396,7 +396,7 @@ class IndexPage extends Component {
             </EasyInstructionsImgAndTextWrapper>
             <EasyInstructionsImgAndTextWrapper
               style={{ alignItems: 'flex-start', marginTop: '2em' }}>
-              <Text style={{}}>
+              <Text>
                 The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation Indicator moves as
                 you inhale and helps provide visual assurance of correct use and medication
                 delivery.
