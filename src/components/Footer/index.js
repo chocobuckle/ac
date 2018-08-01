@@ -21,6 +21,10 @@ const ContactTeam = styled.p`
   font-weight: bold;
   line-height: 1.5em;
   position: absolute;
+
+  @media screen and (min-width: 600px) {
+    font-size: 2.4vw;
+  }
 `;
 
 const SmallPrintAndTevaLogoWrapper = styled.div`
@@ -33,6 +37,9 @@ const SmallPrintAndTevaLogoWrapper = styled.div`
   @media screen and (min-width: 600px) {
     flex-direction: row;
     padding: 0 3vw;
+    justify-content: space-between;
+    align-items: center
+    padding-bottom: 0.75em;
   }
 `;
 
@@ -46,16 +53,24 @@ const SmallPrint = Text.extend`
   }
 `;
 
-const TevaLogo = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2.5vw;
-  width: 100%;
-
+const TevaLogo1 = styled.div`
+  @media screen and (max-width: 599px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5vw;
+  }
   @media screen and (min-width: 600px) {
+    display: none;
+  }
+`;
+
+const TevaLogo2 = styled.div`
+  display: none;
+  @media screen and (min-width: 600px) {
+    display: flex;
+    justify-content: center;
     margin-bottom: 0;
     order: 3;
-    width: 25%;
   }
 `;
 
@@ -104,10 +119,14 @@ function Footer({ footer, tevaLogo, respiratory }) {
         </ContactTeam>
       </ImgAndContactTeam>
       <SmallPrintAndTevaLogoWrapper>
-        <TevaLogo>
+        <TevaLogo1>
           <Img sizes={tevaLogo} alt="Teva logo" style={{ width: '12.9341vw', marginRight: '0.75vw' }} />
           <Img sizes={respiratory} alt="Respiratory" style={{ width: '24.4vw' }} />
-        </TevaLogo>
+        </TevaLogo1>
+        <TevaLogo2>
+          <Img sizes={tevaLogo} alt="Teva logo" style={{ width: '7.525vw', marginRight: '0.75vw' }} />
+          <Img sizes={respiratory} alt="Respiratory" style={{ width: '14.1vw' }} />
+        </TevaLogo2>
         <AddressAndContactDetails>
           <Wrapper1>
             <SmallPrint>
