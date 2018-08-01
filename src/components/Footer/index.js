@@ -5,7 +5,6 @@ import { Text } from 'helpers/sharedStyles';
 
 const FooterWrapper = styled.div`
   p {
-    color: #fff;
     font-family: Myriad Pro, sans-serif;
     margin-bottom: 0;
   }
@@ -17,29 +16,38 @@ const ImgAndContactTeam = styled.div`
 
 const ContactTeam = styled.p`
   bottom: 2.6vw;
+  color: #fff;
   font-size: 3.6vw;
   font-weight: bold;
   line-height: 1.5em;
   position: absolute;
+  text-align: center;
 
   @media screen and (min-width: 600px) {
-    font-size: 2.4vw;
+    font-size: 2.2vw;
+    padding-left: 3vw;
+    position: relative;
+    bottom: 7.25em;
+    text-align: left;
   }
 `;
 
 const SmallPrintAndTevaLogoWrapper = styled.div`
   align-items: center;
   background: #010915;
+  color: #fff;
   display: flex;
   flex-direction: column;
   padding-bottom: 0.55em;
 
   @media screen and (min-width: 600px) {
+    background: none;
     flex-direction: row;
     padding: 0 3vw;
     justify-content: space-between;
-    align-items: center
-    padding-bottom: 0.75em;
+    align-items: center;
+    position: relative;
+    margin-top: -5.65em;
   }
 `;
 
