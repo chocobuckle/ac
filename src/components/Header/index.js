@@ -41,8 +41,10 @@ const mobileAndTabletLogoStyle = {
 };
 
 const desktopLogoStyle = {
-  maxWidth: '178px',
-  width: '21vw'
+  maxWidth: '300px',
+  width: '25vw',
+  position: 'relative',
+  bottom: '0.25em' /* scale */
 };
 
 const DesktopLogo = styled(Img)`
@@ -53,10 +55,15 @@ const DesktopLogo = styled(Img)`
   }
 `;
 
-const DesktopDiv = styled.div`
+const DesktopLogoWrapper = styled.h1`
   display: none;
+  margin: 0;
   @media screen and (min-width: 600px) {
     display: block;
+    background: rgba(0, 72, 153, 1);
+    margin-left: 1em;
+    position: relative;
+    top: 0.5em; /* scale */
   }
 `;
 
@@ -117,11 +124,11 @@ class Header extends Component {
             />
           </Link>
         </MobileAndTabletLogoWrapper>
-        <DesktopDiv>
+        <DesktopLogoWrapper>
           <Link to="/">
             <DesktopLogo alt="logo" sizes={logoSizes} style={{ ...desktopLogoStyle }} />
           </Link>
-        </DesktopDiv>
+        </DesktopLogoWrapper>
         <Menu width="60vw" isOpen={isOpen} onStateChange={(state) => this.handleStateChange(state)}>
           <HeaderLink
             onClick={() => this.closeMenu()}
