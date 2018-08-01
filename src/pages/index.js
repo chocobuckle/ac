@@ -71,10 +71,26 @@ const playButtonStyle = {
 const InhalerTips = ContentWrapper.extend`
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+  }
 `;
 const BetterControlTextAndTorsoImgWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: 600px) {
+    width: 60%;
+
+    h2 {
+      font-size: 4vw;
+    }
+
+    h3 {
+      font-size: 2vw;
+    }
+  }
 `;
 const TorsoWrapper = styled.div`
   display: flex;
@@ -109,6 +125,20 @@ const EasyInstructionsWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+
+  h2 {
+    color: #007fc8;
+    fontWeight: 400;
+    margin: 0.5em auto;
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 40%;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
 `;
 const EasyInstructionsImgAndTextWrapper = styled.div`
   align-items: center;
@@ -297,9 +327,8 @@ class IndexPage extends Component {
         <InhalerTips>
           <BetterControlTextAndTorsoImgWrapper>
             <H2>
-              People who use a valved holding chamber with their inhaler have better control.<sup>
-                1
-              </sup>
+              People who use a valved holding chamber with their inhaler have better control.
+              <sup>1</sup>
             </H2>
             <TorsoWrapper>
               <TorsoTextWrapper>
@@ -355,12 +384,7 @@ class IndexPage extends Component {
             </TorsoImgWrapper>
           </BetterControlTextAndTorsoImgWrapper>
           <EasyInstructionsWrapper>
-            <H2
-              style={{
-                color: '#007fc8',
-                fontWeight: '400',
-                margin: '0.5em auto'
-              }}>
+            <H2>
               <em>
                 <b>Easy </b>
               </em>
@@ -378,8 +402,7 @@ class IndexPage extends Component {
               <Text>Insert inhaler into chamber.</Text>
               <Img sizes={easyInstructions2.sizes} style={{ ...easyInstructions2ImgStyle }} />
             </EasyInstructionsImgAndTextWrapper>
-            <EasyInstructionsImgAndTextWrapper
-              style={{ alignItems: 'center', marginTop: '0.5em' }}>
+            <EasyInstructionsImgAndTextWrapper style={{ alignItems: 'center', marginTop: '0.5em' }}>
               <Img sizes={easyInstructions3.sizes} style={{ ...easyInstructions3ImgStyle }} />
               <Text style={{ marginBottom: 0 }}>
                 Press inhaler and inhale slowly and deeply, holding your breath for 5-10 seconds.
