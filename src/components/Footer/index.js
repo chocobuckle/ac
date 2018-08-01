@@ -32,6 +32,7 @@ const SmallPrintAndTevaLogoWrapper = styled.div`
 
   @media screen and (min-width: 600px) {
     flex-direction: row;
+    padding: 0 3vw;
   }
 `;
 
@@ -49,11 +50,12 @@ const TevaLogo = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 2.5vw;
+  width: 100%;
 
   @media screen and (min-width: 600px) {
     margin-bottom: 0;
     order: 3;
-    width: 30%;
+    width: 25%;
   }
 `;
 
@@ -63,6 +65,10 @@ const AddressAndContactDetails = styled.div`
     order: 1;
     width: 50%;
     text-align: left;
+
+    p {
+      font-size: 1.5vw;
+    }
   }
 `;
 
@@ -72,10 +78,18 @@ const PrivacyPolicy = styled.div`
     order: 2;
     width: 20%;
     text-align: left;
+
+    p {
+      font-size: 1.5vw;
+    }
   }
 `;
 
-const Wrapper1 = styled.div``;
+const Wrapper1 = styled.div`
+  @media screen and (min-width: 600px) {
+    margin-bottom: 0.75em;
+  }
+`;
 
 const Wrapper2 = styled.div``;
 
