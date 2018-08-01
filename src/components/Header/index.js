@@ -40,21 +40,6 @@ const mobileAndTabletLogoStyle = {
   width: '50vw'
 };
 
-const desktopLogoStyle = {
-  maxWidth: '300px',
-  width: '25vw',
-  position: 'relative',
-  bottom: '0.25em' /* scale */
-};
-
-const DesktopLogo = styled(Img)`
-  display: none;
-
-  @media screen and (min-width: 600px) {
-    display: block;
-  }
-`;
-
 const DesktopLogoWrapper = styled.h1`
   display: none;
   margin: 0;
@@ -66,6 +51,21 @@ const DesktopLogoWrapper = styled.h1`
     top: 0.5em; /* scale */
   }
 `;
+
+const DesktopLogo = styled(Img)`
+  display: none;
+
+  @media screen and (min-width: 600px) {
+    display: block;
+  }
+`;
+
+const desktopLogoStyle = {
+  maxWidth: '300px',
+  width: '25vw',
+  position: 'relative',
+  bottom: '0.25em' /* scale */
+};
 
 // const List = styled.ul`
 //   display: flex;
