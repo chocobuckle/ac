@@ -17,8 +17,8 @@ const HeaderWrapper = styled.div`
   @media screen and (min-width: 600px) {
     background: linear-gradient(90deg, rgba(0, 72, 153, 1) 55%, rgba(0, 127, 200, 1) 100%);
     flex-direction: row;
-    justify-content: flex-start;
     position: relative;
+    justify-content: flex-end;
   }
 `;
 
@@ -57,7 +57,7 @@ const DesktopLogo = styled(Img)``;
 
 const desktopLogoStyle = {
   maxWidth: '300px',
-  width: '25vw'
+  width: '22vw'
 };
 
 const List = styled.ul`
@@ -66,19 +66,17 @@ const List = styled.ul`
     display: flex;
     flex-direction: row;
     list-style: none;
-    margin: 0 auto;
-    margin: 0.25em 0;
-    text-align: center;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 70%;
+    justify-content: flex-end;
   }
 `;
 
 const ListItem = styled.li`
   font-family: Myriad Pro, sans-serif;
-  font-size: 1.3rem;
-  margin-bottom: 0.35em;
+  font-size: 3.5vw;
+  margin: 0.5em 0.5em;
   text-decoration: none;
 `;
 
