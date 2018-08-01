@@ -48,8 +48,8 @@ const DesktopLogoWrapper = styled.h1`
     display: block;
     background: rgba(0, 72, 153, 1);
     position: absolute; /* change to absolute */
-    padding: 0.35em 0.25em;
-    left: 0.75em;
+    padding: 0.35em 0.125em;
+    left: 0.9em;
     top: -0.1875em;
   }
 `;
@@ -85,7 +85,7 @@ const HeaderLink = styled(Link)`
   color: #fff;
   text-decoration: none;
   font-style: italic;
-  font-weight: bold;
+  font-weight: 600;
 `;
 
 const headerLinkActiveStyle = {
