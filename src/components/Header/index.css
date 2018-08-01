@@ -7,6 +7,15 @@
   top: 8vw;
 }
 
+@media screen and (min-width: 600px) {
+  .bm-burger-button,
+  .bm-menu,
+  .bm-overlay,
+  .bm-cross-button {
+    display: none;
+  }
+}
+
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: #fff;
