@@ -46,7 +46,8 @@ export const FlexColumnWrapper = styled.div`
 
 export const Text = styled.p`
   font-size: 3.9vw;
-  margin-bottom: 0.25em;
+  line-height: 1.25em;
+  margin-bottom: 0.5em;
 `;
 
 export const InstructionText = Text.extend`
