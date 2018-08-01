@@ -15,21 +15,21 @@ const HeaderWrapper = styled.div`
   width: 100%;
 
   @media screen and (min-width: 600px) {
+    background: linear-gradient(90deg, rgba(0, 72, 153, 1) 55%, rgba(0, 127, 200, 1) 100%);
     flex-direction: row;
     justify-content: flex-start;
   }
 `;
 
-const LogoWrapper = styled.h1`
+const MobileAndTabletLogoWrapper = styled.h1`
   margin: 0 auto;
   padding: 2vw 0 3vw;
-
   @media screen and (min-width: 600px) {
-    margin: 0;
+    display: none;
   }
 `;
 
-const MobileAndTabletLogo  = styled(Img)`
+const MobileAndTabletLogo = styled(Img)`
   @media screen and (min-width: 600px) {
     display: none;
   }
@@ -41,13 +41,20 @@ const mobileAndTabletLogoStyle = {
 };
 
 const desktopLogoStyle = {
-  maxWidth: '300px',
-  width: '30vw'
+  maxWidth: '178px',
+  width: '21vw'
 };
 
-const DesktopLogo  = styled(Img)`
+const DesktopLogo = styled(Img)`
   display: none;
 
+  @media screen and (min-width: 600px) {
+    display: block;
+  }
+`;
+
+const DesktopDiv = styled.div`
+  display: none;
   @media screen and (min-width: 600px) {
     display: block;
   }
@@ -101,12 +108,20 @@ class Header extends Component {
     const { isOpen } = this.state;
     return (
       <HeaderWrapper>
-        <LogoWrapper>
+        <MobileAndTabletLogoWrapper>
           <Link to="/">
-            <MobileAndTabletLogo alt="logo" sizes={logoSizes} style={{ ...mobileAndTabletLogoStyle }} />
+            <MobileAndTabletLogo
+              alt="logo"
+              sizes={logoSizes}
+              style={{ ...mobileAndTabletLogoStyle }}
+            />
+          </Link>
+        </MobileAndTabletLogoWrapper>
+        <DesktopDiv>
+          <Link to="/">
             <DesktopLogo alt="logo" sizes={logoSizes} style={{ ...desktopLogoStyle }} />
           </Link>
-        </LogoWrapper>
+        </DesktopDiv>
         <Menu width="60vw" isOpen={isOpen} onStateChange={(state) => this.handleStateChange(state)}>
           <HeaderLink
             onClick={() => this.closeMenu()}
