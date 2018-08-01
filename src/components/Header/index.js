@@ -46,10 +46,10 @@ const DesktopLogoWrapper = styled.h1`
   @media screen and (min-width: 600px) {
     display: block;
     background: rgba(0, 72, 153, 1);
-    margin: 0;
     position: absolute; /* change to absolute */
-    top: 1.5em;
-    padding: 2.5%;
+    padding: 0.35em 0.25em;
+    left: 0.75em;
+    top: -0.1875em;
   }
 `;
 
@@ -57,7 +57,7 @@ const DesktopLogo = styled(Img)``;
 
 const desktopLogoStyle = {
   maxWidth: '300px',
-  width: '22vw'
+  width: '23vw'
 };
 
 const List = styled.ul`
@@ -75,7 +75,7 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   font-family: Myriad Pro, sans-serif;
-  font-size: 3.5vw;
+  font-size: 3.45vw;
   margin: 0.5em 0.5em;
   text-decoration: none;
 `;
