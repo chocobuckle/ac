@@ -101,7 +101,7 @@ const InhalingRedImgWrapper = styled.div`
 const InhalingWithLogoImgWrapper = styled.div`
   width: 51.5%;
 `;
-const InhalerImgCaption = styled.p`
+const InhalerImgCaption = Text.extend`
   margin-top: 0.75vw;
 `;
 
@@ -313,11 +313,11 @@ class IndexPage extends Component {
                   Guidelines recommend chambers for children and adults.
                   <sup>2</sup>
                 </Text>
-                <p>
+                <Text>
                   The majority of adults do not use their inhalers properly.
                   <sup>3</sup> This is why doctors recommend using an{' '}
                   <span>AeroChamber Plus Flow-Vu</span> Chamber with your inhaler.
-                </p>
+                </Text>
               </TorsoTextWrapper>
               <TorsoTextWrapper>
                 <H3 style={{ color: '#007fc8' }}>
@@ -328,15 +328,15 @@ class IndexPage extends Component {
                     <b> medicine </b>
                   </em>is delivered where it is needed
                 </H3>
-                <p>
+                <Text>
                   Inhalers can be challenging because the medicine comes out very quickly and can
                   end up in your mouth and throat. This can lead to side effects such as sore throat
                   and oral infections.
-                </p>
-                <p>
+                </Text>
+                <Text>
                   Using an <span>AeroChamber Plus Flow-Vu Chamber</span> with your inhaler helps
                   ensure the medicine is delivered to your lungs.
-                </p>
+                </Text>
               </TorsoTextWrapper>
             </TorsoWrapper>
             <TorsoImgWrapper>
@@ -368,20 +368,20 @@ class IndexPage extends Component {
             </H2>
             <EasyInstructionsImgAndTextWrapper>
               <Img sizes={easyInstructions1.sizes} style={{ ...easyInstructions1ImgStyle }} />
-              <p>Shake inhaler and remove cap.</p>
+              <Text>Shake inhaler and remove cap.</Text>
             </EasyInstructionsImgAndTextWrapper>
             <EasyInstructionsImgAndTextWrapper
               style={{
                 position: 'relative',
                 marginTop: '-0.9em'
               }}>
-              <p>Insert inhaler into chamber.</p>
+              <Text>Insert inhaler into chamber.</Text>
               <Img sizes={easyInstructions2.sizes} style={{ ...easyInstructions2ImgStyle }} />
             </EasyInstructionsImgAndTextWrapper>
             <EasyInstructionsImgAndTextWrapper
-              style={{ alignItems: 'center', marginTop: '-0.2em' }}>
+              style={{ alignItems: 'center', marginTop: '0.5em' }}>
               <Img sizes={easyInstructions3.sizes} style={{ ...easyInstructions3ImgStyle }} />
-              <p style={{}}>
+              <Text style={{}}>
                 Press inhaler and inhale slowly and deeply, holding your breath for 5-10 seconds.
                 <span
                   style={{
@@ -392,15 +392,15 @@ class IndexPage extends Component {
                   }}>
                   OR
                 </span>Press inhaler and breathe in and out through the chamber for 2-3 breaths.
-              </p>
+              </Text>
             </EasyInstructionsImgAndTextWrapper>
             <EasyInstructionsImgAndTextWrapper
               style={{ alignItems: 'flex-start', marginTop: '2em' }}>
-              <p style={{}}>
+              <Text style={{}}>
                 The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation Indicator moves as
                 you inhale and helps provide visual assurance of correct use and medication
                 delivery.
-              </p>
+              </Text>
               <Img sizes={flowVuLogo.sizes} style={{ ...flowVuLogoImgStyle }} />
             </EasyInstructionsImgAndTextWrapper>
           </EasyInstructionsWrapper>
