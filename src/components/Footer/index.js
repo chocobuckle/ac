@@ -52,7 +52,13 @@ const TevaLogo = styled.div`
   width: 100%;
 `;
 
-const SmallPrintWrapper = styled.div``;
+const AddressAndContactDetails = styled.div``;
+
+const PrivacyPolicy = styled.div``;
+
+const Wrapper1 = styled.div``;
+
+const Wrapper2 = styled.div``;
 
 function Footer({ footer, tevaLogo, respiratory }) {
   return (
@@ -69,22 +75,31 @@ function Footer({ footer, tevaLogo, respiratory }) {
           <Img sizes={tevaLogo} alt="Teva logo" style={{ width: '12.9341vw', marginRight: '0.75vw' }} />
           <Img sizes={respiratory} alt="Respiratory" style={{ width: '24.4vw' }} />
         </TevaLogo>
-        <SmallPrintWrapper>
-          <SmallPrint>
-            Teva Pharmaceuticals, Floor 1, Wing A, Building 1
-          </SmallPrint>
-          <SmallPrint>
-            Finnabair Business & Technology Park, Dundalk, Co. Louth, Ireland
-          </SmallPrint>
-          <SmallPrint>
-            Freephone:&nbsp;&nbsp;&nbsp;1800&nbsp;-&nbsp;201&nbsp;700&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Email:
-            info@teva.ie&nbsp;&nbsp;&nbsp;
-          </SmallPrint>
-          <SmallPrint>Web: www.teva.ie</SmallPrint>
-          <SmallPrint>privacy policy | legal</SmallPrint>
-          <SmallPrint>Date of preparation: July 2018</SmallPrint>
-          <SmallPrint>Job Code: IE/AEC/18/0001e</SmallPrint>
-        </SmallPrintWrapper>
+        <AddressAndContactDetails>
+          <Wrapper1>
+            <SmallPrint>
+              Teva Pharmaceuticals, Floor 1, Wing A, Building 1
+            </SmallPrint>
+            <SmallPrint>
+              Finnabair Business & Technology Park, Dundalk, Co. Louth, Ireland
+            </SmallPrint>
+          </Wrapper1>
+          <Wrapper2>
+            <SmallPrint>
+              Freephone:&nbsp;&nbsp;&nbsp;1800&nbsp;-&nbsp;201&nbsp;700&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Email:
+              info@teva.ie&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Web: www.teva.ie
+            </SmallPrint>
+          </Wrapper2>
+        </AddressAndContactDetails>
+        <PrivacyPolicy>
+          <Wrapper1>
+            <SmallPrint>privacy policy | legal</SmallPrint>
+            <SmallPrint>Date of preparation: July 2018</SmallPrint>
+          </Wrapper1>
+          <Wrapper2>
+            <SmallPrint>Job Code: IE/AEC/18/0001e</SmallPrint>
+          </Wrapper2>
+        </PrivacyPolicy>
       </SmallPrintAndTevaLogoWrapper>
     </FooterWrapper>
   );
