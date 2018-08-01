@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Text } from 'helpers/sharedStyles';
 
 const FooterWrapper = styled.div`
+  position: relative;
   p {
     font-family: Myriad Pro, sans-serif;
     margin-bottom: 0;
@@ -46,8 +47,9 @@ const SmallPrintAndTevaLogoWrapper = styled.div`
     padding: 0 3vw;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    margin-top: -5.65em;
+    position: absolute;
+    bottom: 4.5vw;
+    width: 100%;
   }
 `;
 
