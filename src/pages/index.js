@@ -300,6 +300,18 @@ const BucketBorder = styled.div`
   border-top: none;
   height: 7vw;
   margin-top: -10.25vw;
+
+  @media screen and (min-width: 500px) {
+    height: 7.5vw;
+  }
+
+  @media screen and (min-width: 600px) {
+    height: 8.25vw;
+  }
+
+  @media screen and (min-width: 700px) {
+    height: 9.25vw;
+  }
 `;
 const AdultOrChild = H3.extend`
   color: #007fc8;
