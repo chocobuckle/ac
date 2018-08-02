@@ -281,7 +281,8 @@ const InhalerAndBucketBorderWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   @media screen and (min-width: 800px) {
-    width: 50%;
+    width: 48%;
+    margin: 0 auto;
   }
 `;
 const ThreeInhalers = styled.div`
