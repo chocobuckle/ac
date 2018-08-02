@@ -7,9 +7,9 @@ const VideoPlayerWrapper = styled.div`
   ${({ activeVideoURL }) =>
     activeVideoURL
       ? `
-        width: 65.4vw;
+        width: 71.9%;
         padding-top: 45.8%;
-        margin: 0.35vw auto -38.5vw;
+        margin: 0.35% auto -42.5%;
       `
       : `
         width: 52.2vw;
