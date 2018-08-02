@@ -277,7 +277,16 @@ const WhiteBannerChildImg = styled(Img)`
   }
 `;
 
-const SixInhalers = ContentWrapper.extend``;
+const SixInhalers = ContentWrapper.extend`
+  @media screen and (min-width: 800px) {
+    h2 {
+      font-size: 2.35rem;
+    }
+    h2 + h3 {
+      font-size: 2rem;
+    }
+  }
+`;
 const SixInhalerImgsWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
@@ -632,7 +641,7 @@ class IndexPage extends Component {
           </WhiteBanner>
         </BubblesAndBanner>
         <SixInhalers>
-          <H2 style={{ color: '#007FC8', marginTop: '0.5em', marginBottom: 0 }}>
+          <H2 style={{ color: '#007FC8', marginTop: '0.1em', marginBottom: 0 }}>
             <em>AeroChamber Plus Flow-Vu</em>
           </H2>
           <H3 style={{ color: '#858585' }}>Anti Static Valved Holding Chamber (VHC)</H3>
