@@ -276,6 +276,9 @@ const InhalerAndBucketBorderWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  @media screen and (min-width: 800px) {
+    width: 50%;
+  }
 `;
 const ThreeInhalers = styled.div`
   align-items: flex-end;
