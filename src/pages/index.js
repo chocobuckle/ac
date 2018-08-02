@@ -154,12 +154,18 @@ const EasyInstructionsWrapper = styled.div`
     h2 {
       margin: 0 0 0.5em;
       text-align: left;
+      font-size: 170%;
+    }
+
+    p {
+      font-size: 100%;
     }
   }
 `;
 const EasyInstructionsImgAndTextWrapper = styled.div`
   align-items: center;
   display: flex;
+  width: 100%;
 `;
 
 const EasyInstructions1Img = styled(Img)`
@@ -167,7 +173,12 @@ const EasyInstructions1Img = styled(Img)`
   margin-right: 2vw;
   max-width: 117px;
   width: 22vw;
+
+  @media screen and (min-width: 600px) {
+    margin-left: 0;
+  }
 `;
+
 const EasyInstructions2Img = styled(Img)`
   max-width: 178px;
   margin-left: 3vw;
