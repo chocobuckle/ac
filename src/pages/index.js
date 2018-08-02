@@ -153,13 +153,12 @@ const EasyInstructionsWrapper = styled.div`
   }
 
   @media screen and (min-width: 600px) {
-    align-items: flex-start;
     width: 40%;
     margin-left: 4%;
 
     h2 {
       margin: 0 0 0.5em;
-      text-align: left;
+      align-self: flex-start;
       font-size: 170%;
     }
 
@@ -170,6 +169,7 @@ const EasyInstructionsWrapper = styled.div`
 `;
 const EasyInstructionsImgAndTextWrapper = styled.div`
   align-items: center;
+  justify-content: center;
   display: flex;
 `;
 
