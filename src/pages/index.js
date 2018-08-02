@@ -291,8 +291,18 @@ const ThreeInhalers = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   width: 90%;
+  position: relative;
+  left: 0.4em;
+
   figcaption {
     margin-top: 1.75vw;
+  }
+`;
+
+const ThreeInhalers2 = ThreeInhalers.extend`
+  left: 2.1em;
+  @media screen and (min-width: 800px) {
+    left: 1.4em;
   }
 `;
 
@@ -346,7 +356,7 @@ const Inhaler6Img = styled(Img)`
 `;
 
 const BucketBorder = styled.div`
-  border: 0.5vw solid #007fc8;
+  border: 0.4vw solid #007fc8;
   border-top: none;
   height: 7vw;
   margin-top: -10.25vw;
@@ -607,7 +617,7 @@ class IndexPage extends Component {
           <H3 style={{ color: '#858585' }}>Anti Static Valved Holding Chamber (VHC)</H3>
           <SixInhalerImgsWrapper>
             <InhalerAndBucketBorderWrapper style={{ marginBottom: '5vw' }}>
-              <ThreeInhalers style={{ position: 'relative', left: '1vw' }}>
+              <ThreeInhalers>
                 <figure>
                   <Inhaler1Img sizes={inhaler1.sizes} />
                   <Figcaption style={{ right: '15.5%' }}>
@@ -631,7 +641,7 @@ class IndexPage extends Component {
               <AdultOrChild>CHILD</AdultOrChild>
             </InhalerAndBucketBorderWrapper>
             <InhalerAndBucketBorderWrapper>
-              <ThreeInhalers style={{ position: 'relative', left: '5vw' }}>
+              <ThreeInhalers2>
                 <figure>
                   <Inhaler4Img sizes={inhaler4.sizes} />
                   <Figcaption style={{ right: '12.75%' }}>
@@ -652,7 +662,7 @@ class IndexPage extends Component {
                     Large<br />Mask
                   </Figcaption>
                 </figure>
-              </ThreeInhalers>
+              </ThreeInhalers2>
               <BucketBorder2 />
               <AdultOrChild>ADULT</AdultOrChild>
             </InhalerAndBucketBorderWrapper>
