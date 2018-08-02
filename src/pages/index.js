@@ -70,7 +70,7 @@ const VideoButtonWrapper = styled.div`
 
 const VideoButton = styled.button`
   background: linear-gradient(90deg, rgba(0, 72, 153, 1) 15.05%, rgba(0, 127, 200, 1) 100%);
-  ${'' /* font-size: 4vw; */} margin: 0 1.5vw;
+  margin: 0 1.5vw;
   padding: 1.5vw 1.75vw;
   display: flex;
   align-items: center;
@@ -85,6 +85,19 @@ const VideoButton = styled.button`
     position: relative;
     top: 0.25vw;
     margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 625px) {
+    margin: 0 1.5vw;
+    padding: 1.5vw 1.75vw;
+
+    span {
+      color: #fff;
+      font-size: 3.5vw;
+      position: relative;
+      top: 0.25vw;
+      margin-bottom: 0;
+    }
   }
 `;
 
@@ -178,6 +191,7 @@ const EasyInstructionsWrapper = styled.div`
     color: #007fc8;
     font-weight: 400;
     margin: 0.5em auto;
+    font-size: 6.75vw;
   }
 
   p {
