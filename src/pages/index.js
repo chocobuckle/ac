@@ -146,12 +146,14 @@ const EasyInstructionsImgAndTextWrapper = styled.div`
   align-items: center;
   display: flex;
 `;
-const easyInstructions1ImgStyle = {
-  marginLeft: '4vw',
-  marginRight: '2vw',
-  maxWidth: '117px',
-  width: '22vw'
-};
+
+const EasyInstructions1Img = styled(Img)`
+  margin-left: 4vw;
+  margin-right: 2vw;
+  max-width: 117px;
+  width: 22vw;
+`;
+
 const easyInstructions2ImgStyle = {
   maxWidth: '178px',
   marginLeft: '3vw',
@@ -393,7 +395,7 @@ class IndexPage extends Component {
               as 1-2-3
             </H2>
             <EasyInstructionsImgAndTextWrapper>
-              <Img sizes={easyInstructions1.sizes} style={{ ...easyInstructions1ImgStyle }} />
+              <EasyInstructions1Img sizes={easyInstructions1.sizes} />
               <Text>Shake inhaler and remove cap.</Text>
             </EasyInstructionsImgAndTextWrapper>
             <EasyInstructionsImgAndTextWrapper
