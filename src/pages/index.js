@@ -404,6 +404,11 @@ const AdultOrChild = H3.extend`
   font-weight: 600;
   text-align: center;
   margin-top: 0.5em;
+  margin-bottom: 0;
+
+  @media screen and (min-width: 800px) {
+    font-size: 1.5em;
+  }
 `;
 const Footnotes = ContentWrapper.extend`
   text-align: left;
