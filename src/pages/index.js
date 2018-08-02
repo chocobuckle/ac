@@ -210,6 +210,11 @@ const EasyInstructions3Img = styled(Img)`
 
 const FlowVuLogoImg = styled(Img)`
   width: 26vw;
+
+  @media screen and (min-width: 600px) {
+    width: 5em;
+    margin-left: 0.5em;
+  }
 `;
 
 const BubblesAndBanner = styled.div`
@@ -465,7 +470,7 @@ class IndexPage extends Component {
               </Text>
             </EasyInstructionsImgAndTextWrapper>
             <EasyInstructionsImgAndTextWrapper
-              style={{ alignItems: 'flex-start', marginTop: '2em' }}>
+              style={{ alignItems: 'flex-start', justifyContent: 'center',  marginTop: '2em' }}>
               <Text>
                 The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation Indicator moves as
                 you inhale and helps provide visual assurance of correct use and medication
