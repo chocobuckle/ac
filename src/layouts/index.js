@@ -113,7 +113,7 @@ export const query = graphql`
       }
     }
     flowVu: imageSharp(id: { regex: "/home/flow_vu_large.png/" }) {
-      sizes(maxWidth: 263) {
+      sizes(maxWidth: 175) {
         src
         srcSet
         srcWebp

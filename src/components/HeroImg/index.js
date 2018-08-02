@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 
 const HeroImgAndTextWrapper = styled.div`
   position: relative;
+  width: 100%;
 `;
 
 const HeroTextWrapper = styled.div`
@@ -43,13 +44,13 @@ const HeroText = styled.p`
 `;
 
 const flowVuImgStyle = {
-  bottom: '34.5vw',
-  left: '72.25vw',
-  maxWidth: '263px',
+  bottom: '32.9%',
+  left: '72.25%',
+  maxWidth: '175px',
   position: 'absolute',
-  width: '17.5vw',
+  width: '17.5%',
   zIndex: 2
-};
+}
 
 function HeroImg({ backgroundImgSizes, flowVuSizes, location }) {
   return (
