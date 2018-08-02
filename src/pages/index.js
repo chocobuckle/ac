@@ -38,6 +38,21 @@ const Macbook = styled.div`
   margin-top: -54vw;
   position: relative;
   z-index: 1;
+
+  @media screen and (min-width: 996px) {
+    margin-top: -538px;
+  }
+`;
+
+const MacbookImg = styled(Img)`
+  margin-top: 26.5vw;
+  width: 86vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 996px) {
+    width: 856.547px;
+  }
 `;
 
 const spinnerStyle = {
@@ -486,14 +501,8 @@ class IndexPage extends Component {
       <IndexWrapper>
         <Macbook>
           <ContentWrapper>
-            <Img
+            <MacbookImg
               sizes={macbook.sizes}
-              style={{
-                marginTop: '26.5vw',
-                width: '86vw',
-                marginLeft: 'auto',
-                marginRight: 'auto'
-              }}
             />
             {!videoHasLoaded && (
               <img src={spinner} alt="loading spinner" style={{ ...spinnerStyle }} />
