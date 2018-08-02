@@ -303,6 +303,7 @@ const ThreeInhalers2 = ThreeInhalers.extend`
   left: 2.1em;
   @media screen and (min-width: 800px) {
     left: 1.4em;
+    margin-top: -0.2em;
   }
 `;
 
@@ -382,10 +383,10 @@ const BucketBorder = styled.div`
 `;
 
 const BucketBorder2 = BucketBorder.extend`
-  @media screen and (min-width: 800px) {
+  ${'' /* @media screen and (min-width: 800px) {
     position: relative;
     bottom: 0.2em;
-  }
+  } */}
 `;
 const AdultOrChild = H3.extend`
   color: #007fc8;
