@@ -36,7 +36,7 @@ function Overview({ data, location }) {
         <p style='margin-bottom: 0;'>
           Watch <span style='font-weight: 600;'>Seeing Is the Difference</span> for a behind-the-scenes look at
           how
-          <span> AeroChamber Plus®</span> is designed, manufactured, and tested:
+          <span style='color: #007fc8; font-weight: 600;'> AeroChamber Plus®</span> is designed, manufactured, and tested:
         </p>"
         macbook={data.macbook}
         bpaAndDishwasherSafe={data.bpaAndDishwasherSafe}

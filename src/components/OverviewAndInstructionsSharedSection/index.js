@@ -6,8 +6,12 @@ import VideoPlayer from 'components/VideoPlayer';
 import spinner from 'images/shared/spinner.gif';
 
 const H2Wrapper = styled.div`
-  margin: 1em auto;
+  margin: 21.75vw auto 1em;
   text-align: center;
+
+  @media screen and (min-width: 996px) {
+    margin-top: 216.63px;
+  }
 `;
 
 const Spinner = styled.img`
@@ -60,6 +64,18 @@ const Gradient = styled.div`
   z-index: 1;
 `;
 
+const TextWrapper = styled.div`
+  @media screen and (min-width: 600px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 840px) {
+    width: 611.5px;
+    margin: 0 auto;
+  }
+`;
+
 class OverviewAndInstructionsSharedSection extends Component {
   state = {
     videoHasLoaded: false
@@ -85,11 +101,11 @@ class OverviewAndInstructionsSharedSection extends Component {
       <div>
         <Gradient pathname={pathname}>
           <ContentWrapper>
-            <H2Wrapper style={{ marginTop: '21.75vw' }}>
+            <H2Wrapper>
               <H2 style={{ marginBottom: '0.25em' }}>{headerFirstLine}</H2>
               <H2>{headerSecondLine}</H2>
             </H2Wrapper>
-            <div
+            <TextWrapper
               style={{ textAlign: 'center' }}
               dangerouslySetInnerHTML={{ __html: subHeaderText }}
             />

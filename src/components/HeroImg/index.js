@@ -14,6 +14,11 @@ const HeroTextWrapper = styled.div`
   p:nth-child(2) {
     font-style: italic;
   }
+
+  @media screen and (min-width: 996px) {
+    left: 49.8px;
+    top: 209.16px;
+  }
 `;
 
 const HeroText = styled.p`
@@ -30,6 +35,10 @@ const HeroText = styled.p`
 
   @media screen and (min-width: 780px) {
     line-height: 1.175em;
+  }
+
+  @media screen and (min-width: 996px) {
+    font-size: 44.1px;
   }
 `;
 
