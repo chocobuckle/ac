@@ -312,6 +312,10 @@ const BucketBorder = styled.div`
   @media screen and (min-width: 700px) {
     height: 9.25vw;
   }
+
+  @media screen and (min-width: 800px) {
+    height: 9.25vw;
+  }
 `;
 const AdultOrChild = H3.extend`
   color: #007fc8;
@@ -537,7 +541,7 @@ class IndexPage extends Component {
           </WhiteBanner>
         </BubblesAndBanner>
         <SixInhalers>
-          <H2 style={{ color: '#007FC8', marginTop: '1em', marginBottom: 0 }}>
+          <H2 style={{ color: '#007FC8', marginTop: '0.5em', marginBottom: 0 }}>
             <em>AeroChamber Plus Flow-Vu</em>
           </H2>
           <H3 style={{ color: '#858585' }}>Anti Static Valved Holding Chamber (VHC)</H3>
