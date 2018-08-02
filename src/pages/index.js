@@ -392,12 +392,6 @@ const BucketBorder = styled.div`
   }
 `;
 
-const BucketBorder2 = BucketBorder.extend`
-  ${'' /* @media screen and (min-width: 800px) {
-    position: relative;
-    bottom: 0.2em;
-  } */}
-`;
 const AdultOrChild = H3.extend`
   color: #007fc8;
   font-size: 4.4vw;
@@ -415,11 +409,22 @@ const Footnotes = ContentWrapper.extend`
   padding: 0 0;
 `;
 
+const FootnotesHeaderText = Text.extend`
+  @media screen and (min-width: 600px) {
+    font-size: 1.05rem;
+  }
+`;
+
 const FootnoteSmallPrint = Text.extend`
   font-weight: 400;
   font-size: 2.6vw;
   margin-bottom: 0.3em;
   line-height: 1.45em;
+
+  @media screen and (min-width: 600px) {
+    font-size: 0.65rem;
+    line-height: 1.7em;
+  }
 `;
 
 class IndexPage extends Component {
@@ -679,13 +684,13 @@ class IndexPage extends Component {
                   </Figcaption>
                 </InhalerFigure>
               </ThreeInhalers2>
-              <BucketBorder2 />
+              <BucketBorder />
               <AdultOrChild>ADULT</AdultOrChild>
             </InhalerAndBucketBorderWrapper2>
           </SixInhalerImgsWrapper>
         </SixInhalers>
         <Footnotes>
-          <Text>Children should transition to a mouthpiece around the age of 5</Text>
+          <FootnotesHeaderText>Children should transition to a mouthpiece around the age of 5</FootnotesHeaderText>
           <FootnoteSmallPrint>
             <b>1.</b> McIvor et al. Optimizing the Delivery of Inhaled Medication for Respiratory
             Patients: The Role of Valved Holding Chambers.
@@ -700,7 +705,7 @@ class IndexPage extends Component {
               http://ginasthma.org/2018-gina-report-global-strategy-for-asthma-management-and-prevention/
             </a>
           </FootnoteSmallPrint>
-          <FootnoteSmallPrint>
+          <FootnoteSmallPrint style={{ marginBottom: 0 }}>
             <b>3.</b> Plaza et al. Medical Personnel and Patient Skill in the Use of Metered Dose
             Inhalers: A Multicentric Study.
           </FootnoteSmallPrint>
