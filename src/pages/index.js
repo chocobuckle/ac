@@ -252,11 +252,20 @@ const WhiteBannerChildImgFlexWrapper = styled.div`
   margin: 0 auto;
   padding: 0.5em 0;
   width: 80vw;
+
+  @media screen and (min-width: 600px) {
+    padding: 0.75em 0;
+  }
 `;
-const whiteBannerChildImgStyle = {
-  maxWidth: '135px',
-  width: '20vw'
-};
+
+const WhiteBannerChildImg = styled(Img)`
+  max-width: 135px;
+  width: 20vw;
+
+  @media screen and (min-width: 600px) {
+    width: 11vw;
+  }
+`;
 
 const SixInhalers = ContentWrapper.extend``;
 const SixInhalerImgsWrapper = styled.div`
@@ -503,16 +512,15 @@ class IndexPage extends Component {
           <Img sizes={bubblesBG.sizes} />
           <WhiteBanner>
             <WhiteBannerChildImgFlexWrapper>
-              <Img
+              <WhiteBannerChildImg
                 sizes={dishwasherSafe.sizes}
                 style={{
-                  ...whiteBannerChildImgStyle,
                   postion: 'relative',
-                  top: '1vw'
+                  top: '0.25em'
                 }}
               />
-              <Img sizes={replace12Months.sizes} style={{ ...whiteBannerChildImgStyle }} />
-              <Img sizes={bpaFree.sizes} style={{ ...whiteBannerChildImgStyle }} />
+              <WhiteBannerChildImg sizes={replace12Months.sizes} />
+              <WhiteBannerChildImg sizes={bpaFree.sizes} />
             </WhiteBannerChildImgFlexWrapper>
           </WhiteBanner>
         </BubblesAndBanner>
