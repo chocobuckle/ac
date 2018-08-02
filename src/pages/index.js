@@ -18,8 +18,14 @@ const Figcaption = styled.figcaption`
   position: relative;
 
   @media screen and (min-width: 800px) {
-    font-size: 1.625vw;
+    font-size: 1em;
   }
+`;
+
+const InhalerFigure = styled.figure`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Macbook = styled.div`
@@ -279,11 +285,15 @@ const SixInhalerImgsWrapper = styled.div`
 const InhalerAndBucketBorderWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 5vw;
   width: 100%;
   @media screen and (min-width: 800px) {
     width: 48%;
     margin: 0 auto;
   }
+`;
+const InhalerAndBucketBorderWrapper2 = InhalerAndBucketBorderWrapper.extend`
+  margin-bottom: 0;
 `;
 const ThreeInhalers = styled.div`
   align-items: flex-end;
@@ -617,56 +627,56 @@ class IndexPage extends Component {
           </H2>
           <H3 style={{ color: '#858585' }}>Anti Static Valved Holding Chamber (VHC)</H3>
           <SixInhalerImgsWrapper>
-            <InhalerAndBucketBorderWrapper style={{ marginBottom: '5vw' }}>
+            <InhalerAndBucketBorderWrapper>
               <ThreeInhalers>
-                <figure>
+                <InhalerFigure>
                   <Inhaler1Img sizes={inhaler1.sizes} />
                   <Figcaption style={{ right: '15.5%' }}>
                     Small<br />Mask
                   </Figcaption>
-                </figure>
-                <figure>
+                </InhalerFigure>
+                <InhalerFigure>
                   <Inhaler2Img sizes={inhaler2.sizes} />
                   <Figcaption style={{ right: '7.5%' }}>
                     Medium<br />Mask
                   </Figcaption>
-                </figure>
-                <figure>
+                </InhalerFigure>
+                <InhalerFigure>
                   <Inhaler3Img sizes={inhaler3.sizes} />
-                  <Figcaption style={{ right: '11%' }}>
+                  <Figcaption style={{ right: '8%' }}>
                     Youth<br />Mouthpiece
                   </Figcaption>
-                </figure>
+                </InhalerFigure>
               </ThreeInhalers>
               <BucketBorder />
               <AdultOrChild>CHILD</AdultOrChild>
             </InhalerAndBucketBorderWrapper>
-            <InhalerAndBucketBorderWrapper>
+            <InhalerAndBucketBorderWrapper2>
               <ThreeInhalers2>
-                <figure>
+                <InhalerFigure>
                   <Inhaler4Img sizes={inhaler4.sizes} />
                   <Figcaption style={{ right: '12.75%' }}>
                     Mouthpiece
                     <br />
                     <br />
                   </Figcaption>
-                </figure>
-                <figure>
+                </InhalerFigure>
+                <InhalerFigure>
                   <Inhaler5Img sizes={inhaler5.sizes} />
                   <Figcaption style={{ right: '11.75%' }}>
                     Small<br />Mask
                   </Figcaption>
-                </figure>
-                <figure>
+                </InhalerFigure>
+                <InhalerFigure>
                   <Inhaler6Img sizes={inhaler6.sizes} />
                   <Figcaption style={{ right: '9.5%' }}>
                     Large<br />Mask
                   </Figcaption>
-                </figure>
+                </InhalerFigure>
               </ThreeInhalers2>
               <BucketBorder2 />
               <AdultOrChild>ADULT</AdultOrChild>
-            </InhalerAndBucketBorderWrapper>
+            </InhalerAndBucketBorderWrapper2>
           </SixInhalerImgsWrapper>
         </SixInhalers>
         <Footnotes>
