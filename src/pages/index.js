@@ -171,11 +171,6 @@ const EasyInstructionsWrapper = styled.div`
 const EasyInstructionsImgAndTextWrapper = styled.div`
   align-items: center;
   display: flex;
-  @media screen and (min-width: 600px) {
-    justify-content: flex-start;
-    width: 100%;
-    position: relative;
-  }
 `;
 
 const EasyInstructions1Img = styled(Img)`
@@ -208,8 +203,8 @@ const EasyInstructions3Img = styled(Img)`
   width: 40vw;
 
   @media screen and (min-width: 600px) {
-    width: 7em;
-    position: absolute;
+    width: 6.5em;
+    margin-top: -4%;
   }
 `;
 
