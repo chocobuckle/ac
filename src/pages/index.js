@@ -81,18 +81,18 @@ const BetterControlTextAndTorsoImgWrapper = styled.div`
   flex-direction: column;
 
   @media screen and (min-width: 600px) {
-    width: 65%;
+    width: 60%;
 
     h2 {
       font-size: 125%;
     }
 
     h3 {
-      font-size: 115%;
+      font-size: 110%;
     }
 
     p {
-      font-size: 100%;
+      font-size: 0.75em;
     }
   }
 `;
@@ -131,7 +131,7 @@ const InhalerImgCaption = Text.extend`
   @media screen and (min-width: 600px) {
     && {
       margin-top: 1.5%;
-      font-size: 80%;
+      font-size: 0.65em;
     }
   }
 `;
@@ -147,9 +147,15 @@ const EasyInstructionsWrapper = styled.div`
     margin: 0.5em auto;
   }
 
+  p {
+    margin-bottom: 0;
+    width: 50%;
+  }
+
   @media screen and (min-width: 600px) {
     align-items: flex-start;
-    width: 35%;
+    width: 40%;
+    margin-left: 4%;
 
     h2 {
       margin: 0 0 0.5em;
@@ -158,14 +164,18 @@ const EasyInstructionsWrapper = styled.div`
     }
 
     p {
-      font-size: 100%;
+      font-size: 0.75em;
     }
   }
 `;
 const EasyInstructionsImgAndTextWrapper = styled.div`
   align-items: center;
   display: flex;
-  width: 100%;
+  @media screen and (min-width: 600px) {
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+  }
 `;
 
 const EasyInstructions1Img = styled(Img)`
@@ -176,6 +186,7 @@ const EasyInstructions1Img = styled(Img)`
 
   @media screen and (min-width: 600px) {
     margin-left: 0;
+    width: 3em;
   }
 `;
 
@@ -183,12 +194,25 @@ const EasyInstructions2Img = styled(Img)`
   max-width: 178px;
   margin-left: 3vw;
   width: 32.5vw;
+
+  @media screen and (min-width: 600px) {
+    width: 4.5em;
+    margin-left: 0;
+    margin-top: 1.5em;
+  }
 `;
+
 const EasyInstructions3Img = styled(Img)`
   margin-right: 2.5vw;
   margin-top: 2vw;
   width: 40vw;
+
+  @media screen and (min-width: 600px) {
+    width: 7em;
+    position: absolute;
+  }
 `;
+
 const FlowVuLogoImg = styled(Img)`
   width: 26vw;
 `;
