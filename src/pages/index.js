@@ -55,13 +55,13 @@ const MacbookImg = styled(Img)`
   }
 `;
 
-const spinnerStyle = {
-  width: '30vw',
-  position: 'absolute',
-  zIndex: 1,
-  left: '35vw',
-  bottom: '21.5vw'
-};
+const LoadingSpinner = styled.img`
+  width: 30%;
+  position: absolute;
+  z-index: 1;
+  left: 35%;
+  bottom: 26.25%;
+`;
 
 const VideoButtonWrapper = styled.div`
   display: flex;
@@ -475,7 +475,7 @@ class IndexPage extends Component {
   };
 
   render() {
-    const { data } = this.props;
+    const { data, location } = this.props;
     const {
       macbook,
       playButton,
@@ -505,7 +505,7 @@ class IndexPage extends Component {
               sizes={macbook.sizes}
             />
             {!videoHasLoaded && (
-              <img src={spinner} alt="loading spinner" style={{ ...spinnerStyle }} />
+              <LoadingSpinner location={location.pathname} src={spinner} alt="loading spinner" />
             )}
             <VideoPlayer
               activeVideoURL={activeVideoURL}
