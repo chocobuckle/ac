@@ -291,12 +291,30 @@ const ThreeInhalers = styled.div`
   }
 `;
 
-const inhaler1ImgStyle = { maxWidth: '138px', width: '20vw' };
-const inhaler2ImgStyle = { maxWidth: '173px', width: '24.5vw' };
-const inhaler3ImgStyle = { maxWidth: '117px', width: '16.5vw' };
-const inhaler4ImgStyle = { maxWidth: '120px', width: '16.5vw' };
-const inhaler5ImgStyle = { maxWidth: '178px', width: '23vw' };
-const inhaler6ImgStyle = { maxWidth: '222px', width: '28.5vw' };
+const Inhaler1Img = styled(Img)`
+  max-width: 138px;
+  width: 20vw;
+`;
+const Inhaler2Img = styled(Img)`
+  max-width: 173px;
+  width: 24.5vw;
+`;
+const Inhaler3Img = styled(Img)`
+  max-width: 117px;
+  width: 16.5vw;
+`;
+const Inhaler4Img = styled(Img)`
+  max-width: 120px;
+  width: 16.5vw;
+`;
+const Inhaler5Img = styled(Img)`
+  max-width: 178px;
+  width: 23vw;
+`;
+const Inhaler6Img = styled(Img)`
+  max-width: 222px;
+  width: 28.5vw;
+`;
 
 const BucketBorder = styled.div`
   border: 0.5vw solid #007fc8;
@@ -552,19 +570,19 @@ class IndexPage extends Component {
             <InhalerAndBucketBorderWrapper style={{ marginBottom: '5vw' }}>
               <ThreeInhalers style={{ position: 'relative', left: '1vw' }}>
                 <figure>
-                  <Img sizes={inhaler1.sizes} style={{ ...inhaler1ImgStyle }} />
+                  <Inhaler1Img sizes={inhaler1.sizes} />
                   <Figcaption style={{ right: '15.5%' }}>
                     Small<br />Mask
                   </Figcaption>
                 </figure>
                 <figure>
-                  <Img sizes={inhaler2.sizes} style={{ ...inhaler2ImgStyle }} />
+                  <Inhaler2Img sizes={inhaler2.sizes} />
                   <Figcaption style={{ right: '7.5%' }}>
                     Medium<br />Mask
                   </Figcaption>
                 </figure>
                 <figure>
-                  <Img sizes={inhaler3.sizes} style={{ ...inhaler3ImgStyle }} />
+                  <Inhaler3Img sizes={inhaler3.sizes} />
                   <Figcaption style={{ right: '11%' }}>
                     Youth<br />Mouthpiece
                   </Figcaption>
@@ -576,7 +594,7 @@ class IndexPage extends Component {
             <InhalerAndBucketBorderWrapper>
               <ThreeInhalers style={{ position: 'relative', left: '5vw' }}>
                 <figure>
-                  <Img sizes={inhaler4.sizes} style={{ ...inhaler4ImgStyle }} />
+                  <Inhaler4Img sizes={inhaler4.sizes} />
                   <Figcaption style={{ right: '12.75%' }}>
                     Mouthpiece
                     <br />
@@ -584,13 +602,13 @@ class IndexPage extends Component {
                   </Figcaption>
                 </figure>
                 <figure>
-                  <Img sizes={inhaler5.sizes} style={{ ...inhaler5ImgStyle }} />
+                  <Inhaler5Img sizes={inhaler5.sizes} />
                   <Figcaption style={{ right: '11.75%' }}>
                     Small<br />Mask
                   </Figcaption>
                 </figure>
                 <figure>
-                  <Img sizes={inhaler6.sizes} style={{ ...inhaler6ImgStyle }} />
+                  <Inhaler6Img sizes={inhaler6.sizes} />
                   <Figcaption style={{ right: '9.5%' }}>
                     Large<br />Mask
                   </Figcaption>
