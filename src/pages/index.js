@@ -439,8 +439,8 @@ class IndexPage extends Component {
             </TorsoWrapper>
             <TorsoImgWrapper>
               <InhalingRedImgWrapper>
-                <Img sizes={inhalingRed.sizes} />
-                <InhalerImgCaption style={{ marginBottom: 0 }}>Inhaler alone</InhalerImgCaption>
+                <Img sizes={inhalingRed.sizes} style={{ marginBottom: 0 }} />
+                <InhalerImgCaption>Inhaler alone</InhalerImgCaption>
               </InhalingRedImgWrapper>
               <InhalingWithLogoImgWrapper>
                 <Img sizes={inhalingWithLogo.sizes} />
@@ -458,7 +458,7 @@ class IndexPage extends Component {
                 <b>Easy </b>
               </em>as 1-2-3
             </H2>
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%'}}>
+            <div>
               <EasyInstructionsImgAndTextWrapper>
                 <EasyInstructions1Img sizes={easyInstructions1.sizes} />
                 <Text>Shake inhaler and remove cap.</Text>
