@@ -16,6 +16,10 @@ const Figcaption = styled.figcaption`
   font-weight: 100;
   font-size: 3.25vw;
   position: relative;
+
+  @media screen and (min-width: 800px) {
+    font-size: 1.625vw;
+  }
 `;
 
 const Macbook = styled.div`
@@ -294,26 +298,50 @@ const ThreeInhalers = styled.div`
 const Inhaler1Img = styled(Img)`
   max-width: 138px;
   width: 20vw;
+
+  @media screen and (min-width: 800px) {
+    width: 10vw;
+  }
 `;
 const Inhaler2Img = styled(Img)`
   max-width: 173px;
   width: 24.5vw;
+
+  @media screen and (min-width: 800px) {
+    width: 12.25vw;
+  }
 `;
 const Inhaler3Img = styled(Img)`
   max-width: 117px;
   width: 16.5vw;
+
+  @media screen and (min-width: 800px) {
+    width: 8.25vw;
+  }
 `;
 const Inhaler4Img = styled(Img)`
   max-width: 120px;
   width: 16.5vw;
+
+  @media screen and (min-width: 800px) {
+    width: 8.25vw;
+  }
 `;
 const Inhaler5Img = styled(Img)`
   max-width: 178px;
   width: 23vw;
+
+  @media screen and (min-width: 800px) {
+    width: 11.5vw;
+  }
 `;
 const Inhaler6Img = styled(Img)`
   max-width: 222px;
   width: 28.5vw;
+
+  @media screen and (min-width: 800px) {
+    width: 14.25vw;
+  }
 `;
 
 const BucketBorder = styled.div`
@@ -321,6 +349,7 @@ const BucketBorder = styled.div`
   border-top: none;
   height: 7vw;
   margin-top: -10.25vw;
+  width: 100%;
 
   @media screen and (min-width: 500px) {
     height: 7.5vw;
@@ -336,6 +365,8 @@ const BucketBorder = styled.div`
 
   @media screen and (min-width: 800px) {
     height: 9.25vw;
+    border: 0.3vw solid #007fc8;
+    border-top: none;
   }
 `;
 const AdultOrChild = H3.extend`
