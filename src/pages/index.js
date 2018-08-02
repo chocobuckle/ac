@@ -370,6 +370,13 @@ const BucketBorder = styled.div`
     border-top: none;
   }
 `;
+
+const BucketBorder2 = BucketBorder.extend`
+  @media screen and (min-width: 800px) {
+    position: relative;
+    bottom: 0.2em;
+  }
+`;
 const AdultOrChild = H3.extend`
   color: #007fc8;
   font-size: 4.4vw;
@@ -646,7 +653,7 @@ class IndexPage extends Component {
                   </Figcaption>
                 </figure>
               </ThreeInhalers>
-              <BucketBorder />
+              <BucketBorder2 />
               <AdultOrChild>ADULT</AdultOrChild>
             </InhalerAndBucketBorderWrapper>
           </SixInhalerImgsWrapper>
