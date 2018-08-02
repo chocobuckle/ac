@@ -48,9 +48,9 @@ const DesktopLogoWrapper = styled.h1`
     display: block;
     background: rgba(0, 72, 153, 1);
     position: absolute; /* change to absolute */
-    padding: 0.35em 0.125em 0.4em;
+    padding: 0.35em 0.125em 0.375em;
     left: 1em;
-    top: -0.15em;
+    top: -0.16em;
   }
 `;
 
@@ -58,7 +58,9 @@ const DesktopLogo = styled(Img)``;
 
 const desktopLogoStyle = {
   maxWidth: '300px',
-  width: '22vw'
+  width: '22vw',
+  position: 'relative',
+  top: '0.025em'
 };
 
 const List = styled.ul`
