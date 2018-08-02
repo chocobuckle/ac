@@ -95,6 +95,14 @@ const BetterControlTextAndTorsoImgWrapper = styled.div`
       font-size: 0.75em;
     }
   }
+
+  @media screen and (min-width: 750px) {
+    width: 65%;
+  }
+
+  @media screen and (min-width: 900px) {
+    width: 70%;
+  }
 `;
 const TorsoWrapper = styled.div`
   display: flex;
@@ -165,6 +173,14 @@ const EasyInstructionsWrapper = styled.div`
     p {
       font-size: 0.75em;
     }
+  }
+
+  @media screen and (min-width: 750px) {
+    width: 35%;
+  }
+
+  @media screen and (min-width: 900px) {
+    width: 30%;
   }
 `;
 const EasyInstructionsImgAndTextWrapper = styled.div`
@@ -424,11 +440,11 @@ class IndexPage extends Component {
             <TorsoImgWrapper>
               <InhalingRedImgWrapper>
                 <Img sizes={inhalingRed.sizes} />
-                <InhalerImgCaption>Inhaler alone</InhalerImgCaption>
+                <InhalerImgCaption style={{ marginBottom: 0 }}>Inhaler alone</InhalerImgCaption>
               </InhalingRedImgWrapper>
               <InhalingWithLogoImgWrapper>
                 <Img sizes={inhalingWithLogo.sizes} />
-                <InhalerImgCaption style={{ marginLeft: '7%' }}>
+                <InhalerImgCaption style={{ marginLeft: '7%', marginBottom: 0 }}>
                   Inhaler with{' '}
                   <span style={{ color: '#007fc8', fontWeight: 'bold' }}>AeroChamber Plus </span>Brand
                   of Chamber
@@ -442,42 +458,45 @@ class IndexPage extends Component {
                 <b>Easy </b>
               </em>as 1-2-3
             </H2>
-            <EasyInstructionsImgAndTextWrapper>
-              <EasyInstructions1Img sizes={easyInstructions1.sizes} />
-              <Text>Shake inhaler and remove cap.</Text>
-            </EasyInstructionsImgAndTextWrapper>
-            <EasyInstructionsImgAndTextWrapper
-              style={{
-                position: 'relative',
-                marginTop: '-0.9em'
-              }}>
-              <Text>Insert inhaler into chamber.</Text>
-              <EasyInstructions2Img sizes={easyInstructions2.sizes} />
-            </EasyInstructionsImgAndTextWrapper>
-            <EasyInstructionsImgAndTextWrapper style={{ alignItems: 'center', marginTop: '0.5em' }}>
-              <EasyInstructions3Img sizes={easyInstructions3.sizes} />
-              <Text style={{ marginBottom: 0 }}>
-                Press inhaler and inhale slowly and deeply, holding your breath for 5-10 seconds.
-                <span
-                  style={{
-                    display: 'block',
-                    fontStyle: 'italic',
-                    fontWeight: 'bold',
-                    margin: '0.125em auto'
-                  }}>
-                  OR
-                </span>Press inhaler and breathe in and out through the chamber for 2-3 breaths.
-              </Text>
-            </EasyInstructionsImgAndTextWrapper>
-            <EasyInstructionsImgAndTextWrapper
-              style={{ alignItems: 'flex-start', justifyContent: 'center',  marginTop: '2em' }}>
-              <Text>
-                The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation Indicator moves as
-                you inhale and helps provide visual assurance of correct use and medication
-                delivery.
-              </Text>
-              <FlowVuLogoImg sizes={flowVuLogo.sizes} />
-            </EasyInstructionsImgAndTextWrapper>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%'}}>
+              <EasyInstructionsImgAndTextWrapper>
+                <EasyInstructions1Img sizes={easyInstructions1.sizes} />
+                <Text>Shake inhaler and remove cap.</Text>
+              </EasyInstructionsImgAndTextWrapper>
+              <EasyInstructionsImgAndTextWrapper
+                style={{
+                  position: 'relative',
+                  marginTop: '-0.9em'
+                }}>
+                <Text>Insert inhaler into chamber.</Text>
+                <EasyInstructions2Img sizes={easyInstructions2.sizes} />
+              </EasyInstructionsImgAndTextWrapper>
+              <EasyInstructionsImgAndTextWrapper
+                style={{ alignItems: 'center', marginTop: '0.5em' }}>
+                <EasyInstructions3Img sizes={easyInstructions3.sizes} />
+                <Text style={{ marginBottom: 0 }}>
+                  Press inhaler and inhale slowly and deeply, holding your breath for 5-10 seconds.
+                  <span
+                    style={{
+                      display: 'block',
+                      fontStyle: 'italic',
+                      fontWeight: 'bold',
+                      margin: '0.125em auto'
+                    }}>
+                    OR
+                  </span>Press inhaler and breathe in and out through the chamber for 2-3 breaths.
+                </Text>
+              </EasyInstructionsImgAndTextWrapper>
+              <EasyInstructionsImgAndTextWrapper
+                style={{ alignItems: 'flex-start', justifyContent: 'center', marginTop: '2em' }}>
+                <Text>
+                  The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation Indicator moves
+                  as you inhale and helps provide visual assurance of correct use and medication
+                  delivery.
+                </Text>
+                <FlowVuLogoImg sizes={flowVuLogo.sizes} />
+              </EasyInstructionsImgAndTextWrapper>
+            </div>
           </EasyInstructionsWrapper>
         </InhalerTips>
         <BubblesAndBanner>
