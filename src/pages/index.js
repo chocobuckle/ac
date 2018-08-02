@@ -127,6 +127,13 @@ const InhalingWithLogoImgWrapper = styled.div`
 `;
 const InhalerImgCaption = Text.extend`
   margin-top: 0.75vw;
+
+  @media screen and (min-width: 600px) {
+    && {
+      margin-top: 1.5%;
+      font-size: 80%;
+    }
+  }
 `;
 
 const EasyInstructionsWrapper = styled.div`
