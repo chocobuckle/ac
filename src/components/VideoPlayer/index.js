@@ -31,7 +31,7 @@ function VideoPlayer({ activeVideoURL, handleVideoLoading }) {
         style={{
           position: 'absolute',
           left: 0,
-          bottom: activeVideoURL ? '24.575vw' : '20.625vw'
+          bottom: activeVideoURL ? '58.9%' : '20.625vw'
         }}
       />
     </VideoPlayerWrapper>
