@@ -382,7 +382,12 @@ const Inhaler1Img = styled(Img)`
   @media screen and (min-width: 800px) {
     width: 10vw;
   }
+
+  @media screen and (min-width: 996px) {
+    width: 99.5938px;
+  }
 `;
+
 const Inhaler2Img = styled(Img)`
   max-width: 173px;
   width: 24.5vw;
@@ -390,7 +395,12 @@ const Inhaler2Img = styled(Img)`
   @media screen and (min-width: 800px) {
     width: 12.25vw;
   }
+
+  @media screen and (min-width: 996px) {
+    width: 122px;
+  }
 `;
+
 const Inhaler3Img = styled(Img)`
   max-width: 117px;
   width: 16.5vw;
@@ -398,13 +408,22 @@ const Inhaler3Img = styled(Img)`
   @media screen and (min-width: 800px) {
     width: 8.25vw;
   }
+
+  @media screen and (min-width: 996px) {
+    width: 82.1562px;
+  }
 `;
+
 const Inhaler4Img = styled(Img)`
   max-width: 120px;
   width: 16.5vw;
 
   @media screen and (min-width: 800px) {
     width: 8.25vw;
+  }
+
+  @media screen and (min-width: 996px) {
+    width: 82.1562px;
   }
 `;
 const Inhaler5Img = styled(Img)`
@@ -414,13 +433,22 @@ const Inhaler5Img = styled(Img)`
   @media screen and (min-width: 800px) {
     width: 11.5vw;
   }
+
+  @media screen and (min-width: 996px) {
+    width: 114.531px;
+  }
 `;
+
 const Inhaler6Img = styled(Img)`
   max-width: 222px;
   width: 28.5vw;
 
   @media screen and (min-width: 800px) {
     width: 14.25vw;
+  }
+
+  @media screen and (min-width: 996px) {
+    width: 141.922px;
   }
 `;
 
