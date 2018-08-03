@@ -4,6 +4,10 @@ export const ContentWrapper = styled.div`
   margin: 0 auto;
   padding: 3vw 0;
   width: 91%;
+
+  @media screen and (min-width: 996px) {
+    padding: 29.88px 0;
+  }
 `;
 
 export const H1 = styled.h1`

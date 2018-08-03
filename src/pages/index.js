@@ -51,6 +51,7 @@ const MacbookImg = styled(Img)`
   margin-right: auto;
 
   @media screen and (min-width: 996px) {
+    margin-top: 263.94px;
     width: 856.547px;
   }
 `;
@@ -131,6 +132,7 @@ const InhalerTips = ContentWrapper.extend`
     flex-direction: row;
   }
 `;
+
 const BetterControlTextAndTorsoImgWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -159,6 +161,7 @@ const BetterControlTextAndTorsoImgWrapper = styled.div`
     width: 70%;
   }
 `;
+
 const TorsoWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -462,6 +465,9 @@ const AdultOrChild = H3.extend`
 const Footnotes = ContentWrapper.extend`
   text-align: left;
   padding: 0 0;
+  @media screen and (min-width: 996px) {
+    padding: 0 0;
+  }
 `;
 
 const FootnotesHeaderText = Text.extend`
