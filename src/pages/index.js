@@ -96,6 +96,16 @@ const VideoButton = styled.button`
       top: 0.15vw;
     }
   }
+
+  @media screen and (min-width: 996px) {
+    margin: 0 14.94px;
+    padding: 14.94px;
+
+    span {
+      font-size: 29.88px;
+      top: 1.494px;
+    }
+  }
 `;
 
 const PlayButtonImg = styled(Img)`
@@ -105,6 +115,11 @@ const PlayButtonImg = styled(Img)`
   @media screen and (min-width: 625px) {
     width: 2.25vw;
     margin-right: 0.9vw;
+  }
+
+  @media screen and (min-width: 996px) {
+    width: 22.4062px;
+    margin-right: 8.964px;
   }
 `;
 
