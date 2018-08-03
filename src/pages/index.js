@@ -92,19 +92,21 @@ const VideoButton = styled.button`
     padding: 1.5vw 1.75vw;
 
     span {
-      color: #fff;
       font-size: 3.5vw;
-      position: relative;
       top: 0.25vw;
-      margin-bottom: 0;
     }
   }
 `;
 
-const playButtonStyle = {
-  width: '3.5vw',
-  marginRight: '1vw'
-};
+const PlayButtonImg = styled(Img)`
+  width: 3.5vw;
+  margin-right: 1vw;
+
+  @media screen and (min-width: 625px) {
+    width: 3.5vw;
+    margin-right: 1vw;
+  }
+`;
 
 const InhalerTips = ContentWrapper.extend`
   display: flex;
@@ -527,15 +529,15 @@ class IndexPage extends Component {
             />
             <VideoButtonWrapper>
               <VideoButton onClick={() => this.handleVideoSelection('https://vimeo.com/281972542')}>
-                <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
+                <PlayButtonImg sizes={playButton.sizes} />
                 <span>VIDEO 1</span>
               </VideoButton>
               <VideoButton onClick={() => this.handleVideoSelection('https://vimeo.com/281972758')}>
-                <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
+                <PlayButtonImg sizes={playButton.sizes} />
                 <span>VIDEO 2</span>
               </VideoButton>
               <VideoButton onClick={() => this.handleVideoSelection('https://vimeo.com/281972704')}>
-                <Img sizes={playButton.sizes} style={{ ...playButtonStyle }} />
+                <PlayButtonImg sizes={playButton.sizes} />
                 <span>VIDEO 3</span>
               </VideoButton>
             </VideoButtonWrapper>
