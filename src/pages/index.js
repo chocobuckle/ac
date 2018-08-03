@@ -89,11 +89,11 @@ const VideoButton = styled.button`
 
   @media screen and (min-width: 625px) {
     margin: 0 1.5vw;
-    padding: 1.5vw 1.75vw;
+    padding: 1.5vw;
 
     span {
-      font-size: 3.5vw;
-      top: 0.25vw;
+      font-size: 3vw;
+      top: 0.15vw;
     }
   }
 `;
@@ -103,8 +103,8 @@ const PlayButtonImg = styled(Img)`
   margin-right: 1vw;
 
   @media screen and (min-width: 625px) {
-    width: 3.5vw;
-    margin-right: 1vw;
+    width: 2.25vw;
+    margin-right: 0.9vw;
   }
 `;
 
