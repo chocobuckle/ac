@@ -183,6 +183,10 @@ const TorsoImgWrapper = styled.div`
 const InhalingRedImgWrapper = styled.div`
   margin-top: 1.3vw;
   width: 41.1%;
+
+  @media screen and (min-width: 996px) {
+    mrgin-top: 12.948px;
+  }
 `;
 const InhalingWithLogoImgWrapper = styled.div`
   width: 51.4%;
@@ -256,7 +260,8 @@ const EasyInstructions1Img = styled(Img)`
 
   @media screen and (min-width: 600px) {
     margin-left: 0;
-    width: 3em;
+    margin-right: 14px;
+    width: 4em;
   }
 `;
 
@@ -266,8 +271,20 @@ const EasyInstructions2Img = styled(Img)`
   width: 32.5vw;
 
   @media screen and (min-width: 600px) {
-    width: 4.5em;
+    width: 13vw;
     margin-left: 0;
+    margin-top: 1.5em;
+  }
+
+  @media screen and (min-width: 900px) {
+    width: 10vw;
+    margin-left: -7px;
+    margin-top: 1.5em;
+  }
+
+  @media screen and (min-width: 996px) {
+    width: 5.5em;
+    margin-left: -15px;
     margin-top: 1.5em;
   }
 `;
@@ -278,8 +295,18 @@ const EasyInstructions3Img = styled(Img)`
   width: 40vw;
 
   @media screen and (min-width: 600px) {
-    width: 6.5em;
+    width: 16.5vw;
     margin-top: -4%;
+  }
+
+  @media screen and (min-width: 900px) {
+    width: 13.25vw;
+    margin-top: -4%;
+  }
+
+  @media screen and (min-width: 996px) {
+    width: 131.969px;
+    margin-right: 17.43px;
   }
 `;
 
@@ -671,7 +698,7 @@ class IndexPage extends Component {
                 <EasyInstructions2Img sizes={easyInstructions2.sizes} />
               </EasyInstructionsImgAndTextWrapper>
               <EasyInstructionsImgAndTextWrapper
-                style={{ alignItems: 'center', marginTop: '0.5em' }}>
+                style={{ alignItems: 'center', marginTop: '1.2em' }}>
                 <EasyInstructions3Img sizes={easyInstructions3.sizes} />
                 <Text style={{ marginBottom: 0 }}>
                   Press inhaler and inhale slowly and deeply, holding your breath for 5-10 seconds.
@@ -687,7 +714,7 @@ class IndexPage extends Component {
                 </Text>
               </EasyInstructionsImgAndTextWrapper>
               <EasyInstructionsImgAndTextWrapper
-                style={{ alignItems: 'flex-start', justifyContent: 'center', marginTop: '2em' }}>
+                style={{ alignItems: 'flex-start', justifyContent: 'center', marginTop: '2.1em' }}>
                 <Text>
                   The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation Indicator moves
                   as you inhale and helps provide visual assurance of correct use and medication
