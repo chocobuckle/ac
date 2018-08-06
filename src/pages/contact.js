@@ -12,11 +12,13 @@ import {
 const LocalContentWrapper = ContentWrapper.extend`
   margin-top: -116.5vw;
   position: relative;
+  text-align: center;
   z-index: 1;
 
   @media screen and (min-width: 996px) {
     display: flex;
     margin-top: -1160.34px;
+    text-align: left;
   }
 `;
 
