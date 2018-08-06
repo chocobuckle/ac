@@ -43,13 +43,13 @@ const Address = styled.div`
 `;
 
 const Gradient = styled.div`
-  background: linear-gradient(
+  ${'' /* background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 5%,
     rgba(255, 255, 255, 0.65) 8%,
     rgba(255, 255, 255, 0.85) 12%,
     rgba(255, 255, 255, 1) 16%
-  );
+  ); */}
   margin-top: -116.5vw;
   position: relative;
   z-index: 1;

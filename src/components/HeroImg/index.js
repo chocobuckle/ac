@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 const HeroImgAndTextWrapper = styled.div`
   position: relative;
   width: 100%;
+  height: 100%;
 `;
 
 const HeroTextWrapper = styled.div`
@@ -52,10 +53,29 @@ const flowVuImgStyle = {
   zIndex: 2
 }
 
+const Gradient = styled.div`
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 3%,
+    rgba(255, 255, 255, 0.3) 8%,
+    rgba(255, 255, 255, 0.5) 12%,
+    rgba(255, 255, 255, 1) 31.5%
+  );
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+`;
+
 function HeroImg({ backgroundImgSizes, flowVuSizes, location }) {
   return (
     <HeroImgAndTextWrapper>
       <Img sizes={backgroundImgSizes} />
+      {location === '/contact' && (
+        <Gradient />
+      )}
       {location !== '/contact' && (
         <HeroTextWrapper>
           <HeroText>Helps Patients Inhale</HeroText>
