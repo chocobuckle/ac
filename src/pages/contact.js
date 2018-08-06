@@ -6,9 +6,19 @@ import {
   H1,
   H2,
   LightBlueSpan,
-  Text,
-  FlexColumnWrapper
+  Text
 } from 'helpers/sharedStyles';
+
+const LocalContentWrapper = ContentWrapper.extend`
+  margin-top: -116.5vw;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (min-width: 996px) {
+    display: flex;
+    margin-top: -1160.34px;
+  }
+`;
 
 const LocalH1 = H1.extend`
   margin-top: 29vw;
@@ -18,7 +28,6 @@ const LocalH1 = H1.extend`
   }
 
   @media screen and (min-width: 996px) {
-    font-size: 46.5px;
     margin-top: 288.84px;
   }
 `;
@@ -26,6 +35,16 @@ const LocalH1 = H1.extend`
 const LocalH2 = H2.extend`
   @media screen and (min-width: 600px) {
     font-size: 31.8px;
+  }
+`;
+
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 996px) {
+    flex-shrink: 0;
+    z-index: 1;
   }
 `;
 
@@ -47,24 +66,20 @@ const MapImg = styled(Img)`
   @media screen and (min-width: 600px) {
     width: 546px;
   }
-`;
-
-const LocalContentWrapper = ContentWrapper.extend`
-  margin-top: -116.5vw;
-  padding-bottom: 0;
-  position: relative;
-  z-index: 1;
 
   @media screen and (min-width: 996px) {
-    margin-top: -1160.34px;
+    width: 780px;
+    position: absolute;
+    top: 277px;
+    right: 118px;
   }
 `;
 
 function Contact({ data }) {
   return (
-    <LocalContentWrapper>
-      <LocalH1>Contact Us</LocalH1>
-      <FlexColumnWrapper>
+    <LocalContentWrapper style={{ paddingBottom: 0 }}>
+      <TextWrapper>
+        <LocalH1>Contact Us</LocalH1>
         <LocalH2 style={{ marginBottom: 0 }}>Commercial Division</LocalH2>
         <LocalH2>Co. Louth, Ireland</LocalH2>
 
@@ -115,8 +130,8 @@ function Contact({ data }) {
           <LightBlueSpan>Collin Botha (North East)</LightBlueSpan>
           <br />087 668 5876 - collin.botha@teva.ie
         </LocalText>
-        <MapImg sizes={data.map.sizes} />
-      </FlexColumnWrapper>
+      </TextWrapper>
+      <MapImg sizes={data.map.sizes} />
     </LocalContentWrapper>
   );
 }
@@ -124,7 +139,7 @@ function Contact({ data }) {
 export const query = graphql`
   query ContactQuery {
     map: imageSharp(id: { regex: "/contact/map.png/" }) {
-      sizes(maxWidth: 676) {
+      sizes(maxWidth: 900) {
         src
         srcSet
         srcWebp

@@ -42,7 +42,8 @@ const Layout = ({ children, data, location }) => {
       <Wrapper
         style={{
           margin: '0 auto',
-          padding: 0
+          padding: 0,
+          overflowX: 'hidden'
         }}>
         <Header logoSizes={logo.sizes} />
         <MainContent>
