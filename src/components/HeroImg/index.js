@@ -39,7 +39,7 @@ const HeroText = styled.p`
   }
 
   @media screen and (min-width: 996px) {
-    font-size: 44.1px;
+    font-size: 44.82px;
   }
 `;
 
