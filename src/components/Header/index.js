@@ -32,15 +32,13 @@ const MobileAndTabletLogoWrapper = styled.h1`
 `;
 
 const MobileAndTabletLogo = styled(Img)`
+  max-width: 300px;
+  width: 50vw;
+
   @media screen and (min-width: 600px) {
     display: none;
   }
 `;
-
-const mobileAndTabletLogoStyle = {
-  maxWidth: '300px',
-  width: '50vw'
-};
 
 const DesktopLogoWrapper = styled.h1`
   display: none;
@@ -54,14 +52,16 @@ const DesktopLogoWrapper = styled.h1`
   }
 `;
 
-const DesktopLogo = styled(Img)``;
+const DesktopLogo = styled(Img)`
+  max-width: 220px;
+  width: 22vw;
+  position: relative;
+  top: 0.025em;
 
-const desktopLogoStyle = {
-  maxWidth: '300px',
-  width: '22vw',
-  position: 'relative',
-  top: '0.025em'
-};
+  @media screen and (min-width: 996px) {
+    width: 219.109px;
+  }
+`;
 
 const List = styled.ul`
   display: none;
@@ -118,7 +118,7 @@ class Header extends Component {
       <HeaderWrapper>
         <DesktopLogoWrapper>
           <Link to="/">
-            <DesktopLogo alt="logo" sizes={logoSizes} style={{ ...desktopLogoStyle }} />
+            <DesktopLogo alt="logo" sizes={logoSizes} />
           </Link>
         </DesktopLogoWrapper>
         <List>
@@ -148,7 +148,6 @@ class Header extends Component {
             <MobileAndTabletLogo
               alt="logo"
               sizes={logoSizes}
-              style={{ ...mobileAndTabletLogoStyle }}
             />
           </Link>
         </MobileAndTabletLogoWrapper>
