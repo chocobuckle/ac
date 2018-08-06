@@ -53,7 +53,7 @@ const flowVuImgStyle = {
   zIndex: 2
 }
 
-const Gradient = styled.div`
+const ContactPageGradient = styled.div`
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 3%,
@@ -74,7 +74,7 @@ function HeroImg({ backgroundImgSizes, flowVuSizes, location }) {
     <HeroImgAndTextWrapper>
       <Img sizes={backgroundImgSizes} />
       {location === '/contact' && (
-        <Gradient />
+        <ContactPageGradient />
       )}
       {location !== '/contact' && (
         <HeroTextWrapper>
