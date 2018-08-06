@@ -30,6 +30,12 @@ const ContactTeam = styled.p`
     bottom: 5.8em;
     text-align: left;
   }
+
+  @media screen and (min-width: 996px) {
+    font-size: 21.912px;
+    padding-left: 29.88px;
+    bottom: 127.09px;
+  }
 `;
 
 const SmallPrintAndTevaLogoWrapper = styled.div`
@@ -50,6 +56,29 @@ const SmallPrintAndTevaLogoWrapper = styled.div`
     bottom: 1.75vw;
     width: 100%;
   }
+
+  @media screen and (min-width: 996px) {
+    padding: 0 0 0 29.88px;
+    bottom: 17.43px;
+  }
+`;
+
+const AddressAndContactDetails = styled.div`
+  text-align: center;
+  @media screen and (min-width: 600px) {
+    order: 1;
+    width: 50%;
+    text-align: left;
+  }
+`;
+
+const PrivacyPolicy = styled.div`
+  text-align: center;
+  @media screen and (min-width: 600px) {
+    order: 2;
+    width: 20%;
+    text-align: left;
+  }
 `;
 
 const SmallPrint = Text.extend`
@@ -57,12 +86,15 @@ const SmallPrint = Text.extend`
   line-height: 1.8em;
 
   @media screen and (min-width: 600px) {
-    font-size: 2.2vw;
-    line-height: 1.8em;
+    font-size: 1.5vw;
+  }
+
+  @media screen and (min-width: 996px) {
+    font-size: 14.94px;
   }
 `;
 
-const TevaLogo1 = styled.div`
+const TevaLogo1Wrapper = styled.div`
   @media screen and (max-width: 599px) {
     display: flex;
     justify-content: center;
@@ -73,7 +105,7 @@ const TevaLogo1 = styled.div`
   }
 `;
 
-const TevaLogo2 = styled.div`
+const TevaLogo2Wrapper = styled.div`
   display: none;
   @media screen and (min-width: 600px) {
     display: flex;
@@ -83,29 +115,27 @@ const TevaLogo2 = styled.div`
   }
 `;
 
-const AddressAndContactDetails = styled.div`
-  text-align: center;
-  @media screen and (min-width: 600px) {
-    order: 1;
-    width: 50%;
-    text-align: left;
+const TevaLogo1Img = styled(Img)`
+  margin-right: 0.75vw;
+  width: 12.9341vw;
+`;
+const Respiratory1Img = styled(Img)`
+  width: 24.4vw;
+`;
+const TevaLogo2Img = styled(Img)`
+  width: 8.43vw;
+  margin-right: 0.75vw;
 
-    p {
-      font-size: 1.5vw;
-    }
+  @media screen and (min-width: 996px) {
+    margin-right: 7.47px;
+    width: 83.9531px;
   }
 `;
+const Respiratory2Img = styled(Img)`
+  width: 15.825vw;
 
-const PrivacyPolicy = styled.div`
-  text-align: center;
-  @media screen and (min-width: 600px) {
-    order: 2;
-    width: 20%;
-    text-align: left;
-
-    p {
-      font-size: 1.5vw;
-    }
+  @media screen and (min-width: 996px) {
+    width: 157.609px;
   }
 `;
 
@@ -128,14 +158,14 @@ function Footer({ footer, tevaLogo, respiratory }) {
         </ContactTeam>
       </ImgAndContactTeam>
       <SmallPrintAndTevaLogoWrapper>
-        <TevaLogo1>
-          <Img sizes={tevaLogo} alt="Teva logo" style={{ width: '12.9341vw', marginRight: '0.75vw' }} />
-          <Img sizes={respiratory} alt="Respiratory" style={{ width: '24.4vw' }} />
-        </TevaLogo1>
-        <TevaLogo2>
-          <Img sizes={tevaLogo} alt="Teva logo" style={{ width: '8.43vw', marginRight: '0.75vw' }} />
-          <Img sizes={respiratory} alt="Respiratory" style={{ width: '15.825vw' }} />
-        </TevaLogo2>
+        <TevaLogo1Wrapper>
+          <TevaLogo1Img sizes={tevaLogo} alt="Teva logo" />
+          <Respiratory1Img sizes={respiratory} alt="Respiratory" />
+        </TevaLogo1Wrapper>
+        <TevaLogo2Wrapper>
+          <TevaLogo2Img sizes={tevaLogo} alt="Teva logo" />
+          <Respiratory2Img sizes={respiratory} alt="Respiratory" />
+        </TevaLogo2Wrapper>
         <AddressAndContactDetails>
           <Wrapper1>
             <SmallPrint>
