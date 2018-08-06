@@ -57,8 +57,8 @@ const ContactPageGradient = styled.div`
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 3%,
-    rgba(255, 255, 255, 0.3) 8%,
-    rgba(255, 255, 255, 0.5) 12%,
+    rgba(255, 255, 255, 0.3) 7%,
+    rgba(255, 255, 255, 0.55) 12%,
     rgba(255, 255, 255, 1) 31.5%
   );
   top: 0;
