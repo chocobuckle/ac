@@ -68,10 +68,10 @@ const MapImg = styled(Img)`
   }
 
   @media screen and (min-width: 996px) {
-    width: 780px;
+    width: 750px;
     position: absolute;
-    top: 277px;
-    right: 118px;
+    top: 295px;
+    right: 100px;
   }
 `;
 
