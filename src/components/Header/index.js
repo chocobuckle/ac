@@ -81,6 +81,10 @@ const ListItem = styled.li`
   font-size: 3.45vw;
   margin: 0.5em 0.5em;
   text-decoration: none;
+
+  @media screen and (min-width: 996px) {
+    font-size: 34.362px;
+  }
 `;
 
 const HeaderLink = styled(Link)`
