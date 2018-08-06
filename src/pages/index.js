@@ -254,24 +254,34 @@ const EasyInstructionsImgAndTextWrapper = styled.div`
 
 const EasyInstructions1Img = styled(Img)`
   margin-left: 4vw;
-  margin-right: 2vw;
+  margin-right: 2.75vw;
   max-width: 117px;
   width: 22vw;
 
   @media screen and (min-width: 600px) {
     margin-left: 0;
-    margin-right: 14px;
-    width: 4em;
+    margin-right: 2vw;
+    width: 8vw;
+  }
+
+  @media screen and (min-width: 900px) {
+    margin-right: 1.5vw;
+    width: 6.5vw;
+  }
+
+  @media screen and (min-width: 996px) {
+    margin-right: 13px;
+    width: 3.75em;
   }
 `;
 
 const EasyInstructions2Img = styled(Img)`
   max-width: 178px;
-  margin-left: 3vw;
-  width: 32.5vw;
+  margin-left: 2.75vw;
+  width: 29vw;
 
   @media screen and (min-width: 600px) {
-    width: 13vw;
+    width: 11.75vw;
     margin-left: 0;
     margin-top: 1.5em;
   }
@@ -284,17 +294,18 @@ const EasyInstructions2Img = styled(Img)`
 
   @media screen and (min-width: 996px) {
     width: 5.5em;
-    margin-left: -15px;
+    margin-left: -19px;
     margin-top: 1.5em;
   }
 `;
 
 const EasyInstructions3Img = styled(Img)`
-  margin-right: 2.5vw;
+  margin-right: 4.75vw;
   margin-top: 2vw;
-  width: 40vw;
+  width: 38vw;
 
   @media screen and (min-width: 600px) {
+    margin-right: 2vw;
     width: 16.5vw;
     margin-top: -4%;
   }
@@ -306,6 +317,7 @@ const EasyInstructions3Img = styled(Img)`
 
   @media screen and (min-width: 996px) {
     width: 131.969px;
+    margin-top: -5.96875px;
     margin-right: 17.43px;
   }
 `;
@@ -342,6 +354,10 @@ const WhiteBannerChildImgFlexWrapper = styled.div`
   @media screen and (min-width: 600px) {
     padding: 0.75em 0;
   }
+
+  @media screen and (min-width: 996px) {
+    width: 797.594px;
+  }
 `;
 
 const WhiteBannerChildImg = styled(Img)`
@@ -350,6 +366,10 @@ const WhiteBannerChildImg = styled(Img)`
 
   @media screen and (min-width: 600px) {
     width: 11vw;
+  }
+
+  @media screen and (min-width: 996px) {
+    width: 109.547px;
   }
 `;
 
@@ -714,7 +734,7 @@ class IndexPage extends Component {
                 </Text>
               </EasyInstructionsImgAndTextWrapper>
               <EasyInstructionsImgAndTextWrapper
-                style={{ alignItems: 'flex-start', justifyContent: 'center', marginTop: '2.1em' }}>
+                style={{ alignItems: 'flex-start', justifyContent: 'center', marginTop: '2.42em' }}>
                 <Text>
                   The <span style={{ fontWeight: '600' }}>Flow-Vu</span> Inhalation Indicator moves
                   as you inhale and helps provide visual assurance of correct use and medication
