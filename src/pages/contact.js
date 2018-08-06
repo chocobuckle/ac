@@ -139,7 +139,7 @@ function Contact({ data }) {
 export const query = graphql`
   query ContactQuery {
     map: imageSharp(id: { regex: "/contact/map.png/" }) {
-      sizes(maxWidth: 900) {
+      sizes(maxWidth: 750) {
         src
         srcSet
         srcWebp

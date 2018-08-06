@@ -10,7 +10,7 @@ const H2Wrapper = styled.div`
   text-align: center;
 
   @media screen and (min-width: 996px) {
-    margin-top: 216.63px;
+    margin: 216.63px auto 1em;
   }
 `;
 
