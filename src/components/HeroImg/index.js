@@ -51,9 +51,31 @@ const flowVuImgStyle = {
   position: 'absolute',
   width: '17.5%',
   zIndex: 2
-}
+};
 
-const ContactPageGradient = styled.div`
+const Gradient = styled.div`
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+`;
+
+const OverviewPageGradient = Gradient.extend`
+  background: linear-gradient(180deg,rgba(255, 255, 255, 0) 5.12%, rgba(255, 255, 255, 0.04) 8.83%, rgba(255, 255, 255, 1) 40.44%););
+  margin-top: 40vw;
+
+  @media screen and (min-width: 996px) {
+    margin-top: 398.4px;
+  }
+`;
+
+const InstructionsPageGradient = Gradient.extend`
+  ${'' /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 54%); */}
+`;
+
+const ContactPageGradient = Gradient.extend`
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 3%,
@@ -61,21 +83,15 @@ const ContactPageGradient = styled.div`
     rgba(255, 255, 255, 0.55) 12%,
     rgba(255, 255, 255, 1) 31.5%
   );
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
 `;
 
 function HeroImg({ backgroundImgSizes, flowVuSizes, location }) {
   return (
     <HeroImgAndTextWrapper>
       <Img sizes={backgroundImgSizes} />
-      {location === '/contact' && (
-        <ContactPageGradient />
-      )}
+      {location === '/overview' && <OverviewPageGradient />}
+      {location === '/instructions' && <InstructionsPageGradient />}
+      {location === '/contact' && <ContactPageGradient />}
       {location !== '/contact' && (
         <HeroTextWrapper>
           <HeroText>Helps Patients Inhale</HeroText>
@@ -85,9 +101,7 @@ function HeroImg({ backgroundImgSizes, flowVuSizes, location }) {
           </HeroText>
         </HeroTextWrapper>
       )}
-      {location !== '/contact' && (
-        <Img sizes={flowVuSizes} style={{ ...flowVuImgStyle }} />
-      )}
+      {location !== '/contact' && <Img sizes={flowVuSizes} style={{ ...flowVuImgStyle }} />}
     </HeroImgAndTextWrapper>
   );
 }

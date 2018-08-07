@@ -5,6 +5,12 @@ import { ContentWrapper, H2, H5 } from 'helpers/sharedStyles';
 import VideoPlayer from 'components/VideoPlayer';
 import spinner from 'images/shared/spinner.gif';
 
+const OverviewAndInstructionsSharedSectionWrapper = styled.div`
+  margin-top: -55.5vw;
+  position: relative;
+  z-index: 2;
+`;
+
 const H2Wrapper = styled.div`
   margin: 21.75vw auto 1em;
   text-align: center;
@@ -45,25 +51,6 @@ const MacBookImg = styled(Img)`
   width: 70vw;
 `;
 
-const Gradient = styled.div`
-  background: ${({ pathname }) => {
-    return pathname === '/overview'
-      ? `linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 1) 63%
-      );`
-      : `linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 1) 54%
-      );`;
-  }}
-  margin-top: -55.5vw;
-  position: relative;
-  z-index: 1;
-`;
-
 const TextWrapper = styled.div`
   @media screen and (min-width: 600px) {
     width: 80%;
@@ -93,24 +80,21 @@ class OverviewAndInstructionsSharedSection extends Component {
       headerFirstLine,
       headerSecondLine,
       subHeaderText,
-      macbook,
-      pathname
+      macbook
     } = this.props;
     const { videoHasLoaded } = this.state;
     return (
-      <div>
-        <Gradient pathname={pathname}>
-          <ContentWrapper>
-            <H2Wrapper>
-              <H2 style={{ marginBottom: '0.25em' }}>{headerFirstLine}</H2>
-              <H2>{headerSecondLine}</H2>
-            </H2Wrapper>
-            <TextWrapper
-              style={{ textAlign: 'center' }}
-              dangerouslySetInnerHTML={{ __html: subHeaderText }}
-            />
-          </ContentWrapper>
-        </Gradient>
+      <OverviewAndInstructionsSharedSectionWrapper>
+        <ContentWrapper>
+          <H2Wrapper>
+            <H2 style={{ marginBottom: '0.25em' }}>{headerFirstLine}</H2>
+            <H2>{headerSecondLine}</H2>
+          </H2Wrapper>
+          <TextWrapper
+            style={{ textAlign: 'center' }}
+            dangerouslySetInnerHTML={{ __html: subHeaderText }}
+          />
+        </ContentWrapper>
         <ContentWrapper style={{ paddingTop: '0.5em' }}>
           <BPAImgAndTextAndMacbookImgWrapper>
             <MacBookImg sizes={macbook.sizes} />
@@ -132,7 +116,7 @@ class OverviewAndInstructionsSharedSection extends Component {
             </BPAImgAndTextWrapper>
           </BPAImgAndTextAndMacbookImgWrapper>
         </ContentWrapper>
-      </div>
+      </OverviewAndInstructionsSharedSectionWrapper>
     );
   }
 }
