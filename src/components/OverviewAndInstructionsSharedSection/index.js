@@ -66,6 +66,7 @@ const MacBookImg = styled(Img)`
   width: 70vw;
 
   @media screen and (min-width: 996px) {
+    margin-bottom: 19.92px;
     width: 697.188px;
   }
 `;
