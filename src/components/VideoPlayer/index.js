@@ -12,9 +12,9 @@ const VideoPlayerWrapper = styled.div`
         margin: 0.35% auto -42.5%;
       `
       : `
-        width: 52.2vw;
-        padding-top: 36.8%;
-        margin: 0.35vw auto -31vw;
+        width: 74.8%;
+        padding-top: 46.9%;
+        margin: 3.3% auto -44.25%;
       `};
 `;
 

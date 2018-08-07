@@ -63,6 +63,13 @@ const TextWrapper = styled.div`
   }
 `;
 
+const MacbookImgAndVideoAndSpinnerWrapper = styled.div``;
+
+const VideoAndSpinnerWrapper = styled.div`
+  width: 100%;
+  position: relative;
+`;
+
 class OverviewAndInstructionsSharedSection extends Component {
   state = {
     videoHasLoaded: false
@@ -97,11 +104,13 @@ class OverviewAndInstructionsSharedSection extends Component {
         </ContentWrapper>
         <ContentWrapper style={{ paddingTop: '0.5em' }}>
           <BPAImgAndTextAndMacbookImgWrapper>
-            <MacBookImg sizes={macbook.sizes} />
-            <div style={{ width: '100%', position: 'relative' }}>
-              {!videoHasLoaded && <Spinner src={spinner} alt="loading spinner" />}
-              <VideoPlayer handleVideoLoading={this.handleVideoLoading} />
-            </div>
+            <MacbookImgAndVideoAndSpinnerWrapper>
+              <MacBookImg sizes={macbook.sizes} />
+              <VideoAndSpinnerWrapper>
+                {!videoHasLoaded && <Spinner src={spinner} alt="loading spinner" />}
+                <VideoPlayer handleVideoLoading={this.handleVideoLoading} />
+              </VideoAndSpinnerWrapper>
+            </MacbookImgAndVideoAndSpinnerWrapper>
             <BPAImgAndTextWrapper>
               <BPAImg sizes={bpaAndDishwasherSafe.sizes} />
               <H5
