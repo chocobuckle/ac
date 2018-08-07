@@ -16,7 +16,8 @@ const AdditionalFeatures = styled.section`
   }
 `;
 
-const AFText = H4.extend`
+const AFText = Text.extend`
+  font-size: 3.5vw;
   color: #000;
 `;
 
@@ -66,7 +67,7 @@ function Overview({ data, location }) {
             used with AeroChamber® due to medication not adhering to chamber
             walls.<sup>6</sup>
           </AFText>
-          <AFText style={{ color: '#007fc8'}}>
+          <AFText style={{ color: '#007fc8', marginBottom: 0}}>
             Not made (or manufactured) with BPA (bisphenol A), phthalates,
             latex, lead, or PVC<sup>1,7</sup>
           </AFText>

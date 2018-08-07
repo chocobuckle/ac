@@ -12,11 +12,36 @@ const OverviewAndInstructionsSharedSectionWrapper = styled.div`
 
   p {
     font-size: 3.5vw;
-    line-height: 1.25em;
+    line-height: 1.3em;
+  }
+
+  @media screen and (min-width: 520px) {
+    p {
+      font-size: 3vw;
+      line-height: 1.35em;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    p {
+      font-size: 2.75vw;
+      line-height: 1.4em;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    p {
+      font-size: 2.5vw;
+    }
   }
 
   @media screen and (min-width: 996px) {
     margin-top: -552.78px;
+
+    p {
+      font-size: 20.916px;
+      line-height: 1.5em;
+    }
   }
 `;
 
@@ -36,16 +61,10 @@ const LocalH2 = H2.extend`
 `;
 
 const TextWrapper = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   @media screen and (min-width: 600px) {
-    ${'' /* width: 80%;
-    margin: 0 auto; */}
-  }
-
-  @media screen and (min-width: 840px) {
-    width: 611.5px;
-    margin: 0 auto;
+    width: 90%;
   }
 `;
 
