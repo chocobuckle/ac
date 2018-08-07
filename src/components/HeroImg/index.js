@@ -90,7 +90,9 @@ function HeroImg({ backgroundImgSizes, flowVuSizes, location }) {
   return (
     <HeroImgAndTextWrapper>
       <Img sizes={backgroundImgSizes} />
-      {(location === '/overview' || location === '/instructions') && <OverviewAndInstructionsPageGradient />}
+      {(location === '/overview' || location === '/instructions') && (
+        <OverviewAndInstructionsPageGradient />
+      )}
       {location === '/contact' && <ContactPageGradient />}
       {location !== '/contact' && (
         <HeroTextWrapper>
