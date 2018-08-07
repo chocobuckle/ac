@@ -30,6 +30,18 @@ const LocalH2 = H2.extend`
   }
 `;
 
+const TextWrapper = styled.div`
+  @media screen and (min-width: 600px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 840px) {
+    width: 611.5px;
+    margin: 0 auto;
+  }
+`;
+
 const BPAImgAndTextAndMacbookImgWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -71,6 +83,7 @@ const BPAImgAndTextWrapper = styled.div`
 
   @media screen and (min-width: 600px) {
     order: 1;
+    width: 17%;
   }
 `;
 
@@ -78,17 +91,15 @@ const BPAImg = styled(Img)`
   max-width: 749px;
   margin-bottom: 2vw;
   width: 30vw;
+
+  @media screen and (min-width: 600px) {
+    width: 100%;
+  }
 `;
 
-const TextWrapper = styled.div`
+const LocalH5 = H5.extend`
   @media screen and (min-width: 600px) {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  @media screen and (min-width: 840px) {
-    width: 611.5px;
-    margin: 0 auto;
+    font-size: 1.7vw;
   }
 `;
 
@@ -135,7 +146,7 @@ class OverviewAndInstructionsSharedSection extends Component {
             </MacbookImgAndVideoAndSpinnerWrapper>
             <BPAImgAndTextWrapper>
               <BPAImg sizes={bpaAndDishwasherSafe.sizes} />
-              <H5
+              <LocalH5
                 style={{
                   color: '#007fc8',
                   fontWeight: 400,
@@ -143,7 +154,7 @@ class OverviewAndInstructionsSharedSection extends Component {
                 }}>
                 AeroChamber Plus® Flow-Vu® is dishwasher safe on the top rack at temperatures up to
                 158°F (70°C).
-              </H5>
+              </LocalH5>
             </BPAImgAndTextWrapper>
           </BPAImgAndTextAndMacbookImgWrapper>
         </ContentWrapper>
