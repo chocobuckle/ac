@@ -64,6 +64,10 @@ const MacBookImg = styled(Img)`
   max-width: 886px;
   margin-bottom: 2vw;
   width: 70vw;
+
+  @media screen and (min-width: 996px) {
+    width: 697.188px;
+  }
 `;
 
 const VideoAndSpinnerWrapper = styled.div`
@@ -85,8 +89,12 @@ const BPAImgAndTextWrapper = styled.div`
 
   @media screen and (min-width: 600px) {
     order: 1;
-    width: 17%;
+    width: 15%;
     position: absolute;
+  }
+
+  @media screen and (min-width: 996px) {
+    width: 149.391px;
   }
 `;
 
@@ -96,13 +104,22 @@ const BPAImg = styled(Img)`
   width: 30vw;
 
   @media screen and (min-width: 600px) {
+    margin-bottom: 1vw;
     width: 100%;
+  }
+
+  @media screen and (min-width: 996px) {
+    margin-bottom: 9.96px;
   }
 `;
 
 const LocalH5 = H5.extend`
   @media screen and (min-width: 600px) {
-    font-size: 1.7vw;
+    font-size: 1.2vw;
+  }
+
+  @media screen and (min-width: 996px) {
+    font-size: 11.952px;
   }
 `;
 
