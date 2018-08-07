@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ContentWrapper, H2, H4, Text } from 'helpers/sharedStyles';
+import { ContentWrapper, ScalingText, H2 } from 'helpers/sharedStyles';
 import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 import IndicationsForUse from 'components/IndicationsForUse';
@@ -16,12 +16,12 @@ const AdditionalFeatures = styled.section`
   }
 `;
 
-const AFText = Text.extend`
-  font-size: 3.5vw;
-  color: #000;
+const LocalH2 = H2.extend`
+  font-size: 5vw;
+  margin-bottom: 0.4em;
 `;
 
-const AFSpan = styled.span`
+const Span = styled.span`
   color: #007fc8;
   font-weight: 600;
   font-style: italic;
@@ -50,27 +50,27 @@ function Overview({ data, location }) {
       {/* <InhalerAnimation animationClickyThing={data.animationClickyThing} inhalerAnimationImg={data.inhalerAnimationImg} /> */}
       <AdditionalFeatures>
         <ContentWrapper>
-          <H2>
+          <LocalH2>
             Additional Features of <em style={{ color: '#007fc8' }}>AeroChamber Plus® Flow-Vu®</em> VHC
-          </H2>
-          <AFText>
-            <AFSpan>"EZ Flow" Exhalation Valve</AFSpan> - Directs exhaled medication
+          </LocalH2>
+          <ScalingText>
+            <Span>"EZ Flow" Exhalation Valve</Span> - Directs exhaled medication
             away from the patient's face and eyes.<sup>5</sup>
-          </AFText>
-          <AFText>
-            <AFSpan>Inhalation Valve</AFSpan> - Built-in, low-resistance, 1-way
+          </ScalingText>
+          <ScalingText>
+            <Span>Inhalation Valve</Span> - Built-in, low-resistance, 1-way
             valve opens easily and prevents exhalation back into the chamber.
             <sup>5</sup>
-          </AFText>
-          <AFText>
-            <AFSpan>Anti-static Chamber</AFSpan> - Improves the delivery of MDIs
+          </ScalingText>
+          <ScalingText>
+            <Span>Anti-static Chamber</Span> - Improves the delivery of MDIs
             used with AeroChamber® due to medication not adhering to chamber
             walls.<sup>6</sup>
-          </AFText>
-          <AFText style={{ color: '#007fc8', marginBottom: 0}}>
+          </ScalingText>
+          <ScalingText style={{ color: '#007fc8', marginBottom: 0}}>
             Not made (or manufactured) with BPA (bisphenol A), phthalates,
             latex, lead, or PVC<sup>1,7</sup>
-          </AFText>
+          </ScalingText>
         </ContentWrapper>
       </AdditionalFeatures>
       <DownloadInstructionsForUse

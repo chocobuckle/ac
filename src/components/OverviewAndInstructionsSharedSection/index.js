@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { ContentWrapper, H2, H5 } from 'helpers/sharedStyles';
+import { ContentWrapper, ScalingText, H2, H5 } from 'helpers/sharedStyles';
 import VideoPlayer from 'components/VideoPlayer';
 import spinner from 'images/shared/spinner.gif';
 

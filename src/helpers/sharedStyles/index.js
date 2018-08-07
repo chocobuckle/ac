@@ -54,6 +54,30 @@ export const Text = styled.p`
   margin-bottom: 0.5em;
 `;
 
+export const ScalingText = styled.p`
+  font-size: 3.5vw;
+  line-height: 1.3em;
+
+  @media screen and (min-width: 520px) {
+    font-size: 3vw;
+    line-height: 1.35em;
+  }
+
+  @media screen and (min-width: 700px) {
+    font-size: 2.75vw;
+    line-height: 1.4em;
+  }
+
+  @media screen and (min-width: 800px) {
+    font-size: 2.5vw;
+  }
+
+  @media screen and (min-width: 996px) {
+    font-size: 20.916px;
+    line-height: 1.5em;
+  }
+`;
+
 export const InstructionText = Text.extend`
   font-size: 2.85vw;
   line-height: 1.45em;
