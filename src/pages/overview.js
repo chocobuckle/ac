@@ -84,7 +84,7 @@ function Overview({ data, location }) {
         smallMask={data.smallMask}
         largeMask={data.largeMask}
       />
-      <IndicationsForUse />
+      <IndicationsForUse style={{ padding: 0 }} />
     </OverviewWrapper>
   );
 }

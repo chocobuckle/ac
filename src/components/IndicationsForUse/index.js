@@ -1,11 +1,11 @@
 import React from 'react';
-import { ContentWrapper, H2, Text, List } from 'helpers/sharedStyles';
+import { ContentWrapper, H2, ScalingText, Text, List } from 'helpers/sharedStyles';
 
 const IndicationsForUseWrapper = ContentWrapper.extend``;
 
-function IndicationsForUse() {
+function IndicationsForUse({ style }) {
   return (
-    <IndicationsForUseWrapper>
+    <IndicationsForUseWrapper style={style}>
       <H2 style={{ marginTop: '0.75em'}}>Indications For Use</H2>
       <Text style={{ marginBottom: '0.75em' }}>
         This product is intended to be used by patients who are under the care
