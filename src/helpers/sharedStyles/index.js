@@ -69,11 +69,11 @@ export const ScalingText = styled.p`
   }
 
   @media screen and (min-width: 800px) {
-    font-size: 2.5vw;
+    font-size: 2.25vw;
   }
 
   @media screen and (min-width: 996px) {
-    font-size: 20.916px;
+    font-size: 22.41px;
     line-height: 1.5em;
   }
 `;

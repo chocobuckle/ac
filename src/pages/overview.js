@@ -19,6 +19,10 @@ const AdditionalFeatures = styled.section`
 const LocalH2 = H2.extend`
   font-size: 5vw;
   margin-bottom: 0.4em;
+
+  @media screen and (min-width: 996px) {
+    font-size: 49.8px;
+  }
 `;
 
 const Span = styled.span`
@@ -67,7 +71,7 @@ function Overview({ data, location }) {
             used with AeroChamber® due to medication not adhering to chamber
             walls.<sup>6</sup>
           </ScalingText>
-          <ScalingText style={{ color: '#007fc8', marginBottom: 0}}>
+          <ScalingText style={{ color: '#007fc8', marginBottom: 0 }}>
             Not made (or manufactured) with BPA (bisphenol A), phthalates,
             latex, lead, or PVC<sup>1,7</sup>
           </ScalingText>

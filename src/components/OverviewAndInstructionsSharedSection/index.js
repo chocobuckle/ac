@@ -31,7 +31,7 @@ const OverviewAndInstructionsSharedSectionWrapper = styled.div`
 
   @media screen and (min-width: 800px) {
     p {
-      font-size: 2.5vw;
+      font-size: 2.25vw;
     }
   }
 
@@ -39,7 +39,7 @@ const OverviewAndInstructionsSharedSectionWrapper = styled.div`
     margin-top: -552.78px;
 
     p {
-      font-size: 20.916px;
+      font-size: 22.41px;
       line-height: 1.5em;
     }
   }
