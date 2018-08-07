@@ -33,17 +33,17 @@ const BPAImgAndTextAndMacbookImgWrapper = styled.div`
   align-items: center;
 `;
 
-const BPAImgStyle = {
-  maxWidth: '749px',
-  marginBottom: '2vw',
-  width: '30vw'
-};
+const BPAImg = styled(Img)`
+  max-width: 749px;
+  margin-bottom: 2vw;
+  width: 30vw;
+`;
 
-const macbookImgStyle = {
-  maxWidth: '886px',
-  marginBottom: '2vw',
-  width: '70vw'
-};
+const MacBookImg = styled(Img)`
+  max-width: 886px;
+  margin-bottom: 2vw;
+  width: 70vw;
+`;
 
 const Gradient = styled.div`
   background: ${({ pathname }) => {
@@ -113,26 +113,21 @@ class OverviewAndInstructionsSharedSection extends Component {
         </Gradient>
         <ContentWrapper style={{ paddingTop: '0.5em' }}>
           <BPAImgAndTextAndMacbookImgWrapper>
-            <Img sizes={macbook.sizes} style={{ ...macbookImgStyle }} />
+            <MacBookImg sizes={macbook.sizes} />
             <div style={{ width: '100%', position: 'relative' }}>
-              {!videoHasLoaded && (
-                <Spinner src={spinner} alt="loading spinner" />
-              )}
+              {!videoHasLoaded && <Spinner src={spinner} alt="loading spinner" />}
               <VideoPlayer handleVideoLoading={this.handleVideoLoading} />
             </div>
             <BPAImgAndTextWrapper>
-              <Img
-                sizes={bpaAndDishwasherSafe.sizes}
-                style={{ ...BPAImgStyle }}
-              />
+              <BPAImg sizes={bpaAndDishwasherSafe.sizes} />
               <H5
                 style={{
                   color: '#007fc8',
                   fontWeight: 400,
                   marginBottom: 0
                 }}>
-                AeroChamber Plus® Flow-Vu® is dishwasher safe on the top rack at
-                temperatures up to 158°F (70°C).
+                AeroChamber Plus® Flow-Vu® is dishwasher safe on the top rack at temperatures up to
+                158°F (70°C).
               </H5>
             </BPAImgAndTextWrapper>
           </BPAImgAndTextAndMacbookImgWrapper>
