@@ -9,6 +9,10 @@ const OverviewAndInstructionsSharedSectionWrapper = styled.div`
   margin-top: -55.5vw;
   position: relative;
   z-index: 2;
+
+  @media screen and (min-width: 996px) {
+    margin-top: -552.78px;
+  }
 `;
 
 const H2Wrapper = styled.div`
@@ -18,6 +22,39 @@ const H2Wrapper = styled.div`
   @media screen and (min-width: 996px) {
     margin: 216.63px auto 1em;
   }
+`;
+
+const LocalH2 = H2.extend`
+  @media screen and (min-width: 996px) {
+    font-size: 52.788px;
+  }
+`;
+
+const BPAImgAndTextAndMacbookImgWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+  }
+`;
+
+const MacbookImgAndVideoAndSpinnerWrapper = styled.div`
+  @media screen and (min-width: 600px) {
+    order: 2;
+  }
+`;
+
+const MacBookImg = styled(Img)`
+  max-width: 886px;
+  margin-bottom: 2vw;
+  width: 70vw;
+`;
+
+const VideoAndSpinnerWrapper = styled.div`
+  width: 100%;
+  position: relative;
 `;
 
 const Spinner = styled.img`
@@ -31,24 +68,16 @@ const Spinner = styled.img`
 const BPAImgAndTextWrapper = styled.div`
   width: 31vw;
   text-align: center;
-`;
 
-const BPAImgAndTextAndMacbookImgWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @media screen and (min-width: 600px) {
+    order: 1;
+  }
 `;
 
 const BPAImg = styled(Img)`
   max-width: 749px;
   margin-bottom: 2vw;
   width: 30vw;
-`;
-
-const MacBookImg = styled(Img)`
-  max-width: 886px;
-  margin-bottom: 2vw;
-  width: 70vw;
 `;
 
 const TextWrapper = styled.div`
@@ -61,13 +90,6 @@ const TextWrapper = styled.div`
     width: 611.5px;
     margin: 0 auto;
   }
-`;
-
-const MacbookImgAndVideoAndSpinnerWrapper = styled.div``;
-
-const VideoAndSpinnerWrapper = styled.div`
-  width: 100%;
-  position: relative;
 `;
 
 class OverviewAndInstructionsSharedSection extends Component {
@@ -94,8 +116,8 @@ class OverviewAndInstructionsSharedSection extends Component {
       <OverviewAndInstructionsSharedSectionWrapper>
         <ContentWrapper>
           <H2Wrapper>
-            <H2 style={{ marginBottom: '0.25em' }}>{headerFirstLine}</H2>
-            <H2>{headerSecondLine}</H2>
+            <LocalH2 style={{ marginBottom: '0.25em' }}>{headerFirstLine}</LocalH2>
+            <LocalH2>{headerSecondLine}</LocalH2>
           </H2Wrapper>
           <TextWrapper
             style={{ textAlign: 'center' }}
