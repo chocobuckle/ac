@@ -51,7 +51,7 @@ const Gradient = styled.div`
       ? `linear-gradient(
         180deg,
         rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 1) 37%
+        rgba(255, 255, 255, 1) 63%
       );`
       : `linear-gradient(
         180deg,
