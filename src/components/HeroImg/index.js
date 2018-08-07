@@ -62,17 +62,18 @@ const Gradient = styled.div`
   z-index: 1;
 `;
 
-const OverviewPageGradient = Gradient.extend`
-  background: linear-gradient(180deg,rgba(255, 255, 255, 0) 5.12%, rgba(255, 255, 255, 0.04) 8.83%, rgba(255, 255, 255, 1) 40.44%););
+const OverviewAndInstructionsPageGradient = Gradient.extend`
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 5.12%,
+    rgba(255, 255, 255, 0.04) 8.83%,
+    rgba(255, 255, 255, 1) 40.44%
+  );
   margin-top: 40vw;
 
   @media screen and (min-width: 996px) {
     margin-top: 398.4px;
   }
-`;
-
-const InstructionsPageGradient = Gradient.extend`
-  ${'' /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 54%); */}
 `;
 
 const ContactPageGradient = Gradient.extend`
@@ -89,8 +90,7 @@ function HeroImg({ backgroundImgSizes, flowVuSizes, location }) {
   return (
     <HeroImgAndTextWrapper>
       <Img sizes={backgroundImgSizes} />
-      {location === '/overview' && <OverviewPageGradient />}
-      {location === '/instructions' && <InstructionsPageGradient />}
+      {(location === '/overview' || location === '/instructions') && <OverviewAndInstructionsPageGradient />}
       {location === '/contact' && <ContactPageGradient />}
       {location !== '/contact' && (
         <HeroTextWrapper>
