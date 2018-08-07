@@ -10,13 +10,17 @@ const OverviewWrapper = styled.div``;
 
 const AdditionalFeatures = styled.section`
   background: #f5f5f5;
+
+  p {
+    margin-bottom: 0.5em;
+  }
 `;
 
 const AFText = H4.extend`
   color: #000;
 `;
 
-const AFSpan = H4.withComponent('span').extend`
+const AFSpan = styled.span`
   color: #007fc8;
   font-weight: 600;
   font-style: italic;
@@ -42,11 +46,11 @@ function Overview({ data, location }) {
         bpaAndDishwasherSafe={data.bpaAndDishwasherSafe}
         pathname={location.pathname}
       />
-      <InhalerAnimation animationClickyThing={data.animationClickyThing} inhalerAnimationImg={data.inhalerAnimationImg} />
+      {/* <InhalerAnimation animationClickyThing={data.animationClickyThing} inhalerAnimationImg={data.inhalerAnimationImg} /> */}
       <AdditionalFeatures>
         <ContentWrapper>
           <H2>
-            Additional Features of <em style={{ color: '#007fc8', fontWeight: 700 }}>AeroChamber Plus® Flow-Vu®</em> VHC
+            Additional Features of <em style={{ color: '#007fc8' }}>AeroChamber Plus® Flow-Vu®</em> VHC
           </H2>
           <AFText>
             <AFSpan>"EZ Flow" Exhalation Valve</AFSpan> - Directs exhaled medication

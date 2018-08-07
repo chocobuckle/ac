@@ -10,6 +10,11 @@ const OverviewAndInstructionsSharedSectionWrapper = styled.div`
   position: relative;
   z-index: 2;
 
+  p {
+    font-size: 3.5vw;
+    line-height: 1.25em;
+  }
+
   @media screen and (min-width: 996px) {
     margin-top: -552.78px;
   }
@@ -31,9 +36,11 @@ const LocalH2 = H2.extend`
 `;
 
 const TextWrapper = styled.div`
+  width: 80%;
+  margin: 0 auto;
   @media screen and (min-width: 600px) {
-    width: 80%;
-    margin: 0 auto;
+    ${'' /* width: 80%;
+    margin: 0 auto; */}
   }
 
   @media screen and (min-width: 840px) {
