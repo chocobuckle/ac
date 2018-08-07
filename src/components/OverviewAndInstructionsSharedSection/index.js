@@ -49,12 +49,14 @@ const BPAImgAndTextAndMacbookImgWrapper = styled.div`
 
   @media screen and (min-width: 600px) {
     flex-direction: row;
+    align-items: flex-start;
   }
 `;
 
 const MacbookImgAndVideoAndSpinnerWrapper = styled.div`
   @media screen and (min-width: 600px) {
     order: 2;
+    margin: 0 auto;
   }
 `;
 
@@ -84,6 +86,7 @@ const BPAImgAndTextWrapper = styled.div`
   @media screen and (min-width: 600px) {
     order: 1;
     width: 17%;
+    position: absolute;
   }
 `;
 
