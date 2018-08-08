@@ -4,7 +4,7 @@ import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 import TabMenuPDFDownload from 'components/TabMenuPDFDownload';
 import Img from 'gatsby-image';
-import { ContentWrapper, InstructionText, ScalingText, Text, H3, H5, H6 } from 'helpers/sharedStyles';
+import { ContentWrapper, ScalingText, Text, H3, H5, H6 } from 'helpers/sharedStyles';
 import TabMenuNotes from 'components/TabMenuNotes';
 import IndicationsForUse from 'components/IndicationsForUse';
 import smallMediumPDF from 'static/small_medium_mask_indications.pdf';
@@ -70,6 +70,11 @@ const InstructionImgAndTextWrapper = styled.div`
   display: flex;
   margin: 3vw auto 6vw;
   width: 80vw;
+
+  @media screen and (min-width: 996px) {
+    margin: 29.88px auto 59.76px;
+    width: 796.797px;
+  }
 `;
 
 const InstructionsBlueHeader = ScalingText.extend`
@@ -77,12 +82,51 @@ const InstructionsBlueHeader = ScalingText.extend`
   margin: 0.75em auto 0;
   text-align: center;
   width: 80vw;
+
+  @media screen and (min-width: 996px) {
+    width: 796.797px;
+  }
 `;
 
 const InstructionImg = styled(Img)`
   max-width: 857px;
-  width: 28vw;
+  width: 31.5vw;
 `;
+
+const InstructionText = ScalingText.extend`
+  position: relative;
+  right: 2.95em;
+
+  @media screen and (min-width: 360px) {
+    right: 3.1em;
+  }
+
+  @media screen and (min-width: 420px) {
+    right: 3.2em;
+  }
+
+  @media screen and (min-width: 500px) {
+    right: 3.37em;
+  }
+
+  @media screen and (min-width: 600px) {
+    right: 3.25em;
+  }
+`;
+
+// @media screen and (min-width: 700px) {
+//   font-size: 2.25vw;
+//   line-height: 1.4em;
+// }
+
+// @media screen and (min-width: 800px) {
+//   font-size: 2vw;
+// }
+
+// @media screen and (min-width: 996px) {
+//   font-size: 19.92px;
+//   line-height: 1.5em;
+// }
 
 const HelpfulTips = styled.div`
   background: rgba(245, 245, 245, 1);

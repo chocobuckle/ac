@@ -107,13 +107,6 @@ export const ScalingH2 = H2.extend`
   }
 `;
 
-export const InstructionText = Text.extend`
-  font-size: 2.85vw;
-  line-height: 1.45em;
-  position: relative;
-  right: 2.95em;
-`;
-
 export const List = ScalingText.withComponent('ul').extend`
   list-style: 'none';
   margin-left: 0;
