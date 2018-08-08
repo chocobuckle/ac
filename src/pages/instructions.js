@@ -380,10 +380,8 @@ class Instructions extends Component {
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
-                <InstructionImgSMClean2b
-                  sizes={data.SMClean_2b.sizes}
-                />
-                <InstructionText style={{ left: '1.4em', width: '60vw' }}>
+                <InstructionImgSMClean2b sizes={data.SMClean_2b.sizes} />
+                <InstructionText>
                   <b>Dishwasher safe under the following conditions:</b>
                 </InstructionText>
               </InstructionImgAndTextWrapper>
