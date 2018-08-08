@@ -361,7 +361,7 @@ class Instructions extends Component {
               <TabMenuPDFDownload
                 download={data.download}
                 PDFImage={data.PDFImage}
-                text="AeroChamber Plus® Flow-Vu® VHC Small Mask/Medium Mask"
+                text="AeroChamber Plus® Flow-Vu® VHC<br />Small Mask/Medium Mask"
                 PDFPath={smallMediumPDF}
               />
               <TabMenuNotes />
@@ -548,7 +548,7 @@ class Instructions extends Component {
                 download={data.download}
                 PDFImage={data.PDFImage}
                 // PDFPath={largeMouthpiecePDF}
-                text="AeroChamber Plus® Flow-Vu® VHC Large Mask/Mouthpiece"
+                text="AeroChamber Plus® Flow-Vu® VHC<br />Large Mask/Mouthpiece"
               />
               <TabMenuNotes />
               <IndicationsForUse style={{ paddingTop: 0 }} />

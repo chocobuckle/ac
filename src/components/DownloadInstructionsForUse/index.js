@@ -28,7 +28,7 @@ const BearAndMaskImgWrapper = styled.div`
   }
 `;
 
-const DownloadImg = styled(Img)`
+export const DownloadImg = styled(Img)`
   margin-left: 2.75vw;
   position: relative;
   bottom: 1.19vw;
