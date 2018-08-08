@@ -215,7 +215,7 @@ class OverviewAndInstructionsSharedSection extends Component {
             <MacbookImgAndVideoAndSpinnerWrapper>
               <MacBookImg sizes={macbook.sizes} />
               <VideoAndSpinnerWrapper>
-                {(!videoHasLoaded || videoHasLoaded) && <Spinner src={spinner} alt="loading spinner" />}
+                {!videoHasLoaded && <Spinner src={spinner} alt="loading spinner" />}
                 <VideoPlayer handleVideoLoading={this.handleVideoLoading} />
               </VideoAndSpinnerWrapper>
             </MacbookImgAndVideoAndSpinnerWrapper>
