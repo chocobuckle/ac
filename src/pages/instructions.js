@@ -142,7 +142,7 @@ class Instructions extends Component {
           bear={data.bear}
           smallMask={data.smallMask}
           largeMask={data.largeMask}
-          style={{ paddingTop: 0, paddingBottom: 0 }}
+          style={{ paddingTop: 0, paddingBottom: 0, position: 'relative', zIndex: 1 }}
         />
         <InstructionsMenu>
           <SubMenuWrapper>
