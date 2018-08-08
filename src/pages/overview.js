@@ -17,11 +17,11 @@ const AdditionalFeatures = styled.section`
 `;
 
 const LocalH2 = H2.extend`
-  font-size: 5vw;
+  font-size: 4.1625vw;
   margin-bottom: 0.4em;
 
   @media screen and (min-width: 996px) {
-    font-size: 49.8px;
+    font-size: 41.4585px;
   }
 `;
 
@@ -55,7 +55,7 @@ function Overview({ data, location }) {
       <AdditionalFeatures>
         <ContentWrapper>
           <LocalH2>
-            Additional Features of <em style={{ color: '#007fc8' }}>AeroChamber Plus® Flow-Vu®</em> VHC
+            Additional Features of <em style={{ color: '#007fc8' }}>AeroChamber Plus® Flow-Vu®</em>
           </LocalH2>
           <ScalingText>
             <Span>"EZ Flow" Exhalation Valve</Span> - Directs exhaled medication
