@@ -96,37 +96,7 @@ const InstructionImg = styled(Img)`
 const InstructionText = ScalingText.extend`
   position: relative;
   right: 2.95em;
-
-  @media screen and (min-width: 360px) {
-    right: 3.1em;
-  }
-
-  @media screen and (min-width: 420px) {
-    right: 3.2em;
-  }
-
-  @media screen and (min-width: 500px) {
-    right: 3.37em;
-  }
-
-  @media screen and (min-width: 600px) {
-    right: 3.25em;
-  }
 `;
-
-// @media screen and (min-width: 700px) {
-//   font-size: 2.25vw;
-//   line-height: 1.4em;
-// }
-
-// @media screen and (min-width: 800px) {
-//   font-size: 2vw;
-// }
-
-// @media screen and (min-width: 996px) {
-//   font-size: 19.92px;
-//   line-height: 1.5em;
-// }
 
 const HelpfulTips = styled.div`
   background: rgba(245, 245, 245, 1);
