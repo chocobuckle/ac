@@ -21,6 +21,11 @@ const BearAndMaskImgWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  @media screen and (min-width: 750px) {
+    margin: 0 auto;
+    width: 682px;
+  }
 `;
 
 const DownloadImg = styled(Img)`
@@ -39,11 +44,21 @@ const DownloadImg = styled(Img)`
 const BearImg = styled(Img)`
   margin: 0 2vw;
   width: 37.5vw;
+
+  @media screen and (min-width: 600px) {
+    margin: 0 19.92px;
+    width: 225px;
+  }
 `;
 
 const MaskImg = styled(Img)`
   margin: 0 2vw;
   width: 21vw;
+
+  @media screen and (min-width: 600px) {
+    margin: 0 19.92px;
+    width: 126px;
+  }
 `;
 
 function DownloadInstructionsForUse({
