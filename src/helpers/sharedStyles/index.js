@@ -114,8 +114,7 @@ export const InstructionText = Text.extend`
   right: 2.95em;
 `;
 
-export const List = styled.ul`
+export const List = ScalingText.withComponent('ul').extend`
   list-style: 'none';
-  font-size: 3.9vw;
   margin-left: 0;
 `;
