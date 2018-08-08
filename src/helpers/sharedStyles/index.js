@@ -98,6 +98,15 @@ export const ScalingText = styled.p`
   }
 `;
 
+export const ScalingH2 = H2.extend`
+  font-size: 4.1625vw;
+  margin-bottom: 0.4em;
+
+  @media screen and (min-width: 996px) {
+    font-size: 41.4585px;
+  }
+`;
+
 export const InstructionText = Text.extend`
   font-size: 2.85vw;
   line-height: 1.45em;

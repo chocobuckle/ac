@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ContentWrapper, ScalingText, H2 } from 'helpers/sharedStyles';
+import { ContentWrapper, ScalingText, ScalingH2 } from 'helpers/sharedStyles';
 import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 import IndicationsForUse from 'components/IndicationsForUse';
@@ -13,15 +13,6 @@ const AdditionalFeatures = styled.section`
 
   p {
     margin-bottom: 0.5em;
-  }
-`;
-
-const LocalH2 = H2.extend`
-  font-size: 4.1625vw;
-  margin-bottom: 0.4em;
-
-  @media screen and (min-width: 996px) {
-    font-size: 41.4585px;
   }
 `;
 
@@ -54,9 +45,9 @@ function Overview({ data, location }) {
       {/* <InhalerAnimation animationClickyThing={data.animationClickyThing} inhalerAnimationImg={data.inhalerAnimationImg} /> */}
       <AdditionalFeatures>
         <ContentWrapper>
-          <LocalH2>
+          <ScalingH2>
             Additional Features of <em style={{ color: '#007fc8' }}>AeroChamber Plus® Flow-Vu®</em>
-          </LocalH2>
+          </ScalingH2>
           <ScalingText>
             <Span>"EZ Flow" Exhalation Valve</Span> - Directs exhaled medication
             away from the patient's face and eyes.<sup>5</sup>

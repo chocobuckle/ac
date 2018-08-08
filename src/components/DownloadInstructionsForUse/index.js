@@ -1,19 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { ContentWrapper } from 'helpers/sharedStyles';
+import { ContentWrapper, ScalingH2, ScalingText } from 'helpers/sharedStyles';
 import smallMediumPDF from 'static/small_medium_mask_indications.pdf';
 // import largeMouthpiecePDF from 'static/large_mask_mouthpiece_indications.pdf';
-
-const H2 = styled.h2`
-  color: #004899;
-  font-size: 5.3vw;
-  font-weight: 600;
-  margin-bottom: 2vw;
-  span {
-    font-size: 5.3vw;
-  }
-`;
 
 const H2AndDownloadWrapper = styled.div`
   display: flex;
@@ -55,16 +45,14 @@ function DownloadInstructionsForUse({
   return (
     <ContentWrapper style={style}>
       <H2AndDownloadWrapper>
-        <H2 style={{ marginBottom: 0 }}>Download Instructions for Use</H2>
+        <ScalingH2 style={{ marginBottom: 0 }}>Download Instructions for Use</ScalingH2>
         <Img sizes={download.sizes} style={{ ...downloadImgStyle }} />
       </H2AndDownloadWrapper>
-      <p>
+      <ScalingText>
         Printed in English and Spanish and featuring the child-friendly
-        <span>
-          {' '}
-          AeroBear®<sup>1</sup>
+        <span>AeroBear®<sup>1</sup>
         </span>
-      </p>
+      </ScalingText>
       <BearAndMaskImgWrapper>
         <Img sizes={bear.sizes} style={{ ...bearImgStyle }} />
         <a
