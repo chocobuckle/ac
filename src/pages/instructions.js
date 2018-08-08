@@ -133,6 +133,25 @@ const InstructionText = ScalingText.extend`
   }
 `;
 
+const IndentedInstructionText = InstructionText.extend`
+  margin-left: calc(12vw + 3vw);
+
+  @media screen and (min-width: 600px) {
+    margin-left: calc(12vw + 2.75vw);
+  }
+
+  @media screen and (min-width: 996px) {
+    margin-left: calc(12vw + 27.39px);
+  }
+`;
+
+const LMInstructFlexWrapper = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+`;
+
 const HelpfulTips = styled.div`
   background: rgba(245, 245, 245, 1);
   border: 0.5vw solid #007fc8;
@@ -461,37 +480,16 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper
                 style={{
-                  flexDirection: 'column'
+                  flexDirection: 'column',
+                  marginBottom: 0
                 }}>
-                <div
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between'
-                  }}>
+                <LMInstructFlexWrapper>
                   <InstructionImg sizes={data.LMInstruct_5.sizes} />
-                  <InstructionImg
-                    sizes={data.LMInstruct_5b.sizes}
-                    style={{
-                      position: 'relative',
-                      right: '4vw',
-                      width: '12vw'
-                    }}
-                  />
-                  <InstructionImg
-                    sizes={data.LMInstruct_5c.sizes}
-                    style={{
-                      width: '15.45vw'
-                    }}
-                  />
-                </div>
-                <InstructionText
-                  style={{
-                    left: '6.85em',
-                    marginBottom: 0,
-                    top: '0.6em',
-                    width: '55vw'
-                  }}>
+                  <InstructionImg sizes={data.LMInstruct_5b.sizes} />
+                  <InstructionImg sizes={data.LMInstruct_5c.sizes} />
+                </LMInstructFlexWrapper>
+                <br />
+                <IndentedInstructionText style={{ marginBottom: '0.5em' }}>
                   <BlueStep>Step 5</BlueStep>
                   <br />
                   Put mouthpiece into mouth and close lips around it to ensure an eective seal. The
@@ -499,28 +497,19 @@ class Instructions extends Component {
                   seal.<br />
                   <br />Apply mask to face and ensure an eective seal. The Flow-Vu® Inspiratory Flow
                   Indicator only moves if a good seal is created.
-                </InstructionText>
+                </IndentedInstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper
                 style={{
-                  flexDirection: 'column'
+                  flexDirection: 'column',
+                  marginBottom: 0
                 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <LMInstructFlexWrapper>
                   <InstructionImg sizes={data.LMInstruct_6.sizes} />
-                  <InstructionImg
-                    sizes={data.LMInstruct_6b.sizes}
-                    style={{
-                      width: '15.45vw'
-                    }}
-                  />
-                </div>
-                <InstructionText
-                  style={{
-                    left: '6.85em',
-                    marginBottom: 0,
-                    top: '0.6em',
-                    width: '55vw'
-                  }}>
+                  <InstructionImg sizes={data.LMInstruct_6b.sizes} />
+                </LMInstructFlexWrapper>
+                <IndentedInstructionText>
+                  <br />
                   <BlueStep>Step 6</BlueStep>
                   <br />
                   Breathe out gently and press the MDI at the beginning of a slow inhalation. Use
@@ -535,7 +524,7 @@ class Instructions extends Component {
                   Maintain seal for 5-6 breaths after the MDI is pressed. Slow down inhalation if
                   you hear the FlowSignal® Whistle sound. It means that you are inhaling too
                   quickly. Administer 1 pu at a time.
-                </InstructionText>
+                </IndentedInstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_7.sizes} />
