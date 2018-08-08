@@ -366,7 +366,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper style={{ marginBottom: 0 }}>
                 <InstructionImg sizes={data.SMClean_2.sizes} />
-                <InstructionText>
+                <InstructionText style={{ marginBottom: 0 }}>
                   <BrownStep>Step 2</BrownStep>
                   <br />
                   Soak the parts for 15 minutes in a mild solution of liquid dish detergent and
