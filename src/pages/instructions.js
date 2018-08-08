@@ -113,7 +113,7 @@ const InstructionImg = styled(Img)`
   }
 `;
 
-const InstructionImg5b = styled(Img)`
+const InstructionImgSMInstruct5b = styled(Img)`
   margin-left: 1em;
   position: relative;
   width: 14vw;
@@ -122,6 +122,15 @@ const InstructionImg5b = styled(Img)`
   @media screen and (min-width: 996px) {
     bottom: 9.96px;
     width: 134.45px;
+  }
+`;
+
+const InstructionImgSMClean2b = styled(Img)`
+  width: 12vw;
+
+  @media screen and (min-width: 996px) {
+    bottom: 9.96px;
+    width: 120px;
   }
 `;
 
@@ -275,7 +284,7 @@ class Instructions extends Component {
                   Insert the MDI into the backpiece of the chamber.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper style={{ justifyContent: 'flex-end'}}>
+              <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_5.sizes} />
                 <InstructionText>
                   <BrownStep>Step 5</BrownStep>
@@ -283,7 +292,7 @@ class Instructions extends Component {
                   Apply mask to face and ensure an effective seal. The Flow-Vu® Inspiratory Flow
                   Indicator (IFI) only moves if a good seal is created.
                 </InstructionText>
-                <InstructionImg5b sizes={data.SMInstruct_5b.sizes} />
+                <InstructionImgSMInstruct5b sizes={data.SMInstruct_5b.sizes} />
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_6.sizes} />
@@ -372,11 +381,8 @@ class Instructions extends Component {
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
-                <InstructionImg
+                <InstructionImgSMClean2b
                   sizes={data.SMClean_2b.sizes}
-                  style={{
-                    width: '15.45vw'
-                  }}
                 />
                 <InstructionText style={{ left: '1.4em', width: '60vw' }}>
                   <b>Dishwasher safe under the following conditions:</b>
