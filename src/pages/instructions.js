@@ -129,7 +129,6 @@ const InstructionImgSMClean2b = styled(Img)`
   width: 12vw;
 
   @media screen and (min-width: 996px) {
-    bottom: 9.96px;
     width: 120px;
   }
 `;
@@ -365,7 +364,7 @@ class Instructions extends Component {
                   Remove the backpiece. To detach the frontpiece, twist chamber as shown.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper style={{ marginBottom: '8vw' }}>
+              <InstructionImgAndTextWrapper style={{ marginBottom: 0 }}>
                 <InstructionImg sizes={data.SMClean_2.sizes} />
                 <InstructionText>
                   <BrownStep>Step 2</BrownStep>
