@@ -4,7 +4,7 @@ import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 import TabMenuPDFDownload from 'components/TabMenuPDFDownload';
 import Img from 'gatsby-image';
-import { ContentWrapper, InstructionText, Text, H3, H5, H6 } from 'helpers/sharedStyles';
+import { ContentWrapper, InstructionText, ScalingText, Text, H3, H5, H6 } from 'helpers/sharedStyles';
 import TabMenuNotes from 'components/TabMenuNotes';
 import IndicationsForUse from 'components/IndicationsForUse';
 import smallMediumPDF from 'static/small_medium_mask_indications.pdf';
@@ -19,6 +19,9 @@ const InstructionsMenu = ContentWrapper.extend`
   padding: 0;
 
   @media screen and (min-width: 996px) {
+    border-radius: 14.94px;
+    border: 7.46875px solid #f2a900;
+    margin-top: 64.74px;
     padding: 0;
   }
 `;
@@ -26,8 +29,12 @@ const InstructionsMenu = ContentWrapper.extend`
 const SubMenuWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-top: -5.4vw;
+  margin-top: -3.2vw;
   width: 100%;
+
+  @media screen and (min-width: 996px) {
+
+  }
 `;
 
 const SubMenuTab = styled.div`
@@ -65,10 +72,8 @@ const InstructionImgAndTextWrapper = styled.div`
   width: 80vw;
 `;
 
-const InstructionsBlueHeader = H5.extend`
+const InstructionsBlueHeader = ScalingText.extend`
   color: #004899;
-  font-weight: 400;
-  line-height: 1.1em;
   margin: 0.75em auto 0;
   text-align: center;
   width: 80vw;
@@ -284,7 +289,7 @@ class Instructions extends Component {
           {activeSubMenuTab === 2 && (
             <div>
               <InstructionsBlueHeader>
-                CLEANING INSTRUCTIONS FOR THE SMALL AND MEDIUM MASK CHAMBERS. THIS PRODUCT CAN BE
+                CLEANING INSTRUCTIONS FOR THE SMALL AND MEDIUM MASK CHAMBERS.<br />THIS PRODUCT CAN BE
                 USED RIGHT OUT OF THE PACKAGE AND THEN CLEANED WEEKLY.
               </InstructionsBlueHeader>
               <InstructionImgAndTextWrapper>
@@ -496,7 +501,7 @@ class Instructions extends Component {
           {activeSubMenuTab === 4 && (
             <div>
               <InstructionsBlueHeader>
-                CLEANING INSTRUCTIONS FOR THE LARGE MASK AND MOUTHPIECE CHAMBERS. THIS PRODUCT CAN
+                CLEANING INSTRUCTIONS FOR THE LARGE MASK AND MOUTHPIECE CHAMBERS.<br />THIS PRODUCT CAN
                 BE USED RIGHT OUT OF THE PACKAGE AND THEN CLEANED WEEKLY.
               </InstructionsBlueHeader>
               <InstructionImgAndTextWrapper>
