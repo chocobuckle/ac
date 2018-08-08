@@ -131,11 +131,11 @@ const VideoAndSpinnerWrapper = styled.div`
 `;
 
 const Spinner = styled.img`
-  width: 30vw;
+  width: 32.8%;
   position: absolute;
   z-index: 1;
-  left: 30.75vw;
-  bottom: 6vw;
+  left: 33.6%;
+  bottom: 134%;
 `;
 
 const BPAImgAndTextWrapper = styled.div`
@@ -215,7 +215,7 @@ class OverviewAndInstructionsSharedSection extends Component {
             <MacbookImgAndVideoAndSpinnerWrapper>
               <MacBookImg sizes={macbook.sizes} />
               <VideoAndSpinnerWrapper>
-                {!videoHasLoaded && <Spinner src={spinner} alt="loading spinner" />}
+                {(!videoHasLoaded || videoHasLoaded) && <Spinner src={spinner} alt="loading spinner" />}
                 <VideoPlayer handleVideoLoading={this.handleVideoLoading} />
               </VideoAndSpinnerWrapper>
             </MacbookImgAndVideoAndSpinnerWrapper>

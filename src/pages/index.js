@@ -61,7 +61,7 @@ const LoadingSpinner = styled.img`
   position: absolute;
   z-index: 1;
   left: 35%;
-  bottom: 26.25%;
+  bottom: 25%;
 `;
 
 const VideoButtonWrapper = styled.div`
@@ -616,7 +616,7 @@ class IndexPage extends Component {
             <MacbookImg
               sizes={macbook.sizes}
             />
-            {!videoHasLoaded && (
+            {(!videoHasLoaded) && (
               <LoadingSpinner location={location.pathname} src={spinner} alt="loading spinner" />
             )}
             <VideoPlayer
