@@ -94,7 +94,7 @@ const BrownStep = styled.span`
 `;
 
 const BlueStep = styled.span`
-  color: #2855A7;
+  color: #2855a7;
   font-weight: 600;
   text-decoration: underline;
 `;
@@ -125,16 +125,7 @@ const InstructionImgSMInstruct5b = styled(Img)`
   }
 `;
 
-const InstructionImgSMClean2b = styled(Img)`
-  width: 12vw;
-
-  @media screen and (min-width: 996px) {
-    width: 120px;
-  }
-`;
-
 const InstructionText = ScalingText.extend`
-
   @media screen and (min-width: 996px) {
     span {
       font-size: 23.25px;
@@ -379,39 +370,25 @@ class Instructions extends Component {
                   OR
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper>
-                <InstructionImgSMClean2b sizes={data.SMClean_2b.sizes} />
-                <InstructionText>
-                  <b>Dishwasher safe under the following conditions:</b>
-                </InstructionText>
-              </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper
-                style={{ flexDirection: 'column', marginTop: '6vw', marginBottom: '-17vw' }}>
-                <ul
-                  style={{
-                    fontSize: '2.85vw',
-                    position: 'relative',
-                    left: '6.3em',
-                    lineHeight: '1.25em',
-                    bottom: '3.5em',
-                    width: '55vw'
-                  }}>
-                  <li>Avoid heavy or other cycles that include heated dry over 158°F</li>
-                  <li>Parts must be placed in the top rack ONLY</li>
-                  <li>Secure product face up, as pictured</li>
-                  <li>Use dishwasher detergent and rinse aid</li>
-                  <li>Do not boil or sterilize</li>
-                </ul>
-                <InstructionText
-                  style={{
-                    width: '60vw',
-                    position: 'relative',
-                    left: '6.75em',
-                    marginTop: '1em',
-                    top: '-5.75em'
-                  }}>
-                  SEE CAUTIONS, 1ST BULLET, BELOW
-                </InstructionText>
+              <InstructionImgAndTextWrapper style={{ marginBottom: 0 }}>
+                <InstructionImg sizes={data.SMClean_2b.sizes} />
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <InstructionText style={{ marginBottom: '0.5em' }}>
+                    <b>Dishwasher safe under the following conditions:</b>
+                  </InstructionText>
+                  <InstructionText>
+                    <ul>
+                      <li>Avoid heavy or other cycles that include heated dry over 158°F</li>
+                      <li>Parts must be placed in the top rack ONLY</li>
+                      <li>Secure product face up, as pictured</li>
+                      <li>Use dishwasher detergent and rinse aid</li>
+                      <li>Do not boil or sterilize</li>
+                    </ul>
+                  </InstructionText>
+                  <InstructionText style={{ marginBottom: '0.5em' }}>
+                    SEE CAUTIONS, 1ST BULLET, BELOW
+                  </InstructionText>
+                </div>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_3.sizes} />
@@ -544,7 +521,8 @@ class Instructions extends Component {
                     top: '0.6em',
                     width: '55vw'
                   }}>
-                  <BlueStep>Step 6</BlueStep><br />
+                  <BlueStep>Step 6</BlueStep>
+                  <br />
                   Breathe out gently and press the MDI at the beginning of a slow inhalation. Use
                   the Flow-Vu® IFI to assist in the coordination of this step. Breathe in slowly and
                   deeply through the mouth until a full breath has been taken. Hold breath for 5-10
@@ -562,7 +540,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_7.sizes} />
                 <InstructionText>
-                  <BlueStep>Step 7</BlueStep><br />
+                  <BlueStep>Step 7</BlueStep>
+                  <br />
                   Follow instructions supplied with the MDI on how long to wait before repeating
                   steps 3-6 as prescribed.
                 </InstructionText>
