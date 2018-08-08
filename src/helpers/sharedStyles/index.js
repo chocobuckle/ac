@@ -55,27 +55,47 @@ export const Text = styled.p`
 `;
 
 export const ScalingText = styled.p`
-  font-size: 3.5vw;
-  line-height: 1.3em;
+  font-size: 3.15vw;
+  line-height: 1.225em;
 
-  @media screen and (min-width: 520px) {
+  @media screen and (min-width: 360px) {
     font-size: 3vw;
+    line-height: 1.25em;
+  }
+
+  @media screen and (min-width: 420px) {
+    font-size: 2.95vw;
+    line-height: 1.3em;
+  }
+
+  @media screen and (min-width: 500px) {
+    font-size: 2.85vw;
+    line-height: 1.25em;
+  }
+
+  @media screen and (min-width: 550px) {
+    font-size: 2.75vw;
+    line-height: 1.3em;
+  }
+
+  @media screen and (min-width: 600px) {
+    font-size: 2.5vw;
     line-height: 1.35em;
   }
 
   @media screen and (min-width: 700px) {
-    font-size: 2.75vw;
+    font-size: 2.25vw;
     line-height: 1.4em;
   }
 
   @media screen and (min-width: 800px) {
-    font-size: 2.25vw;
+    font-size: 2vw;
   }
 
-  @media screen and (min-width: 996px) {
+  ${'' /* @media screen and (min-width: 996px) {
     font-size: 22.41px;
     line-height: 1.5em;
-  }
+  } */}
 `;
 
 export const InstructionText = Text.extend`
