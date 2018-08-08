@@ -367,7 +367,7 @@ class Instructions extends Component {
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <TabMenuNotes />
-              <IndicationsForUse />
+              <IndicationsForUse style={{ paddingTop: 0 }} />
             </div>
           )}
           {activeSubMenuTab === 3 && (
@@ -490,7 +490,7 @@ class Instructions extends Component {
                 text="AeroChamber Plus® Flow-Vu® VHC Large Mask/Mouthpiece"
               />
               <TabMenuNotes />
-              <IndicationsForUse />
+              <IndicationsForUse style={{ paddingTop: 0 }} />
             </div>
           )}
           {activeSubMenuTab === 4 && (
@@ -583,7 +583,7 @@ class Instructions extends Component {
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <TabMenuNotes />
-              <IndicationsForUse />
+              <IndicationsForUse style={{ paddingTop: 0 }} />
             </div>
           )}
         </InstructionsMenu>
