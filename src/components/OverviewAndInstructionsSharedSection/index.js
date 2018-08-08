@@ -11,27 +11,55 @@ const OverviewAndInstructionsSharedSectionWrapper = styled.div`
   z-index: 2;
 
   p {
-    font-size: 3.5vw;
-    line-height: 1.3em;
+    font-size: 3.15vw;
+    line-height: 1.225em;
   }
 
-  @media screen and (min-width: 520px) {
+  @media screen and (min-width: 360px) {
     p {
       font-size: 3vw;
+      line-height: 1.25em;
+    }
+  }
+
+  @media screen and (min-width: 420px) {
+    p {
+      font-size: 2.95vw;
+      line-height: 1.3em;
+    }
+  }
+
+  @media screen and (min-width: 500px) {
+    p {
+      font-size: 2.85vw;
+      line-height: 1.25em;
+    }
+  }
+
+  @media screen and (min-width: 550px) {
+    p {
+      font-size: 2.75vw;
+      line-height: 1.3em;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    p {
+      font-size: 2.5vw;
       line-height: 1.35em;
     }
   }
 
   @media screen and (min-width: 700px) {
     p {
-      font-size: 2.75vw;
+      font-size: 2.25vw;
       line-height: 1.4em;
     }
   }
 
   @media screen and (min-width: 800px) {
     p {
-      font-size: 2.25vw;
+      font-size: 2vw;
     }
   }
 
@@ -39,7 +67,7 @@ const OverviewAndInstructionsSharedSectionWrapper = styled.div`
     margin-top: -552.78px;
 
     p {
-      font-size: 22.41px;
+      font-size: 19.92px;
       line-height: 1.5em;
     }
   }

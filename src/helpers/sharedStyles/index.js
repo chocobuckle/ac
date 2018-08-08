@@ -92,10 +92,10 @@ export const ScalingText = styled.p`
     font-size: 2vw;
   }
 
-  ${'' /* @media screen and (min-width: 996px) {
-    font-size: 22.41px;
+  @media screen and (min-width: 996px) {
+    font-size: 19.92px;
     line-height: 1.5em;
-  } */}
+  }
 `;
 
 export const InstructionText = Text.extend`
