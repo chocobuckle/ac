@@ -33,7 +33,6 @@ const SubMenuWrapper = styled.div`
   width: 100%;
 
   @media screen and (min-width: 996px) {
-
   }
 `;
 
@@ -88,6 +87,18 @@ const InstructionImgAndTextWrapper = styled.div`
   }
 `;
 
+const BrownStep = styled.span`
+  color: #c09442;
+  font-weight: 600;
+  text-decoration: underline;
+`;
+
+const BlueStep = styled.span`
+  color: #2855A7;
+  font-weight: 600;
+  text-decoration: underline;
+`;
+
 const InstructionImg = styled(Img)`
   width: 12vw;
   margin-right: 3vw;
@@ -97,23 +108,30 @@ const InstructionImg = styled(Img)`
   }
 
   @media screen and (min-width: 996px) {
+    margin-right: 27.39px;
     width: 120px;
   }
 `;
 
 const InstructionImg5b = styled(Img)`
+  margin-left: 1em;
   position: relative;
-  right: 2vw;
-  width: 13.5vw;
-  bottom: 1vw;
+  width: 14vw;
+  bottom: 1.1vw;
 
   @media screen and (min-width: 996px) {
+    bottom: 9.96px;
     width: 134.45px;
   }
 `;
 
 const InstructionText = ScalingText.extend`
-  position: relative;
+
+  @media screen and (min-width: 996px) {
+    span {
+      font-size: 23.25px;
+    }
+  }
 `;
 
 const HelpfulTips = styled.div`
@@ -223,6 +241,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_1.sizes} />
                 <InstructionText>
+                  <BrownStep>Step 1</BrownStep>
+                  <br />
                   Carefully examine the product for damage, missing parts, or foreign objects.
                   Remove any foreign objects prior to use. The product should be replaced
                   IMMEDIATELY if there are any damaged or missing parts. If necessary, use the
@@ -233,12 +253,16 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_2.sizes} />
                 <InstructionText>
+                  <BrownStep>Step 2</BrownStep>
+                  <br />
                   Remove cap from the MDI.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_3.sizes} />
                 <InstructionText>
+                  <BrownStep>Step 3</BrownStep>
+                  <br />
                   Shake the MDI immediately before each use as per the instructions supplied with
                   the MDI.
                 </InstructionText>
@@ -246,12 +270,16 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_4.sizes} />
                 <InstructionText>
+                  <BrownStep>Step 4</BrownStep>
+                  <br />
                   Insert the MDI into the backpiece of the chamber.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper>
+              <InstructionImgAndTextWrapper style={{ justifyContent: 'flex-end'}}>
                 <InstructionImg sizes={data.SMInstruct_5.sizes} />
                 <InstructionText>
+                  <BrownStep>Step 5</BrownStep>
+                  <br />
                   Apply mask to face and ensure an effective seal. The Flow-Vu® Inspiratory Flow
                   Indicator (IFI) only moves if a good seal is created.
                 </InstructionText>
@@ -260,6 +288,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_6.sizes} />
                 <InstructionText>
+                  <BrownStep>Step 6</BrownStep>
+                  <br />
                   Press the MDI at the beginning of a slow inhalation as the Flow-Vu® Inspiratory
                   Flow Indicator moves toward the patient. Use the Flow-Vu® Inspiratory Flow
                   Indicator to count breaths. Maintain seal for 5-6 breaths after the MDI is
@@ -269,6 +299,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_7.sizes} />
                 <InstructionText>
+                  <BrownStep>Step 7</BrownStep>
+                  <br />
                   Follow instructions supplied with the MDI on how long to wait before repeating
                   steps 3-6 as prescribed.
                 </InstructionText>
@@ -313,18 +345,22 @@ class Instructions extends Component {
           {activeSubMenuTab === 2 && (
             <div>
               <InstructionsBlueHeader>
-                CLEANING INSTRUCTIONS FOR THE SMALL AND MEDIUM MASK CHAMBERS.<br />THIS PRODUCT CAN BE
-                USED RIGHT OUT OF THE PACKAGE AND THEN CLEANED WEEKLY.
+                CLEANING INSTRUCTIONS FOR THE SMALL AND MEDIUM MASK CHAMBERS.<br />THIS PRODUCT CAN
+                BE USED RIGHT OUT OF THE PACKAGE AND THEN CLEANED WEEKLY.
               </InstructionsBlueHeader>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_1.sizes} />
                 <InstructionText>
+                  <BrownStep>Step 1</BrownStep>
+                  <br />
                   Remove the backpiece. To detach the frontpiece, twist chamber as shown.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper style={{ marginBottom: '8vw' }}>
                 <InstructionImg sizes={data.SMClean_2.sizes} />
                 <InstructionText>
+                  <BrownStep>Step 2</BrownStep>
+                  <br />
                   Soak the parts for 15 minutes in a mild solution of liquid dish detergent and
                   lukewarm clean water. Agitate gently.
                   <br />
@@ -377,6 +413,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_3.sizes} />
                 <InstructionText>
+                  <BrownStep>Step 3</BrownStep>
+                  <br />
                   Shake out excess water from the parts and allow to air dry in a vertical position.
                   Ensure parts are dry before reassembly.
                 </InstructionText>
@@ -384,6 +422,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_4.sizes} />
                 <InstructionText>
+                  <BrownStep>Step 4</BrownStep>
+                  <br />
                   To reassemble, t the frontpiece on the end of the chamber and twist rmly until
                   securely locked into position.
                 </InstructionText>
@@ -391,6 +431,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMClean_5.sizes} />
                 <InstructionText>
+                  <BrownStep>Step 5</BrownStep>
+                  <br />
                   Center the Alignment Feature on the backpiece with the Flow-Vu® Inspiratory Flow
                   Indicator, as shown. Press rmly to attach the backpiece.
                 </InstructionText>
@@ -404,6 +446,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_1.sizes} />
                 <InstructionText>
+                  <BlueStep>Step 1</BlueStep>
+                  <br />
                   Carefully examine the product for damage, missing parts or foreign objects. Remove
                   any foreign objects prior to use. The product should be replaced IMMEDIATELY if
                   there are any damaged or missing parts. If necessary, use the Metered Dose Inhaler
@@ -414,12 +458,16 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_2.sizes} />
                 <InstructionText>
+                  <BlueStep>Step 2</BlueStep>
+                  <br />
                   Remove caps from the MDI and chamber.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_3.sizes} />
                 <InstructionText>
+                  <BlueStep>Step 3</BlueStep>
+                  <br />
                   Shake the MDI immediately before each use as per the instructions supplied with
                   the MDI.
                 </InstructionText>
@@ -427,7 +475,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_4.sizes} />
                 <InstructionText>
-                  Insert the MDI into the backpiece of the chamber.
+                  <BlueStep>Step 4</BlueStep>
+                  <br />Insert the MDI into the backpiece of the chamber.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper
@@ -463,6 +512,8 @@ class Instructions extends Component {
                     top: '0.6em',
                     width: '55vw'
                   }}>
+                  <BlueStep>Step 5</BlueStep>
+                  <br />
                   Put mouthpiece into mouth and close lips around it to ensure an eective seal. The
                   Flow-Vu® Inspiratory Flow Indicator (IFI) only moves if the patient has a good
                   seal.<br />
@@ -490,6 +541,7 @@ class Instructions extends Component {
                     top: '0.6em',
                     width: '55vw'
                   }}>
+                  <BlueStep>Step 6</BlueStep><br />
                   Breathe out gently and press the MDI at the beginning of a slow inhalation. Use
                   the Flow-Vu® IFI to assist in the coordination of this step. Breathe in slowly and
                   deeply through the mouth until a full breath has been taken. Hold breath for 5-10
@@ -507,6 +559,7 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_7.sizes} />
                 <InstructionText>
+                  <BlueStep>Step 7</BlueStep><br />
                   Follow instructions supplied with the MDI on how long to wait before repeating
                   steps 3-6 as prescribed.
                 </InstructionText>
@@ -525,12 +578,14 @@ class Instructions extends Component {
           {activeSubMenuTab === 4 && (
             <div>
               <InstructionsBlueHeader>
-                CLEANING INSTRUCTIONS FOR THE LARGE MASK AND MOUTHPIECE CHAMBERS.<br />THIS PRODUCT CAN
-                BE USED RIGHT OUT OF THE PACKAGE AND THEN CLEANED WEEKLY.
+                CLEANING INSTRUCTIONS FOR THE LARGE MASK AND MOUTHPIECE CHAMBERS.<br />THIS PRODUCT
+                CAN BE USED RIGHT OUT OF THE PACKAGE AND THEN CLEANED WEEKLY.
               </InstructionsBlueHeader>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_1.sizes} />
                 <InstructionText>
+                  <BlueStep>Step 1</BlueStep>
+                  <br />
                   Remove the backpiece. To detach the frontpiece, twist chamber as shown. Remove the
                   mouthpiece cap.
                 </InstructionText>
@@ -538,6 +593,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper style={{ marginBottom: '4.5vw' }}>
                 <InstructionImg sizes={data.LMClean_2.sizes} />
                 <InstructionText style={{ marginBottom: '1.7em' }}>
+                  <BlueStep>Step 2</BlueStep>
+                  <br />
                   Soak the parts for 15 minutes in a mild solution of liquid dish detergent and
                   lukewarm clean water. Agitate gently.
                   <br />
@@ -592,6 +649,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_3.sizes} />
                 <InstructionText>
+                  <BlueStep>Step 3</BlueStep>
+                  <br />
                   Shake out excess water from the parts and allow to air dry in a vertical position.
                   Ensure parts are dry before reassembly.
                 </InstructionText>
@@ -599,6 +658,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_4.sizes} />
                 <InstructionText>
+                  <BlueStep>Step 4</BlueStep>
+                  <br />
                   To reassemble, fit the frontpiece on the end of the chamber and twist firmly until
                   securely locked into position. For mouthpiece models, the protective cap should
                   always be placed on the mouthpiece when the chamber is not in use.
@@ -607,6 +668,8 @@ class Instructions extends Component {
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_5.sizes} />
                 <InstructionText>
+                  <BlueStep>Step 5</BlueStep>
+                  <br />
                   Center the Alignment Feature on the backpiece with the Flow-Vu® Inspiratory Flow
                   Indicator, as shown. Press firmly to attach the backpiece.
                 </InstructionText>
