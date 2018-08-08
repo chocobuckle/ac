@@ -4,7 +4,7 @@ import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 import TabMenuPDFDownload from 'components/TabMenuPDFDownload';
 import Img from 'gatsby-image';
-import { ContentWrapper, ScalingText, Text, H3, H5, H6 } from 'helpers/sharedStyles';
+import { ContentWrapper, ScalingText, ScalingH2, Text, H3, H6 } from 'helpers/sharedStyles';
 import TabMenuNotes from 'components/TabMenuNotes';
 import IndicationsForUse from 'components/IndicationsForUse';
 import smallMediumPDF from 'static/small_medium_mask_indications.pdf';
@@ -163,8 +163,10 @@ const HelpfulTips = styled.div`
   margin: 0 auto 1vw;
   padding: 0.6em;
 
-  div:last-child {
-    margin-bottom: 0;
+  @media screen and (min-width: 996px) {
+    border: 4.96875px solid #007fc8;
+    border-radius: 9.96px;
+    margin: 0 auto 9.96px;
   }
 `;
 
@@ -173,17 +175,23 @@ const TipWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 2.25vw;
+
+  @media screen and (min-width: 996px) {
+    margin-bottom: 22.41px;
+  }
 `;
 
 const TipImg = styled(Img)`
-  max-width: 55px;
-  margin-right: 2vw;
-  width: 6.5vw;
+  margin-right: 1.4vw;
+  width: 4.25vw;
+
+  @media screen and (min-width: 996px) {
+    margin-right: 13.944px;
+    width: 42.3281px;
+  }
 `;
 
-const TipText = Text.extend`
-  font-size: 3vw;
-  line-height: 1.25em;
+const TipText = ScalingText.extend`
   font-weight: 600;
   margin-bottom: 0;
 `;
@@ -221,7 +229,7 @@ class Instructions extends Component {
           bear={data.bear}
           smallMask={data.smallMask}
           largeMask={data.largeMask}
-          style={{ paddingTop: 0, paddingBottom: 0, position: 'relative', zIndex: 1 }}
+          style={{ padding: '0 0', position: 'relative', zIndex: 1 }}
         />
         <InstructionsMenu>
           <SubMenuWrapper>
@@ -326,14 +334,12 @@ class Instructions extends Component {
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <HelpfulTips>
-                <H3
+                <ScalingH2
                   style={{
-                    color: '#004899',
-                    fontWeight: '600',
-                    marginBottom: '0.6em'
+                    marginBottom: '0.5em'
                   }}>
                   Helpful Tips
-                </H3>
+                </ScalingH2>
                 <TipWrapper>
                   <TipImg sizes={data.SMInstruct_PawPrint.sizes} />
                   <TipText>Give praise and rewards.</TipText>
@@ -345,7 +351,7 @@ class Instructions extends Component {
                     game.
                   </TipText>
                 </TipWrapper>
-                <TipWrapper>
+                <TipWrapper style={{ marginBottom: '0.5em' }}>
                   <TipImg sizes={data.SMInstruct_PawPrint.sizes} />
                   <TipText>
                     If possible, give treatments when the child is happy and not crying.
@@ -699,7 +705,7 @@ export const query = graphql`
       }
     }
     SMInstruct_PawPrint: imageSharp(id: { regex: "/instructions/SMInstruct/PawPrint.png/" }) {
-      sizes(maxWidth: 55) {
+      sizes(maxWidth: 43) {
         src
         srcSet
         srcWebp
