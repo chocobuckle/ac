@@ -17,6 +17,10 @@ const InstructionsMenu = ContentWrapper.extend`
   border: 0.75vw solid #f2a900;
   margin-top: 6.5vw;
   padding: 0;
+
+  @media screen and (min-width: 996px) {
+    padding: 0;
+  }
 `;
 
 const SubMenuWrapper = styled.div`
@@ -274,7 +278,7 @@ class Instructions extends Component {
                 PDFPath={smallMediumPDF}
               />
               <TabMenuNotes />
-              <IndicationsForUse />
+              <IndicationsForUse style={{ paddingTop: 0 }} />
             </div>
           )}
           {activeSubMenuTab === 2 && (
