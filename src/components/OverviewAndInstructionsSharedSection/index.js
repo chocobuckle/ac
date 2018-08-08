@@ -210,7 +210,7 @@ class OverviewAndInstructionsSharedSection extends Component {
             dangerouslySetInnerHTML={{ __html: subHeaderText }}
           />
         </ContentWrapper>
-        <ContentWrapper style={{ paddingTop: '0.5em' }}>
+        <ContentWrapper style={{ paddingTop: '0.5em', paddingBottom: 0 }}>
           <BPAImgAndTextAndMacbookImgWrapper>
             <MacbookImgAndVideoAndSpinnerWrapper>
               <MacBookImg sizes={macbook.sizes} />

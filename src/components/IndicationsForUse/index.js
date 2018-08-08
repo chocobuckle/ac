@@ -14,7 +14,7 @@ function IndicationsForUse({ style }) {
         aerosolized medication from most pressurized Metered Dose Inhalers. The
         intended environments for use include the home, hospitals and clinics.
       </ScalingText>
-      <ScalingH2>Cautions:</ScalingH2>
+      <ScalingH2 style={{ marginTop: '0.75em'}}>Cautions:</ScalingH2>
       <List style={{ marginLeft: '1em' }}>
         <li>
           PRODUCT MAY BE PERMANENTLY DAMAGED IF BOILED, STERILIZED, OR CLEANED
