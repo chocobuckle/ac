@@ -126,6 +126,8 @@ const InstructionImgSMInstruct5b = styled(Img)`
 `;
 
 const InstructionText = ScalingText.extend`
+  margin-bottom: 0;
+
   @media screen and (min-width: 996px) {
     span {
       font-size: 23.25px;
@@ -376,7 +378,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper style={{ marginBottom: 0 }}>
                 <InstructionImg sizes={data.SMClean_2.sizes} />
-                <InstructionText style={{ marginBottom: 0 }}>
+                <InstructionText>
                   <BrownStep>Step 2</BrownStep>
                   <br />
                   Soak the parts for 15 minutes in a mild solution of liquid dish detergent and
@@ -395,7 +397,7 @@ class Instructions extends Component {
                   <InstructionText style={{ marginBottom: '0.5em' }}>
                     <b>Dishwasher safe under the following conditions:</b>
                   </InstructionText>
-                  <InstructionText>
+                  <InstructionText style={{ marginBottom: '1.25em' }}>
                     <ul>
                       <li>Avoid heavy or other cycles that include heated dry over 158°F</li>
                       <li>Parts must be placed in the top rack ONLY</li>
@@ -561,9 +563,9 @@ class Instructions extends Component {
                   mouthpiece cap.
                 </InstructionText>
               </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper style={{ marginBottom: '4.5vw' }}>
+              <InstructionImgAndTextWrapper style={{ marginBottom: 0 }}>
                 <InstructionImg sizes={data.LMClean_2.sizes} />
-                <InstructionText style={{ marginBottom: '1.7em' }}>
+                <InstructionText>
                   <BlueStep>Step 2</BlueStep>
                   <br />
                   Soak the parts for 15 minutes in a mild solution of liquid dish detergent and
@@ -577,45 +579,24 @@ class Instructions extends Component {
                 </InstructionText>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper style={{ marginBottom: 0 }}>
-                <InstructionImg
-                  sizes={data.LMClean_2b.sizes}
-                  style={{
-                    width: '15.45vw'
-                  }}
-                />
-                <InstructionText style={{ left: '1.4em', marginBottom: 0 }}>
-                  <b>Dishwasher safe under the following conditions:</b>
-                  <br />
-                  <br />
-                </InstructionText>
-              </InstructionImgAndTextWrapper>
-              <InstructionImgAndTextWrapper
-                style={{ flexDirection: 'column', marginBottom: '-17vw' }}>
-                <ul
-                  style={{
-                    fontSize: '3vw',
-                    position: 'relative',
-                    left: '6.3em',
-                    lineHeight: '1.25em',
-                    bottom: '3.5em',
-                    width: '55vw'
-                  }}>
-                  <li>Avoid heavy or other cycles that include heated dry over 158°F</li>
-                  <li>Parts must be placed in the top rack ONLY</li>
-                  <li>Secure product face up, as pictured</li>
-                  <li>Use dishwasher detergent and rinse aid</li>
-                  <li>Do not boil or sterilize</li>
-                </ul>
-                <InstructionText
-                  style={{
-                    width: '60vw',
-                    position: 'relative',
-                    left: '6.75em',
-                    marginTop: '1em',
-                    top: '-6.25em'
-                  }}>
-                  SEE CAUTIONS, 1ST BULLET, BELOW
-                </InstructionText>
+                <InstructionImg sizes={data.LMClean_2b.sizes} />
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <InstructionText style={{ marginBottom: '0.5em' }}>
+                    <b>Dishwasher safe under the following conditions:</b>
+                  </InstructionText>
+                  <InstructionText style={{ marginBottom: '1.25em' }}>
+                    <ul>
+                      <li>Avoid heavy or other cycles that include heated dry over 158°F</li>
+                      <li>Parts must be placed in the top rack ONLY</li>
+                      <li>Secure product face up, as pictured</li>
+                      <li>Use dishwasher detergent and rinse aid</li>
+                      <li>Do not boil or sterilize</li>
+                    </ul>
+                  </InstructionText>
+                  <InstructionText style={{ marginBottom: '0.5em' }}>
+                    SEE CAUTIONS, 1ST BULLET, BELOW
+                  </InstructionText>
+                </div>
               </InstructionImgAndTextWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMClean_3.sizes} />
