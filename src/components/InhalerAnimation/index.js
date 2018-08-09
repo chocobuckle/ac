@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { ContentWrapper } from 'helpers/sharedStyles';
+import { ContentWrapper, ScalingText } from 'helpers/sharedStyles';
 
 const ClickyThingWrapper = styled.div`
   position: relative;
   cursor: pointer;
-  width: 0%;
   transition: all 0.2s ease-in-out;
   :hover {
     transform: scale(1.2);
@@ -14,7 +13,7 @@ const ClickyThingWrapper = styled.div`
   }
 `;
 
-const ClickyThingNumber = styled.p`
+const ClickyThingNumber = ScalingText.extend`
   color: #fff;
   font-weight: 600;
   position: absolute;
@@ -51,25 +50,22 @@ const YellowBall = styled.div`
   width: 6vw;
 `;
 
-const SelectedNumber = styled.p`
-  && {
-    color: #fff;
-    margin-bottom: 0;
-    position: relative;
-    top: 0.325vw;
-  }
+const SelectedNumber = ScalingText.extend`
+  color: #fff;
+  margin-bottom: 0;
+  position: relative;
+  font-weight: 600;
+  top: 0.325vw;
 `;
 
-const AnimationInfoHeader = styled.p`
-  && {
-    color: #f3b106;
-    font-weight: 600;
-    font-style: italic;
-    margin-bottom: 0;
-    font-size: 3.9vw;
-    position: relative;
-    top: 0.4vw;
-  }
+const AnimationInfoHeader = ScalingText.extend`
+  color: #f3b106;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 0;
+  font-size: 3.9vw;
+  position: relative;
+  top: 0.4vw;
 `;
 
 const YellowBallAndInfoHeaderWrapper = styled.div`
@@ -80,18 +76,17 @@ const YellowBallAndInfoHeaderWrapper = styled.div`
 `;
 
 const AnimationInfoList = styled.ul`
-  border: 1vw solid #007fc8;
+  border: 0.25em solid #007fc8;
   border-right: 0;
   border-bottom: 0;
-  border-radius: 0.4vw;
-  width: 80.25vw;
+  border-radius: 0.25em 0 0 0;
+  width: 80%;
   margin-left: 6vw;
   margin-top: 0.75vw;
   margin-bottom: 0;
   padding: 1.5vw 1.5vw 0;
 
   li {
-    font-size: 3.9vw;
     margin-left: 4.25vw;
     margin-bottom: 1vw;
   }
@@ -120,7 +115,7 @@ class InhalerAnimation extends Component {
     const { animationClickyThing, inhalerAnimationImg } = this.props;
     const { activeClickyThingNumber } = this.state;
     return (
-      <ContentWrapper>
+      <ContentWrapper style={{ position: 'relative', zIndex: 2 }}>
         <Img
           sizes={inhalerAnimationImg.sizes}
           style={{ maxWidth: '933px', width: '73vw', margin: '0 auto' }}

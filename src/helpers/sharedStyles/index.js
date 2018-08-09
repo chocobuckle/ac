@@ -108,11 +108,13 @@ export const ScalingH2 = H2.extend`
 `;
 
 export const ScalingH6 = styled.h6`
-  font-size: 2vw;
+  font-family: Myriad Pro, sans-serif;
+  font-size: 2.05vw;
 
   @media screen and (min-width: 996px) {
-    font-size: 19.92px;
-  }`;
+    font-size: 20.418px;
+  }
+`;
 
 export const List = ScalingText.withComponent('ul').extend`
   list-style: 'none';

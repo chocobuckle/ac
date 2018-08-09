@@ -44,7 +44,7 @@ const SubMenuTab = styled.div`
   border-radius: 1vw;
   color: #fff;
   cursor: pointer;
-  padding: 0.5em 0.75em;
+  padding: 0.5em 0.75em 0.4em;
   display: flex;
   flex-direction: column;
   justify-content: center;
