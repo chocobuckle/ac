@@ -15,27 +15,28 @@ const InstructionsWrapper = styled.div``;
 const InstructionsMenu = ContentWrapper.extend`
   border-radius: 1.5vw;
   border: 0.75vw solid #f2a900;
-  margin-top: 6.5vw;
-  padding: 0;
+  margin-top: 8.5vw;
   position: relative;
+  padding: 0;
 
   @media screen and (min-width: 996px) {
     border-radius: 14.94px;
     border: 7.46875px solid #f2a900;
-    margin-top: 64.74px;
+    margin-top: 84.66px;
     padding: 0;
   }
 `;
 
-const SubMenuWrapper = styled.div`
+const SubMenuTabWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 100%;
-  position: absolute;
-  top: -2.95%;
   left: 0;
+  position: absolute;
+  top: calc(-7.5vw + 1.5vw);
+  width: 100%;
 
   @media screen and (min-width: 996px) {
+    top: -59.76px;
   }
 `;
 
@@ -43,7 +44,7 @@ const SubMenuTab = styled.div`
   border-radius: 1vw;
   color: #fff;
   cursor: pointer;
-  padding: 0.75em 0.75em;
+  padding: 0.5em 0.75em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,17 +68,28 @@ const SubMenuTitle = ScalingH6.extend`
   color: #fff;
   line-height: 1.25em;
   margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
   text-align: center;
   font-weight: 600;
 `;
 
+const InstructionPageWrapper = styled.div`
+  padding-top: 9vw;
+
+  @media screen and (min-width: 996px) {
+    padding-top: 89.64px
+  }
+`;
+
 const InstructionsBlueHeader = ScalingText.extend`
   color: #004899;
-  margin: 0.75em auto 0;
+  margin: 0 auto 4vw;
   text-align: center;
   width: 80vw;
 
   @media screen and (min-width: 996px) {
+    margin: 0 auto 39.84px;
     width: 796.797px;
   }
 `;
@@ -238,40 +250,48 @@ class Instructions extends Component {
           style={{ padding: '0 0', position: 'relative', zIndex: 1 }}
         />
         <InstructionsMenu>
-          <SubMenuWrapper>
+          <SubMenuTabWrapper>
             <SubMenuTab
               activeSubMenuTab={activeSubMenuTab}
               onClick={() => this.handleSubMenu(1)}
               smallMask
               subHeaderNumber={1}>
-              <SubMenuTitle>Small/Medium Mask</SubMenuTitle>
-              <SubMenuTitle>Instructions For Use</SubMenuTitle>
+              <SubMenuTitle>Small/Medium</SubMenuTitle>
+              <SubMenuTitle>Mask</SubMenuTitle>
+              <SubMenuTitle>Instructions</SubMenuTitle>
+              <SubMenuTitle>For Use</SubMenuTitle>
             </SubMenuTab>
             <SubMenuTab
               activeSubMenuTab={activeSubMenuTab}
               onClick={() => this.handleSubMenu(2)}
               smallMask
               subHeaderNumber={2}>
-              <SubMenuTitle>Small/Medium Mask</SubMenuTitle>
-              <SubMenuTitle>Cleaning Instructions</SubMenuTitle>
+              <SubMenuTitle>Small/Medium</SubMenuTitle>
+              <SubMenuTitle>Mask</SubMenuTitle>
+              <SubMenuTitle>Cleaning</SubMenuTitle>
+              <SubMenuTitle>Instructions</SubMenuTitle>
             </SubMenuTab>
             <SubMenuTab
               activeSubMenuTab={activeSubMenuTab}
               onClick={() => this.handleSubMenu(3)}
               subHeaderNumber={3}>
-              <SubMenuTitle>Large Mask/Mouthpiece</SubMenuTitle>
-              <SubMenuTitle>Instructions For Use</SubMenuTitle>
+              <SubMenuTitle>Large</SubMenuTitle>
+              <SubMenuTitle>Mask/Mouthpiece</SubMenuTitle>
+              <SubMenuTitle>Instructions</SubMenuTitle>
+              <SubMenuTitle>For Use</SubMenuTitle>
             </SubMenuTab>
             <SubMenuTab
               activeSubMenuTab={activeSubMenuTab}
               onClick={() => this.handleSubMenu(4)}
               subHeaderNumber={4}>
-              <SubMenuTitle>Large Mask/Mouthpiece</SubMenuTitle>
-              <SubMenuTitle>Cleaning Instructions</SubMenuTitle>
+              <SubMenuTitle>Large</SubMenuTitle>
+              <SubMenuTitle>Mask/Mouthpiece</SubMenuTitle>
+              <SubMenuTitle>Cleaning</SubMenuTitle>
+              <SubMenuTitle>Instructions</SubMenuTitle>
             </SubMenuTab>
-          </SubMenuWrapper>
+          </SubMenuTabWrapper>
           {activeSubMenuTab === 1 && (
-            <div>
+            <InstructionPageWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.SMInstruct_1.sizes} />
                 <InstructionText>
@@ -372,10 +392,10 @@ class Instructions extends Component {
               />
               <TabMenuNotes />
               <IndicationsForUse style={{ paddingTop: 0 }} />
-            </div>
+            </InstructionPageWrapper>
           )}
           {activeSubMenuTab === 2 && (
-            <div>
+            <InstructionPageWrapper>
               <InstructionsBlueHeader>
                 CLEANING INSTRUCTIONS FOR THE SMALL AND MEDIUM MASK CHAMBERS.<br />THIS PRODUCT CAN
                 BE USED RIGHT OUT OF THE PACKAGE AND THEN CLEANED WEEKLY.
@@ -452,10 +472,10 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <TabMenuNotes />
               <IndicationsForUse style={{ paddingTop: 0 }} />
-            </div>
+            </InstructionPageWrapper>
           )}
           {activeSubMenuTab === 3 && (
-            <div>
+            <InstructionPageWrapper>
               <InstructionImgAndTextWrapper>
                 <InstructionImg sizes={data.LMInstruct_1.sizes} />
                 <InstructionText>
@@ -558,10 +578,10 @@ class Instructions extends Component {
               />
               <TabMenuNotes />
               <IndicationsForUse style={{ paddingTop: 0 }} />
-            </div>
+            </InstructionPageWrapper>
           )}
           {activeSubMenuTab === 4 && (
-            <div>
+            <InstructionPageWrapper>
               <InstructionsBlueHeader>
                 CLEANING INSTRUCTIONS FOR THE LARGE MASK AND MOUTHPIECE CHAMBERS.<br />THIS PRODUCT
                 CAN BE USED RIGHT OUT OF THE PACKAGE AND THEN CLEANED WEEKLY.
@@ -640,7 +660,7 @@ class Instructions extends Component {
               </InstructionImgAndTextWrapper>
               <TabMenuNotes />
               <IndicationsForUse style={{ paddingTop: 0 }} />
-            </div>
+            </InstructionPageWrapper>
           )}
         </InstructionsMenu>
       </InstructionsWrapper>

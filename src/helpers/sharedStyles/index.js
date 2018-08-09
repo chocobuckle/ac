@@ -109,48 +109,10 @@ export const ScalingH2 = H2.extend`
 
 export const ScalingH6 = styled.h6`
   font-size: 2vw;
-  ${'' /* font-size: 2vw;
-  line-height: 1.225em; */}
-
-  ${'' /* @media screen and (min-width: 360px) {
-    font-size: 2.85vw;
-    line-height: 1.25em;
-  }
-
-  @media screen and (min-width: 420px) {
-    font-size: 2.8vw;
-    line-height: 1.3em;
-  }
-
-  @media screen and (min-width: 500px) {
-    font-size: 2.7vw;
-    line-height: 1.25em;
-  }
-
-  @media screen and (min-width: 550px) {
-    font-size: 2.6vw;
-    line-height: 1.3em;
-  }
-
-  @media screen and (min-width: 600px) {
-    font-size: 2.35vw;
-    line-height: 1.35em;
-  }
-
-  @media screen and (min-width: 700px) {
-    font-size: 2.1vw;
-    line-height: 1.4em;
-  }
-
-  @media screen and (min-width: 800px) {
-    font-size: 1.85vw;
-  }
 
   @media screen and (min-width: 996px) {
     font-size: 19.92px;
-    line-height: 1.5em;
-  } */}
-`;
+  }`;
 
 export const List = ScalingText.withComponent('ul').extend`
   list-style: 'none';
