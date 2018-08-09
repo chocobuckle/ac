@@ -61,6 +61,18 @@ const MaskImg = styled(Img)`
   }
 `;
 
+const LocalScalingText = ScalingText.extend`
+  margin-bottom: 0.25em;
+
+  @media screen and (min-width: 420px) {
+    margin-bottom: 0.75em;
+  }
+
+  @media screen and (min-width: 600px) {
+    margin-bottom: 1em;
+  }
+`;
+
 function DownloadInstructionsForUse({
   style,
   download,
@@ -75,11 +87,11 @@ function DownloadInstructionsForUse({
         <ScalingH2 style={{ marginBottom: 0 }}>Download Instructions for Use</ScalingH2>
         <DownloadImg sizes={download.sizes} />
       </H2AndDownloadWrapper>
-      <ScalingText>
+      <LocalScalingText>
         Printed in English and Spanish and featuring the child-friendly
         <span> AeroBear®<sup>1</sup>
         </span>
-      </ScalingText>
+      </LocalScalingText>
       <BearAndMaskImgWrapper>
         <BearImg sizes={bear.sizes}  />
         <a
