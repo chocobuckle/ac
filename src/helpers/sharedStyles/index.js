@@ -107,11 +107,12 @@ export const ScalingH2 = H2.extend`
   }
 `;
 
-export const ScalingH6 = styled.p`
-  font-size: 3vw;
-  line-height: 1.225em;
+export const ScalingH6 = styled.h6`
+  font-size: 2vw;
+  ${'' /* font-size: 2vw;
+  line-height: 1.225em; */}
 
-  @media screen and (min-width: 360px) {
+  ${'' /* @media screen and (min-width: 360px) {
     font-size: 2.85vw;
     line-height: 1.25em;
   }
@@ -148,7 +149,7 @@ export const ScalingH6 = styled.p`
   @media screen and (min-width: 996px) {
     font-size: 19.92px;
     line-height: 1.5em;
-  }
+  } */}
 `;
 
 export const List = ScalingText.withComponent('ul').extend`

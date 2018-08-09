@@ -17,6 +17,7 @@ const InstructionsMenu = ContentWrapper.extend`
   border: 0.75vw solid #f2a900;
   margin-top: 6.5vw;
   padding: 0;
+  position: relative;
 
   @media screen and (min-width: 996px) {
     border-radius: 14.94px;
@@ -29,7 +30,10 @@ const InstructionsMenu = ContentWrapper.extend`
 const SubMenuWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-top: -3.2vw;
+  width: 100%;
+  position: absolute;
+  top: -2.95%;
+  left: 0;
 
   @media screen and (min-width: 996px) {
   }
@@ -39,12 +43,11 @@ const SubMenuTab = styled.div`
   border-radius: 1vw;
   color: #fff;
   cursor: pointer;
+  padding: 0.75em 0.75em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 0.3em;
   width: 24.5%;
 
   background-color: ${({ subHeaderNumber, smallMask, activeSubMenuTab }) => {
@@ -242,7 +245,7 @@ class Instructions extends Component {
               smallMask
               subHeaderNumber={1}>
               <SubMenuTitle>Small/Medium Mask</SubMenuTitle>
-              <SubMenuTitle>Instructions for Use</SubMenuTitle>
+              <SubMenuTitle>Instructions For Use</SubMenuTitle>
             </SubMenuTab>
             <SubMenuTab
               activeSubMenuTab={activeSubMenuTab}
@@ -257,7 +260,7 @@ class Instructions extends Component {
               onClick={() => this.handleSubMenu(3)}
               subHeaderNumber={3}>
               <SubMenuTitle>Large Mask/Mouthpiece</SubMenuTitle>
-              <SubMenuTitle>Instructions for Use</SubMenuTitle>
+              <SubMenuTitle>Instructions For Use</SubMenuTitle>
             </SubMenuTab>
             <SubMenuTab
               activeSubMenuTab={activeSubMenuTab}
