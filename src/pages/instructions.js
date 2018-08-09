@@ -75,7 +75,35 @@ const SubMenuTitle = ScalingH6.extend`
 `;
 
 const InstructionPageWrapper = styled.div`
-  padding-top: 9vw;
+  padding-top: 12vw;
+
+  @media screen and (min-width: 360px) {
+    padding-top: 11.25vw;
+  }
+
+  @media screen and (min-width: 420px) {
+    padding-top: 10.75vw;
+  }
+
+  @media screen and (min-width: 500px) {
+    padding-top: 10.5vw;
+  }
+
+  @media screen and (min-width: 600px) {
+    padding-top: 10vw;
+  }
+
+  @media screen and (min-width: 670px) {
+    padding-top: 9.5vw;
+  }
+
+  @media screen and (min-width: 780px) {
+    padding-top: 9.25vw;
+  }
+
+  @media screen and (min-width: 810px) {
+    padding-top: 9vw;
+  }
 
   @media screen and (min-width: 996px) {
     padding-top: 89.64px
