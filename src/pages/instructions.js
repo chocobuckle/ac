@@ -4,7 +4,7 @@ import DownloadInstructionsForUse from 'components/DownloadInstructionsForUse';
 import OverviewAndInstructionsSharedSection from 'components/OverviewAndInstructionsSharedSection';
 import TabMenuPDFDownload from 'components/TabMenuPDFDownload';
 import Img from 'gatsby-image';
-import { ContentWrapper, ScalingText, ScalingH2, Text, H3, H6 } from 'helpers/sharedStyles';
+import { ContentWrapper, ScalingText, ScalingH2, Text, H3, ScalingH6 } from 'helpers/sharedStyles';
 import TabMenuNotes from 'components/TabMenuNotes';
 import IndicationsForUse from 'components/IndicationsForUse';
 import smallMediumPDF from 'static/small_medium_mask_indications.pdf';
@@ -30,7 +30,6 @@ const SubMenuWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: -3.2vw;
-  width: 100%;
 
   @media screen and (min-width: 996px) {
   }
@@ -44,6 +43,7 @@ const SubMenuTab = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0.3em;
   width: 24.5%;
 
@@ -54,11 +54,14 @@ const SubMenuTab = styled.div`
 
     return subHeaderNumber === activeSubMenuTab ? `#004899;` : `#ccdaeb;`;
   }};
+
+  @media screen and (min-width: 996px) {
+    border-radius: 9.96px;
+  }
 `;
 
-const SubMenuTitle = H6.extend`
+const SubMenuTitle = ScalingH6.extend`
   color: #fff;
-  flex-wrap: wrap;
   line-height: 1.25em;
   margin-bottom: 0;
   text-align: center;
