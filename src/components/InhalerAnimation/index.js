@@ -52,10 +52,10 @@ const YellowBall = styled.div`
   background-color: #f3b106;
   border-radius: 50%;
   display: flex;
-  height: 5vw;
+  height: 5.5vw;
   justify-content: center;
   margin-right: 2vw;
-  width: 5vw;
+  width: 5.5vw;
 `;
 
 const SelectedNumber = styled.p`
@@ -64,7 +64,7 @@ const SelectedNumber = styled.p`
   position: relative;
   font-weight: 600;
   top: 0.205vw;
-  font-size: 3.2vw;
+  font-size: 3.4vw;
 `;
 
 const AnimationInfoHeader = ScalingH2.extend`
