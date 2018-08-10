@@ -3,23 +3,20 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { ContentWrapper, ScalingH2 } from 'helpers/sharedStyles';
 
-const InteractiveInhalerImg = styled(Img)`
+const InteractiveInhalerContainer = styled.div`
   width: 73vw;
   margin: 0 auto 34vw;
+  position: relative;
 
   @media screen and (min-width: 600px) {
     width: 438px;
   }
 `;
 
-const ClickThingImgContainer = styled.div`
-  margin: 0 auto;
-  width: 73vw;
-`;
+const InteractiveInhalerImg = styled(Img)``;
 
 const ClickyThingImgWrapper = styled.div`
   cursor: pointer;
-  max-width: 100px;
   position: absolute;
   transition: all 0.2s ease-in-out;
   width: 10vw;
@@ -33,16 +30,16 @@ const ClickyThingImgWrapper = styled.div`
 `;
 
 const ClickyThingImgWrapper1 = ClickyThingImgWrapper.extend`
-  bottom: 65%;
-  left: 5%;
-  margin: 0 auto;
+  bottom: 40vw;
+  left: 13vw;
   transform-origin: right bottom;
 
-  ${'' /* @media screen and (min-width: 600px) {
-    bottom: 168px;
-    left: 9px;
-  } */}
+  @media screen and (min-width: 600px) {
+    bottom: 50%;
+    left: -10%;
+  }
 `;
+
 const ClickyThingImgWrapper2 = ClickyThingImgWrapper.extend`
   ${'' /* bottom: 45.5vw;
   left: 34.2vw;
@@ -179,8 +176,8 @@ class InhalerAnimation extends Component {
     const { activeClickyThingNumber } = this.state;
     return (
       <ContentWrapper style={{ position: 'relative', zIndex: 2 }}>
-        <InteractiveInhalerImg sizes={interactiveInhaler.sizes} />
-        <ClickThingImgContainer>
+        <InteractiveInhalerContainer>
+          <InteractiveInhalerImg sizes={interactiveInhaler.sizes} />
           <ClickyThingImgWrapper1 clickyThingNumber={1} onClick={() => this.handleClick(1)}>
             <ClickyThingImg sizes={clickyThing1.sizes} />
           </ClickyThingImgWrapper1>
@@ -199,7 +196,7 @@ class InhalerAnimation extends Component {
           <ClickyThingImgWrapper6 clickyThingNumber={6} onClick={() => this.handleClick(6)}>
             <ClickyThingImg sizes={clickyThing6.sizes} />
           </ClickyThingImgWrapper6>
-        </ClickThingImgContainer>
+        </InteractiveInhalerContainer>
         <YellowBallAndInfoHeaderWrapper>
           <YellowBall>
             <SelectedNumber>{activeClickyThingNumber}</SelectedNumber>
