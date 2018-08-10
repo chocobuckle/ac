@@ -117,8 +117,8 @@ class InhalerAnimation extends Component {
           clickyThingNumber={2}
           onClick={() => this.handleClick(2)}
           style={{
-            bottom: '46vw',
-            left: '34vw'
+            bottom: '45.5vw',
+            left: '34.2vw'
           }}>
           <ClickyThing sizes={clickyThing2.sizes} />
         </ClickyThingWrapper>
@@ -126,8 +126,8 @@ class InhalerAnimation extends Component {
           clickyThingNumber={3}
           onClick={() => this.handleClick(3)}
           style={{
-            bottom: '48.5vw',
-            left: '42.5vw'
+            bottom: '47.5vw',
+            left: '42vw'
           }}>
           <ClickyThing sizes={clickyThing3.sizes} />
         </ClickyThingWrapper>
@@ -135,7 +135,7 @@ class InhalerAnimation extends Component {
           clickyThingNumber={4}
           onClick={() => this.handleClick(4)}
           style={{
-            bottom: '48.5vw',
+            bottom: '48vw',
             left: '80vw'
           }}>
           <ClickyThing sizes={clickyThing4.sizes} />
@@ -153,8 +153,8 @@ class InhalerAnimation extends Component {
           clickyThingNumber={6}
           onClick={() => this.handleClick(6)}
           style={{
-            bottom: '40.5vw',
-            left: '42vw'
+            bottom: '39.5vw',
+            left: '41.5vw'
           }}>
           <ClickyThing sizes={clickyThing6.sizes} />
         </ClickyThingWrapper>
