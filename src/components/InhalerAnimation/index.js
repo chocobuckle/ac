@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { ContentWrapper, ScalingText, ScalingH2 } from 'helpers/sharedStyles';
 
-const ClickyThingWrapper = styled.div`
+const ClickyThingImgWrapper = styled.div`
   cursor: pointer;
   max-width: 99px;
   position: relative;
@@ -15,7 +15,32 @@ const ClickyThingWrapper = styled.div`
   }
 `;
 
-const ClickyThing = styled(Img)``;
+const ClickyThingImgWrapper1 = ClickyThingImgWrapper.extend`
+  bottom: 28vw;
+  left: 1.5vw;
+`;
+const ClickyThingImgWrapper2 = ClickyThingImgWrapper.extend`
+  bottom: 45.5vw;
+  left: 34.2vw;
+`;
+const ClickyThingImgWrapper3 = ClickyThingImgWrapper.extend`
+  bottom: 47.5vw;
+  left: 42vw;
+`;
+const ClickyThingImgWrapper4 = ClickyThingImgWrapper.extend`
+  bottom: 48vw;
+  left: 80vw;
+`;
+const ClickyThingImgWrapper5 = ClickyThingImgWrapper.extend`
+  bottom: 33.5vw;
+  left: 65vw;
+`;
+const ClickyThingImgWrapper6 = ClickyThingImgWrapper.extend`
+  bottom: 39.5vw;
+  left: 41.5vw;
+`;
+
+const ClickyThingImg = styled(Img)``;
 
 const YellowBall = styled.div`
   align-items: center;
@@ -104,60 +129,24 @@ class InhalerAnimation extends Component {
           sizes={inhalerAnimationImg.sizes}
           style={{ maxWidth: '933px', width: '73vw', margin: '0 auto' }}
         />
-        <ClickyThingWrapper
-          clickyThingNumber={1}
-          onClick={() => this.handleClick(1)}
-          style={{
-            bottom: '28vw',
-            left: '1.5vw'
-          }}>
-          <ClickyThing sizes={clickyThing1.sizes} />
-        </ClickyThingWrapper>
-        <ClickyThingWrapper
-          clickyThingNumber={2}
-          onClick={() => this.handleClick(2)}
-          style={{
-            bottom: '45.5vw',
-            left: '34.2vw'
-          }}>
-          <ClickyThing sizes={clickyThing2.sizes} />
-        </ClickyThingWrapper>
-        <ClickyThingWrapper
-          clickyThingNumber={3}
-          onClick={() => this.handleClick(3)}
-          style={{
-            bottom: '47.5vw',
-            left: '42vw'
-          }}>
-          <ClickyThing sizes={clickyThing3.sizes} />
-        </ClickyThingWrapper>
-        <ClickyThingWrapper
-          clickyThingNumber={4}
-          onClick={() => this.handleClick(4)}
-          style={{
-            bottom: '48vw',
-            left: '80vw'
-          }}>
-          <ClickyThing sizes={clickyThing4.sizes} />
-        </ClickyThingWrapper>
-        <ClickyThingWrapper
-          clickyThingNumber={5}
-          onClick={() => this.handleClick(5)}
-          style={{
-            bottom: '33.5vw',
-            left: '65vw'
-          }}>
-          <ClickyThing sizes={clickyThing5.sizes} />
-        </ClickyThingWrapper>
-        <ClickyThingWrapper
-          clickyThingNumber={6}
-          onClick={() => this.handleClick(6)}
-          style={{
-            bottom: '39.5vw',
-            left: '41.5vw'
-          }}>
-          <ClickyThing sizes={clickyThing6.sizes} />
-        </ClickyThingWrapper>
+        <ClickyThingImgWrapper1 clickyThingNumber={1} onClick={() => this.handleClick(1)}>
+          <ClickyThingImg sizes={clickyThing1.sizes} />
+        </ClickyThingImgWrapper1>
+        <ClickyThingImgWrapper2 clickyThingNumber={2} onClick={() => this.handleClick(2)}>
+          <ClickyThingImg sizes={clickyThing2.sizes} />
+        </ClickyThingImgWrapper2>
+        <ClickyThingImgWrapper3 clickyThingNumber={3} onClick={() => this.handleClick(3)}>
+          <ClickyThingImg sizes={clickyThing3.sizes} />
+        </ClickyThingImgWrapper3>
+        <ClickyThingImgWrapper4 clickyThingNumber={4} onClick={() => this.handleClick(4)}>
+          <ClickyThingImg sizes={clickyThing4.sizes} />
+        </ClickyThingImgWrapper4>
+        <ClickyThingImgWrapper5 clickyThingNumber={5} onClick={() => this.handleClick(5)}>
+          <ClickyThingImg sizes={clickyThing5.sizes} />
+        </ClickyThingImgWrapper5>
+        <ClickyThingImgWrapper6 clickyThingNumber={6} onClick={() => this.handleClick(6)}>
+          <ClickyThingImg sizes={clickyThing6.sizes} />
+        </ClickyThingImgWrapper6>
         <YellowBallAndInfoHeaderWrapper>
           <YellowBall>
             <SelectedNumber>{activeClickyThingNumber}</SelectedNumber>
