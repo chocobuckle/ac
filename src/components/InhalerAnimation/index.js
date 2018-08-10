@@ -11,33 +11,38 @@ const ClickyThingImgWrapper = styled.div`
   width: 10vw;
   :hover {
     transform: scale(1.2);
-    transform-origin: left bottom;
   }
 `;
 
 const ClickyThingImgWrapper1 = ClickyThingImgWrapper.extend`
   bottom: 28vw;
   left: 1.5vw;
+  transform-origin: right bottom;
 `;
 const ClickyThingImgWrapper2 = ClickyThingImgWrapper.extend`
   bottom: 45.5vw;
   left: 34.2vw;
+  transform-origin: left bottom;
 `;
 const ClickyThingImgWrapper3 = ClickyThingImgWrapper.extend`
   bottom: 47.5vw;
   left: 42vw;
+  transform-origin: left bottom;
 `;
 const ClickyThingImgWrapper4 = ClickyThingImgWrapper.extend`
   bottom: 48vw;
   left: 80vw;
+  transform-origin: left bottom;
 `;
 const ClickyThingImgWrapper5 = ClickyThingImgWrapper.extend`
   bottom: 33.5vw;
   left: 65vw;
+  transform-origin: left top;
 `;
 const ClickyThingImgWrapper6 = ClickyThingImgWrapper.extend`
   bottom: 39.5vw;
   left: 41.5vw;
+  transform-origin: right top;
 `;
 
 const ClickyThingImg = styled(Img)``;
