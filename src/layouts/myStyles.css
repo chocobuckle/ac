@@ -3,3 +3,10 @@ html {
   font-family: Myriad Pro, sans-serif;
   line-height: 1.3em;
 }
+
+/* *,
+*::before,
+*::after {
+  box-sizing: inherit;
+  transition: all 0.35s linear;
+} */

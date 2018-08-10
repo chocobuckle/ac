@@ -49,7 +49,7 @@ function Overview({ data, location }) {
         clickyThing4={data.clickyThing4}
         clickyThing5={data.clickyThing5}
         clickyThing6={data.clickyThing6}
-        inhalerAnimationImg={data.inhalerAnimationImg}
+        interactiveInhaler={data.interactiveInhaler}
       />
       <AdditionalFeatures>
         <ContentWrapper>
@@ -110,7 +110,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    inhalerAnimationImg: imageSharp(id: { regex: "/overview/inhaler_animation_img.png/" }) {
+    interactiveInhaler: imageSharp(id: { regex: "/overview/interactive_inhaler.png/" }) {
       sizes(maxWidth: 933) {
         src
         srcSet
@@ -121,7 +121,7 @@ export const query = graphql`
       }
     }
     clickyThing1: imageSharp(id: { regex: "/overview/clicky_thing1.png/" }) {
-      sizes(maxWidth: 99) {
+      sizes(maxWidth: 100) {
         src
         srcSet
         srcWebp
@@ -131,7 +131,7 @@ export const query = graphql`
       }
     }
     clickyThing2: imageSharp(id: { regex: "/overview/clicky_thing2.png/" }) {
-      sizes(maxWidth: 99) {
+      sizes(maxWidth: 100) {
         src
         srcSet
         srcWebp
@@ -141,7 +141,7 @@ export const query = graphql`
       }
     }
     clickyThing3: imageSharp(id: { regex: "/overview/clicky_thing3.png/" }) {
-      sizes(maxWidth: 99) {
+      sizes(maxWidth: 100) {
         src
         srcSet
         srcWebp
@@ -151,7 +151,7 @@ export const query = graphql`
       }
     }
     clickyThing4: imageSharp(id: { regex: "/overview/clicky_thing4.png/" }) {
-      sizes(maxWidth: 99) {
+      sizes(maxWidth: 100) {
         src
         srcSet
         srcWebp
@@ -161,7 +161,7 @@ export const query = graphql`
       }
     }
     clickyThing5: imageSharp(id: { regex: "/overview/clicky_thing5.png/" }) {
-      sizes(maxWidth: 99) {
+      sizes(maxWidth: 100) {
         src
         srcSet
         srcWebp
@@ -171,7 +171,7 @@ export const query = graphql`
       }
     }
     clickyThing6: imageSharp(id: { regex: "/overview/clicky_thing6.png/" }) {
-      sizes(maxWidth: 99) {
+      sizes(maxWidth: 100) {
         src
         srcSet
         srcWebp
