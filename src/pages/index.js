@@ -415,9 +415,8 @@ const ThreeInhalers = styled.div`
 `;
 
 const ThreeInhalers2 = ThreeInhalers.extend`
-  left: 2.1em;
+  left: 1.1em;
   @media screen and (min-width: 800px) {
-    left: 1.4em;
     margin-top: -0.2em;
   }
 `;
