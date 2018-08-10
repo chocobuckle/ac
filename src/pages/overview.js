@@ -49,22 +49,22 @@ function Overview({ data, location }) {
             Additional Features of <em style={{ color: '#007fc8' }}>AeroChamber Plus® Flow-Vu®</em>
           </ScalingH2>
           <ScalingText>
-            <Span>"EZ Flow" Exhalation Valve</Span> - Directs exhaled medication
-            away from the patient's face and eyes.<sup>5</sup>
+            <Span>"EZ Flow" Exhalation Valve</Span> - Directs exhaled medication away from the
+            patient's face and eyes.<sup>5</sup>
           </ScalingText>
           <ScalingText>
-            <Span>Inhalation Valve</Span> - Built-in, low-resistance, 1-way
-            valve opens easily and prevents exhalation back into the chamber.
+            <Span>Inhalation Valve</Span> - Built-in, low-resistance, 1-way valve opens easily and
+            prevents exhalation back into the chamber.
             <sup>5</sup>
           </ScalingText>
           <ScalingText>
-            <Span>Anti-static Chamber</Span> - Improves the delivery of MDIs
-            used with AeroChamber® due to medication not adhering to chamber
-            walls.<sup>6</sup>
+            <Span>Anti-static Chamber</Span> - Improves the delivery of MDIs used with AeroChamber®
+            due to medication not adhering to chamber walls.<sup>6</sup>
           </ScalingText>
           <ScalingText style={{ color: '#007fc8', marginBottom: 0 }}>
-            Not made (or manufactured) with BPA (bisphenol A), phthalates,
-            latex, lead, or PVC<sup>1,7</sup>
+            Not made (or manufactured) with BPA (bisphenol A), phthalates, latex, lead, or PVC<sup>
+              1,7
+            </sup>
           </ScalingText>
         </ContentWrapper>
       </AdditionalFeatures>
@@ -82,9 +82,7 @@ function Overview({ data, location }) {
 
 export const query = graphql`
   query OverviewQuery {
-    bpaAndDishwasherSafe: imageSharp(
-      id: { regex: "/shared/bpa_and_dishwasher_safe.png/" }
-    ) {
+    bpaAndDishwasherSafe: imageSharp(id: { regex: "/shared/bpa_and_dishwasher_safe.png/" }) {
       sizes(maxWidth: 749) {
         src
         srcSet
@@ -134,9 +132,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    smallMask: imageSharp(
-      id: { regex: "/shared/small_mask_medium_mask.png/" }
-    ) {
+    smallMask: imageSharp(id: { regex: "/shared/small_mask_medium_mask.png/" }) {
       sizes(maxWidth: 851) {
         src
         srcSet
@@ -146,9 +142,7 @@ export const query = graphql`
         aspectRatio
       }
     }
-    largeMask: imageSharp(
-      id: { regex: "/shared/large_mask_mouthpiece.png/" }
-    ) {
+    largeMask: imageSharp(id: { regex: "/shared/large_mask_mouthpiece.png/" }) {
       sizes(maxWidth: 851) {
         src
         srcSet

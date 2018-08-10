@@ -31,7 +31,7 @@ const Layout = ({ children, data, location }) => {
     respiratory
   } = data;
   return (
-    <div>
+    <div style={{ background: '#DBECFC' }}>
       <Helmet
         title={site.siteMetadata.title}
         meta={[
@@ -46,7 +46,7 @@ const Layout = ({ children, data, location }) => {
           overflowX: 'hidden'
         }}>
         <Header logoSizes={logo.sizes} />
-        <MainContent>
+        <MainContent style={{ background: '#fff' }}>
           <HeroImg
             backgroundImgSizes={background.sizes}
             flowVuSizes={flowVu.sizes}
