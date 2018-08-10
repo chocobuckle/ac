@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { ContentWrapper, ScalingText } from 'helpers/sharedStyles';
+import { ContentWrapper, ScalingText, ScalingH2 } from 'helpers/sharedStyles';
 
 const ClickyThingWrapper = styled.div`
-  position: relative;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
   max-width: 99px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
   width: 10vw;
   :hover {
     transform: scale(1.2);
@@ -22,26 +22,26 @@ const YellowBall = styled.div`
   background-color: #f3b106;
   border-radius: 50%;
   display: flex;
-  height: 6vw;
+  height: 5vw;
   justify-content: center;
   margin-right: 2vw;
-  width: 6vw;
+  width: 5vw;
 `;
 
-const SelectedNumber = ScalingText.extend`
+const SelectedNumber = styled.p`
   color: #fff;
   margin-bottom: 0;
   position: relative;
   font-weight: 600;
-  top: 0.325vw;
+  top: 0.205vw;
+  font-size: 3.2vw;
 `;
 
-const AnimationInfoHeader = ScalingText.extend`
+const AnimationInfoHeader = ScalingH2.extend`
   color: #f3b106;
   font-weight: 600;
   font-style: italic;
   margin-bottom: 0;
-  font-size: 3.9vw;
   position: relative;
   top: 0.4vw;
 `;
@@ -59,10 +59,8 @@ const AnimationInfoList = styled.ul`
   border-bottom: 0;
   border-radius: 0.25em 0 0 0;
   width: 80%;
-  margin-left: 6vw;
-  margin-top: 0.75vw;
-  margin-bottom: 0;
-  padding: 1.5vw 1.5vw 0;
+  margin: 0.2vw 0 0 6vw;
+  padding: 1.25vw 0 0 0.25vw;
 
   li {
     margin-left: 4.25vw;
