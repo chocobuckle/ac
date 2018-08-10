@@ -411,6 +411,10 @@ const ThreeInhalers = styled.div`
 
   figcaption {
     margin-top: 1.75vw;
+
+    @media screen and (min-width: 996px) {
+      margin-top: 17.43px;
+    }
   }
 `;
 
@@ -514,13 +518,20 @@ const BucketBorder = styled.div`
   }
 
   @media screen and (min-width: 700px) {
-    height: 9.25vw;
+    height: 8.5vw;
   }
 
   @media screen and (min-width: 800px) {
-    height: 9.25vw;
+    height: 9vw;
     border: 0.3vw solid #007fc8;
     border-top: none;
+  }
+
+  @media screen and (min-width: 996px) {
+    height: 92.125px;
+    border: 2.98438px solid #007fc8;
+    border-top: none;
+    margin-top: -102.09px;
   }
 `;
 

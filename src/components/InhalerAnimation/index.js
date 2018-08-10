@@ -7,37 +7,15 @@ const ClickyThingWrapper = styled.div`
   position: relative;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  max-width: 99px;
+  width: 10vw;
   :hover {
     transform: scale(1.2);
-    transform-origin: 0% 100%;
+    transform-origin: left bottom;
   }
 `;
 
-const ClickyThingNumber = ScalingText.extend`
-  color: #fff;
-  font-weight: 600;
-  position: absolute;
-`;
-
-const clickyThingImgStyle = {
-  maxWidth: '99px',
-  width: '10vw'
-};
-
-const flipHorizontal = {
-  display: 'inline-block',
-  transform: 'scale(-1,1)'
-};
-
-const flipVertical = {
-  display: 'inline-block',
-  transform: 'scale(1,-1)'
-};
-
-const flipHorizontalAndVertical = {
-  display: 'inline-block',
-  transform: 'scale(-1,-1)'
-};
+const ClickyThing = styled(Img)``;
 
 const YellowBall = styled.div`
   align-items: center;
@@ -112,7 +90,15 @@ class InhalerAnimation extends Component {
   };
 
   render() {
-    const { animationClickyThing, inhalerAnimationImg } = this.props;
+    const {
+      clickyThing1,
+      clickyThing2,
+      clickyThing3,
+      clickyThing4,
+      clickyThing5,
+      clickyThing6,
+      inhalerAnimationImg
+    } = this.props;
     const { activeClickyThingNumber } = this.state;
     return (
       <ContentWrapper style={{ position: 'relative', zIndex: 2 }}>
@@ -127,20 +113,7 @@ class InhalerAnimation extends Component {
             bottom: '28vw',
             left: '1.5vw'
           }}>
-          <Img
-            sizes={animationClickyThing.sizes}
-            style={{
-              ...clickyThingImgStyle,
-              ...flipHorizontal
-            }}
-          />
-          <ClickyThingNumber
-            style={{
-              left: '1.8vw',
-              top: '0.8vw'
-            }}>
-            1
-          </ClickyThingNumber>
+          <ClickyThing sizes={clickyThing1.sizes} />
         </ClickyThingWrapper>
         <ClickyThingWrapper
           clickyThingNumber={2}
@@ -149,17 +122,7 @@ class InhalerAnimation extends Component {
             bottom: '46vw',
             left: '34vw'
           }}>
-          <Img
-            sizes={animationClickyThing.sizes}
-            style={{ ...clickyThingImgStyle }}
-          />
-          <ClickyThingNumber
-            style={{
-              left: '6vw',
-              top: '0.8vw'
-            }}>
-            2
-          </ClickyThingNumber>
+          <ClickyThing sizes={clickyThing2.sizes} />
         </ClickyThingWrapper>
         <ClickyThingWrapper
           clickyThingNumber={3}
@@ -168,17 +131,7 @@ class InhalerAnimation extends Component {
             bottom: '48.5vw',
             left: '42.5vw'
           }}>
-          <Img
-            sizes={animationClickyThing.sizes}
-            style={{ ...clickyThingImgStyle }}
-          />
-          <ClickyThingNumber
-            style={{
-              left: '6vw',
-              top: '0.8vw'
-            }}>
-            3
-          </ClickyThingNumber>
+          <ClickyThing sizes={clickyThing3.sizes} />
         </ClickyThingWrapper>
         <ClickyThingWrapper
           clickyThingNumber={4}
@@ -187,17 +140,7 @@ class InhalerAnimation extends Component {
             bottom: '48.5vw',
             left: '80vw'
           }}>
-          <Img
-            sizes={animationClickyThing.sizes}
-            style={{ ...clickyThingImgStyle }}
-          />
-          <ClickyThingNumber
-            style={{
-              left: '6vw',
-              top: '0.8vw'
-            }}>
-            4
-          </ClickyThingNumber>
+          <ClickyThing sizes={clickyThing4.sizes} />
         </ClickyThingWrapper>
         <ClickyThingWrapper
           clickyThingNumber={5}
@@ -206,17 +149,7 @@ class InhalerAnimation extends Component {
             bottom: '33.5vw',
             left: '65vw'
           }}>
-          <Img
-            sizes={animationClickyThing.sizes}
-            style={{ ...clickyThingImgStyle, ...flipVertical }}
-          />
-          <ClickyThingNumber
-            style={{
-              left: '6vw',
-              top: '0.8vw'
-            }}>
-            5
-          </ClickyThingNumber>
+          <ClickyThing sizes={clickyThing5.sizes} />
         </ClickyThingWrapper>
         <ClickyThingWrapper
           clickyThingNumber={6}
@@ -225,17 +158,7 @@ class InhalerAnimation extends Component {
             bottom: '40.5vw',
             left: '42vw'
           }}>
-          <Img
-            sizes={animationClickyThing.sizes}
-            style={{ ...clickyThingImgStyle, ...flipHorizontalAndVertical }}
-          />
-          <ClickyThingNumber
-            style={{
-              left: '2vw',
-              top: '0.8vw'
-            }}>
-            6
-          </ClickyThingNumber>
+          <ClickyThing sizes={clickyThing6.sizes} />
         </ClickyThingWrapper>
         <YellowBallAndInfoHeaderWrapper>
           <YellowBall>
@@ -244,11 +167,9 @@ class InhalerAnimation extends Component {
           <AnimationInfoHeader>
             {activeClickyThingNumber === 1 && 'ComfortSeal Mask'}
             {activeClickyThingNumber === 2 && 'EZ Flow Exhalation Valve'}
-            {activeClickyThingNumber === 3 &&
-              'New Flow-Vu Inhalation Indicator'}
+            {activeClickyThingNumber === 3 && 'New Flow-Vu Inhalation Indicator'}
             {activeClickyThingNumber === 4 && 'FlowSignal Whistle'}
-            {activeClickyThingNumber === 5 &&
-              'Responsive One-Way Inspiratory Valve'}
+            {activeClickyThingNumber === 5 && 'Responsive One-Way Inspiratory Valve'}
             {activeClickyThingNumber === 6 && 'New Anti-Static Chamber'}
           </AnimationInfoHeader>
         </YellowBallAndInfoHeaderWrapper>
@@ -267,13 +188,8 @@ class InhalerAnimation extends Component {
           )}
           {activeClickyThingNumber === 3 && (
             <div>
-              <li>
-                Opens with minimal inspiratory effort, closes on exhalation
-              </li>
-              <li>
-                Retains medication inside the chamber for the next breath
-                suspension time
-              </li>
+              <li>Opens with minimal inspiratory effort, closes on exhalation</li>
+              <li>Retains medication inside the chamber for the next breath suspension time</li>
             </div>
           )}
           {activeClickyThingNumber === 4 && (
@@ -284,13 +200,8 @@ class InhalerAnimation extends Component {
           )}
           {activeClickyThingNumber === 5 && (
             <div>
-              <li>
-                Opens with minimal inspiratory effort, closes on exhalation
-              </li>
-              <li>
-                Retains medication inside the chamber for the next breath
-                suspension time
-              </li>
+              <li>Opens with minimal inspiratory effort, closes on exhalation</li>
+              <li>Retains medication inside the chamber for the next breath suspension time</li>
             </div>
           )}
           {activeClickyThingNumber === 6 && (

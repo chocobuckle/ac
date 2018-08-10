@@ -42,7 +42,15 @@ function Overview({ data, location }) {
         bpaAndDishwasherSafe={data.bpaAndDishwasherSafe}
         pathname={location.pathname}
       />
-      {/* <InhalerAnimation animationClickyThing={data.animationClickyThing} inhalerAnimationImg={data.inhalerAnimationImg} /> */}
+      <InhalerAnimation
+        clickyThing1={data.clickyThing1}
+        clickyThing2={data.clickyThing2}
+        clickyThing3={data.clickyThing3}
+        clickyThing4={data.clickyThing4}
+        clickyThing5={data.clickyThing5}
+        clickyThing6={data.clickyThing6}
+        inhalerAnimationImg={data.inhalerAnimationImg}
+      />
       <AdditionalFeatures>
         <ContentWrapper>
           <ScalingH2>
@@ -112,7 +120,57 @@ export const query = graphql`
         aspectRatio
       }
     }
-    animationClickyThing: imageSharp(id: { regex: "/overview/clicky_thing.png/" }) {
+    clickyThing1: imageSharp(id: { regex: "/overview/clicky_thing1.png/" }) {
+      sizes(maxWidth: 99) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    clickyThing2: imageSharp(id: { regex: "/overview/clicky_thing2.png/" }) {
+      sizes(maxWidth: 99) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    clickyThing3: imageSharp(id: { regex: "/overview/clicky_thing3.png/" }) {
+      sizes(maxWidth: 99) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    clickyThing4: imageSharp(id: { regex: "/overview/clicky_thing4.png/" }) {
+      sizes(maxWidth: 99) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    clickyThing5: imageSharp(id: { regex: "/overview/clicky_thing5.png/" }) {
+      sizes(maxWidth: 99) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    clickyThing6: imageSharp(id: { regex: "/overview/clicky_thing6.png/" }) {
       sizes(maxWidth: 99) {
         src
         srcSet
