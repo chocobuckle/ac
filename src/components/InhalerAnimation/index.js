@@ -73,7 +73,7 @@ const AnimationInfoHeader = ScalingH2.extend`
   font-style: italic;
   margin-bottom: 0;
   position: relative;
-  top: 0.4vw;
+  top: 0.25vw;
 `;
 
 const YellowBallAndInfoHeaderWrapper = styled.div`

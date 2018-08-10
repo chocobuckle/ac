@@ -31,7 +31,7 @@ const Layout = ({ children, data, location }) => {
     respiratory
   } = data;
   return (
-    <div style={{ background: '#DBECFC' }}>
+    <div style={{ background: '#e6f4fc' }}>
       <Helmet
         title={site.siteMetadata.title}
         meta={[
