@@ -19,7 +19,7 @@ const ClickyThingImgWrapper = styled.div`
   cursor: pointer;
   position: absolute;
   transition: all 0.2s ease-in-out;
-  width: 10vw;
+  width: 11vw;
   :hover {
     transform: scale(1.2);
   }
@@ -30,65 +30,35 @@ const ClickyThingImgWrapper = styled.div`
 `;
 
 const ClickyThingImgWrapper1 = ClickyThingImgWrapper.extend`
-  bottom: 40vw;
-  left: 13vw;
+  bottom: 50%;
+  left: -11.5%;
   transform-origin: right bottom;
-
-  @media screen and (min-width: 600px) {
-    bottom: 50%;
-    left: -10%;
-  }
 `;
-
 const ClickyThingImgWrapper2 = ClickyThingImgWrapper.extend`
-  ${'' /* bottom: 45.5vw;
-  left: 34.2vw;
+  bottom: 76%;
+  left: 34.5%;
   transform-origin: left bottom;
-
-  @media screen and (min-width: 600px) {
-    bottom: 273px;
-    left: 205.2px;
-  } */}
 `;
-const ClickyThingImgWrapper3 = ClickyThingImgWrapper.extend`
-  ${'' /* bottom: 47.5vw;
-  left: 42vw;
-  transform-origin: left bottom;
 
-  @media screen and (min-width: 600px) {
-    bottom: 285px;
-    left: 252px;
-  } */}
+const ClickyThingImgWrapper3 = ClickyThingImgWrapper.extend`
+  bottom: 67.5%;
+  left: 45%;
+  transform-origin: left bottom;
 `;
 const ClickyThingImgWrapper4 = ClickyThingImgWrapper.extend`
-  ${'' /* bottom: 48vw;
-  left: 80vw;
+  bottom: 56.5%;
+  left: 96.5%;
   transform-origin: left bottom;
-
-  @media screen and (min-width: 600px) {
-    bottom: 288px;
-    left: 480px;
-  } */}
 `;
 const ClickyThingImgWrapper5 = ClickyThingImgWrapper.extend`
-  ${'' /* bottom: 33.5vw;
-  left: 65vw;
+  bottom: 12%;
+  left: 74%;
   transform-origin: left top;
-
-  @media screen and (min-width: 600px) {
-    bottom: 201px;
-    left: 390px;
-  } */}
 `;
 const ClickyThingImgWrapper6 = ClickyThingImgWrapper.extend`
-  ${'' /* bottom: 39.5vw;
-  left: 41.5vw;
+  bottom: 15%;
+  left: 44%;
   transform-origin: right top;
-
-  @media screen and (min-width: 600px) {
-    bottom: 237px;
-    left: 249px;
-  } */}
 `;
 
 const ClickyThingImg = styled(Img)``;
