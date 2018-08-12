@@ -10,10 +10,9 @@ const InteractiveInhalerContainer = styled.div`
 
   @media screen and (min-width: 600px) {
     width: 438px;
+    margin: 0 auto 204px;
   }
 `;
-
-const InteractiveInhalerImg = styled(Img)``;
 
 const ClickyThingImgWrapper = styled.div`
   cursor: pointer;
@@ -60,8 +59,6 @@ const ClickyThingImgWrapper6 = ClickyThingImgWrapper.extend`
   transform-origin: right top;
 `;
 
-const ClickyThingImg = styled(Img)``;
-
 const YellowBallAndInfoHeaderAndAnimationListWrapper = styled.div`
   margin: 0 auto;
   width: 70%;
@@ -75,6 +72,7 @@ const YellowBallAndInfoHeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   margin: -27vw auto 0.3em;
+  width: 120%;
 
   @media screen and (min-width: 600px) {
     margin: -162px auto 0.3em;
@@ -116,7 +114,7 @@ const AnimationInfoList = ScalingText.withComponent('ul').extend`
   border-bottom: 0;
   border-radius: 0.25em 0 0 0;
   padding: 0.35em 0 0 0;
-  margin: 0;
+  margin: 0 0 0 2em;
 
   li {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -127,6 +125,24 @@ const AnimationInfoList = ScalingText.withComponent('ul').extend`
 
   li:last-child {
     margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 500px) {
+    li {
+      margin-left: 1.9em;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    li {
+      margin-left: 1.8em;
+    }
+  }
+
+  @media screen and (min-width: 996px) {
+    li {
+      margin-left: 1.7em;
+    }
   }
 `;
 
@@ -165,24 +181,24 @@ class InhalerAnimation extends Component {
     return (
       <ContentWrapper style={{ position: 'relative', zIndex: 2 }}>
         <InteractiveInhalerContainer>
-          <InteractiveInhalerImg sizes={interactiveInhaler.sizes} />
+          <Img sizes={interactiveInhaler.sizes} />
           <ClickyThingImgWrapper1 clickyThingNumber={1} onClick={() => this.handleClick(1)}>
-            <ClickyThingImg sizes={clickyThing1.sizes} />
+            <Img sizes={clickyThing1.sizes} />
           </ClickyThingImgWrapper1>
           <ClickyThingImgWrapper2 clickyThingNumber={2} onClick={() => this.handleClick(2)}>
-            <ClickyThingImg sizes={clickyThing2.sizes} />
+            <Img sizes={clickyThing2.sizes} />
           </ClickyThingImgWrapper2>
           <ClickyThingImgWrapper3 clickyThingNumber={3} onClick={() => this.handleClick(3)}>
-            <ClickyThingImg sizes={clickyThing3.sizes} />
+            <Img sizes={clickyThing3.sizes} />
           </ClickyThingImgWrapper3>
           <ClickyThingImgWrapper4 clickyThingNumber={4} onClick={() => this.handleClick(4)}>
-            <ClickyThingImg sizes={clickyThing4.sizes} />
+            <Img sizes={clickyThing4.sizes} />
           </ClickyThingImgWrapper4>
           <ClickyThingImgWrapper5 clickyThingNumber={5} onClick={() => this.handleClick(5)}>
-            <ClickyThingImg sizes={clickyThing5.sizes} />
+            <Img sizes={clickyThing5.sizes} />
           </ClickyThingImgWrapper5>
           <ClickyThingImgWrapper6 clickyThingNumber={6} onClick={() => this.handleClick(6)}>
-            <ClickyThingImg sizes={clickyThing6.sizes} />
+            <Img sizes={clickyThing6.sizes} />
           </ClickyThingImgWrapper6>
         </InteractiveInhalerContainer>
         <YellowBallAndInfoHeaderAndAnimationListWrapper>
