@@ -29,12 +29,11 @@ const LocalWrapper = ContentWrapper.extend`
 
 const InteractiveInhalerContainer = styled.div`
   width: 73vw;
-  margin: 0 auto 34vw;
+  margin: 0 auto;
   position: relative;
 
   @media screen and (min-width: 600px) {
     width: 438px;
-    margin: 0 auto 204px;
   }
 
   @media screen and (min-width: 996px) {
@@ -91,7 +90,7 @@ const ClickyThingImgWrapper6 = ClickyThingImgWrapper.extend`
 `;
 
 const YellowBallAndInfoHeaderAndAnimationListWrapper = styled.div`
-  margin: 0 auto;
+  margin: 5.5vw auto 0;
   width: 70%;
 
   @media screen and (min-width: 600px) {
@@ -106,21 +105,14 @@ const YellowBallAndInfoHeaderAndAnimationListWrapper = styled.div`
 const YellowBallAndInfoHeaderWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin: -27vw auto 0.3em;
   width: 120%;
-
-  @media screen and (min-width: 600px) {
-    margin: -185px auto 0.3em;
-  }
 
   @media screen and (min-width: 996px) {
     ${({ activeClickyThingNumber }) => {
       if (activeClickyThingNumber === 3 || activeClickyThingNumber === 5) {
         return `margin-top: 0`;
       }
-      if (activeClickyThingNumber === 2) {
-        return `margin-top: -194px`;
-      }
+      return `margin-top: -194px`;
     }};
   }
 `;
