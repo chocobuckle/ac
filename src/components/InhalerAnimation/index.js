@@ -12,7 +12,14 @@ const LocalWrapper = ContentWrapper.extend`
 
   @media screen and (min-width: 996px) {
     flex-direction: row;
-    align-items: center;
+    align-items: ${({ activeClickyThingNumber }) => {
+      if (activeClickyThingNumber === 3 || activeClickyThingNumber === 5) {
+        console.log('FLEX-START!!!');
+        return `flex-start`;
+      }
+      console.log('CENTER!!!');
+      return `center`;
+    }};
     justify-content: space-around;
     margin-bottom: -145px;
     padding: 0 0;
@@ -103,7 +110,18 @@ const YellowBallAndInfoHeaderWrapper = styled.div`
   width: 120%;
 
   @media screen and (min-width: 600px) {
-    margin: -162px auto 0.3em;
+    margin: -185px auto 0.3em;
+  }
+
+  @media screen and (min-width: 996px) {
+    ${({ activeClickyThingNumber }) => {
+      if (activeClickyThingNumber === 3 || activeClickyThingNumber === 5) {
+        return `margin-top: 0`;
+      }
+      if (activeClickyThingNumber === 2) {
+        return `margin-top: -194px`;
+      }
+    }};
   }
 `;
 
@@ -133,6 +151,11 @@ const InfoHeader = ScalingH2.extend`
 
   @media screen and (min-width: 600px) {
     top: 2.4px;
+  }
+
+  @media screen and (min-width: 996px) {
+    font-size: 40px;
+    width: 360px;
   }
 `;
 
@@ -207,7 +230,7 @@ class InhalerAnimation extends Component {
     } = this.props;
     const { activeClickyThingNumber } = this.state;
     return (
-      <LocalWrapper>
+      <LocalWrapper activeClickyThingNumber={activeClickyThingNumber}>
         <InteractiveInhalerContainer>
           <Img sizes={interactiveInhaler.sizes} />
           <ClickyThingImgWrapper1 clickyThingNumber={1} onClick={() => this.handleClick(1)}>
@@ -230,7 +253,7 @@ class InhalerAnimation extends Component {
           </ClickyThingImgWrapper6>
         </InteractiveInhalerContainer>
         <YellowBallAndInfoHeaderAndAnimationListWrapper>
-          <YellowBallAndInfoHeaderWrapper>
+          <YellowBallAndInfoHeaderWrapper activeClickyThingNumber={activeClickyThingNumber}>
             {activeClickyThingNumber === 1 && <YellowBall sizes={ball1.sizes} />}
             {activeClickyThingNumber === 2 && <YellowBall sizes={ball2.sizes} />}
             {activeClickyThingNumber === 3 && <YellowBall sizes={ball3.sizes} />}
