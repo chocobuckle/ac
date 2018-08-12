@@ -43,6 +43,12 @@ function Overview({ data, location }) {
         pathname={location.pathname}
       />
       <InhalerAnimation
+        ball1={data.ball1}
+        ball2={data.ball2}
+        ball3={data.ball3}
+        ball4={data.ball4}
+        ball5={data.ball5}
+        ball6={data.ball6}
         clickyThing1={data.clickyThing1}
         clickyThing2={data.clickyThing2}
         clickyThing3={data.clickyThing3}
@@ -112,6 +118,66 @@ export const query = graphql`
     }
     interactiveInhaler: imageSharp(id: { regex: "/overview/interactive_inhaler.png/" }) {
       sizes(maxWidth: 933) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    ball1: imageSharp(id: { regex: "/overview/ball1.png/" }) {
+      sizes(maxWidth: 40) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    ball2: imageSharp(id: { regex: "/overview/ball2.png/" }) {
+      sizes(maxWidth: 40) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    ball3: imageSharp(id: { regex: "/overview/ball3.png/" }) {
+      sizes(maxWidth: 40) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    ball4: imageSharp(id: { regex: "/overview/ball4.png/" }) {
+      sizes(maxWidth: 40) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    ball5: imageSharp(id: { regex: "/overview/ball5.png/" }) {
+      sizes(maxWidth: 40) {
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        aspectRatio
+      }
+    }
+    ball6: imageSharp(id: { regex: "/overview/ball6.png/" }) {
+      sizes(maxWidth: 40) {
         src
         srcSet
         srcWebp

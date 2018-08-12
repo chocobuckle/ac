@@ -39,7 +39,6 @@ const ClickyThingImgWrapper2 = ClickyThingImgWrapper.extend`
   left: 34.5%;
   transform-origin: left bottom;
 `;
-
 const ClickyThingImgWrapper3 = ClickyThingImgWrapper.extend`
   bottom: 67.5%;
   left: 45%;
@@ -63,40 +62,34 @@ const ClickyThingImgWrapper6 = ClickyThingImgWrapper.extend`
 
 const ClickyThingImg = styled(Img)``;
 
-const YellowBall = styled.div`
-  align-items: center;
-  background-color: #f3b106;
-  border-radius: 50%;
-  display: flex;
-  height: 5.5vw;
-  justify-content: center;
-  margin-right: 2vw;
-  width: 5.5vw;
-`;
+const YellowBallAndInfoHeaderAndAnimationListWrapper = styled.div`
+  margin: 0 auto;
+  width: 70%;
 
-const SelectedNumber = styled.p`
-  color: #fff;
-  margin-bottom: 0;
-  position: relative;
-  font-weight: 600;
-  top: 0.205vw;
-  font-size: 3.4vw;
-`;
-
-const AnimationInfoHeader = ScalingH2.extend`
-  color: #f3b106;
-  font-weight: 600;
-  font-style: italic;
-  margin-bottom: 0;
-  position: relative;
-  top: 0.25vw;
+  @media screen and (min-width: 600px) {
+    width: 382px;
+  }
 `;
 
 const YellowBallAndInfoHeaderWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin: -27vw auto 0;
-  width: 90vw;
+  margin: -27vw auto 0.3em;
+`;
+
+const YellowBall = styled(Img)`
+  width: 7vw;
+  margin-right: 1.75vw;
+`;
+
+const InfoHeader = ScalingH2.extend`
+  color: #f3b106;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1em;
+  margin-bottom: 0;
+  position: relative;
+  top: 0.25vw;
 `;
 
 const AnimationInfoList = styled.ul`
@@ -104,13 +97,12 @@ const AnimationInfoList = styled.ul`
   border-right: 0;
   border-bottom: 0;
   border-radius: 0.25em 0 0 0;
-  width: 80%;
-  margin: 0.2vw 0 0 6vw;
-  padding: 1.25vw 0 0 0.25vw;
+  padding: 0.35em 0 0 0;
+  margin: 0;
 
   li {
-    margin-left: 4.25vw;
-    margin-bottom: 1vw;
+    margin-left: 1.6em;
+    margin-bottom: 0.25em;
   }
 
   li:last-child {
@@ -135,6 +127,12 @@ class InhalerAnimation extends Component {
 
   render() {
     const {
+      ball1,
+      ball2,
+      ball3,
+      ball4,
+      ball5,
+      ball6,
       clickyThing1,
       clickyThing2,
       clickyThing3,
@@ -167,57 +165,62 @@ class InhalerAnimation extends Component {
             <ClickyThingImg sizes={clickyThing6.sizes} />
           </ClickyThingImgWrapper6>
         </InteractiveInhalerContainer>
-        <YellowBallAndInfoHeaderWrapper>
-          <YellowBall>
-            <SelectedNumber>{activeClickyThingNumber}</SelectedNumber>
-          </YellowBall>
-          <AnimationInfoHeader>
-            {activeClickyThingNumber === 1 && 'ComfortSeal Mask'}
-            {activeClickyThingNumber === 2 && 'EZ Flow Exhalation Valve'}
-            {activeClickyThingNumber === 3 && 'New Flow-Vu Inhalation Indicator'}
-            {activeClickyThingNumber === 4 && 'FlowSignal Whistle'}
-            {activeClickyThingNumber === 5 && 'Responsive One-Way Inspiratory Valve'}
-            {activeClickyThingNumber === 6 && 'New Anti-Static Chamber'}
-          </AnimationInfoHeader>
-        </YellowBallAndInfoHeaderWrapper>
-        <AnimationInfoList>
-          {activeClickyThingNumber === 1 && (
-            <div>
-              <li>Flexible, anatomically designed</li>
-              <li>Specifically designed paediatric options</li>
-            </div>
-          )}
-          {activeClickyThingNumber === 2 && (
-            <div>
-              <li>Minimize re-breathing</li>
-              <li>Directs exhaled flow away from the patients face</li>
-            </div>
-          )}
-          {activeClickyThingNumber === 3 && (
-            <div>
-              <li>Opens with minimal inspiratory effort, closes on exhalation</li>
-              <li>Retains medication inside the chamber for the next breath suspension time</li>
-            </div>
-          )}
-          {activeClickyThingNumber === 4 && (
-            <div>
-              <li>Sounds when the patient is inhaling too rapidly</li>
-              <li>Encourages patients to breathe slowly</li>
-            </div>
-          )}
-          {activeClickyThingNumber === 5 && (
-            <div>
-              <li>Opens with minimal inspiratory effort, closes on exhalation</li>
-              <li>Retains medication inside the chamber for the next breath suspension time</li>
-            </div>
-          )}
-          {activeClickyThingNumber === 6 && (
-            <div>
-              <li>Can be used out of package without pre-treatment</li>
-              <li>Maximizes aerosol suspension time </li>
-            </div>
-          )}
-        </AnimationInfoList>
+        <YellowBallAndInfoHeaderAndAnimationListWrapper>
+          <YellowBallAndInfoHeaderWrapper>
+            {activeClickyThingNumber === 1 && <YellowBall sizes={ball1.sizes} />}
+            {activeClickyThingNumber === 2 && <YellowBall sizes={ball2.sizes} />}
+            {activeClickyThingNumber === 3 && <YellowBall sizes={ball3.sizes} />}
+            {activeClickyThingNumber === 4 && <YellowBall sizes={ball4.sizes} />}
+            {activeClickyThingNumber === 5 && <YellowBall sizes={ball5.sizes} />}
+            {activeClickyThingNumber === 6 && <YellowBall sizes={ball6.sizes} />}
+            <InfoHeader>
+              {activeClickyThingNumber === 1 && 'ComfortSeal Mask'}
+              {activeClickyThingNumber === 2 && 'EZ Flow Exhalation Valve'}
+              {activeClickyThingNumber === 3 && 'New Flow-Vu Inhalation Indicator'}
+              {activeClickyThingNumber === 4 && 'FlowSignal Whistle'}
+              {activeClickyThingNumber === 5 && 'Responsive One-Way Inspiratory Valve'}
+              {activeClickyThingNumber === 6 && 'New Anti-Static Chamber'}
+            </InfoHeader>
+          </YellowBallAndInfoHeaderWrapper>
+          <AnimationInfoList>
+            {activeClickyThingNumber === 1 && (
+              <div>
+                <li>Flexible, anatomically designed</li>
+                <li>Specifically designed paediatric options</li>
+              </div>
+            )}
+            {activeClickyThingNumber === 2 && (
+              <div>
+                <li>Minimize re-breathing</li>
+                <li>Directs exhaled flow away from the patients face</li>
+              </div>
+            )}
+            {activeClickyThingNumber === 3 && (
+              <div>
+                <li>Opens with minimal inspiratory effort, closes on exhalation</li>
+                <li>Retains medication inside the chamber for the next breath suspension time</li>
+              </div>
+            )}
+            {activeClickyThingNumber === 4 && (
+              <div>
+                <li>Sounds when the patient is inhaling too rapidly</li>
+                <li>Encourages patients to breathe slowly</li>
+              </div>
+            )}
+            {activeClickyThingNumber === 5 && (
+              <div>
+                <li>Opens with minimal inspiratory effort, closes on exhalation</li>
+                <li>Retains medication inside the chamber for the next breath suspension time</li>
+              </div>
+            )}
+            {activeClickyThingNumber === 6 && (
+              <div>
+                <li>Can be used out of package without pre-treatment</li>
+                <li>Maximizes aerosol suspension time </li>
+              </div>
+            )}
+          </AnimationInfoList>
+        </YellowBallAndInfoHeaderAndAnimationListWrapper>
       </ContentWrapper>
     );
   }
