@@ -3,6 +3,23 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { ContentWrapper, ScalingH2, ScalingText } from 'helpers/sharedStyles';
 
+const LocalWrapper = ContentWrapper.extend`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+
+  @media screen and (min-width: 996px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: -145px;
+    padding: 0 0;
+    width: 100%;
+  }
+`;
+
 const InteractiveInhalerContainer = styled.div`
   width: 73vw;
   margin: 0 auto 34vw;
@@ -11,6 +28,10 @@ const InteractiveInhalerContainer = styled.div`
   @media screen and (min-width: 600px) {
     width: 438px;
     margin: 0 auto 204px;
+  }
+
+  @media screen and (min-width: 996px) {
+    margin: 0 0 204px 15px;
   }
 `;
 
@@ -32,6 +53,9 @@ const ClickyThingImgWrapper1 = ClickyThingImgWrapper.extend`
   bottom: 50%;
   left: -11.5%;
   transform-origin: right bottom;
+  @media screen and (min-width: 996px) {
+    left: -5.5%;
+  }
 `;
 const ClickyThingImgWrapper2 = ClickyThingImgWrapper.extend`
   bottom: 76%;
@@ -65,6 +89,10 @@ const YellowBallAndInfoHeaderAndAnimationListWrapper = styled.div`
 
   @media screen and (min-width: 600px) {
     width: 382px;
+  }
+
+  @media screen and (min-width: 996px) {
+    margin: 0 0;
   }
 `;
 
@@ -179,7 +207,7 @@ class InhalerAnimation extends Component {
     } = this.props;
     const { activeClickyThingNumber } = this.state;
     return (
-      <ContentWrapper style={{ position: 'relative', zIndex: 2 }}>
+      <LocalWrapper>
         <InteractiveInhalerContainer>
           <Img sizes={interactiveInhaler.sizes} />
           <ClickyThingImgWrapper1 clickyThingNumber={1} onClick={() => this.handleClick(1)}>
@@ -257,7 +285,7 @@ class InhalerAnimation extends Component {
             )}
           </AnimationInfoList>
         </YellowBallAndInfoHeaderAndAnimationListWrapper>
-      </ContentWrapper>
+      </LocalWrapper>
     );
   }
 }
