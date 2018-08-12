@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { ContentWrapper, ScalingH2 } from 'helpers/sharedStyles';
+import { ContentWrapper, ScalingH2, ScalingText } from 'helpers/sharedStyles';
 
 const InteractiveInhalerContainer = styled.div`
   width: 73vw;
@@ -75,11 +75,25 @@ const YellowBallAndInfoHeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   margin: -27vw auto 0.3em;
+
+  @media screen and (min-width: 600px) {
+    margin: -162px auto 0.3em;
+  }
 `;
 
 const YellowBall = styled(Img)`
-  width: 7vw;
+  width: 6.25vw;
   margin-right: 1.75vw;
+
+  @media screen and (min-width: 450px) {
+    width: 6vw;
+    margin-right: 1.5vw;
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 36px;
+    margin-right: 9px;
+  }
 `;
 
 const InfoHeader = ScalingH2.extend`
@@ -89,10 +103,14 @@ const InfoHeader = ScalingH2.extend`
   line-height: 1em;
   margin-bottom: 0;
   position: relative;
-  top: 0.25vw;
+  top: 0.4vw;
+
+  @media screen and (min-width: 600px) {
+    top: 2.4px;
+  }
 `;
 
-const AnimationInfoList = styled.ul`
+const AnimationInfoList = ScalingText.withComponent('ul').extend`
   border: 0.25em solid #007fc8;
   border-right: 0;
   border-bottom: 0;
@@ -101,7 +119,9 @@ const AnimationInfoList = styled.ul`
   margin: 0;
 
   li {
-    margin-left: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    margin-left: 2em;
     margin-bottom: 0.25em;
   }
 
