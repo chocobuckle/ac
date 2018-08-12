@@ -301,7 +301,6 @@ const EasyInstructions2Img = styled(Img)`
 
 const EasyInstructions3Img = styled(Img)`
   margin-right: 4.75vw;
-  margin-top: 2vw;
   width: 38vw;
 
   @media screen and (min-width: 600px) {
